@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+     <link rel="stylesheet" href="../Home.css">
+     <link rel="stylesheet" href="Contact.css">
+
+</head>
+
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="../images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="sf-nav"
+      id="mobileNav"
+    >
+
+      <a
+        href="../Home.html"
+        class="nav-btn"
+      >
+        Home
+      </a>
+
+      <a
+        href="About.html"
+        class="nav-btn"
+      >
+        About
+      </a>
+
+      <a
+        href="Services.html"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      <a
+        href="Courses.html"
+        class="nav-btn"
+      >
+        Courses
+      </a>
+
+      <a
+        href="Contact.html"
+        class="nav-btn contact-link"
+      >
+        Contact
+      </a>
+
+      <a
+        href="Blog.html"
+        class="nav-btn"
+      >
+        Blog
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+</header>
+<body>
+    
+
+<section class="contact-main" id="contactSection">
+
+<div class="contact-grid">
+
+<!-- LEFT PANEL -->
+
+<div class="contact-left">
+
+<small>GET IN TOUCH</small>
+
+<h1>
+Don't hesitate to contact us for more information.
+</h1>
+
+<p>
+Reach out anytime and our team will respond quickly.
+</p>
+
+<div class="contact-info">
+<div class="contact-icon">📍</div>
+<div>
+<h4>Head Office</h4>
+<div>Porur, Chennai</div>
+</div>
+</div>
+
+<div class="contact-info">
+<div class="contact-icon">✉️</div>
+<div>
+<h4>Email Us</h4>
+<div>shainfotech05@gmail.com</div>
+</div>
+</div>
+
+<div class="contact-info">
+<div class="contact-icon">📞</div>
+<div>
+<h4>Call Us</h4>
+<div>93610 46387</div>
+</div>
+</div>
+
+</div>
+
+<!-- RIGHT FORM -->
+
+<div class="contact-right">
+
+<h3>Send us a message</h3>
+
+<p>
+Fill the form and we will contact you soon.
+</p>
+
+<form
+class="contact-form"
+id="contactForm"
+>
+
+<div class="contact-row">
+
+<div class="form-field">
+<input
+type="text"
+name="name"
+placeholder="Name"
+required
+/>
+</div>
+
+<div class="form-field">
+<input
+type="text"
+name="LastName"
+placeholder="LastName"
+/>
+</div>
+
+</div>
+
+<div class="contact-row">
+
+<div class="form-field">
+<input
+type="text"
+name="phone"
+placeholder="Phone"
+required
+/>
+</div>
+
+<div class="form-field">
+<input
+type="email"
+name="email"
+placeholder="Email"
+required
+/>
+</div>
+
+</div>
+
+<div class="form-field">
+
+<select
+name="service"
+required
+>
+
+<option value="">
+Select Service
+</option>
+
+<option>
+Digital Strategy
+</option>
+
+<option>
+Digital Marketing Course
+</option>
+
+<option>
+Web Development
+</option>
+
+<option>
+E-commerce Website
+</option>
+
+<option>
+Search Engine Optimization
+</option>
+
+<option>
+Social Media Marketing
+</option>
+
+<option>
+Content Design
+</option>
+
+<option>
+Business Analysis
+</option>
+
+<option>
+Creative Design
+</option>
+
+<option>
+Brand Consultancy
+</option>
+
+<option>
+AI Marketing
+</option>
+
+</select>
+
+</div>
+
+<div class="form-field">
+
+<input
+type="text"
+name="subject"
+placeholder="Subject"
+/>
+
+</div>
+
+<div class="form-field">
+
+<textarea
+name="message"
+placeholder="Message"
+></textarea>
+
+</div>
+
+<button
+type="submit"
+id="sendBtn"
+>
+SEND MESSAGE
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- JS INSIDE SECTION -->
+
+<script>
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+emailjs.init(
+"yxT-hRvX41RhpOdfZ"
+);
+
+const form =
+document.getElementById(
+"contactForm"
+);
+
+const btn =
+document.getElementById(
+"sendBtn"
+);
+
+form.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+btn.innerHTML =
+"Sending...";
+
+btn.disabled =
+true;
+
+const data = {
+
+name:
+form.name.value,
+
+LastName:
+form.LastName.value,
+
+phone:
+form.phone.value,
+
+email:
+form.email.value,
+
+service:
+form.service.value,
+
+subject:
+form.subject.value,
+
+message:
+form.message.value
+
+};
+
+emailjs.send(
+
+"service_pznbx9s",
+
+"template_8wwwast",
+
+data
+
+)
+
+.then(function(){
+
+alert(
+"Message sent successfully!"
+);
+
+const message =
+`🚀 New Contact Enquiry
+
+👤 Name: ${data.name} ${data.LastName}
+📞 Phone: ${data.phone}
+📧 Email: ${data.email}
+📌 Service: ${data.service}
+📝 Subject: ${data.subject}
+
+💬 Message:
+${data.message}`;
+
+const phoneNumber =
+"919361046387";
+
+const whatsappURL =
+`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+window.location.href =
+whatsappURL;
+
+form.reset();
+
+})
+
+.catch(function(){
+
+alert(
+"Failed to send message"
+);
+
+})
+
+.finally(function(){
+
+btn.innerHTML =
+"SEND MESSAGE";
+
+btn.disabled =
+false;
+
+});
+
+});
+
+});
+
+</script>
+
+</section>
+
+
+
+</body>
+
+
+
+
+
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="../Home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+        <li><a href="DigitalStrategy.html">Digital Strategy</a></li>
+        <li><a href="WebDevelopment.html">Web Development</a></li>
+        <li><a href="Ecommerce.html">Ecommerce Website</a></li>
+        <li><a href="Seo.html">SEO</a></li>
+        <li><a href="SocialMedia.html">Social Media Marketing</a></li>
+        <li><a href="AiMarketing.html">AI Marketing</a></li>
+        <li><a href="BusinessAnalysis.html">Business Analysis</a></li>
+        <li><a href="ContentDesign.html">Content Design</a></li>
+        <li><a href="CreativeDesign.html">Creative Design</a></li>
+        <li><a href="BrandConsultancy.html">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
+
+
+
+</html>
+
+

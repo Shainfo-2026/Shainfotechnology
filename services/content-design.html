@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="../Home.css">
+         <link rel="stylesheet" href="../footer.css">
+         <link rel="stylesheet" href="../footer.js">
+      <link rel="stylesheet" href="brand-consultancy.css">
+
+</head>
+
+
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="../images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="sf-nav"
+      id="mobileNav"
+    >
+
+      <a
+        href="../Home.html"
+        class="nav-btn"
+      >
+        Home
+      </a>
+
+      <a
+        href="../pages/About.html"
+        class="nav-btn"
+      >
+        About
+      </a>
+
+      <a
+        href="../pages/Services.html"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      
+      <a
+        href="../pages/Courses.html"
+        class="nav-btn"
+      >
+        Courses
+      </a>
+
+      <a
+        href="../pages/Contact.html"
+        class="nav-btn contact-link"
+      >
+        Contact
+      </a>
+
+      <a
+        href="../pages/Blog.html"
+        class="nav-btn"
+      >
+        Blog
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+</header>
+<body>
+    
+<section class="smm-hero">
+
+  <!-- LEFT -->
+
+  <div class="smm-left">
+
+    <small>
+      Content Design
+    </small>
+
+    <h1 class="smm-title">
+
+      Design Content
+      <span class="accent">
+        That Captures Attention
+      </span>
+
+      <br>
+
+      and Builds Trust
+
+      <br>
+
+      <span class="accent">
+        Communicate Your Brand with Clarity and Impact
+      </span>
+
+    </h1>
+
+    <p class="smm-desc">
+
+      We craft compelling content designs that tell your brand story
+      effectively.
+
+      Every visual and message is created to engage audiences,
+      strengthen credibility, and support your marketing goals.
+
+    </p>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="smm-right">
+
+    <div class="icon-cloud">
+
+      <div class="icon">G</div>
+      <div class="icon">🔍</div>
+      <div class="icon">📈</div>
+      <div class="icon">📍</div>
+      <div class="icon">📝</div>
+      <div class="icon">⚙️</div>
+      <div class="icon">⭐</div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function(){
+
+        /* NO EXTRA JS NEEDED */
+
+        /* FLOAT ANIMATION +
+           ICON MOVEMENT
+           COMES FROM CSS */
+
+      }
+    );
+
+  </script>
+
+</section>
+
+
+
+<!-- 2 -->
+
+
+<section class="brand-section" id="contentDesignSection">
+
+  <div class="brand-grid">
+
+    <!-- LEFT CONTENT -->
+
+    <div class="brand-left">
+
+      <h2>
+
+        <span class="brand-white">
+          What is
+        </span>
+
+        <span class="brand-gradient">
+          Content Design
+        </span>
+
+        <span class="brand-white">
+          ?
+        </span>
+
+      </h2>
+
+      <p>
+        Content design focuses on structuring and presenting information
+        in a way that is clear, user-friendly, and purposeful. It ensures
+        users can easily understand, navigate, and take action.
+      </p>
+
+      <p>
+        We design content around user intent and business goals—balancing
+        clarity, consistency, and performance. Our approach improves
+        readability, engagement, and long-term content effectiveness
+        across digital platforms.
+      </p>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="brand-right">
+
+      <img
+        src="/images/about/whyss.png"
+        alt="Content Design Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "contentDesignSection"
+      );
+
+    if(!section) return;
+
+    /* INTERSECTION OBSERVER */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target
+            .classList
+            .add("show");
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.25
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 3 -->
+
+<section class="services-wrap" id="servicesGridContent">
+
+  <div class="services-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        1
+      </div>
+
+      <div class="service-icon">
+        🧠
+      </div>
+
+      <div class="service-title">
+        Content Strategy & Planning
+      </div>
+
+      <div class="service-desc">
+        Structuring content around user intent, goals,
+        and business outcomes.
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        2
+      </div>
+
+      <div class="service-icon">
+        🧭
+      </div>
+
+      <div class="service-title">
+        Website & UX Content
+      </div>
+
+      <div class="service-desc">
+        Clear, purposeful content that guides users
+        through digital experiences.
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        3
+      </div>
+
+      <div class="service-icon">
+        🔍
+      </div>
+
+      <div class="service-title">
+        SEO Content Structuring
+      </div>
+
+      <div class="service-desc">
+        Content designed to rank, read well,
+        and convert effectively.
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        4
+      </div>
+
+      <div class="service-icon">
+        🗣️
+      </div>
+
+      <div class="service-title">
+        Brand Tone & Messaging
+      </div>
+
+      <div class="service-desc">
+        Consistent voice and messaging across
+        all digital touchpoints.
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        5
+      </div>
+
+      <div class="service-icon">
+        📐
+      </div>
+
+      <div class="service-title">
+        Content Hierarchy & Flow
+      </div>
+
+      <div class="service-desc">
+        Logical content structure for better
+        readability and engagement.
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        6
+      </div>
+
+      <div class="service-icon">
+        ♻️
+      </div>
+
+      <div class="service-title">
+        Content Audits & Optimisation
+      </div>
+
+      <div class="service-desc">
+        Improving existing content for clarity,
+        performance, and relevance.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "servicesGridContent"
+      );
+
+    if(!section) return;
+
+    /* SECTION READY */
+
+    console.log(
+      "Services Grid Loaded"
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+
+<!-- 4 -->
+
+<section class="seo-hero-dark" id="whyContentDesignHero">
+
+  <div class="seo-hero-grid">
+
+    <!-- LEFT -->
+
+    <div class="seo-left">
+
+      <h1>
+        Why <span>Content Design</span>?
+      </h1>
+
+      <li>
+        Content design structures information to be clear, purposeful, and
+        easy to understand. By aligning content with user intent and business
+        goals, it helps audiences find what they need quickly and engage
+        with your brand more effectively.
+      </li>
+
+      <li>
+        Well-designed content improves usability, accessibility, and
+        consistency across digital platforms. Through strong hierarchy,
+        clear messaging, and continuous optimisation, content design
+        supports better experiences, stronger conversions, and long-term
+        digital performance.
+      </li>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="seo-right seo-image-wrap">
+
+      <img
+        src="/images/CONTENTDESIGN.png"
+        alt="Content Design Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "whyContentDesignHero"
+      );
+
+    if(!section) return;
+
+    /* INTERSECTION OBSERVER */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target
+            .classList
+            .add("show");
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.3
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="home-faq-wrap" id="faqContentDesign">
+
+  <div class="home-faq-container">
+
+    <!-- TITLE -->
+
+    <h2 class="home-faq-title">
+
+      <span class="faq-title-white">
+        Frequently Asked
+      </span>
+
+      <span class="faq-title-gradient">
+        Questions
+      </span>
+
+    </h2>
+
+    <p class="home-faq-sub">
+      Clear answers to help you move forward with confidence.
+    </p>
+
+    <!-- FAQ CARD -->
+
+    <div class="home-faq-card">
+
+      <!-- FAQ 1 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            What is content design?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Content design focuses on structuring and presenting
+            content to improve clarity, usability, and user
+            understanding.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 2 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Is content design different from copywriting?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Yes. Content design combines strategy, structure,
+            and UX principles, while copywriting focuses mainly
+            on writing text.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 3 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Do you design content for websites only?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            No. We design content for websites, landing pages,
+            apps, and other digital platforms.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 4 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Will the content be SEO-friendly?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Yes. We structure content using SEO best practices
+            while keeping it clear and user-focused.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 5 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            How do we get started with content design?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Contact us to discuss your goals, and we’ll create
+            a content structure and delivery plan.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "faqContentDesign"
+      );
+
+    if(!section) return;
+
+    const items =
+      section.querySelectorAll(
+        ".home-faq-item"
+      );
+
+    /* AUTO OPEN FIRST FAQ */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            const first =
+              items[0];
+
+            first.classList.add(
+              "open"
+            );
+
+            first.querySelector(
+              ".home-faq-toggle"
+            ).innerHTML="−";
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.35
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+    /* FAQ TOGGLE */
+
+    items.forEach(item=>{
+
+      const header =
+        item.querySelector(
+          ".home-faq-header"
+        );
+
+      const toggle =
+        item.querySelector(
+          ".home-faq-toggle"
+        );
+
+      header.addEventListener(
+      "click",
+      function(){
+
+        const isOpen =
+          item.classList.contains(
+            "open"
+          );
+
+        items.forEach(i=>{
+
+          i.classList.remove(
+            "open"
+          );
+
+          i.querySelector(
+            ".home-faq-toggle"
+          ).innerHTML="+";
+
+        });
+
+        if(!isOpen){
+
+          item.classList.add(
+            "open"
+          );
+
+          toggle.innerHTML="−";
+
+        }
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+</body>
+
+
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="../Home.html">Home</a></li>
+        <li><a href="../pages/About.html">About Us</a></li>
+        <li><a href="../pages/Services.html">Services</a></li>
+        <li><a href="../pages/Courses.html">Courses</a></li>
+        <li><a href="../pages/Contact.html">Contact</a></li>
+        <li><a href="../pages/Blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+        <li><a href="DigitalStrategy.html">Digital Strategy</a></li>
+        <li><a href="WebDevelopment.html">Web Development</a></li>
+        <li><a href="Ecommerce.html">Ecommerce Website</a></li>
+        <li><a href="Seo.html">SEO</a></li>
+        <li><a href="SocialMedia.html">Social Media Marketing</a></li>
+        <li><a href="AiMarketing.html">AI Marketing</a></li>
+        <li><a href="BusinessAnalysis.html">Business Analysis</a></li>
+        <li><a href="ContentDesign.html">Content Design</a></li>
+        <li><a href="CreativeDesign.html">Creative Design</a></li>
+        <li><a href="BrandConsultancy.html">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
+</html>

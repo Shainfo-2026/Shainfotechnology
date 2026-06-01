@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="../Home.css">
+         <link rel="stylesheet" href="../footer.css">
+         <link rel="stylesheet" href="../footer.js">
+      <link rel="stylesheet" href="web-development.css">
+
+</head>
+
+
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="../images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="sf-nav"
+      id="mobileNav"
+    >
+
+      <a
+        href="../Home.html"
+        class="nav-btn"
+      >
+        Home
+      </a>
+
+      <a
+        href="../pages/About.html"
+        class="nav-btn"
+      >
+        About
+      </a>
+
+      <a
+        href="../pages/Services.html"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      
+      <a
+        href="../pages/Courses.html"
+        class="nav-btn"
+      >
+        Courses
+      </a>
+
+      <a
+        href="../pages/Contact.html"
+        class="nav-btn contact-link"
+      >
+        Contact
+      </a>
+
+      <a
+        href="../pages/Blog.html"
+        class="nav-btn"
+      >
+        Blog
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+</header>
+<body>
+
+<section class="webdev-hero" id="webDevelopmentHero">
+
+  <div class="webdev-left">
+
+    <small>
+      Website Development
+    </small>
+
+    <h1 class="webdev-title">
+
+      Build a
+      <span class="accent">
+        Website Designed for
+      </span>
+
+      <br/>
+
+      Performance and Growth
+
+      <br/>
+
+      <span class="accent">
+        Modern, Responsive, and Conversion-Focused
+      </span>
+
+    </h1>
+
+    <p class="webdev-desc">
+
+      We develop fast, secure, and scalable websites tailored
+      to your business goals.
+
+      Every website is built to deliver a seamless user
+      experience and support long-term digital success.
+
+    </p>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="webdev-right">
+
+    <div class="webdev-icon-cloud">
+
+      <div class="webdev-icon">💻</div>
+      <div class="webdev-icon">⚡</div>
+      <div class="webdev-icon">📱</div>
+      <div class="webdev-icon">🌐</div>
+      <div class="webdev-icon">🧩</div>
+      <div class="webdev-icon">🔒</div>
+      <div class="webdev-icon">🚀</div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hero =
+      document.getElementById(
+        "webDevelopmentHero"
+      );
+
+    if(!hero) return;
+
+    /* ICON HOVER EFFECT */
+
+    const icons =
+      hero.querySelectorAll(
+        ".webdev-icon"
+      );
+
+    icons.forEach(icon=>{
+
+      icon.addEventListener(
+      "mouseenter",
+      function(){
+
+        this.style.transform =
+          "translateY(-10px) scale(1.08)";
+
+      });
+
+      icon.addEventListener(
+      "mouseleave",
+      function(){
+
+        this.style.transform =
+          "";
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 2 -->
+
+
+
+<section class="webdev-brand-section" id="webdevSecondSlide">
+
+  <div class="webdev-brand-grid">
+
+    <!-- LEFT -->
+
+    <div class="webdev-brand-left">
+
+      <h2>
+
+        <span class="webdev-brand-white">
+          What is
+        </span>
+
+        <span class="webdev-brand-gradient">
+          Web Development
+        </span>
+
+        <span class="webdev-brand-white">
+          ?
+        </span>
+
+      </h2>
+
+      <p>
+        Web development is the process of designing, building, and
+        maintaining websites that are functional, fast, and user-friendly.
+        A well-developed website acts as the digital foundation of your
+        business, supporting marketing, sales, and customer engagement.
+      </p>
+
+      <p>
+        We create responsive, performance-optimised websites that work
+        seamlessly across all devices. Our development approach focuses on
+        clean code, scalability, and SEO-ready structure so your website can
+        grow with your business while delivering a powerful user experience.
+      </p>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="webdev-brand-right">
+
+      <img
+        src="/images/about/whyss.png"
+        alt="Web Development Process Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "webdevSecondSlide"
+      );
+
+    if(!section) return;
+
+    /* INTERSECTION OBSERVER */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target.classList.add(
+              "show"
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.25
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 3 -->
+    
+
+
+<section class="webdev-services-wrap" id="webdevServices">
+
+  <div class="webdev-services-grid">
+
+    <!-- JS RENDER AREA -->
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "webdevServices"
+      );
+
+    if(!section) return;
+
+    const grid =
+      section.querySelector(
+        ".webdev-services-grid"
+      );
+
+    /* SERVICES DATA */
+
+    const services = [
+
+      {
+        title:
+        "Purpose-Driven Web Architecture",
+
+        desc:
+        "Websites structured around user flow, clarity, and business objectives.",
+
+        icon:"🧭"
+      },
+
+      {
+        title:
+        "Device-First Responsive Builds",
+
+        desc:
+        "Layouts engineered to adapt flawlessly across all modern devices.",
+
+        icon:"📐"
+      },
+
+      {
+        title:
+        "Speed-Focused Engineering",
+
+        desc:
+        "Lean code and optimized assets for faster load times and smoother interactions.",
+
+        icon:"⚡"
+      },
+
+      {
+        title:
+        "Search-Ready Codebase",
+
+        desc:
+        "Technically sound foundations built for long-term search visibility.",
+
+        icon:"🔎"
+      },
+
+      {
+        title:
+        "Scalable Content Management",
+
+        desc:
+        "Flexible CMS setups that grow with your content and team.",
+
+        icon:"🧩"
+      },
+
+      {
+        title:
+        "Security-First Development",
+
+        desc:
+        "Hardened builds with best-practice protections from day one.",
+
+        icon:"🛡️"
+      }
+
+    ];
+
+    /* RENDER CARDS */
+
+    grid.innerHTML =
+      services.map((s,i)=>`
+
+      <div class="webdev-service-card">
+
+        <div class="webdev-service-number">
+          ${i+1}
+        </div>
+
+        <div class="webdev-service-icon">
+          ${s.icon}
+        </div>
+
+        <div class="webdev-service-title">
+          ${s.title}
+        </div>
+
+        <div class="webdev-service-desc">
+          ${s.desc}
+        </div>
+
+      </div>
+
+    `).join("");
+
+  });
+
+  </script>
+
+</section>
+
+
+
+<!-- 4 -->
+
+
+
+<section class="webdev-why-section" id="whyWebDevelopment">
+
+  <div class="webdev-why-grid">
+
+    <!-- LEFT -->
+
+    <div class="webdev-why-left">
+
+      <h1>
+        Why <span>Website Development</span>?
+      </h1>
+
+      <ul>
+
+        <li>
+          Your website is your digital foundation. A well-built website builds
+          trust, improves engagement, and supports every marketing effort you
+          invest in. It creates strong first impressions and guides visitors
+          smoothly toward taking action.
+        </li>
+
+        <li>
+          Beyond design, a powerful website is built for performance and growth.
+          With fast load times, mobile responsiveness, SEO-ready structure,
+          and strong security, your website becomes a long-term asset that
+          scales with your business.
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="webdev-why-right webdev-image-wrap">
+
+      <img
+        src="/images/WEBDEVELOPMENT.png"
+        alt="Professional Website Development Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+      const section =
+        document.getElementById(
+          "whyWebDevelopment"
+        );
+
+      if(!section) return;
+
+      /* INTERSECTION REVEAL */
+
+      const observer =
+        new IntersectionObserver(
+
+          (entries)=>{
+
+            entries.forEach(entry=>{
+
+              if(
+                entry.isIntersecting
+              ){
+
+                entry.target.classList.add(
+                  "show"
+                );
+
+              }
+
+            });
+
+          },
+
+          {
+            threshold:.3
+          }
+
+        );
+
+      observer.observe(
+        section
+      );
+
+    }
+  );
+
+  </script>
+
+</section>
+
+
+
+<!-- 5 -->
+
+
+<section class="webdev-faq-wrap" id="webdevFaqSection">
+
+  <div class="webdev-faq-container">
+
+    <!-- TITLE -->
+
+    <h2 class="webdev-faq-title">
+
+      <span class="webdev-faq-title-white">
+        Frequently Asked
+      </span>
+
+      <span class="webdev-faq-title-gradient">
+        Questions
+      </span>
+
+    </h2>
+
+    <p class="webdev-faq-sub">
+      Clear answers to help you move forward with confidence.
+    </p>
+
+    <!-- FAQ CARD -->
+
+    <div class="webdev-faq-card">
+
+      <!-- FAQ 1 -->
+
+      <div class="webdev-faq-item">
+
+        <div
+          class="webdev-faq-header"
+          role="button"
+          tabindex="0"
+        >
+
+          <div class="webdev-faq-question">
+            How long does it take to build a website?
+          </div>
+
+          <div class="webdev-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="webdev-faq-answer">
+          <p>
+            Most websites are completed within 2–4 weeks depending on
+            features, content readiness, and feedback cycles.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 2 -->
+
+      <div class="webdev-faq-item">
+
+        <div
+          class="webdev-faq-header"
+          role="button"
+          tabindex="0"
+        >
+
+          <div class="webdev-faq-question">
+            Will my website be mobile-friendly?
+          </div>
+
+          <div class="webdev-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="webdev-faq-answer">
+          <p>
+            Yes. Every website we build is fully responsive and optimized
+            for mobile, tablet, and desktop devices.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 3 -->
+
+      <div class="webdev-faq-item">
+
+        <div
+          class="webdev-faq-header"
+          role="button"
+          tabindex="0"
+        >
+
+          <div class="webdev-faq-question">
+            Can I update website content myself?
+          </div>
+
+          <div class="webdev-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="webdev-faq-answer">
+          <p>
+            Yes. We build CMS-based websites so you can easily edit
+            content, add pages, and update information without technical skills.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 4 -->
+
+      <div class="webdev-faq-item">
+
+        <div
+          class="webdev-faq-header"
+          role="button"
+          tabindex="0"
+        >
+
+          <div class="webdev-faq-question">
+            Do you provide support after launch?
+          </div>
+
+          <div class="webdev-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="webdev-faq-answer">
+          <p>
+            Yes. We offer maintenance, security updates, performance
+            optimization, and technical support after your website goes live.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 5 -->
+
+      <div class="webdev-faq-item">
+
+        <div
+          class="webdev-faq-header"
+          role="button"
+          tabindex="0"
+        >
+
+          <div class="webdev-faq-question">
+            How do I get started with website development?
+          </div>
+
+          <div class="webdev-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="webdev-faq-answer">
+          <p>
+            Contact us with your requirements and we will share a project
+            plan, timeline, and strategy for building your website.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+const section =
+document.getElementById(
+"webdevFaqSection"
+);
+
+if(!section) return;
+
+const items =
+section.querySelectorAll(
+".webdev-faq-item"
+);
+
+/* AUTO OPEN FIRST FAQ */
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const first =
+items[0];
+
+first.classList.add(
+"open"
+);
+
+first.querySelector(
+".webdev-faq-toggle"
+).innerHTML="−";
+
+observer.disconnect();
+
+}
+
+});
+
+},
+
+{
+threshold:.35
+}
+
+);
+
+observer.observe(
+section
+);
+
+/* FAQ TOGGLE */
+
+items.forEach(item=>{
+
+const header =
+item.querySelector(
+".webdev-faq-header"
+);
+
+const toggle =
+item.querySelector(
+".webdev-faq-toggle"
+);
+
+header.addEventListener(
+"click",
+function(){
+
+const isOpen =
+item.classList.contains(
+"open"
+);
+
+items.forEach(i=>{
+
+i.classList.remove(
+"open"
+);
+
+i.querySelector(
+".webdev-faq-toggle"
+).innerHTML="+";
+
+});
+
+if(!isOpen){
+
+item.classList.add(
+"open"
+);
+
+toggle.innerHTML="−";
+
+}
+
+});
+
+});
+
+/* FAQ SCHEMA */
+
+const schema = {
+
+"@context":"https://schema.org",
+"@type":"FAQPage",
+
+mainEntity:[
+
+{
+"@type":"Question",
+"name":"How long does it take to build a website?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Most websites are completed within 2–4 weeks depending on features, content readiness, and feedback cycles."
+}
+},
+
+{
+"@type":"Question",
+"name":"Will my website be mobile-friendly?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Yes. Every website we build is fully responsive and optimized for mobile, tablet, and desktop devices."
+}
+},
+
+{
+"@type":"Question",
+"name":"Can I update website content myself?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Yes. We build CMS-based websites so you can easily edit content, add pages, and update information without technical skills."
+}
+},
+
+{
+"@type":"Question",
+"name":"Do you provide support after launch?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Yes. We offer maintenance, security updates, performance optimization, and technical support after your website goes live."
+}
+},
+
+{
+"@type":"Question",
+"name":"How do I get started with website development?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Contact us with your requirements and we will share a project plan, timeline, and strategy for building your website."
+}
+}
+
+]
+
+};
+
+const script =
+document.createElement(
+"script"
+);
+
+script.type =
+"application/ld+json";
+
+script.innerHTML =
+JSON.stringify(
+schema
+);
+
+document.head.appendChild(
+script
+);
+
+});
+
+</script>
+
+</section>
+
+
+
+</body>
+
+
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="../Home.html">Home</a></li>
+        <li><a href="../pages/About.html">About Us</a></li>
+        <li><a href="../pages/Services.html">Services</a></li>
+        <li><a href="../pages/Courses.html">Courses</a></li>
+        <li><a href="../pages/Contact.html">Contact</a></li>
+        <li><a href="../pages/Blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+        <li><a href="DigitalStrategy.html">Digital Strategy</a></li>
+        <li><a href="WebDevelopment.html">Web Development</a></li>
+        <li><a href="Ecommerce.html">Ecommerce Website</a></li>
+        <li><a href="Seo.html">SEO</a></li>
+        <li><a href="SocialMedia.html">Social Media Marketing</a></li>
+        <li><a href="AiMarketing.html">AI Marketing</a></li>
+        <li><a href="BusinessAnalysis.html">Business Analysis</a></li>
+        <li><a href="ContentDesign.html">Content Design</a></li>
+        <li><a href="CreativeDesign.html">Creative Design</a></li>
+        <li><a href="BrandConsultancy.html">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
+</html>

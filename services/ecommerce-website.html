@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="../Home.css">
+         <link rel="stylesheet" href="../footer.css">
+         <link rel="stylesheet" href="../footer.js">
+      <link rel="stylesheet" href="ecommerce-website.css">
+
+</head>
+
+
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="../images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="sf-nav"
+      id="mobileNav"
+    >
+
+      <a
+        href="../Home.html"
+        class="nav-btn"
+      >
+        Home
+      </a>
+
+      <a
+        href="../pages/About.html"
+        class="nav-btn"
+      >
+        About
+      </a>
+
+      <a
+        href="../pages/Services.html"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      
+      <a
+        href="../pages/Courses.html"
+        class="nav-btn"
+      >
+        Courses
+      </a>
+
+      <a
+        href="../pages/Contact.html"
+        class="nav-btn contact-link"
+      >
+        Contact
+      </a>
+
+      <a
+        href="../pages/Blog.html"
+        class="nav-btn"
+      >
+        Blog
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+</header>
+<body>
+
+
+
+    <!-- SEO + META -->
+
+<title>Custom Ecommerce Websites by Shainfo Tech</title>
+
+<meta
+  name="description"
+  content="Need a top ecommerce website? Shainfo Technology creates user-friendly stores with mobile support and easy inventory tools. Launch yours and sell more—contact us!"
+>
+
+<!-- HERO SECTION -->
+
+<section class="smm-hero" id="ecommerceHero">
+
+  <div class="smm-left">
+
+    <small>E-commerce</small>
+
+    <h1 class="smm-title">
+
+      Build an Online Store
+      <span class="accent">
+        That Converts Visitors
+      </span>
+
+      <br>
+
+      into Customers
+
+      <br>
+
+      <span class="accent">
+        Sell Smarter with a Scalable E-commerce Platform
+      </span>
+
+    </h1>
+
+    <p class="smm-desc">
+
+      We develop secure, high-performance e-commerce websites
+      designed to maximise conversions.
+
+      From product pages to checkout optimisation, every
+      element is built to increase sales and support
+      long-term business growth.
+
+    </p>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="smm-right">
+
+    <div class="icon-cloud">
+
+      <div class="icon">G</div>
+      <div class="icon">🔍</div>
+      <div class="icon">📈</div>
+      <div class="icon">📍</div>
+      <div class="icon">📝</div>
+      <div class="icon">⚙️</div>
+      <div class="icon">⭐</div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hero =
+      document.getElementById(
+        "ecommerceHero"
+      );
+
+    if(!hero) return;
+
+    /* ICON HOVER EFFECT */
+
+    const icons =
+      hero.querySelectorAll(
+        ".icon"
+      );
+
+    icons.forEach(icon=>{
+
+      icon.addEventListener(
+      "mouseenter",
+      function(){
+
+        icon.style.transform =
+          "translateY(-6px) scale(1.05)";
+
+      });
+
+      icon.addEventListener(
+      "mouseleave",
+      function(){
+
+        icon.style.transform =
+          "";
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+
+<!-- 2 -->
+    
+
+<section class="brand-section" id="secondSlideEcommerce">
+
+  <div class="brand-grid">
+
+    <!-- LEFT -->
+
+    <div class="brand-left">
+
+      <h2>
+        <span class="brand-white">
+          What is
+        </span>
+
+        <span class="brand-gradient">
+          E-Commerce Website Development
+        </span>
+
+        <span class="brand-white">
+          ?
+        </span>
+      </h2>
+
+      <p>
+        E-commerce website development focuses on building online stores
+        that are secure, scalable, and conversion-focused. A well-designed
+        e-commerce site ensures smooth product discovery, checkout, and
+        customer experience.
+      </p>
+
+      <p>
+        We create e-commerce platforms optimized for performance, mobile
+        usability, and secure transactions. Our solutions support growth,
+        easy management, and customer trust—helping businesses sell
+        efficiently online.
+      </p>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="brand-right">
+
+      <img
+        src="/images/about/whyss.png"
+        alt="E-commerce Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+      const section =
+        document.getElementById(
+          "secondSlideEcommerce"
+        );
+
+      if(!section) return;
+
+      /* INTERSECTION OBSERVER */
+
+      const observer =
+        new IntersectionObserver(
+
+        (entries)=>{
+
+          entries.forEach(entry=>{
+
+            if(
+              entry.isIntersecting
+            ){
+
+              entry.target.classList.add(
+                "show"
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold:.25
+        }
+
+      );
+
+      observer.observe(
+        section
+      );
+
+    }
+  );
+
+  </script>
+
+</section>
+
+
+
+<!-- 3 -->
+
+
+<section class="services-wrap" id="servicesEcommerce">
+
+  <div class="services-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        1
+      </div>
+
+      <div class="service-icon">
+        🛍️
+      </div>
+
+      <div class="service-title">
+        Ecommerce Platform Setup
+      </div>
+
+      <div class="service-desc">
+        Scalable ecommerce foundations built for smooth selling and future growth.
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        2
+      </div>
+
+      <div class="service-icon">
+        📦
+      </div>
+
+      <div class="service-title">
+        Product & Catalog Management
+      </div>
+
+      <div class="service-desc">
+        Well-structured product listings for easy browsing and higher conversions.
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        3
+      </div>
+
+      <div class="service-icon">
+        💳
+      </div>
+
+      <div class="service-title">
+        Checkout & Payment Integration
+      </div>
+
+      <div class="service-desc">
+        Secure, frictionless checkout with trusted payment gateways.
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        4
+      </div>
+
+      <div class="service-icon">
+        🧠
+      </div>
+
+      <div class="service-title">
+        Conversion-Focused UX
+      </div>
+
+      <div class="service-desc">
+        User journeys designed to reduce drop-offs and increase sales.
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        5
+      </div>
+
+      <div class="service-icon">
+        🚚
+      </div>
+
+      <div class="service-title">
+        Order, Shipping & Inventory Flow
+      </div>
+
+      <div class="service-desc">
+        Automated systems to manage orders, stock, and delivery efficiently.
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        6
+      </div>
+
+      <div class="service-icon">
+        🔐
+      </div>
+
+      <div class="service-title">
+        Ecommerce Security & Compliance
+      </div>
+
+      <div class="service-desc">
+        Protected transactions and data with industry-standard security practices.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function(){
+
+        const section =
+          document.getElementById(
+            "servicesEcommerce"
+          );
+
+        if(!section) return;
+
+        /* JS INSIDE SECTION */
+
+        const cards =
+          section.querySelectorAll(
+            ".service-card"
+          );
+
+        cards.forEach(
+          card=>{
+
+            card.addEventListener(
+              "mouseenter",
+              function(){
+                this.classList.add(
+                  "hovering"
+                );
+              }
+            );
+
+            card.addEventListener(
+              "mouseleave",
+              function(){
+                this.classList.remove(
+                  "hovering"
+                );
+              }
+            );
+
+          }
+        );
+
+      }
+    );
+
+  </script>
+
+</section>
+
+
+
+
+<!-- 4 -->
+
+
+
+<section class="seo-hero-dark" id="whyEcommerceHero">
+
+  <div class="seo-hero-grid">
+
+    <!-- LEFT -->
+
+    <div class="seo-left">
+
+      <h1>
+        Why <span>E-commerce Website</span>?
+      </h1>
+
+      <li>
+        An ecommerce website is the backbone of your online sales.
+        A well-built platform makes it easy for customers to browse
+        products, trust your brand, and complete purchases smoothly—
+        driving consistent revenue and repeat business.
+      </li>
+
+      <li>
+        Beyond design, a successful ecommerce website is optimized
+        for performance, security, and scalability. Fast load times,
+        mobile-first experiences, secure payments, and streamlined
+        order management turn your online store into a reliable
+        growth engine.
+      </li>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="seo-right seo-image-wrap">
+
+      <img
+        src="/images/ECOMMERCE.png"
+        alt="E-commerce Website Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "whyEcommerceHero"
+      );
+
+    if(!section) return;
+
+    /* INTERSECTION REVEAL */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target.classList.add(
+              "show"
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.3
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+
+<!-- 5 -->
+
+<section class="home-faq-wrap" id="faqEcommerce">
+
+  <div class="home-faq-container">
+
+    <!-- TITLE -->
+
+    <h2 class="home-faq-title">
+
+      <span class="faq-title-white">
+        Frequently Asked
+      </span>
+
+      <span class="faq-title-gradient">
+        Questions
+      </span>
+
+    </h2>
+
+    <p class="home-faq-sub">
+      Clear answers to help you move forward with confidence.
+    </p>
+
+    <!-- FAQ CARD -->
+
+    <div class="home-faq-card">
+
+      <!-- FAQ 1 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            What type of ecommerce websites do you build?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            We build scalable ecommerce websites for products and
+            services, including custom, Shopify, and WooCommerce
+            solutions.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 2 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Will my ecommerce website be mobile-friendly?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Yes. All our ecommerce websites are fully responsive and
+            optimized for mobile, tablet, and desktop users.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 3 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Can I manage products and orders myself?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Absolutely. You’ll get an easy-to-use admin panel to manage
+            products, orders, pricing, and inventory.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 4 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Is payment and checkout secure?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Yes. We integrate trusted payment gateways and follow secure
+            development standards to protect transactions.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 5 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            How do we get started with an ecommerce website?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Contact us with your business requirements, and we’ll guide
+            you through the platform, timeline, and next steps.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "faqEcommerce"
+      );
+
+    if(!section) return;
+
+    const items =
+      section.querySelectorAll(
+        ".home-faq-item"
+      );
+
+    /* AUTO OPEN FIRST FAQ */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            const first =
+              items[0];
+
+            first.classList.add(
+              "open"
+            );
+
+            first.querySelector(
+              ".home-faq-toggle"
+            ).innerHTML="−";
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.35
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+    /* FAQ TOGGLE */
+
+    items.forEach(item=>{
+
+      const header =
+        item.querySelector(
+          ".home-faq-header"
+        );
+
+      const toggle =
+        item.querySelector(
+          ".home-faq-toggle"
+        );
+
+      header.addEventListener(
+      "click",
+      function(){
+
+        const isOpen =
+          item.classList.contains(
+            "open"
+          );
+
+        items.forEach(i=>{
+
+          i.classList.remove(
+            "open"
+          );
+
+          i.querySelector(
+            ".home-faq-toggle"
+          ).innerHTML="+";
+
+        });
+
+        if(!isOpen){
+
+          item.classList.add(
+            "open"
+          );
+
+          toggle.innerHTML="−";
+
+        }
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+
+</body>
+
+
+
+
+
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="../Home.html">Home</a></li>
+        <li><a href="../pages/About.html">About Us</a></li>
+        <li><a href="../pages/Services.html">Services</a></li>
+        <li><a href="../pages/Courses.html">Courses</a></li>
+        <li><a href="../pages/Contact.html">Contact</a></li>
+        <li><a href="../pages/Blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+        <li><a href="DigitalStrategy.html">Digital Strategy</a></li>
+        <li><a href="WebDevelopment.html">Web Development</a></li>
+        <li><a href="Ecommerce.html">Ecommerce Website</a></li>
+        <li><a href="Seo.html">SEO</a></li>
+        <li><a href="SocialMedia.html">Social Media Marketing</a></li>
+        <li><a href="AiMarketing.html">AI Marketing</a></li>
+        <li><a href="BusinessAnalysis.html">Business Analysis</a></li>
+        <li><a href="ContentDesign.html">Content Design</a></li>
+        <li><a href="CreativeDesign.html">Creative Design</a></li>
+        <li><a href="BrandConsultancy.html">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
+</html>

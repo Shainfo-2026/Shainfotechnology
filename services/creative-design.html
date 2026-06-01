@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="../Home.css">
+         <link rel="stylesheet" href="../footer.css">
+         <link rel="stylesheet" href="../footer.js">
+      <link rel="stylesheet" href="content-design.css">
+
+</head>
+
+
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="../images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="sf-nav"
+      id="mobileNav"
+    >
+
+      <a
+        href="../Home.html"
+        class="nav-btn"
+      >
+        Home
+      </a>
+
+      <a
+        href="../pages/About.html"
+        class="nav-btn"
+      >
+        About
+      </a>
+
+      <a
+        href="../pages/Services.html"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      
+      <a
+        href="../pages/Courses.html"
+        class="nav-btn"
+      >
+        Courses
+      </a>
+
+      <a
+        href="../pages/Contact.html"
+        class="nav-btn contact-link"
+      >
+        Contact
+      </a>
+
+      <a
+        href="../pages/Blog.html"
+        class="nav-btn"
+      >
+        Blog
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+</header>
+<body>
+
+  <!-- 1 -->
+
+  <!-- SEO META -->
+
+<title>
+Creative Design Services | Transform Your Brand | Shainfotechnology
+</title>
+
+<meta
+name="description"
+content="Transform your business with compelling creative design services that enhance your brand's identity and leave a lasting impression on customers."
+>
+
+<!-- HERO SECTION -->
+
+<section class="smm-hero" id="creativeHero">
+
+  <!-- LEFT -->
+
+  <div class="smm-left">
+
+    <small>
+      Creative Design
+    </small>
+
+    <h1 class="smm-title">
+
+      Create a
+      <span class="accent">
+        Visual Identity
+      </span>
+
+      <br/>
+
+      That Stands Out
+
+      <br/>
+
+      <span class="accent">
+        Design Experiences That Leave a Lasting Impression
+      </span>
+
+    </h1>
+
+    <p class="smm-desc">
+
+      Our creative design solutions focus on consistency,
+      clarity, and brand recognition.
+
+      From digital creatives to branding assets,
+      we help businesses communicate professionally
+      and memorably.
+
+    </p>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="smm-right">
+
+    <div class="icon-cloud">
+
+      <div class="icon">
+        G
+      </div>
+
+      <div class="icon">
+        🔍
+      </div>
+
+      <div class="icon">
+        📈
+      </div>
+
+      <div class="icon">
+        📍
+      </div>
+
+      <div class="icon">
+        📝
+      </div>
+
+      <div class="icon">
+        ⚙️
+      </div>
+
+      <div class="icon">
+        ⭐
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    /* HERO READY */
+
+    const hero =
+      document.getElementById(
+        "creativeHero"
+      );
+
+    if(!hero) return;
+
+    /* ICON FLOAT
+       already handled
+       through CSS animation */
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 2 -->
+
+<section class="brand-section" id="creativeDesignSection">
+
+  <div class="brand-grid">
+
+    <!-- LEFT CONTENT -->
+
+    <div class="brand-left">
+
+      <h2>
+
+        <span class="brand-white">
+          What is
+        </span>
+
+        <span class="brand-gradient">
+          Creative Design
+        </span>
+
+        <span class="brand-white">
+          ?
+        </span>
+
+      </h2>
+
+      <p>
+        Creative design is the visual expression of your brand’s
+        identity across digital platforms. It includes layouts,
+        graphics, visuals, and design elements that communicate
+        your message clearly and attract attention.
+      </p>
+
+      <p>
+        Our creative design process blends aesthetics with purpose.
+        Every design choice is made to support brand consistency,
+        usability, and engagement—helping your business stand out
+        while maintaining clarity and professionalism.
+      </p>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="brand-right">
+
+      <img
+        src="/images/about/whyss.png"
+        alt="Creative Design Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "creativeDesignSection"
+      );
+
+    if(!section) return;
+
+    /* INTERSECTION OBSERVER */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target
+            .classList
+            .add("show");
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.25
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 3 -->
+
+<section class="services-wrap" id="creativeServicesSection">
+
+  <div class="services-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        1
+      </div>
+
+      <div class="service-icon">
+        💡
+      </div>
+
+      <div class="service-title">
+        Visual Concept & Direction
+      </div>
+
+      <div class="service-desc">
+        Creative concepts that align visuals with your brand story.
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        2
+      </div>
+
+      <div class="service-icon">
+        🎨
+      </div>
+
+      <div class="service-title">
+        Brand Design Systems
+      </div>
+
+      <div class="service-desc">
+        Consistent design frameworks for colors, typography, and layouts.
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        3
+      </div>
+
+      <div class="service-icon">
+        📢
+      </div>
+
+      <div class="service-title">
+        Marketing & Campaign Creatives
+      </div>
+
+      <div class="service-desc">
+        High-impact designs for ads, banners, and digital campaigns.
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        4
+      </div>
+
+      <div class="service-icon">
+        📱
+      </div>
+
+      <div class="service-title">
+        Social & Content Design
+      </div>
+
+      <div class="service-desc">
+        Scroll-ready creatives optimized for social media platforms.
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        5
+      </div>
+
+      <div class="service-icon">
+        🧩
+      </div>
+
+      <div class="service-title">
+        UI Visual Design
+      </div>
+
+      <div class="service-desc">
+        Aesthetic, user-focused interfaces that enhance usability.
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        6
+      </div>
+
+      <div class="service-icon">
+        ✨
+      </div>
+
+      <div class="service-title">
+        Design Quality & Consistency
+      </div>
+
+      <div class="service-desc">
+        Attention to detail ensuring visual clarity across all touchpoints.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "creativeServicesSection"
+      );
+
+    if(!section) return;
+
+    /* SECTION READY */
+
+    console.log(
+      "Creative Services Grid Loaded"
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 4 -->
+
+<section class="seo-hero-dark" id="whyCreativeDesign">
+
+  <div class="seo-hero-grid">
+
+    <!-- LEFT -->
+
+    <div class="seo-left">
+
+      <h1>
+        Why <span>Creative Design</span>?
+      </h1>
+
+      <li>
+        Creative design brings your brand to life through visuals that
+        communicate clearly and connect emotionally with your audience.
+        Strong design builds recognition, trust, and a lasting brand identity.
+      </li>
+
+      <li>
+        Beyond aesthetics, effective creative design improves usability and
+        engagement. Strategic visuals guide users, reinforce messaging, and
+        create memorable experiences that drive interaction and real
+        business impact.
+      </li>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="seo-right seo-image-wrap">
+
+      <img
+        src="/images/CREATIVEDESIGN.png"
+        alt="Creative Design Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "whyCreativeDesign"
+      );
+
+    if(!section) return;
+
+    /* INTERSECTION REVEAL */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target.classList.add(
+              "show"
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.3
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+<!-- 5 -->
+
+<section class="home-faq-wrap" id="faqCreativeDesign">
+
+  <div class="home-faq-container">
+
+    <!-- TITLE -->
+
+    <h2 class="home-faq-title">
+
+      <span class="faq-title-white">
+        Frequently Asked
+      </span>
+
+      <span class="faq-title-gradient">
+        Questions
+      </span>
+
+    </h2>
+
+    <p class="home-faq-sub">
+      Clear answers to help you move forward with confidence.
+    </p>
+
+    <!-- FAQ CARD -->
+
+    <div class="home-faq-card">
+
+      <!-- FAQ 1 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            What does your creative design service include?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Our creative design covers visual concepts, brand creatives,
+            marketing designs, and UI visuals for digital platforms.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 2 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Do you design for both digital and marketing needs?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Yes. We create designs for websites, social media, ads,
+            campaigns, and other digital marketing materials.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 3 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Will the designs match my brand identity?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Absolutely. All designs are created to align with your
+            brand colors, tone, and visual guidelines.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 4 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            How many design revisions are included?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            We include a defined number of revisions to ensure
+            the final designs meet your expectations.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 5 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            How do we get started with creative design?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Contact us with your requirements, and we’ll discuss
+            concepts, timelines, and next steps.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "faqCreativeDesign"
+      );
+
+    if(!section) return;
+
+    const items =
+      section.querySelectorAll(
+        ".home-faq-item"
+      );
+
+    /* AUTO OPEN FIRST FAQ */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            const first =
+              items[0];
+
+            first.classList.add(
+              "open"
+            );
+
+            first.querySelector(
+              ".home-faq-toggle"
+            ).innerHTML="−";
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.35
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+    /* FAQ TOGGLE */
+
+    items.forEach(item=>{
+
+      const header =
+        item.querySelector(
+          ".home-faq-header"
+        );
+
+      const toggle =
+        item.querySelector(
+          ".home-faq-toggle"
+        );
+
+      header.addEventListener(
+      "click",
+      function(){
+
+        const isOpen =
+          item.classList.contains(
+            "open"
+          );
+
+        items.forEach(i=>{
+
+          i.classList.remove(
+            "open"
+          );
+
+          i.querySelector(
+            ".home-faq-toggle"
+          ).innerHTML="+";
+
+        });
+
+        if(!isOpen){
+
+          item.classList.add(
+            "open"
+          );
+
+          toggle.innerHTML="−";
+
+        }
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+    
+</body>
+
+
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="../Home.html">Home</a></li>
+        <li><a href="../pages/About.html">About Us</a></li>
+        <li><a href="../pages/Services.html">Services</a></li>
+        <li><a href="../pages/Courses.html">Courses</a></li>
+        <li><a href="../pages/Contact.html">Contact</a></li>
+        <li><a href="../pages/Blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+        <li><a href="DigitalStrategy.html">Digital Strategy</a></li>
+        <li><a href="WebDevelopment.html">Web Development</a></li>
+        <li><a href="Ecommerce.html">Ecommerce Website</a></li>
+        <li><a href="Seo.html">SEO</a></li>
+        <li><a href="SocialMedia.html">Social Media Marketing</a></li>
+        <li><a href="AiMarketing.html">AI Marketing</a></li>
+        <li><a href="BusinessAnalysis.html">Business Analysis</a></li>
+        <li><a href="ContentDesign.html">Content Design</a></li>
+        <li><a href="CreativeDesign.html">Creative Design</a></li>
+        <li><a href="BrandConsultancy.html">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
+</html>

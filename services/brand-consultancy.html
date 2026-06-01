@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="../Home.css">
+         <link rel="stylesheet" href="../footer.css">
+         <link rel="stylesheet" href="../footer.js">
+      <link rel="stylesheet" href="brand-consultancy.css">
+
+</head>
+
+
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="../images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="sf-nav"
+      id="mobileNav"
+    >
+
+      <a
+        href="../Home.html"
+        class="nav-btn"
+      >
+        Home
+      </a>
+
+      <a
+        href="../pages/About.html"
+        class="nav-btn"
+      >
+        About
+      </a>
+
+      <a
+        href="../pages/Services.html"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      
+      <a
+        href="../pages/Courses.html"
+        class="nav-btn"
+      >
+        Courses
+      </a>
+
+      <a
+        href="../pages/Contact.html"
+        class="nav-btn contact-link"
+      >
+        Contact
+      </a>
+
+      <a
+        href="../pages/Blog.html"
+        class="nav-btn"
+      >
+        Blog
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+</header>
+<body>
+    
+    <!-- SEO META -->
+
+<title>
+Top Brand Strategy Consultancy Firm
+</title>
+
+<meta
+name="description"
+content="Elevate your brand with Shainfo Technology's expert brand consultancy services. Discover strategies to enhance your identity and engage your audience."
+>
+
+<!-- HERO SECTION -->
+
+<section class="smm-hero" id="brandHeroSection">
+
+  <!-- LEFT -->
+
+  <div class="smm-left">
+
+    <small>
+      Brand Consultancy
+    </small>
+
+    <h1 class="smm-title">
+
+      Build a Brand
+
+      <span class="accent">
+        That Customers Trust
+      </span>
+
+      <br>
+
+      and Remember
+
+      <br>
+
+      <span class="accent">
+        Shape a Clear, Consistent Brand Identity
+      </span>
+
+    </h1>
+
+    <p class="smm-desc">
+
+      We help businesses define their brand voice,
+      positioning, and visual identity.
+
+      Our consultancy ensures your brand communicates
+      with purpose, builds credibility, and stands strong
+      in competitive markets.
+
+    </p>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="smm-right">
+
+    <div class="icon-cloud">
+
+      <div class="icon">
+        G
+      </div>
+
+      <div class="icon">
+        🔍
+      </div>
+
+      <div class="icon">
+        📈
+      </div>
+
+      <div class="icon">
+        📍
+      </div>
+
+      <div class="icon">
+        📝
+      </div>
+
+      <div class="icon">
+        ⚙️
+      </div>
+
+      <div class="icon">
+        ⭐
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hero =
+      document.getElementById(
+        "brandHeroSection"
+      );
+
+    if(!hero) return;
+
+    const icons =
+      hero.querySelectorAll(
+        ".icon"
+      );
+
+    /* SAME FLOATING ICONS
+       CSS HANDLES ANIMATION */
+
+    icons.forEach(icon=>{
+
+      icon.addEventListener(
+      "mouseenter",
+      function(){
+
+        icon.style.transform =
+          "translateY(-12px) scale(1.05)";
+
+      });
+
+      icon.addEventListener(
+      "mouseleave",
+      function(){
+
+        icon.style.transform =
+          "";
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+
+<section class="brand-section" id="brandSection">
+
+  <div class="brand-grid">
+
+    <!-- LEFT -->
+
+    <div class="brand-left">
+
+      <h2>
+
+        <span class="brand-white">
+          What is
+        </span>
+
+        <span class="brand-gradient">
+          Brand Consultancy
+        </span>
+
+        <span class="brand-white">
+          ?
+        </span>
+
+      </h2>
+
+      <p>
+        Brand consultancy is the process of defining, shaping, and aligning
+        your brand’s identity, positioning, and messaging to create a strong
+        and consistent presence in the market. It helps businesses clearly
+        communicate who they are, what they stand for, and why customers
+        should choose them.
+      </p>
+
+      <p>
+        At our company, brand consultancy goes beyond visuals and logos.
+        We focus on building a clear brand strategy that connects your
+        business goals with customer perception. This ensures consistency
+        across digital platforms, communication, and customer experience,
+        ultimately driving trust, recognition, and long-term growth.
+      </p>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="brand-right">
+
+      <img
+        src="/images/about/whyss.png"
+        alt="Brand Consultancy Illustration"
+      >
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "brandSection"
+      );
+
+    if(!section) return;
+
+    /* SAME INTERSECTION OBSERVER */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target.classList.add(
+              "show"
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.25
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="services-wrap" id="servicesBrandSection">
+
+  <div class="services-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        1
+      </div>
+
+      <div class="service-icon">
+        🔎
+      </div>
+
+      <div class="service-title">
+        Brand Audit & Evaluation
+      </div>
+
+      <div class="service-desc">
+        Assessing your current brand perception, strengths, and gaps.
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        2
+      </div>
+
+      <div class="service-icon">
+        📍
+      </div>
+
+      <div class="service-title">
+        Brand Positioning Strategy
+      </div>
+
+      <div class="service-desc">
+        Defining how your brand stands out in a competitive market.
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        3
+      </div>
+
+      <div class="service-icon">
+        👥
+      </div>
+
+      <div class="service-title">
+        Audience Insight & Segmentation
+      </div>
+
+      <div class="service-desc">
+        Identifying target audiences and aligning brand relevance.
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        4
+      </div>
+
+      <div class="service-icon">
+        📖
+      </div>
+
+      <div class="service-title">
+        Brand Narrative & Storytelling
+      </div>
+
+      <div class="service-desc">
+        Crafting a compelling brand story that builds emotional connection.
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        5
+      </div>
+
+      <div class="service-icon">
+        🧩
+      </div>
+
+      <div class="service-title">
+        Brand Consistency Framework
+      </div>
+
+      <div class="service-desc">
+        Ensuring consistent brand expression across all platforms.
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        6
+      </div>
+
+      <div class="service-icon">
+        🚀
+      </div>
+
+      <div class="service-title">
+        Brand Growth & Evolution Plan
+      </div>
+
+      <div class="service-desc">
+        Strategic guidance to scale and evolve your brand confidently.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "servicesBrandSection"
+      );
+
+    if(!section) return;
+
+    const cards =
+      section.querySelectorAll(
+        ".service-card"
+      );
+
+    /* SAME HOVER READY CARDS
+       CSS HANDLES ANIMATION */
+
+    cards.forEach(card=>{
+
+      card.addEventListener(
+      "mouseenter",
+      function(){
+
+        card.style.willChange =
+          "transform";
+
+      });
+
+      card.addEventListener(
+      "mouseleave",
+      function(){
+
+        card.style.willChange =
+          "auto";
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+
+<!-- 4 -->
+
+
+
+<section class="seo-hero-dark" id="whyBrandHero">
+
+  <div class="seo-hero-grid">
+
+    <!-- LEFT -->
+
+    <div class="seo-left">
+
+      <h1>
+        Why <span>Brand Consultancy</span>?
+      </h1>
+
+      <li>
+        Brand consultancy defines who you are as a business and how your
+        audience perceives you. By clarifying your purpose, positioning,
+        and messaging, it builds trust, recognition, and emotional
+        connection with customers.
+      </li>
+
+      <li>
+        A strong brand strategy ensures consistency across every touchpoint
+        from digital presence to communication and customer experience.
+        With long-term direction and clarity, brand consultancy helps your
+        business stand out and grow sustainably in competitive markets.
+      </li>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="seo-right seo-image-wrap">
+
+      <img
+        src="/images/BRANDCONSULTANCY.png"
+        alt="Brand Consultancy Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "whyBrandHero"
+      );
+
+    if(!section) return;
+
+    /* INTERSECTION OBSERVER */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target
+            .classList
+            .add("show");
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.3
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="home-faq-wrap" id="faqBrandSection">
+
+  <div class="home-faq-container">
+
+    <!-- TITLE -->
+
+    <h2 class="home-faq-title">
+
+      <span class="faq-title-white">
+        Frequently Asked
+      </span>
+
+      <span class="faq-title-gradient">
+        Questions
+      </span>
+
+    </h2>
+
+    <p class="home-faq-sub">
+      Clear answers to help you move forward with confidence.
+    </p>
+
+    <!-- FAQ CARD -->
+
+    <div class="home-faq-card">
+
+      <!-- FAQ 1 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            What is brand consultancy?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Brand consultancy helps define your brand’s positioning,
+            messaging, and identity to create long-term trust and
+            recognition.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 2 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Is brand consultancy useful for small businesses?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Yes. Strong branding helps startups and small businesses
+            stand out, build credibility, and attract the right customers.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 3 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Does brand consultancy include logo and design?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            It focuses on strategy and direction. Visual design and
+            creative execution can be added as separate services.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 4 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            How long does a brand consultancy project take?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Most brand consultancy projects take 2–4 weeks depending
+            on research, workshops, and strategic planning.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 5 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            How do we get started with brand consultancy?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Contact us to discuss your business goals and we’ll build
+            a clear brand strategy roadmap tailored to your growth.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "faqBrandSection"
+      );
+
+    if(!section) return;
+
+    const items =
+      section.querySelectorAll(
+        ".home-faq-item"
+      );
+
+    /* AUTO OPEN FIRST FAQ */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            const first =
+              items[0];
+
+            first.classList.add(
+              "open"
+            );
+
+            first.querySelector(
+              ".home-faq-toggle"
+            ).innerHTML="−";
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.35
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+    /* FAQ TOGGLE */
+
+    items.forEach(item=>{
+
+      const header =
+        item.querySelector(
+          ".home-faq-header"
+        );
+
+      const toggle =
+        item.querySelector(
+          ".home-faq-toggle"
+        );
+
+      header.addEventListener(
+      "click",
+      function(){
+
+        const isOpen =
+          item.classList.contains(
+            "open"
+          );
+
+        items.forEach(i=>{
+
+          i.classList.remove(
+            "open"
+          );
+
+          i.querySelector(
+            ".home-faq-toggle"
+          ).innerHTML="+";
+
+        });
+
+        if(!isOpen){
+
+          item.classList.add(
+            "open"
+          );
+
+          toggle.innerHTML="−";
+
+        }
+
+      });
+
+    });
+
+    /* FAQ SCHEMA */
+
+    const schema = {
+
+      "@context":
+      "https://schema.org",
+
+      "@type":
+      "FAQPage",
+
+      "mainEntity":[
+
+      {
+        "@type":"Question",
+        "name":"What is brand consultancy?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Brand consultancy helps define your brand’s positioning, messaging, and identity to create long-term trust and recognition."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"Is brand consultancy useful for small businesses?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. Strong branding helps startups and small businesses stand out, build credibility, and attract the right customers."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"Does brand consultancy include logo and design?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"It focuses on strategy and direction. Visual design and creative execution can be added as separate services."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"How long does a brand consultancy project take?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Most brand consultancy projects take 2–4 weeks depending on research, workshops, and strategic planning."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"How do we get started with brand consultancy?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Contact us to discuss your business goals and we’ll build a clear brand strategy roadmap tailored to your growth."
+        }
+      }
+
+      ]
+
+    };
+
+    const script =
+      document.createElement(
+        "script"
+      );
+
+    script.type =
+      "application/ld+json";
+
+    script.innerHTML =
+      JSON.stringify(
+        schema
+      );
+
+    document.head.appendChild(
+      script
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+</body>
+
+
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="../Home.html">Home</a></li>
+        <li><a href="../pages/About.html">About Us</a></li>
+        <li><a href="../pages/Services.html">Services</a></li>
+        <li><a href="../pages/Courses.html">Courses</a></li>
+        <li><a href="../pages/Contact.html">Contact</a></li>
+        <li><a href="../pages/Blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+        <li><a href="DigitalStrategy.html">Digital Strategy</a></li>
+        <li><a href="WebDevelopment.html">Web Development</a></li>
+        <li><a href="Ecommerce.html">Ecommerce Website</a></li>
+        <li><a href="Seo.html">SEO</a></li>
+        <li><a href="SocialMedia.html">Social Media Marketing</a></li>
+        <li><a href="AiMarketing.html">AI Marketing</a></li>
+        <li><a href="BusinessAnalysis.html">Business Analysis</a></li>
+        <li><a href="ContentDesign.html">Content Design</a></li>
+        <li><a href="CreativeDesign.html">Creative Design</a></li>
+        <li><a href="BrandConsultancy.html">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
+</html>

@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+         <link rel="stylesheet" href="../Home.css">
+         <link rel="stylesheet" href="../footer.css">
+         <link rel="stylesheet" href="../footer.js">
+         <link rel="stylesheet" href="aimarketing.css">
+
+</head>
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="../images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="sf-nav"
+      id="mobileNav"
+    >
+
+      <a
+        href="../Home.html"
+        class="nav-btn"
+      >
+        Home
+      </a>
+
+      <a
+        href="../pages/About.html"
+        class="nav-btn"
+      >
+        About
+      </a>
+
+      <a
+        href="../pages/Services.html"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      
+      <a
+        href="../pages/Courses.html"
+        class="nav-btn"
+      >
+        Courses
+      </a>
+
+      <a
+        href="../pages/Contact.html"
+        class="nav-btn contact-link"
+      >
+        Contact
+      </a>
+
+      <a
+        href="../pages/Blog.html"
+        class="nav-btn"
+      >
+        Blog
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+</header>
+
+<body>
+
+<!-- 1111 -->
+ <!-- SEO META -->
+
+<title>
+AI-Powered Marketing Solutions Shainfo | Shainfotech
+</title>
+
+<meta
+name="description"
+content="Build winning strategies with our AI marketing at Shainfo Technology. Chatbots, analytics, and optimization in one. Cut waste and win big. Try it free."
+>
+
+<!-- HERO SECTION -->
+
+<section class="smm-hero" id="aiHeroSection">
+
+  <!-- LEFT -->
+
+  <div class="smm-left">
+
+    <small>
+      AI Marketing
+    </small>
+
+    <h1 class="smm-title">
+
+      Grow Faster with
+
+      <span class="accent">
+        Intelligent Automation
+      </span>
+
+      <br>
+
+      Powered by
+
+      <br>
+
+      <span class="accent">
+        Sha Infotech
+      </span>
+
+    </h1>
+
+    <p class="smm-desc">
+
+      At Sha Infotech, we help businesses generate more traffic,
+      more leads, and more revenue using advanced AI-powered
+      marketing strategies.
+
+      <br><br>
+
+      Our AI solutions analyze data, predict customer behavior,
+      automate campaigns, and optimize performance so you get
+      better results with lower marketing costs.
+
+    </p>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="smm-right">
+
+    <div class="icon-cloud">
+
+      <div class="icon">G</div>
+
+      <div class="icon">
+        🔍
+      </div>
+
+      <div class="icon">
+        📈
+      </div>
+
+      <div class="icon">
+        📍
+      </div>
+
+      <div class="icon">
+        📝
+      </div>
+
+      <div class="icon">
+        ⚙️
+      </div>
+
+      <div class="icon">
+        ⭐
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hero =
+      document.getElementById(
+        "aiHeroSection"
+      );
+
+    if(!hero) return;
+
+    const icons =
+      hero.querySelectorAll(
+        ".icon"
+      );
+
+    /* SAME FLOATING ICONS
+       CSS HANDLES ANIMATION */
+
+    icons.forEach(icon=>{
+
+      icon.addEventListener(
+      "mouseenter",
+      function(){
+
+        icon.style.transform =
+          "translateY(-12px) scale(1.05)";
+
+      });
+
+      icon.addEventListener(
+      "mouseleave",
+      function(){
+
+        icon.style.transform =
+          "";
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+    <section class="brand-section" id="brandSection">
+
+  <div class="brand-grid">
+
+    <!-- LEFT CONTENT -->
+
+    <div class="brand-left">
+
+      <h2>
+
+        <span class="brand-white">
+          What is
+        </span>
+
+        <span class="brand-gradient">
+          AI Marketing
+        </span>
+
+        <span class="brand-white">
+          ?
+        </span>
+
+      </h2>
+
+      <p>
+        AI Marketing is the use of artificial intelligence technologies
+        to analyze data, predict customer behavior, automate campaigns,
+        and optimize marketing performance. It helps businesses move
+        from guesswork to data-driven decision-making, ensuring smarter
+        strategies and better results.
+      </p>
+
+      <p>
+        At our company, AI Marketing goes beyond basic automation.
+        We leverage advanced AI-powered tools to identify high-intent
+        audiences, personalize campaigns, optimize ad performance
+        in real-time, and improve overall marketing efficiency.
+        By combining intelligent data insights with strategic
+        execution, we help businesses increase conversions,
+        reduce marketing waste, and achieve sustainable growth
+        in a competitive digital landscape.
+      </p>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="brand-right">
+
+      <img
+        src="/images/about/whyss.png"
+        alt="AI Marketing Illustration"
+      >
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "brandSection"
+      );
+
+    if(!section) return;
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target
+              .classList
+              .add("show");
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.25
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+
+<!-- 3 -->
+
+
+<section class="services-wrap" id="servicesGridAI">
+
+  <div class="services-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        1
+      </div>
+
+      <div class="service-icon">
+        🔎
+      </div>
+
+      <div class="service-title">
+        AI-Powered SEO Optimization
+      </div>
+
+      <div class="service-desc">
+        Discover high-ranking keywords, analyze competitors,
+        optimize on-page & technical SEO, improve content
+        relevance, and increase organic traffic.
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        2
+      </div>
+
+      <div class="service-icon">
+        📍
+      </div>
+
+      <div class="service-title">
+        AI-Based Performance Marketing
+      </div>
+
+      <div class="service-desc">
+        Run smarter ad campaigns using AI across Google Ads,
+        Meta Ads (Facebook & Instagram), and YouTube Ads
+        for higher ROI.
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        3
+      </div>
+
+      <div class="service-icon">
+        👥
+      </div>
+
+      <div class="service-title">
+        AI Content Generation & Optimization
+      </div>
+
+      <div class="service-desc">
+        Create high-performing blog posts, website copy,
+        landing pages, ad creatives, and email campaigns
+        using AI tools.
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        4
+      </div>
+
+      <div class="service-icon">
+        📖
+      </div>
+
+      <div class="service-title">
+        Marketing Automation & Lead Nurturing
+      </div>
+
+      <div class="service-desc">
+        Use AI chatbots, automated email workflows,
+        CRM integration, customer segmentation,
+        and predictive follow-ups.
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        5
+      </div>
+
+      <div class="service-icon">
+        🧩
+      </div>
+
+      <div class="service-title">
+        AI Analytics & Predictive Insights
+      </div>
+
+      <div class="service-desc">
+        Track customer behavior, forecast sales,
+        analyze conversion funnels, and monitor
+        performance with AI dashboards.
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        6
+      </div>
+
+      <div class="service-icon">
+        🚀
+      </div>
+
+      <div class="service-title">
+        AI-Powered Social Media Intelligence
+      </div>
+
+      <div class="service-desc">
+        Understand audience behavior, track content
+        performance, predict best posting times,
+        and analyze trends.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "servicesGridAI"
+      );
+
+    if(!section) return;
+
+    const cards =
+      section.querySelectorAll(
+        ".service-card"
+      );
+
+    /* SAME HOVER-READY CARDS
+       CSS CONTROLS EFFECT */
+
+    cards.forEach(card=>{
+
+      card.addEventListener(
+      "mouseenter",
+      function(){
+
+        card.style.willChange =
+          "transform";
+
+      });
+
+      card.addEventListener(
+      "mouseleave",
+      function(){
+
+        card.style.willChange =
+          "auto";
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+
+
+
+
+<!-- 4 -->
+
+<section class="seo-hero-dark" id="seoHeroDark">
+
+  <div class="seo-hero-grid">
+
+    <!-- LEFT CONTENT -->
+
+    <div class="seo-left">
+
+      <h1>
+        Why Choose
+        <span>AI Marketing</span>?
+      </h1>
+
+      <ul>
+
+        <li>
+          Traditional marketing guesses.
+        </li>
+
+        <li>
+          <strong>
+            AI Marketing predicts.
+          </strong>
+        </li>
+
+        <li>
+          With AI-powered systems, you can:
+        </li>
+
+        <li>
+          ✅ Identify high-intent customers
+        </li>
+
+        <li>
+          ✅ Automate personalized campaigns
+        </li>
+
+        <li>
+          ✅ Improve ad targeting accuracy
+        </li>
+
+        <li>
+          ✅ Increase website conversions
+        </li>
+
+        <li>
+          ✅ Reduce marketing waste
+        </li>
+
+        <li>
+          ✅ Get real-time performance insights
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="seo-right seo-image-wrap">
+
+      <img
+        src="/images/about/ai.png"
+        alt="AI Marketing Illustration"
+      >
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "seoHeroDark"
+      );
+
+    if(!section) return;
+
+    /* SAME INTERSECTION OBSERVER */
+
+    const observer =
+      new IntersectionObserver(
+
+      function(entries){
+
+        entries.forEach(
+        function(entry){
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target
+            .classList
+            .add(
+              "show"
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.3
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+
+
+<!-- 5 -->
+
+
+
+<section class="home-faq-wrap" id="faqAiSection">
+
+  <div class="home-faq-container">
+
+    <!-- TITLE -->
+
+    <h2 class="home-faq-title">
+
+      <span class="faq-title-white">
+        Frequently Asked
+      </span>
+
+      <span class="faq-title-gradient">
+        Questions
+      </span>
+
+    </h2>
+
+    <p class="home-faq-sub">
+      Everything you need to know about AI-powered marketing solutions.
+    </p>
+
+    <!-- FAQ CARD -->
+
+    <div class="home-faq-card">
+
+      <!-- FAQ 1 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            What is AI Marketing?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            AI Marketing uses artificial intelligence to analyze data,
+            predict customer behavior, automate campaigns, and optimize
+            marketing performance for better results.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 2 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            How does AI improve marketing performance?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            AI analyzes real-time data to optimize targeting, bidding,
+            and content strategy, helping businesses increase conversions
+            and reduce marketing waste.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 3 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Is AI Marketing suitable for small businesses?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Yes. AI tools help small businesses compete with larger
+            brands by improving efficiency, targeting the right audience,
+            and maximizing ROI.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 4 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Can AI Marketing reduce advertising costs?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Absolutely. AI continuously optimizes campaigns to lower
+            cost-per-lead and improve return on investment.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 5 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            How do we get started with AI Marketing?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Contact our team for a consultation. We'll analyze your
+            business goals and build a customized AI-driven
+            marketing strategy.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+
+    <div class="home-faq-cta">
+
+      <h3>
+        Ready to grow with AI?
+      </h3>
+
+      <p>
+        Let our experts build a smart marketing system for your business.
+      </p>
+
+      <a href="/contact">
+        <button>
+          BOOK FREE AI CONSULTATION →
+        </button>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "faqAiSection"
+      );
+
+    if(!section) return;
+
+    const items =
+      section.querySelectorAll(
+        ".home-faq-item"
+      );
+
+    /* AUTO OPEN FIRST FAQ */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            const first =
+              items[0];
+
+            first.classList.add(
+              "open"
+            );
+
+            first.querySelector(
+              ".home-faq-toggle"
+            ).innerHTML="−";
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.35
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+    /* FAQ TOGGLE */
+
+    items.forEach(item=>{
+
+      const header =
+        item.querySelector(
+          ".home-faq-header"
+        );
+
+      const toggle =
+        item.querySelector(
+          ".home-faq-toggle"
+        );
+
+      header.addEventListener(
+      "click",
+      function(){
+
+        const isOpen =
+          item.classList.contains(
+            "open"
+          );
+
+        items.forEach(i=>{
+
+          i.classList.remove(
+            "open"
+          );
+
+          i.querySelector(
+            ".home-faq-toggle"
+          ).innerHTML="+";
+
+        });
+
+        if(!isOpen){
+
+          item.classList.add(
+            "open"
+          );
+
+          toggle.innerHTML="−";
+
+        }
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+</body>
+
+
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="../Home.html">Home</a></li>
+        <li><a href="../pages/About.html">About Us</a></li>
+        <li><a href="../pages/Services.html">Services</a></li>
+        <li><a href="../pages/Courses.html">Courses</a></li>
+        <li><a href="../pages/Contact.html">Contact</a></li>
+        <li><a href="../pages/Blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+        <li><a href="DigitalStrategy.html">Digital Strategy</a></li>
+        <li><a href="WebDevelopment.html">Web Development</a></li>
+        <li><a href="Ecommerce.html">Ecommerce Website</a></li>
+        <li><a href="Seo.html">SEO</a></li>
+        <li><a href="SocialMedia.html">Social Media Marketing</a></li>
+        <li><a href="AiMarketing.html">AI Marketing</a></li>
+        <li><a href="BusinessAnalysis.html">Business Analysis</a></li>
+        <li><a href="ContentDesign.html">Content Design</a></li>
+        <li><a href="CreativeDesign.html">Creative Design</a></li>
+        <li><a href="BrandConsultancy.html">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
+</html>

@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="../Home.css">
+         <link rel="stylesheet" href="../footer.css">
+         <link rel="stylesheet" href="../footer.js">
+      <link rel="stylesheet" href="social-media-marketing.css">
+
+</head>
+
+
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="../images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="sf-nav"
+      id="mobileNav"
+    >
+
+      <a
+        href="../Home.html"
+        class="nav-btn"
+      >
+        Home
+      </a>
+
+      <a
+        href="../pages/About.html"
+        class="nav-btn"
+      >
+        About
+      </a>
+
+      <a
+        href="../pages/Services.html"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      
+      <a
+        href="../pages/Courses.html"
+        class="nav-btn"
+      >
+        Courses
+      </a>
+
+      <a
+        href="../pages/Contact.html"
+        class="nav-btn contact-link"
+      >
+        Contact
+      </a>
+
+      <a
+        href="../pages/Blog.html"
+        class="nav-btn"
+      >
+        Blog
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+</header>
+
+<body>
+
+<section class="smm-hero" id="socialMediaHero">
+
+  <!-- LEFT -->
+
+  <div class="smm-left">
+
+    <small>
+      Social Media Marketing
+    </small>
+
+    <h1 class="smm-title">
+
+      Turn
+      <span class="accent">
+        Social Media Attention
+      </span>
+
+      <br>
+
+      into Brand Growth
+
+      <br>
+
+      <span class="accent">
+        Engage the Right Audience Across Every Platform
+      </span>
+
+    </h1>
+
+    <p class="smm-desc">
+
+      We create data-driven social media strategies that build trust,
+      increase engagement, and drive real results. From content planning
+      to campaign execution, we help your brand stay visible and relevant.
+
+    </p>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="smm-right">
+
+    <div class="icon-cloud">
+
+      <div class="icon">G</div>
+      <div class="icon">🔍</div>
+      <div class="icon">📈</div>
+      <div class="icon">📍</div>
+      <div class="icon">📝</div>
+      <div class="icon">⚙️</div>
+      <div class="icon">⭐</div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+      const section =
+        document.getElementById(
+          "socialMediaHero"
+        );
+
+      if(!section) return;
+
+      /* SECTION READY */
+
+      section.classList.add(
+        "loaded"
+      );
+
+    }
+  );
+
+  </script>
+
+</section>
+
+
+
+<!-- 2 -->
+
+
+<section class="brand-section" id="socialMediaSection">
+
+  <div class="brand-grid">
+
+    <!-- LEFT CONTENT -->
+
+    <div class="brand-left">
+
+      <h2>
+
+        <span class="brand-white">
+          What is
+        </span>
+
+        <span class="brand-gradient">
+          Social Media Marketing
+        </span>
+
+        <span class="brand-white">
+          ?
+        </span>
+
+      </h2>
+
+      <p>
+
+        Social media marketing uses platforms like Instagram, Facebook,
+        and LinkedIn to build brand awareness, engage audiences,
+        and drive business growth. It focuses on meaningful interaction
+        rather than simply posting content.
+
+      </p>
+
+      <p>
+
+        We develop platform-specific strategies, create engaging content,
+        and manage community interactions to strengthen brand presence.
+        Our approach helps businesses connect with their audience,
+        build trust, and achieve measurable results.
+
+      </p>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="brand-right">
+
+      <img
+        src="/images/about/whyss.png"
+        alt="Social Media Marketing Strategy Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+      const section =
+        document.getElementById(
+          "socialMediaSection"
+        );
+
+      if(!section) return;
+
+      /* INTERSECTION OBSERVER */
+
+      const observer =
+        new IntersectionObserver(
+
+        (entries)=>{
+
+          entries.forEach(entry=>{
+
+            if(
+              entry.isIntersecting
+            ){
+
+              entry.target.classList.add(
+                "show"
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold:.25
+        }
+
+      );
+
+      observer.observe(
+        section
+      );
+
+    }
+  );
+
+  </script>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="services-wrap" id="servicesGridSocial">
+
+  <div class="services-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        1
+      </div>
+
+      <div class="service-icon">
+        🧭
+      </div>
+
+      <div class="service-title">
+        Platform Strategy & Planning
+      </div>
+
+      <div class="service-desc">
+        Choosing the right platforms and content direction based on your audience.
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        2
+      </div>
+
+      <div class="service-icon">
+        🗓️
+      </div>
+
+      <div class="service-title">
+        Content Creation & Calendars
+      </div>
+
+      <div class="service-desc">
+        Consistent, brand-aligned content planned for maximum engagement.
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        3
+      </div>
+
+      <div class="service-icon">
+        🎬
+      </div>
+
+      <div class="service-title">
+        Creative Design & Reels
+      </div>
+
+      <div class="service-desc">
+        Scroll-stopping visuals and short-form videos that capture attention.
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        4
+      </div>
+
+      <div class="service-icon">
+        💬
+      </div>
+
+      <div class="service-title">
+        Community Management
+      </div>
+
+      <div class="service-desc">
+        Active engagement through comments, messages, and audience interactions.
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        5
+      </div>
+
+      <div class="service-icon">
+        📣
+      </div>
+
+      <div class="service-title">
+        Paid Social Campaigns
+      </div>
+
+      <div class="service-desc">
+        Targeted ad campaigns designed to drive leads and conversions.
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        6
+      </div>
+
+      <div class="service-icon">
+        📈
+      </div>
+
+      <div class="service-title">
+        Analytics & Growth Insights
+      </div>
+
+      <div class="service-desc">
+        Performance tracking with actionable insights for continuous growth.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+      const section =
+        document.getElementById(
+          "servicesGridSocial"
+        );
+
+      if(!section) return;
+
+      /* READY */
+
+      const cards =
+        section.querySelectorAll(
+          ".service-card"
+        );
+
+      cards.forEach(card=>{
+
+        /* SAME HOVER CSS HANDLES EFFECT */
+
+        card.addEventListener(
+          "mouseenter",
+          function(){}
+        );
+
+        card.addEventListener(
+          "mouseleave",
+          function(){}
+        );
+
+      });
+
+    }
+  );
+
+  </script>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="seo-hero-dark" id="whySocialMedia">
+
+  <div class="seo-hero-grid">
+
+    <!-- LEFT -->
+
+    <div class="seo-left">
+
+      <h1>
+        Why <span>Social Media Marketing</span>?
+      </h1>
+
+      <ul>
+
+        <li>
+          Social media marketing connects your brand with the right audience
+          through consistent, engaging, and relevant content. It builds
+          awareness, trust, and meaningful relationships that turn followers
+          into loyal customers.
+        </li>
+
+        <li>
+          With a strategic and data-driven approach, social media goes beyond
+          likes and shares. Targeted campaigns, performance tracking, and
+          continuous optimisation help generate leads, drive traffic, and
+          support measurable business growth.
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="seo-right seo-image-wrap">
+
+      <img
+        src="/images/SOCIALMEDIAMARKETING.png"
+        alt="Social Media Marketing Strategy Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "whySocialMedia"
+      );
+
+    if(!section) return;
+
+    /* INTERSECTION REVEAL */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target.classList.add(
+              "show"
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.3
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+<!-- 5 -->
+
+
+<section class="home-faq-wrap" id="faqSocialMedia">
+
+  <div class="home-faq-container">
+
+    <!-- TITLE -->
+
+    <h2 class="home-faq-title">
+      <span class="faq-title-white">
+        Frequently Asked
+      </span>
+
+      <span class="faq-title-gradient">
+        Questions
+      </span>
+    </h2>
+
+    <p class="home-faq-sub">
+      Clear answers to help you move forward with confidence.
+    </p>
+
+    <!-- FAQ CARD -->
+
+    <div class="home-faq-card">
+
+      <!-- FAQ 1 -->
+
+      <div class="home-faq-item">
+
+        <div
+          class="home-faq-header"
+          role="button"
+          tabindex="0"
+        >
+
+          <div class="home-faq-question">
+            Which social media platforms do you manage?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            We manage platforms such as Instagram,
+            Facebook, LinkedIn, and YouTube depending
+            on where your target audience is most active.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 2 -->
+
+      <div class="home-faq-item">
+
+        <div
+          class="home-faq-header"
+          role="button"
+          tabindex="0"
+        >
+
+          <div class="home-faq-question">
+            Do you create content or only manage posting?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            We handle the entire process including
+            strategy, content creation, design,
+            captions, scheduling, and audience engagement.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 3 -->
+
+      <div class="home-faq-item">
+
+        <div
+          class="home-faq-header"
+          role="button"
+          tabindex="0"
+        >
+
+          <div class="home-faq-question">
+            How often will you post on social media?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Posting frequency depends on your business
+            goals and plan, but most strategies include
+            consistent weekly or daily content.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 4 -->
+
+      <div class="home-faq-item">
+
+        <div
+          class="home-faq-header"
+          role="button"
+          tabindex="0"
+        >
+
+          <div class="home-faq-question">
+            Will social media marketing help generate leads?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Yes. With the right strategy, content,
+            and targeted campaigns, social media can
+            generate leads, increase traffic,
+            and grow your brand.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 5 -->
+
+      <div class="home-faq-item">
+
+        <div
+          class="home-faq-header"
+          role="button"
+          tabindex="0"
+        >
+
+          <div class="home-faq-question">
+            How do we get started with social media marketing?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Simply contact us to discuss your business
+            goals and we will create a customised
+            social media strategy for your brand.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "faqSocialMedia"
+      );
+
+    if(!section) return;
+
+    const items =
+      section.querySelectorAll(
+        ".home-faq-item"
+      );
+
+    /* AUTO OPEN FIRST FAQ */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            const first =
+              items[0];
+
+            first.classList.add(
+              "open"
+            );
+
+            first.querySelector(
+              ".home-faq-toggle"
+            ).innerHTML="−";
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.35
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+    /* FAQ TOGGLE */
+
+    items.forEach(item=>{
+
+      const header =
+        item.querySelector(
+          ".home-faq-header"
+        );
+
+      const toggle =
+        item.querySelector(
+          ".home-faq-toggle"
+        );
+
+      header.addEventListener(
+      "click",
+      function(){
+
+        const isOpen =
+          item.classList.contains(
+            "open"
+          );
+
+        items.forEach(i=>{
+
+          i.classList.remove(
+            "open"
+          );
+
+          i.querySelector(
+            ".home-faq-toggle"
+          ).innerHTML="+";
+
+        });
+
+        if(!isOpen){
+
+          item.classList.add(
+            "open"
+          );
+
+          toggle.innerHTML="−";
+
+        }
+
+      });
+
+    });
+
+    /* FAQ SCHEMA */
+
+    const schema = {
+
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+
+      "mainEntity":[
+
+        {
+          "@type":"Question",
+          "name":"Which social media platforms do you manage?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"We manage platforms such as Instagram, Facebook, LinkedIn, and YouTube depending on where your target audience is most active."
+          }
+        },
+
+        {
+          "@type":"Question",
+          "name":"Do you create content or only manage posting?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"We handle the entire process including strategy, content creation, design, captions, scheduling, and audience engagement."
+          }
+        },
+
+        {
+          "@type":"Question",
+          "name":"How often will you post on social media?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Posting frequency depends on your business goals and plan, but most strategies include consistent weekly or daily content."
+          }
+        },
+
+        {
+          "@type":"Question",
+          "name":"Will social media marketing help generate leads?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes. With the right strategy, content, and targeted campaigns, social media can generate leads, increase traffic, and grow your brand."
+          }
+        },
+
+        {
+          "@type":"Question",
+          "name":"How do we get started with social media marketing?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Simply contact us to discuss your business goals and we will create a customised social media strategy for your brand."
+          }
+        }
+
+      ]
+
+    };
+
+    const script =
+      document.createElement(
+        "script"
+      );
+
+    script.type =
+      "application/ld+json";
+
+    script.innerHTML =
+      JSON.stringify(schema);
+
+    document.head.appendChild(
+      script
+    );
+
+  });
+
+  </script>
+
+</section>
+
+    
+</body>
+
+
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="../Home.html">Home</a></li>
+        <li><a href="../pages/About.html">About Us</a></li>
+        <li><a href="../pages/Services.html">Services</a></li>
+        <li><a href="../pages/Courses.html">Courses</a></li>
+        <li><a href="../pages/Contact.html">Contact</a></li>
+        <li><a href="../pages/Blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+        <li><a href="DigitalStrategy.html">Digital Strategy</a></li>
+        <li><a href="WebDevelopment.html">Web Development</a></li>
+        <li><a href="Ecommerce.html">Ecommerce Website</a></li>
+        <li><a href="Seo.html">SEO</a></li>
+        <li><a href="SocialMedia.html">Social Media Marketing</a></li>
+        <li><a href="AiMarketing.html">AI Marketing</a></li>
+        <li><a href="BusinessAnalysis.html">Business Analysis</a></li>
+        <li><a href="ContentDesign.html">Content Design</a></li>
+        <li><a href="CreativeDesign.html">Creative Design</a></li>
+        <li><a href="BrandConsultancy.html">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
+</html>

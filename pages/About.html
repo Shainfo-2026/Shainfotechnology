@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <link rel="stylesheet" href="../Home.css">
+     <link rel="stylesheet" href="../About.css">
+
+</head>
+
+
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="../images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="sf-nav"
+      id="mobileNav"
+    >
+
+      <a
+        href="../Home.html"
+        class="nav-btn"
+      >
+        Home
+      </a>
+
+      <a
+        href="About.html"
+        class="nav-btn"
+      >
+        About
+      </a>
+
+      <a
+        href="Services.html"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      <a
+        href="Courses.html"
+        class="nav-btn"
+      >
+        Courses
+      </a>
+
+      <a
+        href="Contact.html"
+        class="nav-btn contact-link"
+      >
+        Contact
+      </a>
+
+      <a
+        href="Blog.html"
+        class="nav-btn"
+      >
+        Blog
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+</header>
+
+<body>
+   
+    <section class="about-hero">
+
+  <!-- TOP BADGE -->
+  <div class="about-badge">
+    <span class="dot"></span>
+    ABOUT SHA INFOTECHNOLOGY
+  </div>
+
+  <!-- CONTENT -->
+  <div class="about-content">
+
+    <h1>
+      Building Digital Experiences
+      <br>
+      That Drive Growth
+    </h1>
+
+    <p>
+      <strong>SHA Infotechnology</strong> is a digital solutions company helping
+      businesses grow through strategy, design, and scalable technology.
+    </p>
+
+    <!-- FEATURE BOXES -->
+    <div class="about-features">
+
+      <div class="feature-box">
+        🚀 Strategy-First Approach
+      </div>
+
+      <div class="feature-box">
+        🎯 Performance-Driven Solutions
+      </div>
+
+      <div class="feature-box">
+        🤝 Long-Term Growth Partner
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- CURVE -->
+  <div class="hero-wave"></div>
+
+</section>
+
+
+
+<section class="vision-section" id="visionSection">
+
+  <!-- HEADER -->
+
+<div class="vision-header">
+
+  <h2 class="vision-title">
+
+    <span class="vision-title-white">
+      Our Vision </br>
+    </span>
+
+    <span class="vision-title-gradient">
+      Driving Digital Growth
+    </span>
+
+  </h2>
+
+  <div class="vision-divider"></div>
+
+</div>
+
+  <!-- CONTENT -->
+
+  <div class="vision-container">
+
+    <!-- IMAGE -->
+
+    <div class="vision-image">
+
+      <div class="vision-image-glow">
+
+        <img
+          src="/images/vission.png"
+          alt="Our Vision"
+        >
+
+      </div>
+
+    </div>
+
+    <!-- TEXT -->
+
+    <div class="vision-text">
+
+      <p>
+        At SHA Infotechnology, we believe sustainable growth comes from the
+        right blend of creativity, performance marketing, and modern
+        technology—built to scale with your business.
+      </p>
+
+      <p>
+        We aim to empower brands to build a powerful online presence,
+        strengthen customer trust, and achieve long-term success in an
+        ever-evolving digital landscape.
+      </p>
+
+      <p>
+        Our vision is to create digital solutions that are visually
+        compelling and strategically designed to deliver real business
+        impact.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "visionSection"
+      );
+
+    if(!section) return;
+
+    const header =
+      section.querySelector(
+        ".vision-header"
+      );
+
+    const image =
+      section.querySelector(
+        ".vision-image-glow"
+      );
+
+    const divider =
+      section.querySelector(
+        ".vision-divider"
+      );
+
+    const paragraphs =
+      section.querySelectorAll(
+        ".vision-text p"
+      );
+
+    /* INTERSECTION OBSERVER */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            /* HEADER */
+
+            header.classList.add(
+              "reveal"
+            );
+
+            /* DIVIDER */
+
+            divider.classList.add(
+              "draw"
+            );
+
+            /* IMAGE */
+
+            image.classList.add(
+              "reveal"
+            );
+
+            /* PARAGRAPH STAGGER */
+
+            paragraphs.forEach(
+              (p,i)=>{
+
+              setTimeout(()=>{
+
+                p.classList.add(
+                  "reveal"
+                );
+
+              }, i * 120);
+
+            });
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.3
+      }
+
+    );
+
+    observer.observe(section);
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 3 -->
+
+
+<section class="aboutmission-section">
+
+  <div class="aboutmission-header">
+
+    <h2 class="aboutmission-title">
+
+      <span class="aboutmission-title-white">
+        Our Mission
+      </span>
+
+      <span class="aboutmission-title-gradient">
+        Turning Vision Into Results
+      </span>
+
+    </h2>
+
+    <div class="aboutmission-divider"></div>
+
+  </div>
+
+  <div class="aboutmission-container">
+
+    <!-- TEXT -->
+
+    <div class="aboutmission-text">
+
+      <p>
+        Our mission is to help businesses grow by delivering impactful
+        digital marketing and software solutions that generate real,
+        measurable outcomes.
+      </p>
+
+      <p>
+        We focus on building strong digital foundations that support
+        long-term success—combining strategy, creativity, and technology
+        to improve brand visibility, customer engagement, and revenue growth.
+      </p>
+
+      <p>
+        Through data-driven decision-making, continuous optimization,
+        and a client-first mindset, we ensure every business we work with
+        grows smarter, faster, and with confidence.
+      </p>
+
+    </div>
+
+    <!-- IMAGE -->
+
+    <div class="aboutmission-image">
+
+      <div class="aboutmission-image-glow">
+        <img
+          src="/images/vission.png"
+         
+          alt="Our Mission"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- 4 -->
+
+
+<section class="trust-wrap">
+
+  <!-- HEADING -->
+  <div class="trust-heading">
+    <h2><span>Our Journey</span></h2>
+    <div class="trust-underline"></div>
+  </div>
+
+  <div class="trust-grid">
+
+    <!-- LEFT TIMELINE -->
+    <div class="trust-timeline">
+
+      <div
+        class="trust-item"
+        style="
+        --accent:#8b5cf6;
+        --accent-soft:#8b5c
+        f655;
+        "
+      >
+        <div class="trust-dot"></div>
+
+        <div class="trust-card">
+          <div class="trust-icon">🏗️</div>
+          <h4>Strong Digital Foundation</h4>
+          <p>
+            Scalable, future-ready architecture.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="trust-item"
+        style="
+        --accent:#22d3ee;
+        --accent-soft:#22d3ee55;
+        "
+      >
+        <div class="trust-dot"></div>
+
+        <div class="trust-card">
+          <div class="trust-icon">🔍</div>
+          <h4>Transparent Process</h4>
+          <p>
+            Clear timelines & communication.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="trust-item"
+        style="
+        --accent:#ec4899;
+        --accent-soft:#ec489955;
+        "
+      >
+        <div class="trust-dot"></div>
+
+        <div class="trust-card">
+          <div class="trust-icon">📈</div>
+          <h4>Results That Matter</h4>
+          <p>
+            Leads, traffic & conversions.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="trust-item"
+        style="
+        --accent:#f59e0b;
+        --accent-soft:#f59e0b55;
+        "
+      >
+        <div class="trust-dot"></div>
+
+        <div class="trust-card">
+          <div class="trust-icon">🤝</div>
+          <h4>Long-Term Partnership</h4>
+          <p>
+            We grow with your business.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT BOX -->
+    <div class="trust-sticky">
+
+      <div class="trust-box">
+
+        <h3>
+          Why Clients
+          <span>Trust Us</span>
+        </h3>
+
+        <div class="trust-points">
+
+          <div class="trust-point">
+            <span>✓</span>
+            Strategy-first execution
+          </div>
+
+          <div class="trust-point">
+            <span>✓</span>
+            SEO & performance focus
+          </div>
+
+          <div class="trust-point">
+            <span>✓</span>
+            Transparent process
+          </div>
+
+          <div class="trust-point">
+            <span>✓</span>
+            Scalable solutions
+          </div>
+
+        </div>
+
+        <div class="trust-counters">
+
+          <div class="counter-box">
+            <strong>100+</strong>
+            Clients
+          </div>
+
+          <div class="counter-box">
+            <strong>150+</strong>
+            Projects
+          </div>
+
+          <div class="counter-box">
+            <strong>2+</strong>
+            Years
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+
+
+<section class="sha-stats">
+
+  <div class="sha-stats-inner">
+
+    <div class="stat-box">
+      <div class="stat-value">100+</div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-value">2+</div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-value">5+</div>
+      <div class="stat-label">Expert Professionals</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-value">180+</div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- 6 -->
+
+
+<section class="mission-section">
+
+  <div class="mission-container">
+
+    <!-- TITLE -->
+    <h2 class="mission-heading">
+      <span class="white">
+        Meet the Team
+      </span>
+
+      <span class="gradient">
+        The People Behind the Pixels
+      </span>
+    </h2>
+
+    <!-- GRID -->
+    <div class="mission-grid">
+
+      <!-- LEFT TEXT -->
+      <div class="mission-text">
+
+        <p>
+          At SHA Infotechnology, our strength lies in the people behind the work.
+          We are a passionate team of strategists, developers, designers, and
+          digital specialists dedicated to helping businesses succeed online.
+        </p>
+
+        <p>
+          Each team member brings unique skills and experience, working
+          collaboratively to deliver high-quality websites, powerful SEO
+          strategies, and result-driven digital marketing solutions.
+        </p>
+
+        <ul class="mission-points">
+
+          <li>
+            Collaborative and transparent work culture
+          </li>
+
+          <li>
+            Strong focus on quality, performance, and results
+          </li>
+
+          <li>
+            Long-term partnerships and measurable growth
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="mission-image">
+
+        <img
+          src="images/meetourteam.png"
+          alt="Meet Our Team"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- 7 -->
+
+
+<section class="team-section">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ================= TEAM SECTION ================= */
+
+.team-section{
+  padding-top:20px;
+  padding-bottom:40px;
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+}
+
+.team-container{
+  max-width:1300px;
+  margin:auto;
+}
+
+/* ===== TITLE ===== */
+
+.team-title{
+  text-align:center;
+  margin-bottom:40px;
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .8s ease;
+}
+
+.team-section.show .team-title{
+  opacity:1;
+  transform:none;
+}
+
+.team-title h2{
+  font-size:56px;
+  font-weight:800;
+  margin-bottom:10px;
+  background:linear-gradient(90deg,#8b5cf6,#ec4899);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.team-title p{
+  font-size:18px;
+  color:#cbd5f5;
+  line-height:1.6;
+}
+
+/* ===== GRID ===== */
+
+.team-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:28px;
+}
+
+/* ===== CARD ===== */
+
+.team-card{
+  width:380px;
+  background:#ffffff;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 20px 55px rgba(0,0,0,0.5);
+
+  opacity:0;
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.16,1,.3,1);
+}
+
+.team-card.from-left{
+  transform:translateX(-60px);
+}
+
+.team-card.from-right{
+  transform:translateX(60px);
+}
+
+.team-card.show{
+  opacity:1;
+  transform:none;
+}
+
+.team-card:hover{
+  transform:translateY(-6px);
+}
+
+/* IMAGE */
+
+.team-image{
+  width:100%;
+  height:300px;
+  overflow:hidden;
+  background:#ffffff;
+}
+
+.team-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* INFO */
+
+.team-info{
+  padding:18px 20px 22px;
+  text-align:center;
+}
+
+.team-role{
+  font-size:14px;
+  letter-spacing:1px;
+  color:#64748b;
+  margin-bottom:4px;
+}
+
+.team-name{
+  font-size:18px;
+  font-weight:600;
+  color:#020617;
+}
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+  .team-card{
+    width:320px;
+  }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .team-grid{
+    flex-direction:column;
+    gap:18px;
+    align-items:center;
+  }
+
+  .team-card{
+    width:90%;
+    max-width:340px;
+    margin:auto;
+    height:auto;
+    border-radius:20px;
+    padding:22px 16px 20px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.18);
+    transform:none !important;
+    opacity:1 !important;
+  }
+
+  .team-card:hover{
+    transform:none !important;
+  }
+
+  .team-image{
+    height:auto;
+    display:flex;
+    justify-content:center;
+    margin-bottom:12px;
+    background:none;
+  }
+
+  .team-image img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    background:#ffffff;
+    border:4px solid #ffffff;
+    box-shadow:0 8px 22px rgba(0,0,0,0.2);
+  }
+
+  .team-info{
+    padding:0;
+  }
+
+  .team-name{
+    font-size:17px;
+  }
+
+  .team-role{
+    font-size:14px;
+    font-weight:500;
+    color:#6b7280;
+    letter-spacing:.4px;
+  }
+
+}
+
+</style>
+
+<div class="team-container">
+
+  <!-- TITLE -->
+  <div class="team-title">
+    <h2>Meet the People Behind the Work</h2>
+
+    <p>
+      The team that turns ideas into powerful digital solutions.
+      <br>
+      We believe great results come from teamwork and trust.
+    </p>
+  </div>
+
+  <!-- GRID -->
+  <div class="team-grid">
+
+    <div class="team-card from-left">
+      <div class="team-image">
+        <img src="images/about/m.jpeg" alt="Prasanth V">
+      </div>
+
+      <div class="team-info">
+        <div class="team-role">PROJECT MANAGER</div>
+        <div class="team-name">Prasanth V</div>
+      </div>
+    </div>
+
+    <div class="team-card from-right">
+      <div class="team-image">
+        <img src="images/about/r.jpeg" alt="Ramya">
+      </div>
+
+      <div class="team-info">
+        <div class="team-role">PROJECT MANAGER</div>
+        <div class="team-name">Ramya</div>
+      </div>
+    </div>
+
+    <div class="team-card from-left">
+      <div class="team-image">
+        <img src="images/about/s.png" alt="Sowndarya S">
+      </div>
+
+      <div class="team-info">
+        <div class="team-role">WEB DEVELOPER</div>
+        <div class="team-name">Sowndarya S</div>
+      </div>
+    </div>
+
+    <div class="team-card from-right">
+      <div class="team-image">
+        <img src="images/about/gaya2.jpeg" alt="Gayathri S">
+      </div>
+
+      <div class="team-info">
+        <div class="team-role">TEAM LEAD</div>
+        <div class="team-name">Gayathri S</div>
+      </div>
+    </div>
+
+    <div class="team-card from-left">
+      <div class="team-image">
+        <img src="images/about/sathish.png" alt="Sathish Kumar">
+      </div>
+
+      <div class="team-info">
+        <div class="team-role">MANAGEMENT</div>
+        <div class="team-name">Sathish Kumar</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+const teamSection = document.querySelector('.team-section');
+const teamCards = document.querySelectorAll('.team-card');
+
+const observer = new IntersectionObserver(
+
+([entry])=>{
+
+if(entry.isIntersecting){
+
+teamSection.classList.add('show');
+
+teamCards.forEach((card,i)=>{
+
+setTimeout(()=>{
+
+card.classList.add('show');
+
+}, i*150);
+
+});
+
+observer.disconnect();
+}
+
+},
+
+{threshold:0.3}
+
+);
+
+observer.observe(teamSection);
+
+</script>
+
+</section>
+
+
+
+<!-- 8 -->
+
+
+<section class="ideas-section">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ================= IDEAS SECTION ================= */
+
+.ideas-section{
+  padding-top:0;
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+}
+
+.ideas-container{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+/* ===== HEADING ===== */
+
+.ideas-heading{
+  text-align:center;
+  margin-bottom:26px;
+  opacity:0;
+  transform:translateY(24px);
+  transition:all .7s ease;
+}
+
+.ideas-heading.show{
+  opacity:1;
+  transform:none;
+}
+
+.ideas-heading h2{
+  font-size:56px;
+  font-weight:800;
+
+  background:
+  linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  line-height:1.2;
+}
+
+/* ===== GRID ===== */
+
+.ideas-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+/* ===== CARD ===== */
+
+.idea-card{
+  background:rgba(255,255,255,0.05);
+
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
+  border-radius:18px;
+  padding:24px;
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,0.55),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+
+  opacity:0;
+  transform:translateY(28px);
+
+  transition:
+    opacity .6s ease,
+    transform .6s cubic-bezier(.16,1,.3,1);
+}
+
+.idea-card.show{
+  opacity:1;
+  transform:none;
+}
+
+/* CARD TITLE */
+
+.idea-card h3{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:8px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* CARD TEXT */
+
+.idea-card p{
+  font-size:18px;
+  line-height:1.7;
+  color:#e5e7eb;
+  margin:0;
+}
+
+/* ===== TABLET ===== */
+
+@media(max-width:1024px){
+
+  .ideas-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+  .ideas-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .ideas-heading h2{
+    font-size:36px;
+  }
+
+  .idea-card p{
+    font-size:16px;
+  }
+
+}
+
+</style>
+
+<div class="ideas-container">
+
+  <!-- HEADING -->
+  <div class="ideas-heading">
+
+    <h2>
+      The Ideas That Drive Everything We Do
+    </h2>
+
+  </div>
+
+  <!-- GRID -->
+  <div class="ideas-grid">
+
+    <!-- CARD 1 -->
+    <div class="idea-card">
+
+      <h3>
+        Core Purpose
+      </h3>
+
+      <p>
+        To guide businesses from confusion to confidence by delivering
+        clear digital strategies that turn ideas into measurable growth.
+      </p>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="idea-card">
+
+      <h3>
+        Core Values
+      </h3>
+
+      <p>
+        Driven by transparency, responsibility, continuous learning, and
+        respect for our clients—guiding every decision we make.
+      </p>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="idea-card">
+
+      <h3>
+        Our Passion
+      </h3>
+
+      <p>
+        Creating digital experiences that deliver real impact through
+        thoughtful design, strategy, and execution.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+/* ===== SCROLL REVEAL ===== */
+
+const ideasSection =
+document.querySelector('.ideas-section');
+
+const ideasHeading =
+ideasSection.querySelector('.ideas-heading');
+
+const ideaCards =
+ideasSection.querySelectorAll('.idea-card');
+
+const ideasObserver =
+new IntersectionObserver(
+
+([entry])=>{
+
+if(entry.isIntersecting){
+
+ideasHeading.classList.add('show');
+
+ideaCards.forEach((card,i)=>{
+
+setTimeout(()=>{
+
+card.classList.add('show');
+
+}, i*150);
+
+});
+
+ideasObserver.disconnect();
+
+}
+
+},
+
+{threshold:0.3}
+
+);
+
+ideasObserver.observe(ideasSection);
+
+</script>
+
+</section>
+
+
+
+
+<section class="why-section" id="whyChooseSection">
+
+    <div class="why-container">
+
+        <!-- TITLE -->
+
+        <div class="why-title">
+            <h2>Why Choose Shainfotechnology</h2>
+        </div>
+
+        <!-- GRID -->
+
+        <div class="why-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="why-card">
+                <div class="why-icon">🖥️</div>
+
+                <h3>
+                    End-to-End Website Development
+                </h3>
+
+                <p class="para">
+                    We build fast, responsive websites designed to convert
+                    visitors into customers and support your business goals.
+                </p>
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="why-card">
+                <div class="why-icon">📊</div>
+
+                <h3>
+                    SEO Strategies That Drive Growth
+                </h3>
+
+                <p class="para">
+                    High-intent SEO strategies that improve visibility,
+                    traffic, and qualified enquiries.
+                </p>
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="why-card">
+                <div class="why-icon">🚀</div>
+
+                <h3>
+                    High-ROI Google Ads & PPC
+                </h3>
+
+                <p class="para">
+                    Targeted ad campaigns optimised for conversions and
+                    measurable ROI.
+                </p>
+            </div>
+
+            <!-- CARD 4 -->
+
+            <div class="why-card">
+                <div class="why-icon">🛍️</div>
+
+                <h3>
+                    Scalable E-Commerce Solutions
+                </h3>
+
+                <p class="para">
+                    Secure, mobile-first e-commerce platforms built to scale.
+                </p>
+            </div>
+
+            <!-- CARD 5 -->
+
+            <div class="why-card">
+                <div class="why-icon">📢</div>
+
+                <h3>
+                    Result-Focused Social Media
+                </h3>
+
+                <p class="para">
+                    Campaigns that build brand trust and real audience
+                    engagement.
+                </p>
+            </div>
+
+            <!-- CARD 6 -->
+
+            <div class="why-card">
+                <div class="why-icon">🔍</div>
+
+                <h3>
+                    Transparent Process & Support
+                </h3>
+
+                <p class="para">
+                    Clear communication, reporting, and long-term partnership.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JS INSIDE SECTION -->
+
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function(){
+
+        const section =
+            document.getElementById(
+                "whyChooseSection"
+            );
+
+        const title =
+            section.querySelector(
+                ".why-title"
+            );
+
+        const cards =
+            section.querySelectorAll(
+                ".why-card"
+            );
+
+        /* ================= REVEAL ================= */
+
+        const observer =
+            new IntersectionObserver(
+
+            (entries)=>{
+
+                entries.forEach(entry=>{
+
+                    if(entry.isIntersecting){
+
+                        /* TITLE */
+
+                        title.classList.add(
+                            "show"
+                        );
+
+                        /* CARDS */
+
+                        cards.forEach(
+                            (card,i)=>{
+
+                            setTimeout(()=>{
+
+                                card.classList.add(
+                                    "show"
+                                );
+
+                            }, i * 120);
+
+                        });
+
+                        observer.disconnect();
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold:.25
+            }
+
+        );
+
+        observer.observe(section);
+
+    });
+
+    </script>
+
+</section>
+
+
+
+
+</body>
+
+
+
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="../Home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+        <li><a href="DigitalStrategy.html">Digital Strategy</a></li>
+        <li><a href="WebDevelopment.html">Web Development</a></li>
+        <li><a href="Ecommerce.html">Ecommerce Website</a></li>
+        <li><a href="Seo.html">SEO</a></li>
+        <li><a href="SocialMedia.html">Social Media Marketing</a></li>
+        <li><a href="AiMarketing.html">AI Marketing</a></li>
+        <li><a href="BusinessAnalysis.html">Business Analysis</a></li>
+        <li><a href="ContentDesign.html">Content Design</a></li>
+        <li><a href="CreativeDesign.html">Creative Design</a></li>
+        <li><a href="BrandConsultancy.html">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
+
+
+
+
+
+</html>

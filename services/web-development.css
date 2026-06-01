@@ -1,0 +1,887 @@
+/* ================= HERO ================= */
+
+.webdev-hero{
+  background:radial-gradient(
+    circle at top,
+    #0b0b16,
+    #05050c 70%
+  );
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  padding:60px 5%;
+
+  font-family:Inter,system-ui,sans-serif;
+  color:#fff;
+  overflow:hidden;
+  text-align:center;
+}
+
+/* ================= LABEL ================= */
+
+.webdev-left small{
+  font-size:13px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:#c7c7ff;
+  font-weight:700;
+}
+
+/* ================= TITLE ================= */
+
+.webdev-title{
+  font-size:clamp(
+    28px,
+    6vw,
+    56px
+  );
+
+  font-weight:900;
+  line-height:1.15;
+  margin:16px 0;
+}
+
+.webdev-title .accent{
+  background:linear-gradient(
+    135deg,
+    #7c7cff,
+    #c084fc,
+    #f472b6
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.webdev-desc{
+  font-size:clamp(
+    15px,
+    2vw,
+    18px
+  );
+
+  color:#cfcfe5;
+  max-width:600px;
+  line-height:1.7;
+  margin:12px auto 0;
+}
+
+/* ================= RIGHT ================= */
+
+.webdev-right{
+  margin-top:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ================= ICON CLOUD ================= */
+
+.webdev-icon-cloud{
+  position:relative;
+  width:clamp(
+    260px,
+    60vw,
+    360px
+  );
+
+  height:clamp(
+    260px,
+    60vw,
+    360px
+  );
+}
+
+/* ================= ICON ================= */
+
+.webdev-icon{
+  position:absolute;
+
+  width:clamp(
+    42px,
+    6vw,
+    56px
+  );
+
+  height:clamp(
+    42px,
+    6vw,
+    56px
+  );
+
+  border-radius:14px;
+
+  background:linear-gradient(
+    135deg,
+    #7c7cff,
+    #c084fc
+  );
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:clamp(
+    18px,
+    3vw,
+    26px
+  );
+
+  box-shadow:
+    0 20px 50px rgba(
+      124,
+      124,
+      255,
+      .45
+    );
+
+  animation:
+    float 6s ease-in-out infinite;
+
+  transition:
+    transform .3s ease;
+}
+
+/* ================= POSITIONS ================= */
+
+.webdev-icon:nth-child(2){
+  top:20%;
+  left:15%;
+  animation-delay:1s;
+}
+
+.webdev-icon:nth-child(3){
+  top:10%;
+  right:18%;
+  animation-delay:2s;
+}
+
+.webdev-icon:nth-child(4){
+  top:45%;
+  left:0;
+  animation-delay:1.5s;
+}
+
+.webdev-icon:nth-child(5){
+  top:45%;
+  right:0;
+  animation-delay:.8s;
+}
+
+.webdev-icon:nth-child(6){
+  bottom:15%;
+  left:20%;
+  animation-delay:2.4s;
+}
+
+.webdev-icon:nth-child(7){
+  bottom:15%;
+  right:20%;
+  animation-delay:1.9s;
+}
+
+/* ================= FLOAT ================= */
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-14px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}
+
+/* ================= DESKTOP ================= */
+
+@media(min-width:992px){
+
+  .webdev-hero{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    align-items:center;
+    padding:100px 8%;
+    text-align:left;
+  }
+
+  .webdev-desc{
+    margin-left:0;
+  }
+
+  .webdev-right{
+    margin-top:0;
+  }
+
+}
+
+
+
+
+
+
+/* 2 */
+
+
+
+/* ================= WEB DEVELOPMENT SECTION ================= */
+
+.webdev-brand-section{
+  padding:70px 5%;
+  font-family:Inter,system-ui,sans-serif;
+  overflow:hidden;
+}
+
+/* ================= GRID ================= */
+
+.webdev-brand-grid{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+}
+
+/* ================= LEFT CONTENT ================= */
+
+.webdev-brand-left{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .8s ease;
+  text-align:center;
+}
+
+.webdev-brand-section.show
+.webdev-brand-left{
+  opacity:1;
+  transform:none;
+}
+
+/* ================= HEADING ================= */
+
+.webdev-brand-left h2{
+  font-size:clamp(
+    26px,
+    5vw,
+    42px
+  );
+
+  font-weight:900;
+  margin-bottom:18px;
+  line-height:1.2;
+}
+
+/* ================= GRADIENT ================= */
+
+.webdev-brand-gradient{
+  background:linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.webdev-brand-white{
+  color:#ffffff;
+}
+
+/* ================= PARAGRAPH ================= */
+
+.webdev-brand-left p{
+  font-size:clamp(
+    15px,
+    2vw,
+    17px
+  );
+
+  line-height:1.7;
+  color:#ffffff;
+  max-width:600px;
+  margin:0 auto 14px;
+}
+
+/* ================= RIGHT IMAGE ================= */
+
+.webdev-brand-right{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  opacity:0;
+  transform:translateY(30px);
+
+  transition:
+    all .8s ease .2s;
+}
+
+.webdev-brand-section.show
+.webdev-brand-right{
+  opacity:1;
+  transform:none;
+}
+
+.webdev-brand-right img{
+  width:100%;
+  max-width:380px;
+  height:auto;
+}
+
+/* ================= DESKTOP ================= */
+
+@media(min-width:992px){
+
+  .webdev-brand-section{
+    padding:100px 8%;
+  }
+
+  .webdev-brand-grid{
+    display:grid;
+    grid-template-columns:
+      1.1fr
+      0.9fr;
+
+    align-items:center;
+    gap:60px;
+  }
+
+  .webdev-brand-left{
+    text-align:left;
+  }
+
+  .webdev-brand-left p{
+    margin:0 0 16px 0;
+  }
+
+  .webdev-brand-right img{
+    max-width:480px;
+  }
+
+}
+
+
+
+
+/* 3 */
+
+
+
+/* ================= WEB DEV SERVICES ================= */
+
+.webdev-services-wrap{
+  font-family:Inter,system-ui,sans-serif;
+  color:#e5e7eb;
+  padding:60px 5%;
+  margin:0;
+}
+
+/* ================= GRID ================= */
+
+.webdev-services-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:22px;
+}
+
+/* ================= CARD ================= */
+
+.webdev-service-card{
+  background:#ffffff;
+  border-radius:18px;
+  padding:28px 22px;
+  position:relative;
+  border:1px solid rgba(
+    0,
+    0,
+    0,
+    0.05
+  );
+
+  box-shadow:0 15px 40px rgba(
+    0,
+    0,
+    0,
+    0.15
+  );
+
+  transition:all .3s ease;
+  overflow:hidden;
+}
+
+/* EXACT HOVER */
+
+.webdev-service-card:hover{
+  transform:translateY(-6px);
+
+  box-shadow:0 25px 70px rgba(
+    185,
+    5,
+    4,
+    0.35
+  );
+}
+
+/* ================= NUMBER ================= */
+
+.webdev-service-number{
+  position:absolute;
+  top:14px;
+  right:18px;
+
+  font-size:42px;
+  font-weight:900;
+
+  color:rgba(
+    0,
+    0,
+    0,
+    0.05
+  );
+}
+
+/* ================= ICON ================= */
+
+.webdev-service-icon{
+  width:48px;
+  height:48px;
+  border-radius:12px;
+
+  background:linear-gradient(
+    135deg,
+    #8b5cf6,
+    #ec4899
+  );
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:22px;
+  color:#ffffff;
+  margin-bottom:16px;
+}
+
+/* ================= TEXT ================= */
+
+.webdev-service-title{
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:10px;
+  color:#000000;
+}
+
+.webdev-service-desc{
+  font-size:14px;
+  line-height:1.6;
+  color:#000000;
+}
+
+/* ================= TABLET ================= */
+
+@media(min-width:640px){
+
+  .webdev-services-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+  }
+
+}
+
+/* ================= DESKTOP ================= */
+
+@media(min-width:992px){
+
+  .webdev-services-wrap{
+    padding:90px 8%;
+  }
+
+  .webdev-services-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+
+  .webdev-service-card{
+    padding:34px 28px;
+  }
+
+  .webdev-service-number{
+    font-size:56px;
+  }
+
+}
+
+
+
+/* 4 */
+
+
+/* ================= WHY WEB DEVELOPMENT ================= */
+
+.webdev-why-section{
+  padding:60px 5%;
+  font-family:Inter,system-ui,sans-serif;
+  color:#e5e7eb;
+  overflow:hidden;
+}
+
+/* ================= GRID ================= */
+
+.webdev-why-grid{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  align-items:center;
+  text-align:center;
+}
+
+/* ================= LEFT ================= */
+
+.webdev-why-left{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .8s ease;
+}
+
+.webdev-why-section.show
+.webdev-why-left{
+  opacity:1;
+  transform:none;
+}
+
+/* ================= HEADING ================= */
+
+.webdev-why-left h1{
+  font-size:clamp(
+    26px,
+    5vw,
+    42px
+  );
+
+  font-weight:900;
+  line-height:1.2;
+  margin-bottom:16px;
+  color:#fff;
+}
+
+.webdev-why-left h1 span{
+  background:linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ================= LIST ================= */
+
+.webdev-why-left ul{
+  padding:0;
+  margin:0;
+}
+
+.webdev-why-left li{
+  font-size:clamp(
+    15px,
+    2vw,
+    18px
+  );
+
+  line-height:1.7;
+  color:#cbd5f5;
+  max-width:600px;
+  margin:0 auto 14px;
+  list-style:none;
+}
+
+/* ================= RIGHT IMAGE ================= */
+
+.webdev-why-right{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  opacity:0;
+  transform:scale(.95);
+
+  transition:
+    all .8s ease .2s;
+}
+
+.webdev-why-section.show
+.webdev-why-right{
+  opacity:1;
+  transform:scale(1);
+}
+
+/* ================= IMAGE GLOW ================= */
+
+.webdev-image-wrap{
+  position:relative;
+}
+
+.webdev-image-wrap::before{
+  content:"";
+  position:absolute;
+
+  width:280px;
+  height:280px;
+
+  background:radial-gradient(
+    circle,
+    rgba(139,92,246,.45),
+    transparent 70%
+  );
+
+  filter:blur(40px);
+  z-index:0;
+}
+
+.webdev-image-wrap img{
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:280px;
+}
+
+/* ================= DESKTOP ================= */
+
+@media(min-width:992px){
+
+  .webdev-why-section{
+    padding:90px 8%;
+  }
+
+  .webdev-why-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:60px;
+    text-align:left;
+  }
+
+  .webdev-why-left li{
+    margin:0 0 16px 0;
+  }
+
+  .webdev-image-wrap::before{
+    width:420px;
+    height:420px;
+  }
+
+  .webdev-image-wrap img{
+    max-width:420px;
+  }
+
+}
+
+
+
+/* 5 */
+
+
+/* ================= WEB DEV FAQ ================= */
+
+.webdev-faq-wrap{
+  padding:70px 5%;
+  font-family:Inter,system-ui,sans-serif;
+  color:#ffffff;
+}
+
+/* ================= CONTAINER ================= */
+
+.webdev-faq-container{
+  max-width:1000px;
+  margin:auto;
+}
+
+/* ================= TITLE ================= */
+
+.webdev-faq-title{
+  text-align:center;
+  font-size:clamp(
+    26px,
+    5vw,
+    42px
+  );
+
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.webdev-faq-title-white{
+  color:#ffffff;
+}
+
+.webdev-faq-title-gradient{
+  background:linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ================= SUBTITLE ================= */
+
+.webdev-faq-sub{
+  text-align:center;
+  font-size:15px;
+  color:#cbd5f5;
+  margin-bottom:36px;
+}
+
+/* ================= CARD ================= */
+
+.webdev-faq-card{
+  border-radius:22px;
+  padding:24px;
+
+  box-shadow:0 20px 60px rgba(
+    0,
+    0,
+    0,
+    0.25
+  );
+}
+
+/* ================= ITEM ================= */
+
+.webdev-faq-item{
+  border-top:1px solid rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+
+  padding:16px 4px;
+  transition:background .25s ease;
+}
+
+.webdev-faq-item:last-child{
+  border-bottom:1px solid rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+}
+
+/* EXACT HOVER */
+
+.webdev-faq-item:hover{
+  background:#1b1b1b;
+}
+
+/* ================= HEADER ================= */
+
+.webdev-faq-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  gap:12px;
+}
+
+/* ================= QUESTION ================= */
+
+.webdev-faq-question{
+  font-size:clamp(
+    15px,
+    2vw,
+    18px
+  );
+
+  font-weight:700;
+  color:#ffffff;
+}
+
+/* ================= TOGGLE ================= */
+
+.webdev-faq-toggle{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+
+  background:linear-gradient(
+    135deg,
+    #8b5cf6,
+    #ec4899
+  );
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:16px;
+  font-weight:900;
+  color:#ffffff;
+
+  transition:transform .3s ease;
+}
+
+/* ROTATE */
+
+.webdev-faq-item.open
+.webdev-faq-toggle{
+  transform:rotate(180deg);
+}
+
+/* ================= ANSWER ================= */
+
+.webdev-faq-answer{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+
+  transition:
+    max-height .4s ease,
+    opacity .3s ease;
+}
+
+.webdev-faq-item.open
+.webdev-faq-answer{
+  max-height:260px;
+  opacity:1;
+}
+
+.webdev-faq-answer p{
+  margin-top:10px;
+  font-size:14px;
+  line-height:1.6;
+  color:#e2e8f0;
+}
+
+/* ================= DESKTOP ================= */
+
+@media(min-width:992px){
+
+  .webdev-faq-wrap{
+    padding:90px 8%;
+  }
+
+  .webdev-faq-card{
+    padding:32px;
+  }
+
+}
