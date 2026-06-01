@@ -1,76 +1,2215 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHA Infotechnology</title>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<title>SHA INFOTECHNOLOGY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<!-- Organization schema -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"SHA Infotechnology",
-  "url":"https://shainfotechnology.in",
-  "logo":"https://shainfotechnology.in/favicon.png"
-}
-</script>
-
-<!-- Google Analytics + Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P225RC16Y3"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-dataLayer.push(arguments);
-}
-
-gtag('js', new Date());
-
-gtag('config','G-P225RC16Y3');
-gtag('config','AW-17853848982');
-</script>
-
-<!-- Facebook Pixel -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;
-n.loaded=!0;
-n.version='2.0';
-n.queue=[];
-t=b.createElement(e);
-t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}
-(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','1382005503745863');
-fbq('track','PageView');
-</script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="Home.css">
 
 </head>
 
+<!-- ================= HEADER ================= -->
+
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="sf-nav"
+      id="mobileNav"
+    >
+
+      <a
+        href="Home.html"
+        class="nav-btn"
+      >
+        Home
+      </a>
+
+      <a
+        href="/pages/About.html"
+        class="nav-btn"
+      >
+        About
+      </a>
+
+      <a
+        href="/pages/services.html"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      <a
+        href="pages/Courses.html"
+        class="nav-btn"
+      >
+        Courses
+      </a>
+
+      <a
+        href="pages/Contact.html"
+        class="nav-btn contact-link"
+      >
+        Contact
+      </a>
+
+      <a
+        href="/blog"
+        class="nav-btn"
+      >
+        Blog
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
 <body>
 
-<div id="root"></div>
 
-<script type="module" src="/src/main.jsx"></script>
+
+
+
+
+  <!-- ================= HERO SECTION ================= -->
+
+<section class="hero-section">
+
+  <div class="hero-container">
+
+    <!-- LEFT CONTENT -->
+
+    <div class="hero-left">
+
+      <h1>
+        Digital Marketing Services That <br>
+        <span>Grow Your Business</span>
+      </h1>
+
+      <p>
+        Sha Infotechnology is a results-driven digital marketing agency
+        delivering powerful digital marketing services, website development,
+        and content marketing strategy solutions to help brands scale online,
+        generate qualified leads, and increase revenue.
+      </p>
+
+      <button
+        class="cta-btn"
+        id="openPopupBtn"
+      >
+        Connect With Us
+      </button>
+
+    </div>
+
+    <!-- RIGHT FORM -->
+
+    <div class="hero-right">
+
+      <div class="side-form">
+
+        <h2>Connect With Us</h2>
+
+        <form
+          class="heroForm"
+          id="sideForm"
+        >
+
+          <div class="form-row">
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              required
+            >
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            >
+
+          </div>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          >
+
+          <select
+            name="selection"
+            required
+          >
+            <option value="">
+              Select Service / Course
+            </option>
+
+            <option value="Digital Strategy">Digital Strategy</option>
+            <option value="Digital Marketing Course">Digital Marketing Course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="E-commerce Website">E-commerce Website</option>
+            <option value="Search Engine Optimization">Search Engine Optimization</option>
+            <option value="Social Media Marketing">Social Media Marketing</option>
+            <option value="Content Design">Content Design</option>
+            <option value="Business Analysis">Business Analysis</option>
+            <option value="Creative Design">Creative Design</option>
+            <option value="Brand Consultancy">Brand Consultancy</option>
+            <option value="AI Marketing">AI Marketing</option>
+
+          </select>
+
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="3"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="submit-btn"
+          >
+            Submit
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- POPUP -->
+
+  <div
+    class="popup-overlay"
+    id="popupOverlay"
+  >
+
+    <div
+      class="popup-form"
+      id="popupBox"
+    >
+
+      <button
+        class="close-btn"
+        id="closePopupBtn"
+      >
+        ✕
+      </button>
+
+      <h2>Connect With Us</h2>
+
+      <form
+        class="heroForm"
+        id="popupForm"
+      >
+
+        <div class="form-row">
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            required
+          >
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            required
+          >
+
+        </div>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        >
+
+        <select
+          name="selection"
+          required
+        >
+          <option value="">
+            Select Service / Course
+          </option>
+
+          <option value="Digital Strategy">Digital Strategy</option>
+          <option value="Digital Marketing Course">Digital Marketing Course</option>
+          <option value="Web Development">Web Development</option>
+          <option value="E-commerce Website">E-commerce Website</option>
+          <option value="Search Engine Optimization">Search Engine Optimization</option>
+          <option value="Social Media Marketing">Social Media Marketing</option>
+          <option value="Content Design">Content Design</option>
+          <option value="Business Analysis">Business Analysis</option>
+          <option value="Creative Design">Creative Design</option>
+          <option value="Brand Consultancy">Brand Consultancy</option>
+          <option value="AI Marketing">AI Marketing</option>
+
+        </select>
+
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="4"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="submit-btn"
+        >
+          Submit
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    /* EMAILJS INIT */
+
+    emailjs.init(
+      "yxT-hRvX41RhpOdfZ"
+    );
+
+    const popup =
+      document.getElementById(
+        "popupOverlay"
+      );
+
+    const openBtn =
+      document.getElementById(
+        "openPopupBtn"
+      );
+
+    const closeBtn =
+      document.getElementById(
+        "closePopupBtn"
+      );
+
+    /* OPEN POPUP */
+
+    if(openBtn){
+
+      openBtn.onclick=function(){
+
+        popup.style.display="flex";
+
+      };
+
+    }
+
+    /* CLOSE BUTTON */
+
+    if(closeBtn){
+
+      closeBtn.onclick=function(){
+
+        popup.style.display="none";
+
+      };
+
+    }
+
+    /* OVERLAY CLOSE */
+
+    popup.onclick=function(e){
+
+      if(e.target===popup){
+
+        popup.style.display="none";
+
+      }
+
+    };
+
+    /* ESC CLOSE */
+
+    document.addEventListener(
+    "keydown",
+    function(e){
+
+      if(e.key==="Escape"){
+
+        popup.style.display="none";
+
+      }
+
+    });
+
+    /* FORM SUBMIT */
+
+    const forms =
+      document.querySelectorAll(
+        ".heroForm"
+      );
+
+    forms.forEach(form=>{
+
+      form.addEventListener(
+      "submit",
+      function(e){
+
+        e.preventDefault();
+
+        const btn =
+          form.querySelector(
+            ".submit-btn"
+          );
+
+        btn.innerHTML="Sending...";
+        btn.disabled=true;
+
+        const data={
+
+          name:
+            form.name.value,
+
+          phone:
+            form.phone.value,
+
+          email:
+            form.email.value,
+
+          selection:
+            form.selection.value,
+
+          message:
+            form.message.value
+
+        };
+
+        emailjs.send(
+          "service_pznbx9s",
+          "template_8wwwast",
+          data,
+          "yxT-hRvX41RhpOdfZ"
+        )
+
+        .then(()=>{
+
+          alert(
+            "Enquiry Sent Successfully!"
+          );
+
+          const message=
+`🚀 New Enquiry
+
+👤 Name: ${data.name}
+📞 Phone: ${data.phone}
+📧 Email: ${data.email}
+📌 Service: ${data.selection}
+
+💬 Message:
+${data.message}`;
+
+          const phoneNumber =
+            "919361046387";
+
+          const whatsappURL =
+`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+          /* WHATSAPP REDIRECT */
+
+          window.location.href=
+            whatsappURL;
+
+          /* RESET */
+
+          forms.forEach(
+            f=>f.reset()
+          );
+
+          /* CLOSE POPUP */
+
+          popup.style.display=
+            "none";
+
+        })
+
+        .catch(()=>{
+
+          alert(
+            "Failed to send enquiry."
+          );
+
+        })
+
+        .finally(()=>{
+
+          btn.innerHTML=
+            "Submit";
+
+          btn.disabled=
+            false;
+
+        });
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+  <!-- ================= POPUP FORM ================= -->
+
+
+
+
+
+  <!-- ================= ABOUT SECTION ================= -->
+
+  <section class="projectrun-section">
+
+    <div class="projectrun-header">
+
+      <h2 class="projectrun-title">
+
+        <span class="projectrun-title-white">
+          Your Trusted Digital
+        </span>
+
+        <span class="projectrun-title-gradient">
+          Marketing Agency for Measurable Growth
+        </span>
+
+      </h2>
+
+      <div class="projectrun-divider"></div>
+
+    </div>
+
+    <div class="projectrun-container">
+
+      <!-- IMAGE -->
+
+      <div class="projectrun-image">
+
+        <div class="projectrun-image-glow">
+
+          <img src="images/projectrun.png" alt="Digital Marketing">
+
+        </div>
+
+      </div>
+
+      <!-- TEXT -->
+
+      <div class="projectrun-text">
+
+        <p>
+          At SHA Infotechnology, we combine creativity, data, and technology to deliver end-to-end digital marketing
+          services tailored for startups, SMEs, and growing enterprises.
+        </p>
+
+        <p>
+          From high-performance website development to ROI-focused content marketing strategies, our solutions are
+          designed to strengthen your online presence and drive meaningful business outcomes.
+        </p>
+
+        <p>
+          We help your brand stand out in a competitive digital landscape by aligning smart digital strategies with
+          measurable growth objectives.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= SERVICES ================= -->
+
+<section class="seo-section" id="seoSection">
+
+  <!-- HEADER -->
+
+  <div class="seo-header">
+
+    <h2 class="seo-title">
+
+      <span class="seo-title-white">
+        Digital Marketing
+      </span>
+
+      <span class="seo-title-gradient">
+        Services
+      </span>
+
+    </h2>
+
+    <div class="seo-divider"></div>
+
+  </div>
+
+  <!-- CONTENT -->
+
+  <div class="seo-container">
+
+    <!-- LEFT TEXT -->
+
+    <div class="seo-text">
+
+      <p>
+        We create customized digital marketing campaigns that align with your
+        business goals and deliver measurable outcomes.
+      </p>
+
+      <ul class="seo-list">
+
+        <li>
+          Search Engine Optimization (SEO)
+        </li>
+
+        <li>
+          Google Ads & Paid Media (PPC)
+        </li>
+
+        <li>
+          Social Media Marketing (SMM)
+        </li>
+
+        <li>
+          Local SEO & Lead Generation
+        </li>
+
+        <li>
+          Analytics & Performance Tracking
+        </li>
+
+      </ul>
+
+      <p>
+        Our strategies increase visibility, drive high-quality traffic,
+        and convert visitors into loyal customers.
+      </p>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="seo-image">
+
+      <div class="image-glow">
+
+        <img
+          src="/images/seo.png"
+          alt="Digital Marketing Services"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const seoSection =
+      document.getElementById(
+        "seoSection"
+      );
+
+    if(!seoSection) return;
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            seoSection.classList.add(
+              "seo-show"
+            );
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.2
+      }
+
+    );
+
+    observer.observe(
+      seoSection
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+  <!-- ================= WEBSITE DEVELOPMENT ================= -->
+
+<section class="section-wrap" id="websiteSection">
+
+  <!-- HEADER -->
+
+  <div class="section-header">
+
+    <h2 class="section-title">
+
+      <span class="title-white">
+        Website Development
+      </span>
+
+      <span class="title-gradient">
+        That Converts
+      </span>
+
+    </h2>
+
+    <p class="section-desc">
+      Your website is your digital storefront. Our website development
+      services are designed to create strong first impressions while
+      driving real business results.
+    </p>
+
+  </div>
+
+  <!-- CONTENT -->
+
+  <div class="section-container">
+
+    <!-- IMAGE -->
+
+    <div class="section-image">
+
+      <img
+        src="/images/websitehome.png"
+        alt="Website Development Services"
+      >
+
+    </div>
+
+    <!-- TEXT -->
+
+    <div class="section-text">
+
+      <ul class="section-list">
+
+        <li>
+          SEO-friendly website architecture
+        </li>
+
+        <li>
+          Fast-loading, mobile-responsive design
+        </li>
+
+        <li>
+          UX/UI optimized for conversions
+        </li>
+
+        <li>
+          Secure and scalable development
+        </li>
+
+      </ul>
+
+      <p>
+        We build websites that not only look great but also convert visitors
+        into loyal customers.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "websiteSection"
+      );
+
+    if(!section) return;
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            section.classList.add(
+              "section-show"
+            );
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.2
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+  <!-- ================= CONTENT MARKETING ================= -->
+<section class="contentcore-section" id="contentCoreSection">
+
+  <!-- HEADER -->
+
+  <div class="contentcore-header">
+
+    <h2 class="contentcore-title">
+
+      <span class="contentcore-title-white">
+        Content Marketing Strategy
+      </span>
+
+      <span class="contentcore-title-gradient">
+        for Brand Authority
+      </span>
+
+    </h2>
+
+    <div class="contentcore-divider"></div>
+
+  </div>
+
+  <!-- CONTENT -->
+
+  <div class="contentcore-container">
+
+    <!-- LEFT TEXT -->
+
+    <div class="contentcore-text">
+
+      <p>
+        Content is the backbone of digital success. Our content marketing
+        strategy is designed to build trust, authority, and long-term brand value.
+      </p>
+
+      <ul class="contentcore-list">
+
+        <li>
+          SEO-optimized blog content
+        </li>
+
+        <li>
+          Website and landing page copywriting
+        </li>
+
+        <li>
+          Social media content planning
+        </li>
+
+        <li>
+          Brand storytelling and messaging
+        </li>
+
+      </ul>
+
+      <p>
+        We help you attract, engage, and retain your audience with meaningful,
+        high-impact content that supports your business goals.
+      </p>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="contentcore-image">
+
+      <div class="contentcore-image-glow">
+
+        <img
+          src="/images/conhome.png"
+          alt="Content Marketing Strategy"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "contentCoreSection"
+      );
+
+    if(!section) return;
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            section.classList.add(
+              "contentcore-show"
+            );
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.2
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+  <!-- ================= WHAT WE DO ================= -->
+
+<section class="sh-wrap">
+
+  <h2 class="sh-title">What We Do Best</h2>
+
+  <div class="sh-grid">
+
+    <a href="digital-strategy.html" class="sh-card">
+      <div class="sh-icon">🧠</div>
+      <h3>Digital Strategy</h3>
+      <div class="sh-hover-text">
+        Data-driven strategies that align technology, marketing, and business goals.
+      </div>
+    </a>
+
+    <a href="web-development.html" class="sh-card">
+      <div class="sh-icon">💻</div>
+      <h3>Web Development</h3>
+      <div class="sh-hover-text">
+        High-performance, responsive websites built to convert visitors into customers.
+      </div>
+    </a>
+
+    <a href="ecommerce-website.html" class="sh-card">
+      <div class="sh-icon">🛒</div>
+      <h3>E-commerce Website</h3>
+      <div class="sh-hover-text">
+        Secure, scalable online stores designed for smooth shopping and higher sales.
+      </div>
+    </a>
+
+    <a href="seo.html" class="sh-card">
+      <div class="sh-icon">🔍</div>
+      <h3>Search Engine Optimization</h3>
+      <div class="sh-hover-text">
+        Improve rankings, organic traffic, and long-term online visibility.
+      </div>
+    </a>
+
+    <a href="social-media-marketing.html" class="sh-card">
+      <div class="sh-icon">📣</div>
+      <h3>Social Media Marketing</h3>
+      <div class="sh-hover-text">
+        Build brand awareness, engagement, and trust across social platforms.
+      </div>
+    </a>
+
+    <a href="content-design.html" class="sh-card">
+      <div class="sh-icon">✍️</div>
+      <h3>Content Design</h3>
+      <div class="sh-hover-text">
+        Compelling content that informs, engages, and converts your audience.
+      </div>
+    </a>
+
+    <a href="business-analysis.html" class="sh-card">
+      <div class="sh-icon">📊</div>
+      <h3>Business Analysis</h3>
+      <div class="sh-hover-text">
+        Insight-driven analysis to optimize processes, performance, and growth.
+      </div>
+    </a>
+
+    <a href="creative-design.html" class="sh-card">
+      <div class="sh-icon">🎨</div>
+      <h3>Creative Design</h3>
+      <div class="sh-hover-text">
+        Eye-catching visuals and branding that make your business stand out.
+      </div>
+    </a>
+
+    <a href="brand-consultancy.html" class="sh-card">
+      <div class="sh-icon">🏷️</div>
+      <h3>Brand Consultancy</h3>
+      <div class="sh-hover-text">
+        Build a strong, consistent brand identity that drives trust and growth.
+      </div>
+    </a>
+
+    <a href="ai-marketing.html" class="sh-card">
+      <div class="sh-icon">⚙️</div>
+      <h3>AI Marketing</h3>
+      <div class="sh-hover-text">
+        AI-powered marketing strategies that analyze data, predict customer behavior and maximize conversions.
+      </div>
+    </a>
+
+  </div>
+
+</section>
+
+
+
+  <!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why-wrap" id="whyChooseSection">
+
+  <div class="why-container">
+
+    <!-- LEFT -->
+
+    <div class="why-left">
+
+      <h2>
+        Why Choose
+        <span>SHA Infotechnology</span>
+        <br>
+        as Your Digital Marketing Agency?
+      </h2>
+
+      <p>
+        We don’t just market your brand — we help you grow it sustainably.
+        Our approach combines creativity, strategy, and performance-driven
+        execution to deliver measurable business results.
+      </p>
+
+      <div class="why-tagline">
+        Trusted by businesses looking for real digital growth.
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="why-features">
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          👨‍💻
+        </div>
+
+        <div>
+
+          <h4>
+            Experienced Professionals
+          </h4>
+
+          <p>
+            Skilled digital marketing experts with hands-on industry experience.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          📊
+        </div>
+
+        <div>
+
+          <h4>
+            Data-Driven Strategies
+          </h4>
+
+          <p>
+            Every decision backed by analytics, insights, and proven metrics.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          📈
+        </div>
+
+        <div>
+
+          <h4>
+            Transparent Reporting & ROI
+          </h4>
+
+          <p>
+            Clear reports, honest communication, and measurable return on investment.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          🏢
+        </div>
+
+        <div>
+
+          <h4>
+            Industry-Specific Solutions
+          </h4>
+
+          <p>
+            Customized strategies tailored to your business and target audience.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          💰
+        </div>
+
+        <div>
+
+          <h4>
+            Affordable & Scalable Plans
+          </h4>
+
+          <p>
+            Flexible pricing plans that grow along with your business.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "whyChooseSection"
+      );
+
+    if(!section) return;
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            section.classList.add(
+              "why-show"
+            );
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.2
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+
+  <!-- ================= INDUSTRIES ================= -->
+
+
+  <section class="sha-industries" id="industriesSection">
+
+  <!-- HEADING -->
+
+  <h2>
+    Industries
+    <span>We Serve</span>
+  </h2>
+
+  <p>
+    SHA Infotechnology partners with businesses across diverse industries,
+    delivering tailored digital solutions for IT companies, e-commerce brands,
+    healthcare providers, educational institutions, real estate firms, and
+    growing startups to drive consistent growth and measurable results.
+  </p>
+
+  <!-- SLIDER -->
+
+  <div class="industry-slider">
+
+    <div class="industry-track">
+
+      <!-- SET 1 -->
+
+      <div class="industry-item">
+        <div class="industry-icon">💻</div>
+        <h4>IT & Software Companies</h4>
+      </div>
+
+      <div class="industry-item">
+        <div class="industry-icon">🛒</div>
+        <h4>E-commerce & Retail</h4>
+      </div>
+
+      <div class="industry-item">
+        <div class="industry-icon">🏥</div>
+        <h4>Healthcare & Clinics</h4>
+      </div>
+
+      <div class="industry-item">
+        <div class="industry-icon">🎓</div>
+        <h4>Education & EdTech</h4>
+      </div>
+
+      <div class="industry-item">
+        <div class="industry-icon">🏗️</div>
+        <h4>Real Estate & Construction</h4>
+      </div>
+
+      <div class="industry-item">
+        <div class="industry-icon">🚀</div>
+        <h4>Startups & Local Businesses</h4>
+      </div>
+
+      <!-- DUPLICATE SET (for infinite scroll same as React) -->
+
+      <div class="industry-item">
+        <div class="industry-icon">💻</div>
+        <h4>IT & Software Companies</h4>
+      </div>
+
+      <div class="industry-item">
+        <div class="industry-icon">🛒</div>
+        <h4>E-commerce & Retail</h4>
+      </div>
+
+      <div class="industry-item">
+        <div class="industry-icon">🏥</div>
+        <h4>Healthcare & Clinics</h4>
+      </div>
+
+      <div class="industry-item">
+        <div class="industry-icon">🎓</div>
+        <h4>Education & EdTech</h4>
+      </div>
+
+      <div class="industry-item">
+        <div class="industry-icon">🏗️</div>
+        <h4>Real Estate & Construction</h4>
+      </div>
+
+      <div class="industry-item">
+        <div class="industry-icon">🚀</div>
+        <h4>Startups & Local Businesses</h4>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "industriesSection"
+      );
+
+    if(!section) return;
+
+    const slider =
+      section.querySelector(
+        ".industry-slider"
+      );
+
+    const track =
+      section.querySelector(
+        ".industry-track"
+      );
+
+    /* SAME REACT STRUCTURE
+       CSS handles animation + hover pause */
+
+  });
+
+  </script>
+
+</section>
+
+
+
+  <!-- ================= STATS ================= -->
+
+ <section class="sha-stats" id="statsSection">
+
+  <div class="sha-stats-inner">
+
+    <!-- ITEM 1 -->
+
+    <div class="stat-box">
+
+      <div
+        class="stat-value"
+        data-target="100"
+      >
+        0+
+      </div>
+
+      <div class="stat-label">
+        Happy Clients
+      </div>
+
+    </div>
+
+    <!-- ITEM 2 -->
+
+    <div class="stat-box">
+
+      <div
+        class="stat-value"
+        data-target="2"
+      >
+        0+
+      </div>
+
+      <div class="stat-label">
+        Years of Experience
+      </div>
+
+    </div>
+
+    <!-- ITEM 3 -->
+
+    <div class="stat-box">
+
+      <div
+        class="stat-value"
+        data-target="5"
+      >
+        0+
+      </div>
+
+      <div class="stat-label">
+        Expert Professionals
+      </div>
+
+    </div>
+
+    <!-- ITEM 4 -->
+
+    <div class="stat-box">
+
+      <div
+        class="stat-value"
+        data-target="180"
+      >
+        0+
+      </div>
+
+      <div class="stat-label">
+        Projects Delivered
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "statsSection"
+      );
+
+    if(!section) return;
+
+    const counters =
+      section.querySelectorAll(
+        ".stat-value"
+      );
+
+    let started = false;
+
+    /* SAME INTERSECTION OBSERVER */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting &&
+            !started
+          ){
+
+            started = true;
+
+            counters.forEach(
+              counter=>{
+
+              const target =
+                parseInt(
+                  counter.dataset.target
+                );
+
+              let current = 0;
+
+              const increment =
+                Math.ceil(
+                  target / 40
+                );
+
+              const timer =
+                setInterval(()=>{
+
+                current += increment;
+
+                if(
+                  current >= target
+                ){
+                  current = target;
+                  clearInterval(
+                    timer
+                  );
+                }
+
+                counter.innerHTML =
+                  current + "+";
+
+              },30);
+
+            });
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.4
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+  <!-- ================= FAQ ================= -->
+
+
+<section class="home-faq-wrap" id="faqSection">
+
+  <div class="home-faq-container">
+
+    <!-- TITLE -->
+
+    <h2 class="home-faq-title">
+
+      <span class="faq-title-white">
+        Frequently Asked
+      </span>
+
+      <span class="faq-title-gradient">
+        Questions
+      </span>
+
+    </h2>
+
+    <p class="home-faq-sub">
+      Clear answers to help you move forward with confidence.
+    </p>
+
+    <!-- FAQ CARD -->
+
+    <div class="home-faq-card">
+
+      <!-- FAQ 1 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Which service should I start with?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            If you’re new, start with a professional website and basic SEO.
+            Once traffic grows, ads and social media help scale faster.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 2 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Do you work with small businesses?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Yes. We work with startups, small businesses, and growing companies,
+            offering flexible and affordable solutions.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 3 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            How long does it take to see results?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            SEO typically takes 2–3 months for visible results,
+            while Google Ads and social media campaigns can generate
+            leads much faster.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 4 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            Do you provide ongoing support?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Absolutely. We offer continuous optimization, support,
+            and performance tracking for all our services.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQ 5 -->
+
+      <div class="home-faq-item">
+
+        <div class="home-faq-header">
+
+          <div class="home-faq-question">
+            How do I get started?
+          </div>
+
+          <div class="home-faq-toggle">
+            +
+          </div>
+
+        </div>
+
+        <div class="home-faq-answer">
+          <p>
+            Simply contact us for a free consultation.
+            We’ll analyze your business and recommend
+            the best growth strategy.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+
+    <div class="home-faq-cta">
+
+      <h3>
+        Still have questions?
+      </h3>
+
+      <p>
+        Talk directly with our experts and get a custom growth plan.
+      </p>
+
+      <a href="pages/Contact.html">
+        <button>
+          BOOK FREE CONSULTATION →
+        </button>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "faqSection"
+      );
+
+    if(!section) return;
+
+    const items =
+      section.querySelectorAll(
+        ".home-faq-item"
+      );
+
+    /* AUTO OPEN FIRST FAQ */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            const first =
+              items[0];
+
+            first.classList.add(
+              "open"
+            );
+
+            first.querySelector(
+              ".home-faq-toggle"
+            ).innerHTML="−";
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.35
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+    /* FAQ TOGGLE */
+
+    items.forEach(item=>{
+
+      const header =
+        item.querySelector(
+          ".home-faq-header"
+        );
+
+      const toggle =
+        item.querySelector(
+          ".home-faq-toggle"
+        );
+
+      header.addEventListener(
+      "click",
+      function(){
+
+        const isOpen =
+          item.classList.contains(
+            "open"
+          );
+
+        items.forEach(i=>{
+
+          i.classList.remove(
+            "open"
+          );
+
+          i.querySelector(
+            ".home-faq-toggle"
+          ).innerHTML="+";
+
+        });
+
+        if(!isOpen){
+
+          item.classList.add(
+            "open"
+          );
+
+          toggle.innerHTML="−";
+
+        }
+
+      });
+
+    });
+
+    /* FAQ SCHEMA */
+
+    const schema = {
+
+      "@context":
+      "https://schema.org",
+
+      "@type":
+      "FAQPage",
+
+      "mainEntity":[
+
+      {
+        "@type":"Question",
+        "name":"Which service should I start with?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"If you’re new, start with a professional website and basic SEO. Once traffic grows, ads and social media help scale faster."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"Do you work with small businesses?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. We work with startups, small businesses, and growing companies, offering flexible and affordable solutions."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"How long does it take to see results?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"SEO typically takes 2–3 months for visible results, while Google Ads and social media campaigns can generate leads much faster."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"Do you provide ongoing support?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Absolutely. We offer continuous optimization, support, and performance tracking for all our services."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"How do I get started?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Simply contact us for a free consultation. We’ll analyze your business and recommend the best growth strategy."
+        }
+      }
+
+      ]
+
+    };
+
+    const script =
+      document.createElement(
+        "script"
+      );
+
+    script.type =
+      "application/ld+json";
+
+    script.innerHTML =
+      JSON.stringify(
+        schema
+      );
+
+    document.head.appendChild(
+      script
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+  <!-- JS -->
+
+  <script src="script.js"></script>
 
 </body>
+
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="../Home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+        <li><a href="DigitalStrategy.html">Digital Strategy</a></li>
+        <li><a href="WebDevelopment.html">Web Development</a></li>
+        <li><a href="Ecommerce.html">Ecommerce Website</a></li>
+        <li><a href="Seo.html">SEO</a></li>
+        <li><a href="SocialMedia.html">Social Media Marketing</a></li>
+        <li><a href="AiMarketing.html">AI Marketing</a></li>
+        <li><a href="BusinessAnalysis.html">Business Analysis</a></li>
+        <li><a href="ContentDesign.html">Content Design</a></li>
+        <li><a href="CreativeDesign.html">Creative Design</a></li>
+        <li><a href="BrandConsultancy.html">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="footer.css">
+<script src="footer.js"></script>
+</footer>
+
+<!-- FONT AWESOME -->
+
+
+
 </html>
