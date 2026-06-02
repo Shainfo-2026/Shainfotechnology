@@ -215,6 +215,7 @@
     align-items:center;
     padding:90px 8%;
     text-align:left;
+    
   }
 
   .smm-desc{
@@ -232,7 +233,8 @@
 @media(max-width:768px){
 
   .smm-hero{
-    padding:60px 20px;
+    padding: 20px;
+    padding-top: 25%;
   }
 
   .smm-title{

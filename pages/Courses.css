@@ -260,7 +260,9 @@
 /* ================= MOBILE ================= */
 
 @media(max-width:600px){
-
+.hero-section{
+  padding-top: 20%;
+}
   .form-row{
     flex-direction:column;
   }

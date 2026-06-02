@@ -13,7 +13,8 @@
   flex-direction:column;
   justify-content:center;
 
-  padding:50px 6%;
+ 
+  padding:70px 9%;
 
   font-family:'Inter',
   system-ui,
@@ -214,6 +215,27 @@
 
 
 
+@media(max-width:768px){
+
+  .smm-hero{
+    padding: 20px;
+    padding-top: 25%;
+  }
+
+  .smm-title{
+    line-height:1.25;
+  }
+
+  .smm-desc{
+    font-size:15px;
+  }
+
+  .icon-cloud{
+    width:280px;
+    height:280px;
+  }
+
+}
 
 
 
