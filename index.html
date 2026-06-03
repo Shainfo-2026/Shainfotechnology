@@ -20,6 +20,8 @@
   <!-- CSS -->
    <link rel="stylesheet" href="hom.html">
   <link rel="stylesheet" href="Home.css">
+  <link rel="stylesheet" href="Callbutton.html">
+  <link rel="stylesheet" href="Callbutton.css">
 
 </head>
 
@@ -2084,6 +2086,191 @@ ${data.message}`;
 
   <script src="script.js"></script>
 
+
+
+
+
+
+  <!-- CALL FLOAT BUTTON -->
+
+<a
+href="tel:919361046387"
+class="call-float"
+aria-label="Call SHA Infotechnology"
+>
+
+<!-- PHONE ICON -->
+
+<svg viewBox="0 0 24 24">
+
+<path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 21 3 13.93 3 5.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.25.2 2.46.57 3.59a1 1 0 01-.25 1.01l-2.2 2.19z"/>
+
+</svg>
+
+</a>
+
+<!-- JS INSIDE SECTION -->
+
+<script>
+
+/* OPTIONAL CLICK TRACK */
+
+document.querySelector(".call-float")
+.addEventListener("click",function(){
+
+console.log("Call button clicked");
+
+});
+
+</script>
+
+
+<!-- whatsapp -->
+
+
+<div class="wa-chat" id="waChat" style="display:none;">
+
+<div class="wa-header">
+
+<img
+class="wa-avatar"
+src="images/LOGO.jpeg"
+alt="SHA Infotechnology"
+/>
+
+<div>
+<div class="wa-name">SHA Infotechnology</div>
+<div class="wa-status">Online</div>
+</div>
+
+<div
+class="wa-close"
+onclick="closeWA()"
+>
+✕
+</div>
+
+</div>
+
+<div class="wa-body">
+
+<div class="wa-bubble">
+Hi there 👋 <br>
+How can we help you today?
+</div>
+
+</div>
+
+<div class="wa-input">
+
+<input
+id="waInput"
+type="text"
+value="Hi SHA Infotechnology 👋 I would like to enquire about your services."
+>
+
+<div
+class="wa-send"
+onclick="sendWhatsApp()"
+>
+➤
+</div>
+
+</div>
+
+</div>
+
+<!-- FLOAT BUTTON -->
+
+<div
+class="wa-float"
+onclick="toggleWA()"
+>
+
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+alt="WhatsApp"
+>
+
+</div>
+
+<script>
+
+/* PHONE */
+
+const phone="919361046387";
+
+/* AUTO OPEN 5 SEC */
+
+setTimeout(()=>{
+document.getElementById(
+"waChat"
+).style.display="block";
+},5000);
+
+/* TOGGLE */
+
+function toggleWA(){
+
+const chat=document.getElementById(
+"waChat"
+);
+
+if(chat.style.display==="none"){
+chat.style.display="block";
+}
+else{
+chat.style.display="none";
+}
+
+}
+
+/* CLOSE */
+
+function closeWA(){
+document.getElementById(
+"waChat"
+).style.display="none";
+}
+
+/* SEND */
+
+function sendWhatsApp(){
+
+const msg=document.getElementById(
+"waInput"
+).value;
+
+const url=
+"https://wa.me/"
++phone+
+"?text="+
+encodeURIComponent(msg);
+
+window.open(
+url,
+"_blank"
+);
+
+}
+
+/* ENTER KEY */
+
+document.addEventListener(
+"keydown",
+function(e){
+
+if(
+e.key==="Enter" &&
+document.activeElement.id==="waInput"
+){
+sendWhatsApp();
+}
+
+}
+);
+
+</script>
 </body>
 
 
