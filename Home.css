@@ -203,7 +203,11 @@
 /* MOBILE */
 
 @media(max-width:600px){
-
+.hero-section{
+  text-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
+}
   .form-row{
     flex-direction:column;
   }
