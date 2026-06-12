@@ -1,0 +1,28 @@
+RewriteEngine On
+
+# About
+RewriteRule ^About/?$ pages/About.html [L,NC]
+
+# Services
+RewriteRule ^Services/?$ pages/Services.html [L,NC]
+
+# Blog
+RewriteRule ^Blog/?$ pages/Blog.html [L,NC]
+
+# Courses
+RewriteRule ^Courses/?$ pages/Courses.html [L,NC]
+
+# Contact
+RewriteRule ^Contact/?$ pages/Contact.html [L,NC]
+
+# Service Pages
+RewriteRule ^web-development/?$ services/web-development.html [L,NC]
+RewriteRule ^seo/?$ services/seo.html [L,NC]
+RewriteRule ^social-media-marketing/?$ services/social-media-marketing.html [L,NC]
+RewriteRule ^digital-strategy/?$ services/digital-strategy.html [L,NC]
+RewriteRule ^creative-design/?$ services/creative-design.html [L,NC]
+RewriteRule ^content-design/?$ services/content-design.html [L,NC]
+RewriteRule ^brand-consultancy/?$ services/brand-consultancy.html [L,NC]
+RewriteRule ^business-analysis/?$ services/business-analysis.html [L,NC]
+RewriteRule ^ecommerce-website/?$ services/ecommerce-website.html [L,NC]
+RewriteRule ^aimarketing/?$ services/aimarketing.html [L,NC]
