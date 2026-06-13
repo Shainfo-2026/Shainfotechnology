@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="../Home.css">
-         <link rel="stylesheet" href="../footer.css">
-         <link rel="stylesheet" href="../footer.js">
-      <link rel="stylesheet" href="social-media-marketing.css">
-      <link rel="stylesheet" href="../Callbutton.css">
+  <link rel="stylesheet" href="/Home.css">
+         <link rel="stylesheet" href="/footer.css">
+         <link rel="stylesheet" href="/footer.js">
+       <link rel="stylesheet" href="/servicesse/ecommerce-website.css">
+         <link rel="stylesheet" href="/Callbutton.css">
 
 </head>
 
@@ -25,7 +25,7 @@
 
         <a href="/">
           <img
-            src="../images/LOGO.jpeg"
+            src="/images/LOGO.jpeg"
             alt="Logo"
             class="logo-img"
           />
@@ -54,21 +54,21 @@
     >
 
       <a
-        href="../index.html"
+        href="/"
         class="nav-btn"
       >
         Home
       </a>
 
       <a
-        href="../pages/About.html"
+        href="/About/"
         class="nav-btn"
       >
         About
       </a>
 
       <a
-        href="../pages/Services.html"
+        href="/Services/"
         class="nav-btn"
       >
         Services
@@ -76,21 +76,21 @@
 
       
       <a
-        href="../pages/Courses.html"
+        href="/Courses/"
         class="nav-btn"
       >
         Courses
       </a>
 
       <a
-        href="../pages/Contact.html"
+        href="/Contact/"
         class="nav-btn contact-link"
       >
         Contact
       </a>
 
       <a
-        href="../pages/Blog.html"
+        href="/Blog/"
         class="nav-btn"
       >
         Blog
@@ -216,43 +216,54 @@
   </script>
 
 </header>
-
 <body>
 
-<section class="smm-hero" id="socialMediaHero">
 
-  <!-- LEFT -->
+
+    <!-- SEO + META -->
+
+<title>Custom Ecommerce Websites by Shainfo Tech</title>
+
+<meta
+  name="description"
+  content="Need a top ecommerce website? Shainfo Technology creates user-friendly stores with mobile support and easy inventory tools. Launch yours and sell more—contact us!"
+>
+
+<!-- HERO SECTION -->
+
+<section class="smm-hero" id="ecommerceHero">
 
   <div class="smm-left">
 
-    <small>
-      Social Media Marketing
-    </small>
+    <small>E-commerce</small>
 
     <h1 class="smm-title">
 
-      Turn
+      Build an Online Store
       <span class="accent">
-        Social Media Attention
+        That Converts Visitors
       </span>
 
       <br>
 
-      into Brand Growth
+      into Customers
 
       <br>
 
       <span class="accent">
-        Engage the Right Audience Across Every Platform
+        Sell Smarter with a Scalable E-commerce Platform
       </span>
 
     </h1>
 
     <p class="smm-desc">
 
-      We create data-driven social media strategies that build trust,
-      increase engagement, and drive real results. From content planning
-      to campaign execution, we help your brand stay visible and relevant.
+      We develop secure, high-performance e-commerce websites
+      designed to maximise conversions.
+
+      From product pages to checkout optimisation, every
+      element is built to increase sales and support
+      long-term business growth.
 
     </p>
 
@@ -281,24 +292,46 @@
   <script>
 
   document.addEventListener(
-    "DOMContentLoaded",
-    function(){
+  "DOMContentLoaded",
+  function(){
 
-      const section =
-        document.getElementById(
-          "socialMediaHero"
-        );
-
-      if(!section) return;
-
-      /* SECTION READY */
-
-      section.classList.add(
-        "loaded"
+    const hero =
+      document.getElementById(
+        "ecommerceHero"
       );
 
-    }
-  );
+    if(!hero) return;
+
+    /* ICON HOVER EFFECT */
+
+    const icons =
+      hero.querySelectorAll(
+        ".icon"
+      );
+
+    icons.forEach(icon=>{
+
+      icon.addEventListener(
+      "mouseenter",
+      function(){
+
+        icon.style.transform =
+          "translateY(-6px) scale(1.05)";
+
+      });
+
+      icon.addEventListener(
+      "mouseleave",
+      function(){
+
+        icon.style.transform =
+          "";
+
+      });
+
+    });
+
+  });
 
   </script>
 
@@ -307,59 +340,53 @@
 
 
 <!-- 2 -->
+    
 
-
-<section class="brand-section" id="socialMediaSection">
+<section class="brand-section" id="secondSlideEcommerce">
 
   <div class="brand-grid">
 
-    <!-- LEFT CONTENT -->
+    <!-- LEFT -->
 
     <div class="brand-left">
 
       <h2>
-
         <span class="brand-white">
           What is
         </span>
 
         <span class="brand-gradient">
-          Social Media Marketing
+          E-Commerce Website Development
         </span>
 
         <span class="brand-white">
           ?
         </span>
-
       </h2>
 
       <p>
-
-        Social media marketing uses platforms like Instagram, Facebook,
-        and LinkedIn to build brand awareness, engage audiences,
-        and drive business growth. It focuses on meaningful interaction
-        rather than simply posting content.
-
+        E-commerce website development focuses on building online stores
+        that are secure, scalable, and conversion-focused. A well-designed
+        e-commerce site ensures smooth product discovery, checkout, and
+        customer experience.
       </p>
 
       <p>
-
-        We develop platform-specific strategies, create engaging content,
-        and manage community interactions to strengthen brand presence.
-        Our approach helps businesses connect with their audience,
-        build trust, and achieve measurable results.
-
+        We create e-commerce platforms optimized for performance, mobile
+        usability, and secure transactions. Our solutions support growth,
+        easy management, and customer trust—helping businesses sell
+        efficiently online.
       </p>
 
     </div>
 
-    <!-- RIGHT IMAGE -->
+    <!-- RIGHT -->
 
     <div class="brand-right">
 
       <img
         src="/images/about/whyss.png"
-        alt="Social Media Marketing Strategy Illustration"
+        alt="E-commerce Illustration"
       />
 
     </div>
@@ -376,7 +403,7 @@
 
       const section =
         document.getElementById(
-          "socialMediaSection"
+          "secondSlideEcommerce"
         );
 
       if(!section) return;
@@ -425,7 +452,8 @@
 
 <!-- 3 -->
 
-<section class="services-wrap" id="servicesGridSocial">
+
+<section class="services-wrap" id="servicesEcommerce">
 
   <div class="services-grid">
 
@@ -438,15 +466,15 @@
       </div>
 
       <div class="service-icon">
-        🧭
+        🛍️
       </div>
 
       <div class="service-title">
-        Platform Strategy & Planning
+        Ecommerce Platform Setup
       </div>
 
       <div class="service-desc">
-        Choosing the right platforms and content direction based on your audience.
+        Scalable ecommerce foundations built for smooth selling and future growth.
       </div>
 
     </div>
@@ -460,15 +488,15 @@
       </div>
 
       <div class="service-icon">
-        🗓️
+        📦
       </div>
 
       <div class="service-title">
-        Content Creation & Calendars
+        Product & Catalog Management
       </div>
 
       <div class="service-desc">
-        Consistent, brand-aligned content planned for maximum engagement.
+        Well-structured product listings for easy browsing and higher conversions.
       </div>
 
     </div>
@@ -482,15 +510,15 @@
       </div>
 
       <div class="service-icon">
-        🎬
+        💳
       </div>
 
       <div class="service-title">
-        Creative Design & Reels
+        Checkout & Payment Integration
       </div>
 
       <div class="service-desc">
-        Scroll-stopping visuals and short-form videos that capture attention.
+        Secure, frictionless checkout with trusted payment gateways.
       </div>
 
     </div>
@@ -504,15 +532,15 @@
       </div>
 
       <div class="service-icon">
-        💬
+        🧠
       </div>
 
       <div class="service-title">
-        Community Management
+        Conversion-Focused UX
       </div>
 
       <div class="service-desc">
-        Active engagement through comments, messages, and audience interactions.
+        User journeys designed to reduce drop-offs and increase sales.
       </div>
 
     </div>
@@ -526,15 +554,15 @@
       </div>
 
       <div class="service-icon">
-        📣
+        🚚
       </div>
 
       <div class="service-title">
-        Paid Social Campaigns
+        Order, Shipping & Inventory Flow
       </div>
 
       <div class="service-desc">
-        Targeted ad campaigns designed to drive leads and conversions.
+        Automated systems to manage orders, stock, and delivery efficiently.
       </div>
 
     </div>
@@ -548,15 +576,15 @@
       </div>
 
       <div class="service-icon">
-        📈
+        🔐
       </div>
 
       <div class="service-title">
-        Analytics & Growth Insights
+        Ecommerce Security & Compliance
       </div>
 
       <div class="service-desc">
-        Performance tracking with actionable insights for continuous growth.
+        Protected transactions and data with industry-standard security practices.
       </div>
 
     </div>
@@ -567,42 +595,50 @@
 
   <script>
 
-  document.addEventListener(
-    "DOMContentLoaded",
-    function(){
+    document.addEventListener(
+      "DOMContentLoaded",
+      function(){
 
-      const section =
-        document.getElementById(
-          "servicesGridSocial"
+        const section =
+          document.getElementById(
+            "servicesEcommerce"
+          );
+
+        if(!section) return;
+
+        /* JS INSIDE SECTION */
+
+        const cards =
+          section.querySelectorAll(
+            ".service-card"
+          );
+
+        cards.forEach(
+          card=>{
+
+            card.addEventListener(
+              "mouseenter",
+              function(){
+                this.classList.add(
+                  "hovering"
+                );
+              }
+            );
+
+            card.addEventListener(
+              "mouseleave",
+              function(){
+                this.classList.remove(
+                  "hovering"
+                );
+              }
+            );
+
+          }
         );
 
-      if(!section) return;
-
-      /* READY */
-
-      const cards =
-        section.querySelectorAll(
-          ".service-card"
-        );
-
-      cards.forEach(card=>{
-
-        /* SAME HOVER CSS HANDLES EFFECT */
-
-        card.addEventListener(
-          "mouseenter",
-          function(){}
-        );
-
-        card.addEventListener(
-          "mouseleave",
-          function(){}
-        );
-
-      });
-
-    }
-  );
+      }
+    );
 
   </script>
 
@@ -610,9 +646,12 @@
 
 
 
+
 <!-- 4 -->
 
-<section class="seo-hero-dark" id="whySocialMedia">
+
+
+<section class="seo-hero-dark" id="whyEcommerceHero">
 
   <div class="seo-hero-grid">
 
@@ -621,36 +660,33 @@
     <div class="seo-left">
 
       <h1>
-        Why <span>Social Media Marketing</span>?
+        Why <span>E-commerce Website</span>?
       </h1>
 
-      <ul>
+      <li>
+        An ecommerce website is the backbone of your online sales.
+        A well-built platform makes it easy for customers to browse
+        products, trust your brand, and complete purchases smoothly—
+        driving consistent revenue and repeat business.
+      </li>
 
-        <li>
-          Social media marketing connects your brand with the right audience
-          through consistent, engaging, and relevant content. It builds
-          awareness, trust, and meaningful relationships that turn followers
-          into loyal customers.
-        </li>
-
-        <li>
-          With a strategic and data-driven approach, social media goes beyond
-          likes and shares. Targeted campaigns, performance tracking, and
-          continuous optimisation help generate leads, drive traffic, and
-          support measurable business growth.
-        </li>
-
-      </ul>
+      <li>
+        Beyond design, a successful ecommerce website is optimized
+        for performance, security, and scalability. Fast load times,
+        mobile-first experiences, secure payments, and streamlined
+        order management turn your online store into a reliable
+        growth engine.
+      </li>
 
     </div>
 
-    <!-- RIGHT IMAGE -->
+    <!-- RIGHT -->
 
     <div class="seo-right seo-image-wrap">
 
       <img
-        src="/images/SOCIALMEDIAMARKETING.png"
-        alt="Social Media Marketing Strategy Illustration"
+        src="/images/ECOMMERCE.png"
+        alt="E-commerce Website Illustration"
       />
 
     </div>
@@ -667,7 +703,7 @@
 
     const section =
       document.getElementById(
-        "whySocialMedia"
+        "whyEcommerceHero"
       );
 
     if(!section) return;
@@ -713,16 +749,17 @@
 
 
 
+
 <!-- 5 -->
 
-
-<section class="home-faq-wrap" id="faqSocialMedia">
+<section class="home-faq-wrap" id="faqEcommerce">
 
   <div class="home-faq-container">
 
     <!-- TITLE -->
 
     <h2 class="home-faq-title">
+
       <span class="faq-title-white">
         Frequently Asked
       </span>
@@ -730,6 +767,7 @@
       <span class="faq-title-gradient">
         Questions
       </span>
+
     </h2>
 
     <p class="home-faq-sub">
@@ -744,14 +782,10 @@
 
       <div class="home-faq-item">
 
-        <div
-          class="home-faq-header"
-          role="button"
-          tabindex="0"
-        >
+        <div class="home-faq-header">
 
           <div class="home-faq-question">
-            Which social media platforms do you manage?
+            What type of ecommerce websites do you build?
           </div>
 
           <div class="home-faq-toggle">
@@ -762,9 +796,9 @@
 
         <div class="home-faq-answer">
           <p>
-            We manage platforms such as Instagram,
-            Facebook, LinkedIn, and YouTube depending
-            on where your target audience is most active.
+            We build scalable ecommerce websites for products and
+            services, including custom, Shopify, and WooCommerce
+            solutions.
           </p>
         </div>
 
@@ -774,14 +808,10 @@
 
       <div class="home-faq-item">
 
-        <div
-          class="home-faq-header"
-          role="button"
-          tabindex="0"
-        >
+        <div class="home-faq-header">
 
           <div class="home-faq-question">
-            Do you create content or only manage posting?
+            Will my ecommerce website be mobile-friendly?
           </div>
 
           <div class="home-faq-toggle">
@@ -792,9 +822,8 @@
 
         <div class="home-faq-answer">
           <p>
-            We handle the entire process including
-            strategy, content creation, design,
-            captions, scheduling, and audience engagement.
+            Yes. All our ecommerce websites are fully responsive and
+            optimized for mobile, tablet, and desktop users.
           </p>
         </div>
 
@@ -804,14 +833,10 @@
 
       <div class="home-faq-item">
 
-        <div
-          class="home-faq-header"
-          role="button"
-          tabindex="0"
-        >
+        <div class="home-faq-header">
 
           <div class="home-faq-question">
-            How often will you post on social media?
+            Can I manage products and orders myself?
           </div>
 
           <div class="home-faq-toggle">
@@ -822,9 +847,8 @@
 
         <div class="home-faq-answer">
           <p>
-            Posting frequency depends on your business
-            goals and plan, but most strategies include
-            consistent weekly or daily content.
+            Absolutely. You’ll get an easy-to-use admin panel to manage
+            products, orders, pricing, and inventory.
           </p>
         </div>
 
@@ -834,14 +858,10 @@
 
       <div class="home-faq-item">
 
-        <div
-          class="home-faq-header"
-          role="button"
-          tabindex="0"
-        >
+        <div class="home-faq-header">
 
           <div class="home-faq-question">
-            Will social media marketing help generate leads?
+            Is payment and checkout secure?
           </div>
 
           <div class="home-faq-toggle">
@@ -852,10 +872,8 @@
 
         <div class="home-faq-answer">
           <p>
-            Yes. With the right strategy, content,
-            and targeted campaigns, social media can
-            generate leads, increase traffic,
-            and grow your brand.
+            Yes. We integrate trusted payment gateways and follow secure
+            development standards to protect transactions.
           </p>
         </div>
 
@@ -865,14 +883,10 @@
 
       <div class="home-faq-item">
 
-        <div
-          class="home-faq-header"
-          role="button"
-          tabindex="0"
-        >
+        <div class="home-faq-header">
 
           <div class="home-faq-question">
-            How do we get started with social media marketing?
+            How do we get started with an ecommerce website?
           </div>
 
           <div class="home-faq-toggle">
@@ -883,9 +897,8 @@
 
         <div class="home-faq-answer">
           <p>
-            Simply contact us to discuss your business
-            goals and we will create a customised
-            social media strategy for your brand.
+            Contact us with your business requirements, and we’ll guide
+            you through the platform, timeline, and next steps.
           </p>
         </div>
 
@@ -894,7 +907,7 @@
     </div>
 
 
-   <div class="home-faq-cta">
+    <div class="home-faq-cta">
 
   <h3>
     Ready to Take the Next Step?
@@ -904,7 +917,7 @@
     Get in touch with our team and discover the right solutions for your business needs.
   </p>
 
-  <a href="../pages/Contact.html">
+  <a href="/Contact/">
     <button>
       CONTACT US →
     </button>
@@ -923,7 +936,7 @@
 
     const section =
       document.getElementById(
-        "faqSocialMedia"
+        "faqEcommerce"
       );
 
     if(!section) return;
@@ -942,9 +955,7 @@
 
         entries.forEach(entry=>{
 
-          if(
-            entry.isIntersecting
-          ){
+          if(entry.isIntersecting){
 
             const first =
               items[0];
@@ -1024,84 +1035,16 @@
 
     });
 
-    /* FAQ SCHEMA */
-
-    const schema = {
-
-      "@context":"https://schema.org",
-      "@type":"FAQPage",
-
-      "mainEntity":[
-
-        {
-          "@type":"Question",
-          "name":"Which social media platforms do you manage?",
-          "acceptedAnswer":{
-            "@type":"Answer",
-            "text":"We manage platforms such as Instagram, Facebook, LinkedIn, and YouTube depending on where your target audience is most active."
-          }
-        },
-
-        {
-          "@type":"Question",
-          "name":"Do you create content or only manage posting?",
-          "acceptedAnswer":{
-            "@type":"Answer",
-            "text":"We handle the entire process including strategy, content creation, design, captions, scheduling, and audience engagement."
-          }
-        },
-
-        {
-          "@type":"Question",
-          "name":"How often will you post on social media?",
-          "acceptedAnswer":{
-            "@type":"Answer",
-            "text":"Posting frequency depends on your business goals and plan, but most strategies include consistent weekly or daily content."
-          }
-        },
-
-        {
-          "@type":"Question",
-          "name":"Will social media marketing help generate leads?",
-          "acceptedAnswer":{
-            "@type":"Answer",
-            "text":"Yes. With the right strategy, content, and targeted campaigns, social media can generate leads, increase traffic, and grow your brand."
-          }
-        },
-
-        {
-          "@type":"Question",
-          "name":"How do we get started with social media marketing?",
-          "acceptedAnswer":{
-            "@type":"Answer",
-            "text":"Simply contact us to discuss your business goals and we will create a customised social media strategy for your brand."
-          }
-        }
-
-      ]
-
-    };
-
-    const script =
-      document.createElement(
-        "script"
-      );
-
-    script.type =
-      "application/ld+json";
-
-    script.innerHTML =
-      JSON.stringify(schema);
-
-    document.head.appendChild(
-      script
-    );
-
   });
 
   </script>
 
 </section>
+
+
+
+
+
 
 
 <a
@@ -1134,7 +1077,7 @@ console.log("Call button clicked");
 });
 
 </script>
-    
+
 
 
 
@@ -1286,6 +1229,8 @@ sendWhatsApp();
 
 
 
+
+
 <footer class="sps-footer">
 
   <div class="sps-footer-grid">
@@ -1308,12 +1253,13 @@ sendWhatsApp();
       <h4>Quick Links</h4>
 
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../pages/About.html">About Us</a></li>
-        <li><a href="../pages/Services.html">Services</a></li>
-        <li><a href="../pages/Courses.html">Courses</a></li>
-        <li><a href="../pages/Contact.html">Contact</a></li>
-        <li><a href="../pages/Blog.html">Blog</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/About/">About Us</a></li>
+       
+        <li><a href="/Services/">Services</a></li>
+        <li><a href="/Courses/">Courses</a></li>
+        <li><a href="/Contact/">Contact</a></li>
+        <li><a href="/Blog/">Blog</a></li>
       </ul>
     </div>
 
@@ -1321,17 +1267,17 @@ sendWhatsApp();
     <div>
       <h4>Our Services</h4>
 
-     <ul>
-         <li><a href="../services/digital-strategy.html">Digital Strategy</a></li>
-        <li><a href="../services/web-development.html">Web Development</a></li>
-        <li><a href="../services/ecommerce-website.html">Ecommerce Website</a></li>
-        <li><a href="../services/seo.html">SEO</a></li>
-        <li><a href="../services/social-media-marketing.html">Social Media Marketing</a></li>
-        <li><a href="../services/aimarketing.html">AI Marketing</a></li>
-        <li><a href="../services/business-analysis.html">Business Analysis</a></li>
-        <li><a href="../services/content-design.html">Content Design</a></li>
-        <li><a href="../services/creative-design.html">Creative Design</a></li>
-        <li><a href="../services/brand-consultancy.html">Brand Consultancy</a></li>
+      <ul>
+         <li><a href="/Services/Digital_Strategy/">Digital Strategy</a></li>
+        <li><a href="/Services/Web_development/">Web Development</a></li>
+        <li><a href="/Services/Ecommerce/">Ecommerce Website</a></li>
+        <li><a href="/Services/Seo/">SEO</a></li>
+        <li><a href="/Services/SocialMediaMarketing/">Social Media Marketing</a></li>
+        <li><a href="/Services/Aimarketing/">AI Marketing</a></li>
+        <li><a href="/Services/Business_analysis/">Business Analysis</a></li>
+        <li><a href="/Services/Content_design/">Content Design</a></li>
+        <li><a href="/Services/Creative_design/">Creative Design</a></li>
+        <li><a href="/Services/Brand_consultancy/">Brand Consultancy</a></li>
       </ul>
     </div>
 

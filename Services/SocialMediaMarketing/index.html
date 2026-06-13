@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-         <link rel="stylesheet" href="../Home.css">
-         <link rel="stylesheet" href="../footer.css">
-         <link rel="stylesheet" href="../footer.js">
-         <link rel="stylesheet" href="aimarketing.css">
-         <link rel="stylesheet" href="../Callbutton.css">
+  <link rel="stylesheet" href="/Home.css">
+         <link rel="stylesheet" href="/footer.css">
+         <link rel="stylesheet" href="/footer.js">
+       <link rel="stylesheet" href="/servicesse/social-media-marketing.css">
+         <link rel="stylesheet" href="/Callbutton.css">
 
 </head>
+
+
 <header class="sf-header" id="siteHeader">
 
   <div class="sf-header-inner">
@@ -24,7 +25,7 @@
 
         <a href="/">
           <img
-            src="../images/LOGO.jpeg"
+            src="/images/LOGO.jpeg"
             alt="Logo"
             class="logo-img"
           />
@@ -53,21 +54,21 @@
     >
 
       <a
-        href="../index.html"
+        href="/"
         class="nav-btn"
       >
         Home
       </a>
 
       <a
-        href="../pages/About.html"
+        href="/About/"
         class="nav-btn"
       >
         About
       </a>
 
       <a
-        href="../pages/Services.html"
+        href="/Services/"
         class="nav-btn"
       >
         Services
@@ -75,21 +76,21 @@
 
       
       <a
-        href="../pages/Courses.html"
+        href="/Courses/"
         class="nav-btn"
       >
         Courses
       </a>
 
       <a
-        href="../pages/Contact.html"
+        href="/Contact/"
         class="nav-btn contact-link"
       >
         Contact
       </a>
 
       <a
-        href="../pages/Blog.html"
+        href="/Blog/"
         class="nav-btn"
       >
         Blog
@@ -218,61 +219,40 @@
 
 <body>
 
-<!-- 1111 -->
- <!-- SEO META -->
-
-<title>
-AI-Powered Marketing Solutions Shainfo | Shainfotech
-</title>
-
-<meta
-name="description"
-content="Build winning strategies with our AI marketing at Shainfo Technology. Chatbots, analytics, and optimization in one. Cut waste and win big. Try it free."
->
-
-<!-- HERO SECTION -->
-
-<section class="smm-hero" id="aiHeroSection">
+<section class="smm-hero" id="socialMediaHero">
 
   <!-- LEFT -->
 
   <div class="smm-left">
 
     <small>
-      AI Marketing
+      Social Media Marketing
     </small>
 
     <h1 class="smm-title">
 
-      Grow Faster with
-
+      Turn
       <span class="accent">
-        Intelligent Automation
+        Social Media Attention
       </span>
 
       <br>
 
-      Powered by
+      into Brand Growth
 
       <br>
 
       <span class="accent">
-        Sha Infotech
+        Engage the Right Audience Across Every Platform
       </span>
 
     </h1>
 
     <p class="smm-desc">
 
-      At Sha Infotech, we help businesses generate more traffic,
-      more leads, and more revenue using advanced AI-powered
-      marketing strategies.
-
-      <br><br>
-
-      Our AI solutions analyze data, predict customer behavior,
-      automate campaigns, and optimize performance so you get
-      better results with lower marketing costs.
+      We create data-driven social media strategies that build trust,
+      increase engagement, and drive real results. From content planning
+      to campaign execution, we help your brand stay visible and relevant.
 
     </p>
 
@@ -285,30 +265,12 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
     <div class="icon-cloud">
 
       <div class="icon">G</div>
-
-      <div class="icon">
-        🔍
-      </div>
-
-      <div class="icon">
-        📈
-      </div>
-
-      <div class="icon">
-        📍
-      </div>
-
-      <div class="icon">
-        📝
-      </div>
-
-      <div class="icon">
-        ⚙️
-      </div>
-
-      <div class="icon">
-        ⭐
-      </div>
+      <div class="icon">🔍</div>
+      <div class="icon">📈</div>
+      <div class="icon">📍</div>
+      <div class="icon">📝</div>
+      <div class="icon">⚙️</div>
+      <div class="icon">⭐</div>
 
     </div>
 
@@ -319,54 +281,35 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
   <script>
 
   document.addEventListener(
-  "DOMContentLoaded",
-  function(){
+    "DOMContentLoaded",
+    function(){
 
-    const hero =
-      document.getElementById(
-        "aiHeroSection"
+      const section =
+        document.getElementById(
+          "socialMediaHero"
+        );
+
+      if(!section) return;
+
+      /* SECTION READY */
+
+      section.classList.add(
+        "loaded"
       );
 
-    if(!hero) return;
-
-    const icons =
-      hero.querySelectorAll(
-        ".icon"
-      );
-
-    /* SAME FLOATING ICONS
-       CSS HANDLES ANIMATION */
-
-    icons.forEach(icon=>{
-
-      icon.addEventListener(
-      "mouseenter",
-      function(){
-
-        icon.style.transform =
-          "translateY(-12px) scale(1.05)";
-
-      });
-
-      icon.addEventListener(
-      "mouseleave",
-      function(){
-
-        icon.style.transform =
-          "";
-
-      });
-
-    });
-
-  });
+    }
+  );
 
   </script>
 
 </section>
 
 
-    <section class="brand-section" id="brandSection">
+
+<!-- 2 -->
+
+
+<section class="brand-section" id="socialMediaSection">
 
   <div class="brand-grid">
 
@@ -381,7 +324,7 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
         </span>
 
         <span class="brand-gradient">
-          AI Marketing
+          Social Media Marketing
         </span>
 
         <span class="brand-white">
@@ -391,22 +334,21 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
       </h2>
 
       <p>
-        AI Marketing is the use of artificial intelligence technologies
-        to analyze data, predict customer behavior, automate campaigns,
-        and optimize marketing performance. It helps businesses move
-        from guesswork to data-driven decision-making, ensuring smarter
-        strategies and better results.
+
+        Social media marketing uses platforms like Instagram, Facebook,
+        and LinkedIn to build brand awareness, engage audiences,
+        and drive business growth. It focuses on meaningful interaction
+        rather than simply posting content.
+
       </p>
 
       <p>
-        At our company, AI Marketing goes beyond basic automation.
-        We leverage advanced AI-powered tools to identify high-intent
-        audiences, personalize campaigns, optimize ad performance
-        in real-time, and improve overall marketing efficiency.
-        By combining intelligent data insights with strategic
-        execution, we help businesses increase conversions,
-        reduce marketing waste, and achieve sustainable growth
-        in a competitive digital landscape.
+
+        We develop platform-specific strategies, create engaging content,
+        and manage community interactions to strengthen brand presence.
+        Our approach helps businesses connect with their audience,
+        build trust, and achieve measurable results.
+
       </p>
 
     </div>
@@ -417,8 +359,8 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
       <img
         src="/images/about/whyss.png"
-        alt="AI Marketing Illustration"
-      >
+        alt="Social Media Marketing Strategy Illustration"
+      />
 
     </div>
 
@@ -429,48 +371,51 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
   <script>
 
   document.addEventListener(
-  "DOMContentLoaded",
-  function(){
+    "DOMContentLoaded",
+    function(){
 
-    const section =
-      document.getElementById(
-        "brandSection"
+      const section =
+        document.getElementById(
+          "socialMediaSection"
+        );
+
+      if(!section) return;
+
+      /* INTERSECTION OBSERVER */
+
+      const observer =
+        new IntersectionObserver(
+
+        (entries)=>{
+
+          entries.forEach(entry=>{
+
+            if(
+              entry.isIntersecting
+            ){
+
+              entry.target.classList.add(
+                "show"
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold:.25
+        }
+
       );
 
-    if(!section) return;
+      observer.observe(
+        section
+      );
 
-    const observer =
-      new IntersectionObserver(
-
-      (entries)=>{
-
-        entries.forEach(entry=>{
-
-          if(
-            entry.isIntersecting
-          ){
-
-            entry.target
-              .classList
-              .add("show");
-
-          }
-
-        });
-
-      },
-
-      {
-        threshold:.25
-      }
-
-    );
-
-    observer.observe(
-      section
-    );
-
-  });
+    }
+  );
 
   </script>
 
@@ -478,11 +423,9 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
 
 
-
 <!-- 3 -->
 
-
-<section class="services-wrap" id="servicesGridAI">
+<section class="services-wrap" id="servicesGridSocial">
 
   <div class="services-grid">
 
@@ -495,17 +438,15 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
       </div>
 
       <div class="service-icon">
-        🔎
+        🧭
       </div>
 
       <div class="service-title">
-        AI-Powered SEO Optimization
+        Platform Strategy & Planning
       </div>
 
       <div class="service-desc">
-        Discover high-ranking keywords, analyze competitors,
-        optimize on-page & technical SEO, improve content
-        relevance, and increase organic traffic.
+        Choosing the right platforms and content direction based on your audience.
       </div>
 
     </div>
@@ -519,17 +460,15 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
       </div>
 
       <div class="service-icon">
-        📍
+        🗓️
       </div>
 
       <div class="service-title">
-        AI-Based Performance Marketing
+        Content Creation & Calendars
       </div>
 
       <div class="service-desc">
-        Run smarter ad campaigns using AI across Google Ads,
-        Meta Ads (Facebook & Instagram), and YouTube Ads
-        for higher ROI.
+        Consistent, brand-aligned content planned for maximum engagement.
       </div>
 
     </div>
@@ -543,17 +482,15 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
       </div>
 
       <div class="service-icon">
-        👥
+        🎬
       </div>
 
       <div class="service-title">
-        AI Content Generation & Optimization
+        Creative Design & Reels
       </div>
 
       <div class="service-desc">
-        Create high-performing blog posts, website copy,
-        landing pages, ad creatives, and email campaigns
-        using AI tools.
+        Scroll-stopping visuals and short-form videos that capture attention.
       </div>
 
     </div>
@@ -567,17 +504,15 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
       </div>
 
       <div class="service-icon">
-        📖
+        💬
       </div>
 
       <div class="service-title">
-        Marketing Automation & Lead Nurturing
+        Community Management
       </div>
 
       <div class="service-desc">
-        Use AI chatbots, automated email workflows,
-        CRM integration, customer segmentation,
-        and predictive follow-ups.
+        Active engagement through comments, messages, and audience interactions.
       </div>
 
     </div>
@@ -591,17 +526,15 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
       </div>
 
       <div class="service-icon">
-        🧩
+        📣
       </div>
 
       <div class="service-title">
-        AI Analytics & Predictive Insights
+        Paid Social Campaigns
       </div>
 
       <div class="service-desc">
-        Track customer behavior, forecast sales,
-        analyze conversion funnels, and monitor
-        performance with AI dashboards.
+        Targeted ad campaigns designed to drive leads and conversions.
       </div>
 
     </div>
@@ -615,17 +548,15 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
       </div>
 
       <div class="service-icon">
-        🚀
+        📈
       </div>
 
       <div class="service-title">
-        AI-Powered Social Media Intelligence
+        Analytics & Growth Insights
       </div>
 
       <div class="service-desc">
-        Understand audience behavior, track content
-        performance, predict best posting times,
-        and analyze trends.
+        Performance tracking with actionable insights for continuous growth.
       </div>
 
     </div>
@@ -637,47 +568,41 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
   <script>
 
   document.addEventListener(
-  "DOMContentLoaded",
-  function(){
+    "DOMContentLoaded",
+    function(){
 
-    const section =
-      document.getElementById(
-        "servicesGridAI"
-      );
+      const section =
+        document.getElementById(
+          "servicesGridSocial"
+        );
 
-    if(!section) return;
+      if(!section) return;
 
-    const cards =
-      section.querySelectorAll(
-        ".service-card"
-      );
+      /* READY */
 
-    /* SAME HOVER-READY CARDS
-       CSS CONTROLS EFFECT */
+      const cards =
+        section.querySelectorAll(
+          ".service-card"
+        );
 
-    cards.forEach(card=>{
+      cards.forEach(card=>{
 
-      card.addEventListener(
-      "mouseenter",
-      function(){
+        /* SAME HOVER CSS HANDLES EFFECT */
 
-        card.style.willChange =
-          "transform";
+        card.addEventListener(
+          "mouseenter",
+          function(){}
+        );
 
-      });
-
-      card.addEventListener(
-      "mouseleave",
-      function(){
-
-        card.style.willChange =
-          "auto";
+        card.addEventListener(
+          "mouseleave",
+          function(){}
+        );
 
       });
 
-    });
-
-  });
+    }
+  );
 
   </script>
 
@@ -685,62 +610,34 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
 
 
-
-
-
 <!-- 4 -->
 
-<section class="seo-hero-dark" id="seoHeroDark">
+<section class="seo-hero-dark" id="whySocialMedia">
 
   <div class="seo-hero-grid">
 
-    <!-- LEFT CONTENT -->
+    <!-- LEFT -->
 
     <div class="seo-left">
 
       <h1>
-        Why Choose
-        <span>AI Marketing</span>?
+        Why <span>Social Media Marketing</span>?
       </h1>
 
       <ul>
 
         <li>
-          Traditional marketing guesses.
+          Social media marketing connects your brand with the right audience
+          through consistent, engaging, and relevant content. It builds
+          awareness, trust, and meaningful relationships that turn followers
+          into loyal customers.
         </li>
 
         <li>
-          <strong>
-            AI Marketing predicts.
-          </strong>
-        </li>
-
-        <li>
-          With AI-powered systems, you can:
-        </li>
-
-        <li>
-          ✅ Identify high-intent customers
-        </li>
-
-        <li>
-          ✅ Automate personalized campaigns
-        </li>
-
-        <li>
-          ✅ Improve ad targeting accuracy
-        </li>
-
-        <li>
-          ✅ Increase website conversions
-        </li>
-
-        <li>
-          ✅ Reduce marketing waste
-        </li>
-
-        <li>
-          ✅ Get real-time performance insights
+          With a strategic and data-driven approach, social media goes beyond
+          likes and shares. Targeted campaigns, performance tracking, and
+          continuous optimisation help generate leads, drive traffic, and
+          support measurable business growth.
         </li>
 
       </ul>
@@ -752,9 +649,9 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
     <div class="seo-right seo-image-wrap">
 
       <img
-        src="/images/about/ai.png"
-        alt="AI Marketing Illustration"
-      >
+        src="/images/SOCIALMEDIAMARKETING.png"
+        alt="Social Media Marketing Strategy Illustration"
+      />
 
     </div>
 
@@ -770,28 +667,25 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
     const section =
       document.getElementById(
-        "seoHeroDark"
+        "whySocialMedia"
       );
 
     if(!section) return;
 
-    /* SAME INTERSECTION OBSERVER */
+    /* INTERSECTION REVEAL */
 
     const observer =
       new IntersectionObserver(
 
-      function(entries){
+      (entries)=>{
 
-        entries.forEach(
-        function(entry){
+        entries.forEach(entry=>{
 
           if(
             entry.isIntersecting
           ){
 
-            entry.target
-            .classList
-            .add(
+            entry.target.classList.add(
               "show"
             );
 
@@ -819,20 +713,16 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
 
 
-
-
 <!-- 5 -->
 
 
-
-<section class="home-faq-wrap" id="faqAiSection">
+<section class="home-faq-wrap" id="faqSocialMedia">
 
   <div class="home-faq-container">
 
     <!-- TITLE -->
 
     <h2 class="home-faq-title">
-
       <span class="faq-title-white">
         Frequently Asked
       </span>
@@ -840,11 +730,10 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
       <span class="faq-title-gradient">
         Questions
       </span>
-
     </h2>
 
     <p class="home-faq-sub">
-      Everything you need to know about AI-powered marketing solutions.
+      Clear answers to help you move forward with confidence.
     </p>
 
     <!-- FAQ CARD -->
@@ -855,10 +744,14 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
       <div class="home-faq-item">
 
-        <div class="home-faq-header">
+        <div
+          class="home-faq-header"
+          role="button"
+          tabindex="0"
+        >
 
           <div class="home-faq-question">
-            What is AI Marketing?
+            Which social media platforms do you manage?
           </div>
 
           <div class="home-faq-toggle">
@@ -869,9 +762,9 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
         <div class="home-faq-answer">
           <p>
-            AI Marketing uses artificial intelligence to analyze data,
-            predict customer behavior, automate campaigns, and optimize
-            marketing performance for better results.
+            We manage platforms such as Instagram,
+            Facebook, LinkedIn, and YouTube depending
+            on where your target audience is most active.
           </p>
         </div>
 
@@ -881,10 +774,14 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
       <div class="home-faq-item">
 
-        <div class="home-faq-header">
+        <div
+          class="home-faq-header"
+          role="button"
+          tabindex="0"
+        >
 
           <div class="home-faq-question">
-            How does AI improve marketing performance?
+            Do you create content or only manage posting?
           </div>
 
           <div class="home-faq-toggle">
@@ -895,9 +792,9 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
         <div class="home-faq-answer">
           <p>
-            AI analyzes real-time data to optimize targeting, bidding,
-            and content strategy, helping businesses increase conversions
-            and reduce marketing waste.
+            We handle the entire process including
+            strategy, content creation, design,
+            captions, scheduling, and audience engagement.
           </p>
         </div>
 
@@ -907,10 +804,14 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
       <div class="home-faq-item">
 
-        <div class="home-faq-header">
+        <div
+          class="home-faq-header"
+          role="button"
+          tabindex="0"
+        >
 
           <div class="home-faq-question">
-            Is AI Marketing suitable for small businesses?
+            How often will you post on social media?
           </div>
 
           <div class="home-faq-toggle">
@@ -921,9 +822,9 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
         <div class="home-faq-answer">
           <p>
-            Yes. AI tools help small businesses compete with larger
-            brands by improving efficiency, targeting the right audience,
-            and maximizing ROI.
+            Posting frequency depends on your business
+            goals and plan, but most strategies include
+            consistent weekly or daily content.
           </p>
         </div>
 
@@ -933,10 +834,14 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
       <div class="home-faq-item">
 
-        <div class="home-faq-header">
+        <div
+          class="home-faq-header"
+          role="button"
+          tabindex="0"
+        >
 
           <div class="home-faq-question">
-            Can AI Marketing reduce advertising costs?
+            Will social media marketing help generate leads?
           </div>
 
           <div class="home-faq-toggle">
@@ -947,8 +852,10 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
         <div class="home-faq-answer">
           <p>
-            Absolutely. AI continuously optimizes campaigns to lower
-            cost-per-lead and improve return on investment.
+            Yes. With the right strategy, content,
+            and targeted campaigns, social media can
+            generate leads, increase traffic,
+            and grow your brand.
           </p>
         </div>
 
@@ -958,10 +865,14 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
       <div class="home-faq-item">
 
-        <div class="home-faq-header">
+        <div
+          class="home-faq-header"
+          role="button"
+          tabindex="0"
+        >
 
           <div class="home-faq-question">
-            How do we get started with AI Marketing?
+            How do we get started with social media marketing?
           </div>
 
           <div class="home-faq-toggle">
@@ -972,9 +883,9 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
         <div class="home-faq-answer">
           <p>
-            Contact our team for a consultation. We'll analyze your
-            business goals and build a customized AI-driven
-            marketing strategy.
+            Simply contact us to discuss your business
+            goals and we will create a customised
+            social media strategy for your brand.
           </p>
         </div>
 
@@ -982,8 +893,8 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
     </div>
 
-    <!-- CTA -->
-<div class="home-faq-cta">
+
+   <div class="home-faq-cta">
 
   <h3>
     Ready to Take the Next Step?
@@ -993,14 +904,13 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
     Get in touch with our team and discover the right solutions for your business needs.
   </p>
 
-  <a href="../pages/Contact.html">
+  <a href="/Contact/">
     <button>
       CONTACT US →
     </button>
   </a>
 
 </div>
-
   </div>
 
   <!-- JS INSIDE SECTION -->
@@ -1013,7 +923,7 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
     const section =
       document.getElementById(
-        "faqAiSection"
+        "faqSocialMedia"
       );
 
     if(!section) return;
@@ -1032,7 +942,9 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
         entries.forEach(entry=>{
 
-          if(entry.isIntersecting){
+          if(
+            entry.isIntersecting
+          ){
 
             const first =
               items[0];
@@ -1112,19 +1024,84 @@ content="Build winning strategies with our AI marketing at Shainfo Technology. C
 
     });
 
+    /* FAQ SCHEMA */
+
+    const schema = {
+
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+
+      "mainEntity":[
+
+        {
+          "@type":"Question",
+          "name":"Which social media platforms do you manage?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"We manage platforms such as Instagram, Facebook, LinkedIn, and YouTube depending on where your target audience is most active."
+          }
+        },
+
+        {
+          "@type":"Question",
+          "name":"Do you create content or only manage posting?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"We handle the entire process including strategy, content creation, design, captions, scheduling, and audience engagement."
+          }
+        },
+
+        {
+          "@type":"Question",
+          "name":"How often will you post on social media?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Posting frequency depends on your business goals and plan, but most strategies include consistent weekly or daily content."
+          }
+        },
+
+        {
+          "@type":"Question",
+          "name":"Will social media marketing help generate leads?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes. With the right strategy, content, and targeted campaigns, social media can generate leads, increase traffic, and grow your brand."
+          }
+        },
+
+        {
+          "@type":"Question",
+          "name":"How do we get started with social media marketing?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Simply contact us to discuss your business goals and we will create a customised social media strategy for your brand."
+          }
+        }
+
+      ]
+
+    };
+
+    const script =
+      document.createElement(
+        "script"
+      );
+
+    script.type =
+      "application/ld+json";
+
+    script.innerHTML =
+      JSON.stringify(schema);
+
+    document.head.appendChild(
+      script
+    );
+
   });
 
   </script>
 
 </section>
-
-
-
-
-
-
-
-
 
 
 <a
@@ -1157,6 +1134,8 @@ console.log("Call button clicked");
 });
 
 </script>
+    
+
 
 
 
@@ -1220,7 +1199,7 @@ onclick="toggleWA()"
 >
 
 <img
-src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+src="/images/WhatsApp.svg"
 alt="WhatsApp"
 >
 
@@ -1329,12 +1308,13 @@ sendWhatsApp();
       <h4>Quick Links</h4>
 
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../pages/About.html">About Us</a></li>
-        <li><a href="../pages/Services.html">Services</a></li>
-        <li><a href="../pages/Courses.html">Courses</a></li>
-        <li><a href="../pages/Contact.html">Contact</a></li>
-        <li><a href="../pages/Blog.html">Blog</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/About/">About Us</a></li>
+       
+        <li><a href="/Services/">Services</a></li>
+        <li><a href="/Courses/">Courses</a></li>
+        <li><a href="/Contact/">Contact</a></li>
+        <li><a href="/Blog/">Blog</a></li>
       </ul>
     </div>
 
@@ -1342,17 +1322,17 @@ sendWhatsApp();
     <div>
       <h4>Our Services</h4>
 
-    <ul>
-         <li><a href="../services/digital-strategy.html">Digital Strategy</a></li>
-        <li><a href="../services/web-development.html">Web Development</a></li>
-        <li><a href="../services/ecommerce-website.html">Ecommerce Website</a></li>
-        <li><a href="../services/seo.html">SEO</a></li>
-        <li><a href="../services/social-media-marketing.html">Social Media Marketing</a></li>
-        <li><a href="../services/aimarketing.html">AI Marketing</a></li>
-        <li><a href="../services/business-analysis.html">Business Analysis</a></li>
-        <li><a href="../services/content-design.html">Content Design</a></li>
-        <li><a href="../services/creative-design.html">Creative Design</a></li>
-        <li><a href="../services/brand-consultancy.html">Brand Consultancy</a></li>
+      <ul>
+         <li><a href="/Services/Digital_Strategy/">Digital Strategy</a></li>
+        <li><a href="/Services/Web_development/">Web Development</a></li>
+        <li><a href="/Services/Ecommerce/">Ecommerce Website</a></li>
+        <li><a href="/Services/Seo/">SEO</a></li>
+        <li><a href="/Services/SocialMediaMarketing/">Social Media Marketing</a></li>
+        <li><a href="/Services/Aimarketing/">AI Marketing</a></li>
+        <li><a href="/Services/Business_analysis/">Business Analysis</a></li>
+        <li><a href="/Services/Content_design/">Content Design</a></li>
+        <li><a href="/Services/Creative_design/">Creative Design</a></li>
+        <li><a href="/Services/Brand_consultancy/">Brand Consultancy</a></li>
       </ul>
     </div>
 

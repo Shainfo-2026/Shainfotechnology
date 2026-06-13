@@ -8,11 +8,7 @@
 
 body{
     font-family:'Inter',sans-serif;
-      background:linear-gradient(
-    135deg,
-    #000c24,
-    #020617
-  );
+    background:#fff;
 }
 
 /* SECTION */

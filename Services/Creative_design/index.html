@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="../Home.css">
-         <link rel="stylesheet" href="../footer.css">
-         <link rel="stylesheet" href="../footer.js">
-      <link rel="stylesheet" href="brand-consultancy.css">
-      <link rel="stylesheet" href="../Callbutton.css">
+  <link rel="stylesheet" href="/Home.css">
+         <link rel="stylesheet" href="/footer.css">
+         <link rel="stylesheet" href="/footer.js">
+       <link rel="stylesheet" href="/servicesse/creative-design.css">
+         <link rel="stylesheet" href="/Callbutton.css">
 
 </head>
 
@@ -25,7 +25,7 @@
 
         <a href="/">
           <img
-            src="../images/LOGO.jpeg"
+            src="/images/LOGO.jpeg"
             alt="Logo"
             class="logo-img"
           />
@@ -54,21 +54,21 @@
     >
 
       <a
-        href="../index.html"
+        href="/"
         class="nav-btn"
       >
         Home
       </a>
 
       <a
-        href="../pages/About.html"
+        href="/About/"
         class="nav-btn"
       >
         About
       </a>
 
       <a
-        href="../pages/Services.html"
+        href="/Services/"
         class="nav-btn"
       >
         Services
@@ -76,21 +76,21 @@
 
       
       <a
-        href="../pages/Courses.html"
+        href="/Courses/"
         class="nav-btn"
       >
         Courses
       </a>
 
       <a
-        href="../pages/Contact.html"
+        href="/Contact/"
         class="nav-btn contact-link"
       >
         Contact
       </a>
 
       <a
-        href="../pages/Blog.html"
+        href="/Blog/"
         class="nav-btn"
       >
         Blog
@@ -217,60 +217,97 @@
 
 </header>
 <body>
-    
 
-  <section class="smm-hero" id="businessHero">
+  <!-- 1 -->
+
+  <!-- SEO META -->
+
+<title>
+Creative Design Services | Transform Your Brand | Shainfotechnology
+</title>
+
+<meta
+name="description"
+content="Transform your business with compelling creative design services that enhance your brand's identity and leave a lasting impression on customers."
+>
+
+<!-- HERO SECTION -->
+
+<section class="smm-hero" id="creativeHero">
+
+  <!-- LEFT -->
 
   <div class="smm-left">
 
     <small>
-      Business Analysis
+      Creative Design
     </small>
 
     <h1 class="smm-title">
 
-      Make
+      Create a
       <span class="accent">
-        Smarter Decisions
+        Visual Identity
       </span>
 
-      <br>
+      <br/>
 
-      with Clear Digital Insights
+      That Stands Out
 
-      <br>
+      <br/>
 
       <span class="accent">
-        Turn Data into Actionable Growth Strategies
+        Design Experiences That Leave a Lasting Impression
       </span>
 
     </h1>
 
     <p class="smm-desc">
 
-      We analyse your business performance,
-      market trends, and customer behaviour
-      to uncover growth opportunities.
+      Our creative design solutions focus on consistency,
+      clarity, and brand recognition.
 
-      Our insights help you plan smarter
-      strategies, reduce risk, and scale
-      with confidence.
+      From digital creatives to branding assets,
+      we help businesses communicate professionally
+      and memorably.
 
     </p>
 
   </div>
 
+  <!-- RIGHT -->
+
   <div class="smm-right">
 
     <div class="icon-cloud">
 
-      <div class="icon">G</div>
-      <div class="icon">🔍</div>
-      <div class="icon">📈</div>
-      <div class="icon">📍</div>
-      <div class="icon">📝</div>
-      <div class="icon">⚙️</div>
-      <div class="icon">⭐</div>
+      <div class="icon">
+        G
+      </div>
+
+      <div class="icon">
+        🔍
+      </div>
+
+      <div class="icon">
+        📈
+      </div>
+
+      <div class="icon">
+        📍
+      </div>
+
+      <div class="icon">
+        📝
+      </div>
+
+      <div class="icon">
+        ⚙️
+      </div>
+
+      <div class="icon">
+        ⭐
+      </div>
 
     </div>
 
@@ -284,36 +321,18 @@
   "DOMContentLoaded",
   function(){
 
-    /* TITLE */
+    /* HERO READY */
 
-    document.title =
-      "Expert Business Analysts - Shainfo Tech";
-
-    /* META DESCRIPTION */
-
-    let meta =
-      document.querySelector(
-        'meta[name="description"]'
+    const hero =
+      document.getElementById(
+        "creativeHero"
       );
 
-    if(!meta){
+    if(!hero) return;
 
-      meta =
-      document.createElement(
-        "meta"
-      );
-
-      meta.name =
-        "description";
-
-      document.head.appendChild(
-        meta
-      );
-
-    }
-
-    meta.content =
-      "Shainfo Technology delivers smart business analysis to fix gaps and fuel success. Tailored plans for your needs. Reach out now.";
+    /* ICON FLOAT
+       already handled
+       through CSS animation */
 
   });
 
@@ -322,13 +341,9 @@
 </section>
 
 
-
-
 <!-- 2 -->
 
-
-
-<section class="brand-section" id="businessAnalysisSection">
+<section class="brand-section" id="creativeDesignSection">
 
   <div class="brand-grid">
 
@@ -337,31 +352,33 @@
     <div class="brand-left">
 
       <h2>
+
         <span class="brand-white">
           What is
         </span>
 
         <span class="brand-gradient">
-          Business Analysis
+          Creative Design
         </span>
 
         <span class="brand-white">
           ?
         </span>
+
       </h2>
 
       <p>
-        Business analysis involves understanding your business goals,
-        challenges, and processes to identify opportunities for
-        improvement. It helps bridge the gap between business needs and
-        practical solutions.
+        Creative design is the visual expression of your brand’s
+        identity across digital platforms. It includes layouts,
+        graphics, visuals, and design elements that communicate
+        your message clearly and attract attention.
       </p>
 
       <p>
-        We analyze workflows, market conditions, and data insights to
-        provide clear recommendations and strategic direction. Our
-        approach ensures informed decision-making, reduced risks, and
-        better alignment between business objectives and execution.
+        Our creative design process blends aesthetics with purpose.
+        Every design choice is made to support brand consistency,
+        usability, and engagement—helping your business stand out
+        while maintaining clarity and professionalism.
       </p>
 
     </div>
@@ -372,7 +389,7 @@
 
       <img
         src="/images/about/whyss.png"
-        alt="Business Analysis Illustration"
+        alt="Creative Design Illustration"
       />
 
     </div>
@@ -389,298 +406,12 @@
 
     const section =
       document.getElementById(
-        "businessAnalysisSection"
+        "creativeDesignSection"
       );
 
     if(!section) return;
 
     /* INTERSECTION OBSERVER */
-
-    const observer =
-      new IntersectionObserver(
-
-      (entries)=>{
-
-        entries.forEach(entry=>{
-
-          if(
-            entry.isIntersecting
-          ){
-
-            entry.target
-            .classList
-            .add(
-              "show"
-            );
-
-          }
-
-        });
-
-      },
-
-      {
-        threshold:.25
-      }
-
-    );
-
-    observer.observe(
-      section
-    );
-
-  });
-
-  </script>
-
-</section>
-
-<!-- 3 -->
-
-<section class="services-wrap" id="servicesBusinessAnalysis">
-
-  <div class="services-grid">
-
-    <!-- CARD 1 -->
-
-    <div class="service-card">
-
-      <div class="service-number">
-        1
-      </div>
-
-      <div class="service-icon">
-        📋
-      </div>
-
-      <div class="service-title">
-        Business Requirement Analysis
-      </div>
-
-      <div class="service-desc">
-        Understanding goals, challenges, and requirements to define the right solutions.
-      </div>
-
-    </div>
-
-    <!-- CARD 2 -->
-
-    <div class="service-card">
-
-      <div class="service-number">
-        2
-      </div>
-
-      <div class="service-icon">
-        🔁
-      </div>
-
-      <div class="service-title">
-        Process & Workflow Mapping
-      </div>
-
-      <div class="service-desc">
-        Analyzing current workflows to identify gaps and inefficiencies.
-      </div>
-
-    </div>
-
-    <!-- CARD 3 -->
-
-    <div class="service-card">
-
-      <div class="service-number">
-        3
-      </div>
-
-      <div class="service-icon">
-        📊
-      </div>
-
-      <div class="service-title">
-        Market & Competitor Analysis
-      </div>
-
-      <div class="service-desc">
-        Evaluating market trends and competitors to support smart decisions.
-      </div>
-
-    </div>
-
-    <!-- CARD 4 -->
-
-    <div class="service-card">
-
-      <div class="service-number">
-        4
-      </div>
-
-      <div class="service-icon">
-        📈
-      </div>
-
-      <div class="service-title">
-        Data-Driven Insights
-      </div>
-
-      <div class="service-desc">
-        Turning business data into actionable insights for growth.
-      </div>
-
-    </div>
-
-    <!-- CARD 5 -->
-
-    <div class="service-card">
-
-      <div class="service-number">
-        5
-      </div>
-
-      <div class="service-icon">
-        🧠
-      </div>
-
-      <div class="service-title">
-        Solution & Feasibility Planning
-      </div>
-
-      <div class="service-desc">
-        Recommending practical, scalable solutions aligned with objectives.
-      </div>
-
-    </div>
-
-    <!-- CARD 6 -->
-
-    <div class="service-card">
-
-      <div class="service-number">
-        6
-      </div>
-
-      <div class="service-icon">
-        🗺️
-      </div>
-
-      <div class="service-title">
-        Strategic Roadmapping
-      </div>
-
-      <div class="service-desc">
-        Clear action plans to guide implementation and future growth.
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-    "DOMContentLoaded",
-    function(){
-
-      const section =
-        document.getElementById(
-          "servicesBusinessAnalysis"
-        );
-
-      if(!section) return;
-
-      const cards =
-        section.querySelectorAll(
-          ".service-card"
-        );
-
-      /* JS INSIDE SECTION */
-
-      cards.forEach(card=>{
-
-        card.addEventListener(
-          "mouseenter",
-          function(){}
-
-        );
-
-        card.addEventListener(
-          "mouseleave",
-          function(){}
-
-        );
-
-      });
-
-    }
-  );
-
-  </script>
-
-</section>
-
-
-
-
-<!-- 4 -->
-
-
-<section class="seo-hero-dark" id="businessAnalysisHero">
-
-  <div class="seo-hero-grid">
-
-    <!-- LEFT -->
-
-    <div class="seo-left">
-
-      <h1>
-        Why <span>Business Analysis</span>?
-      </h1>
-
-      <li>
-        Business analysis uncovers real needs, challenges, and opportunities
-        within your organisation. By examining processes, data, and market
-        conditions, it provides clarity that supports confident, informed
-        decision-making.
-      </li>
-
-      <li>
-        With a structured approach, business analysis turns complexity into
-        clear action. It aligns goals with practical solutions, improves
-        efficiency, and creates roadmaps that guide strategy, technology,
-        and long-term growth.
-      </li>
-
-    </div>
-
-    <!-- RIGHT IMAGE -->
-
-    <div class="seo-right seo-image-wrap">
-
-      <img
-        src="/images/BUSINESSANALYSIS.png"
-        alt="Business Analysis Illustration"
-      />
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    const section =
-      document.getElementById(
-        "businessAnalysisHero"
-      );
-
-    if(!section) return;
 
     const observer =
       new IntersectionObserver(
@@ -704,7 +435,7 @@
       },
 
       {
-        threshold:.3
+        threshold:.25
       }
 
     );
@@ -720,10 +451,273 @@
 </section>
 
 
+<!-- 3 -->
+
+<section class="services-wrap" id="creativeServicesSection">
+
+  <div class="services-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        1
+      </div>
+
+      <div class="service-icon">
+        💡
+      </div>
+
+      <div class="service-title">
+        Visual Concept & Direction
+      </div>
+
+      <div class="service-desc">
+        Creative concepts that align visuals with your brand story.
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        2
+      </div>
+
+      <div class="service-icon">
+        🎨
+      </div>
+
+      <div class="service-title">
+        Brand Design Systems
+      </div>
+
+      <div class="service-desc">
+        Consistent design frameworks for colors, typography, and layouts.
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        3
+      </div>
+
+      <div class="service-icon">
+        📢
+      </div>
+
+      <div class="service-title">
+        Marketing & Campaign Creatives
+      </div>
+
+      <div class="service-desc">
+        High-impact designs for ads, banners, and digital campaigns.
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        4
+      </div>
+
+      <div class="service-icon">
+        📱
+      </div>
+
+      <div class="service-title">
+        Social & Content Design
+      </div>
+
+      <div class="service-desc">
+        Scroll-ready creatives optimized for social media platforms.
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        5
+      </div>
+
+      <div class="service-icon">
+        🧩
+      </div>
+
+      <div class="service-title">
+        UI Visual Design
+      </div>
+
+      <div class="service-desc">
+        Aesthetic, user-focused interfaces that enhance usability.
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="service-card">
+
+      <div class="service-number">
+        6
+      </div>
+
+      <div class="service-icon">
+        ✨
+      </div>
+
+      <div class="service-title">
+        Design Quality & Consistency
+      </div>
+
+      <div class="service-desc">
+        Attention to detail ensuring visual clarity across all touchpoints.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "creativeServicesSection"
+      );
+
+    if(!section) return;
+
+    /* SECTION READY */
+
+    console.log(
+      "Creative Services Grid Loaded"
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 4 -->
+
+<section class="seo-hero-dark" id="whyCreativeDesign">
+
+  <div class="seo-hero-grid">
+
+    <!-- LEFT -->
+
+    <div class="seo-left">
+
+      <h1>
+        Why <span>Creative Design</span>?
+      </h1>
+
+      <li>
+        Creative design brings your brand to life through visuals that
+        communicate clearly and connect emotionally with your audience.
+        Strong design builds recognition, trust, and a lasting brand identity.
+      </li>
+
+      <li>
+        Beyond aesthetics, effective creative design improves usability and
+        engagement. Strategic visuals guide users, reinforce messaging, and
+        create memorable experiences that drive interaction and real
+        business impact.
+      </li>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="seo-right seo-image-wrap">
+
+      <img
+        src="/images/CREATIVEDESIGN.png"
+        alt="Creative Design Illustration"
+      />
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "whyCreativeDesign"
+      );
+
+    if(!section) return;
+
+    /* INTERSECTION REVEAL */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target.classList.add(
+              "show"
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.3
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+  });
+
+  </script>
+
+</section>
+
 <!-- 5 -->
 
-
-<section class="home-faq-wrap" id="businessFaqSection">
+<section class="home-faq-wrap" id="faqCreativeDesign">
 
   <div class="home-faq-container">
 
@@ -756,7 +750,7 @@
         <div class="home-faq-header">
 
           <div class="home-faq-question">
-            What is business analysis?
+            What does your creative design service include?
           </div>
 
           <div class="home-faq-toggle">
@@ -767,8 +761,8 @@
 
         <div class="home-faq-answer">
           <p>
-            Business analysis helps identify business needs, challenges,
-            and opportunities to recommend effective solutions.
+            Our creative design covers visual concepts, brand creatives,
+            marketing designs, and UI visuals for digital platforms.
           </p>
         </div>
 
@@ -781,7 +775,7 @@
         <div class="home-faq-header">
 
           <div class="home-faq-question">
-            Who needs business analysis services?
+            Do you design for both digital and marketing needs?
           </div>
 
           <div class="home-faq-toggle">
@@ -792,8 +786,8 @@
 
         <div class="home-faq-answer">
           <p>
-            Startups, growing businesses, and enterprises benefit from
-            business analysis before investing in technology or marketing.
+            Yes. We create designs for websites, social media, ads,
+            campaigns, and other digital marketing materials.
           </p>
         </div>
 
@@ -806,7 +800,7 @@
         <div class="home-faq-header">
 
           <div class="home-faq-question">
-            What does your business analysis process include?
+            Will the designs match my brand identity?
           </div>
 
           <div class="home-faq-toggle">
@@ -817,8 +811,8 @@
 
         <div class="home-faq-answer">
           <p>
-            Our process includes requirement gathering, workflow analysis,
-            market evaluation, and solution planning.
+            Absolutely. All designs are created to align with your
+            brand colors, tone, and visual guidelines.
           </p>
         </div>
 
@@ -831,7 +825,7 @@
         <div class="home-faq-header">
 
           <div class="home-faq-question">
-            How long does a business analysis project take?
+            How many design revisions are included?
           </div>
 
           <div class="home-faq-toggle">
@@ -842,8 +836,8 @@
 
         <div class="home-faq-answer">
           <p>
-            Most business analysis projects take 1–3 weeks, depending on
-            scope and complexity.
+            We include a defined number of revisions to ensure
+            the final designs meet your expectations.
           </p>
         </div>
 
@@ -856,7 +850,7 @@
         <div class="home-faq-header">
 
           <div class="home-faq-question">
-            How do we get started with business analysis?
+            How do we get started with creative design?
           </div>
 
           <div class="home-faq-toggle">
@@ -867,8 +861,8 @@
 
         <div class="home-faq-answer">
           <p>
-            Contact us to discuss your business goals, and we’ll begin
-            with a structured analysis and roadmap.
+            Contact us with your requirements, and we’ll discuss
+            concepts, timelines, and next steps.
           </p>
         </div>
 
@@ -876,7 +870,7 @@
 
     </div>
 
-  <div class="home-faq-cta">
+    <div class="home-faq-cta">
 
   <h3>
     Ready to Take the Next Step?
@@ -886,7 +880,7 @@
     Get in touch with our team and discover the right solutions for your business needs.
   </p>
 
-  <a href="../pages/Contact.html">
+  <a href="/Contact/">
     <button>
       CONTACT US →
     </button>
@@ -905,7 +899,7 @@
 
     const section =
       document.getElementById(
-        "businessFaqSection"
+        "faqCreativeDesign"
       );
 
     if(!section) return;
@@ -924,7 +918,9 @@
 
         entries.forEach(entry=>{
 
-          if(entry.isIntersecting){
+          if(
+            entry.isIntersecting
+          ){
 
             const first =
               items[0];
@@ -1009,6 +1005,8 @@
   </script>
 
 </section>
+    
+
 
 
 
@@ -1042,6 +1040,7 @@ console.log("Call button clicked");
 });
 
 </script>
+
 
 
 
@@ -1215,12 +1214,13 @@ sendWhatsApp();
       <h4>Quick Links</h4>
 
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../pages/About.html">About Us</a></li>
-        <li><a href="../pages/Services.html">Services</a></li>
-        <li><a href="../pages/Courses.html">Courses</a></li>
-        <li><a href="../pages/Contact.html">Contact</a></li>
-        <li><a href="../pages/Blog.html">Blog</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/About/">About Us</a></li>
+       
+        <li><a href="/Services/">Services</a></li>
+        <li><a href="/Courses/">Courses</a></li>
+        <li><a href="/Contact/">Contact</a></li>
+        <li><a href="/Blog/">Blog</a></li>
       </ul>
     </div>
 
@@ -1228,17 +1228,17 @@ sendWhatsApp();
     <div>
       <h4>Our Services</h4>
 
-     <ul>
-         <li><a href="../services/digital-strategy.html">Digital Strategy</a></li>
-        <li><a href="../services/web-development.html">Web Development</a></li>
-        <li><a href="../services/ecommerce-website.html">Ecommerce Website</a></li>
-        <li><a href="../services/seo.html">SEO</a></li>
-        <li><a href="../services/social-media-marketing.html">Social Media Marketing</a></li>
-        <li><a href="../services/aimarketing.html">AI Marketing</a></li>
-        <li><a href="../services/business-analysis.html">Business Analysis</a></li>
-        <li><a href="../services/content-design.html">Content Design</a></li>
-        <li><a href="../services/creative-design.html">Creative Design</a></li>
-        <li><a href="../services/brand-consultancy.html">Brand Consultancy</a></li>
+      <ul>
+         <li><a href="/Services/Digital_Strategy/">Digital Strategy</a></li>
+        <li><a href="/Services/Web_development/">Web Development</a></li>
+        <li><a href="/Services/Ecommerce/">Ecommerce Website</a></li>
+        <li><a href="/Services/Seo/">SEO</a></li>
+        <li><a href="/Services/SocialMediaMarketing/">Social Media Marketing</a></li>
+        <li><a href="/Services/Aimarketing/">AI Marketing</a></li>
+        <li><a href="/Services/Business_analysis/">Business Analysis</a></li>
+        <li><a href="/Services/Content_design/">Content Design</a></li>
+        <li><a href="/Services/Creative_design/">Creative Design</a></li>
+        <li><a href="/Services/Brand_consultancy/">Brand Consultancy</a></li>
       </ul>
     </div>
 

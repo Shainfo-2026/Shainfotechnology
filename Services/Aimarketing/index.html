@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="../Home.css">
-         <link rel="stylesheet" href="../footer.css">
-         <link rel="stylesheet" href="../footer.js">
-      <link rel="stylesheet" href="seo.css">
-      <link rel="stylesheet" href="../Callbutton.css">
+
+         <link rel="stylesheet" href="/Home.css">
+         <link rel="stylesheet" href="/footer.css">
+         <link rel="stylesheet" href="/footer.js">
+       <link rel="stylesheet" href="aimarketing.css">
+         <link rel="stylesheet" href="/Callbutton.css">
 
 </head>
-
-
 <header class="sf-header" id="siteHeader">
 
   <div class="sf-header-inner">
@@ -25,7 +24,7 @@
 
         <a href="/">
           <img
-            src="../images/LOGO.jpeg"
+            src="/images/LOGO.jpeg"
             alt="Logo"
             class="logo-img"
           />
@@ -54,21 +53,21 @@
     >
 
       <a
-        href="../index.html"
+        href="/"
         class="nav-btn"
       >
         Home
       </a>
 
       <a
-        href="../pages/About.html"
+        href="/About/"
         class="nav-btn"
       >
         About
       </a>
 
       <a
-        href="../pages/Services.html"
+        href="/Services/"
         class="nav-btn"
       >
         Services
@@ -76,21 +75,21 @@
 
       
       <a
-        href="../pages/Courses.html"
+        href="/Courses/"
         class="nav-btn"
       >
         Courses
       </a>
 
       <a
-        href="../pages/Contact.html"
+        href="/Contact/"
         class="nav-btn contact-link"
       >
         Contact
       </a>
 
       <a
-        href="../pages/Blog.html"
+        href="/Blog/"
         class="nav-btn"
       >
         Blog
@@ -216,39 +215,64 @@
   </script>
 
 </header>
+
 <body>
 
-<section class="smm-hero" id="seoHeroSection">
+<!-- 1111 -->
+ <!-- SEO META -->
+
+<title>
+AI-Powered Marketing Solutions Shainfo | Shainfotech
+</title>
+
+<meta
+name="description"
+content="Build winning strategies with our AI marketing at Shainfo Technology. Chatbots, analytics, and optimization in one. Cut waste and win big. Try it free."
+>
+
+<!-- HERO SECTION -->
+
+<section class="smm-hero" id="aiHeroSection">
+
+  <!-- LEFT -->
 
   <div class="smm-left">
 
     <small>
-      Search Engine Optimization
+      AI Marketing
     </small>
 
     <h1 class="smm-title">
 
-      Turn Search Visibility
+      Grow Faster with
+
       <span class="accent">
-        into Real
+        Intelligent Automation
       </span>
-      <br/>
 
-      Business Growth
-      <br/>
+      <br>
+
+      Powered by
+
+      <br>
 
       <span class="accent">
-        Be Discovered by Customers Who Are Ready to Buy
+        Sha Infotech
       </span>
 
     </h1>
 
     <p class="smm-desc">
 
-      We design SEO strategies that connect your business with
-      high-intent searchers. From technical optimisation to
-      content and authority building, we focus on sustainable
-      rankings that generate leads, sales, and long-term trust.
+      At Sha Infotech, we help businesses generate more traffic,
+      more leads, and more revenue using advanced AI-powered
+      marketing strategies.
+
+      <br><br>
+
+      Our AI solutions analyze data, predict customer behavior,
+      automate campaigns, and optimize performance so you get
+      better results with lower marketing costs.
 
     </p>
 
@@ -261,12 +285,30 @@
     <div class="icon-cloud">
 
       <div class="icon">G</div>
-      <div class="icon">🔍</div>
-      <div class="icon">📈</div>
-      <div class="icon">📍</div>
-      <div class="icon">📝</div>
-      <div class="icon">⚙️</div>
-      <div class="icon">⭐</div>
+
+      <div class="icon">
+        🔍
+      </div>
+
+      <div class="icon">
+        📈
+      </div>
+
+      <div class="icon">
+        📍
+      </div>
+
+      <div class="icon">
+        📝
+      </div>
+
+      <div class="icon">
+        ⚙️
+      </div>
+
+      <div class="icon">
+        ⭐
+      </div>
 
     </div>
 
@@ -277,82 +319,106 @@
   <script>
 
   document.addEventListener(
-    "DOMContentLoaded",
-    function(){
+  "DOMContentLoaded",
+  function(){
 
-      const section =
-        document.getElementById(
-          "seoHeroSection"
-        );
-
-      if(!section) return;
-
-      /* SECTION READY */
-
-      section.classList.add(
-        "loaded"
+    const hero =
+      document.getElementById(
+        "aiHeroSection"
       );
 
-    }
-  );
+    if(!hero) return;
+
+    const icons =
+      hero.querySelectorAll(
+        ".icon"
+      );
+
+    /* SAME FLOATING ICONS
+       CSS HANDLES ANIMATION */
+
+    icons.forEach(icon=>{
+
+      icon.addEventListener(
+      "mouseenter",
+      function(){
+
+        icon.style.transform =
+          "translateY(-12px) scale(1.05)";
+
+      });
+
+      icon.addEventListener(
+      "mouseleave",
+      function(){
+
+        icon.style.transform =
+          "";
+
+      });
+
+    });
+
+  });
 
   </script>
 
 </section>
 
 
-
-
-<!-- 2 -->
-
-<section class="brand-section" id="secondSlideSEO">
+    <section class="brand-section" id="brandSection">
 
   <div class="brand-grid">
 
-    <!-- LEFT -->
+    <!-- LEFT CONTENT -->
 
     <div class="brand-left">
 
       <h2>
+
         <span class="brand-white">
           What is
         </span>
 
         <span class="brand-gradient">
-          SEO
+          AI Marketing
         </span>
 
         <span class="brand-white">
           ?
         </span>
+
       </h2>
 
       <p>
-        Search Engine Optimization (SEO) is the process of improving your
-        website’s visibility on search engines like Google to attract
-        high-intent organic traffic. It helps search engines understand
-        your website while making it easier for customers to discover
-        your business online.
+        AI Marketing is the use of artificial intelligence technologies
+        to analyze data, predict customer behavior, automate campaigns,
+        and optimize marketing performance. It helps businesses move
+        from guesswork to data-driven decision-making, ensuring smarter
+        strategies and better results.
       </p>
 
       <p>
-        Our SEO approach combines keyword research, on-page optimization,
-        technical improvements, and content strategy to create long-term
-        growth. Instead of quick fixes, we build sustainable SEO
-        foundations that increase rankings, drive qualified traffic,
-        and support consistent business growth.
+        At our company, AI Marketing goes beyond basic automation.
+        We leverage advanced AI-powered tools to identify high-intent
+        audiences, personalize campaigns, optimize ad performance
+        in real-time, and improve overall marketing efficiency.
+        By combining intelligent data insights with strategic
+        execution, we help businesses increase conversions,
+        reduce marketing waste, and achieve sustainable growth
+        in a competitive digital landscape.
       </p>
 
     </div>
 
-    <!-- RIGHT -->
+    <!-- RIGHT IMAGE -->
 
     <div class="brand-right">
 
       <img
         src="/images/about/whyss.png"
-        alt="SEO Strategy Illustration"
-      />
+        alt="AI Marketing Illustration"
+      >
 
     </div>
 
@@ -368,12 +434,10 @@
 
     const section =
       document.getElementById(
-        "secondSlideSEO"
+        "brandSection"
       );
 
     if(!section) return;
-
-    /* INTERSECTION OBSERVER */
 
     const observer =
       new IntersectionObserver(
@@ -386,9 +450,9 @@
             entry.isIntersecting
           ){
 
-            entry.target.classList.add(
-              "show"
-            );
+            entry.target
+              .classList
+              .add("show");
 
           }
 
@@ -418,7 +482,7 @@
 <!-- 3 -->
 
 
-<section class="services-wrap" id="servicesGridSEO">
+<section class="services-wrap" id="servicesGridAI">
 
   <div class="services-grid">
 
@@ -426,18 +490,22 @@
 
     <div class="service-card">
 
-      <div class="service-number">1</div>
+      <div class="service-number">
+        1
+      </div>
 
       <div class="service-icon">
-        🔍
+        🔎
       </div>
 
       <div class="service-title">
-        Keyword Research & Strategy
+        AI-Powered SEO Optimization
       </div>
 
       <div class="service-desc">
-        Identify high-intent keywords your customers actively search for.
+        Discover high-ranking keywords, analyze competitors,
+        optimize on-page & technical SEO, improve content
+        relevance, and increase organic traffic.
       </div>
 
     </div>
@@ -446,18 +514,22 @@
 
     <div class="service-card">
 
-      <div class="service-number">2</div>
+      <div class="service-number">
+        2
+      </div>
 
       <div class="service-icon">
-        🧩
+        📍
       </div>
 
       <div class="service-title">
-        On-Page SEO Optimisation
+        AI-Based Performance Marketing
       </div>
 
       <div class="service-desc">
-        Improve site structure, content, and metadata for better rankings.
+        Run smarter ad campaigns using AI across Google Ads,
+        Meta Ads (Facebook & Instagram), and YouTube Ads
+        for higher ROI.
       </div>
 
     </div>
@@ -466,18 +538,22 @@
 
     <div class="service-card">
 
-      <div class="service-number">3</div>
+      <div class="service-number">
+        3
+      </div>
 
       <div class="service-icon">
-        ⚙️
+        👥
       </div>
 
       <div class="service-title">
-        Technical SEO
+        AI Content Generation & Optimization
       </div>
 
       <div class="service-desc">
-        Fix performance, indexing, and crawl issues that limit visibility.
+        Create high-performing blog posts, website copy,
+        landing pages, ad creatives, and email campaigns
+        using AI tools.
       </div>
 
     </div>
@@ -486,18 +562,22 @@
 
     <div class="service-card">
 
-      <div class="service-number">4</div>
+      <div class="service-number">
+        4
+      </div>
 
       <div class="service-icon">
-        📍
+        📖
       </div>
 
       <div class="service-title">
-        Local SEO
+        Marketing Automation & Lead Nurturing
       </div>
 
       <div class="service-desc">
-        Dominate local search results and Google Maps visibility.
+        Use AI chatbots, automated email workflows,
+        CRM integration, customer segmentation,
+        and predictive follow-ups.
       </div>
 
     </div>
@@ -506,18 +586,22 @@
 
     <div class="service-card">
 
-      <div class="service-number">5</div>
+      <div class="service-number">
+        5
+      </div>
 
       <div class="service-icon">
-        ✍️
+        🧩
       </div>
 
       <div class="service-title">
-        Content Optimisation
+        AI Analytics & Predictive Insights
       </div>
 
       <div class="service-desc">
-        Create SEO-friendly content that attracts and converts users.
+        Track customer behavior, forecast sales,
+        analyze conversion funnels, and monitor
+        performance with AI dashboards.
       </div>
 
     </div>
@@ -526,114 +610,23 @@
 
     <div class="service-card">
 
-      <div class="service-number">6</div>
+      <div class="service-number">
+        6
+      </div>
 
       <div class="service-icon">
-        📊
+        🚀
       </div>
 
       <div class="service-title">
-        SEO Reporting & Analytics
+        AI-Powered Social Media Intelligence
       </div>
 
       <div class="service-desc">
-        Transparent reports focused on traffic, leads, and growth.
+        Understand audience behavior, track content
+        performance, predict best posting times,
+        and analyze trends.
       </div>
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-    "DOMContentLoaded",
-    function(){
-
-      const section =
-        document.getElementById(
-          "servicesGridSEO"
-        );
-
-      if(!section) return;
-
-      const cards =
-        section.querySelectorAll(
-          ".service-card"
-        );
-
-      /* SAME CARD HOVER SUPPORT */
-
-      cards.forEach(card=>{
-
-        card.addEventListener(
-          "mouseenter",
-          function(){
-            card.style.willChange =
-              "transform";
-          }
-        );
-
-        card.addEventListener(
-          "mouseleave",
-          function(){
-            card.style.willChange =
-              "auto";
-          }
-        );
-
-      });
-
-    }
-  );
-
-  </script>
-
-</section>
-
-
-<!-- 4 -->
-
-<section class="seo-hero-dark" id="whySEOSection">
-
-  <div class="seo-hero-grid">
-
-    <!-- LEFT -->
-
-    <div class="seo-left">
-
-      <h1>
-        Why <span>Search Engine Optimisation</span>?
-      </h1>
-
-      <ul>
-
-        <li>
-          SEO increases your website’s visibility on search engines,
-          helping you reach customers exactly when they’re looking
-          for your services and driving consistent business growth.
-        </li>
-
-        <li>
-          SEO builds long-term digital authority by strengthening
-          trust, relevance, and performance. Unlike paid ads,
-          it delivers sustainable results over time.
-        </li>
-
-      </ul>
-
-    </div>
-
-    <!-- RIGHT IMAGE -->
-
-    <div class="seo-right seo-image-wrap">
-
-      <img
-        src="/images/SEOINNER.png"
-        alt="SEO Growth Illustration"
-      />
 
     </div>
 
@@ -649,25 +642,156 @@
 
     const section =
       document.getElementById(
-        "whySEOSection"
+        "servicesGridAI"
       );
 
     if(!section) return;
 
-    /* INTERSECTION OBSERVER */
+    const cards =
+      section.querySelectorAll(
+        ".service-card"
+      );
+
+    /* SAME HOVER-READY CARDS
+       CSS CONTROLS EFFECT */
+
+    cards.forEach(card=>{
+
+      card.addEventListener(
+      "mouseenter",
+      function(){
+
+        card.style.willChange =
+          "transform";
+
+      });
+
+      card.addEventListener(
+      "mouseleave",
+      function(){
+
+        card.style.willChange =
+          "auto";
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+
+
+
+
+<!-- 4 -->
+
+<section class="seo-hero-dark" id="seoHeroDark">
+
+  <div class="seo-hero-grid">
+
+    <!-- LEFT CONTENT -->
+
+    <div class="seo-left">
+
+      <h1>
+        Why Choose
+        <span>AI Marketing</span>?
+      </h1>
+
+      <ul>
+
+        <li>
+          Traditional marketing guesses.
+        </li>
+
+        <li>
+          <strong>
+            AI Marketing predicts.
+          </strong>
+        </li>
+
+        <li>
+          With AI-powered systems, you can:
+        </li>
+
+        <li>
+          ✅ Identify high-intent customers
+        </li>
+
+        <li>
+          ✅ Automate personalized campaigns
+        </li>
+
+        <li>
+          ✅ Improve ad targeting accuracy
+        </li>
+
+        <li>
+          ✅ Increase website conversions
+        </li>
+
+        <li>
+          ✅ Reduce marketing waste
+        </li>
+
+        <li>
+          ✅ Get real-time performance insights
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="seo-right seo-image-wrap">
+
+      <img
+        src="/images/about/ai.png"
+        alt="AI Marketing Illustration"
+      >
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "seoHeroDark"
+      );
+
+    if(!section) return;
+
+    /* SAME INTERSECTION OBSERVER */
 
     const observer =
       new IntersectionObserver(
 
-      (entries)=>{
+      function(entries){
 
-        entries.forEach(entry=>{
+        entries.forEach(
+        function(entry){
 
           if(
             entry.isIntersecting
           ){
 
-            entry.target.classList.add(
+            entry.target
+            .classList
+            .add(
               "show"
             );
 
@@ -695,15 +819,20 @@
 
 
 
+
+
 <!-- 5 -->
 
-<section class="home-faq-wrap" id="seoFaqSection">
+
+
+<section class="home-faq-wrap" id="faqAiSection">
 
   <div class="home-faq-container">
 
     <!-- TITLE -->
 
     <h2 class="home-faq-title">
+
       <span class="faq-title-white">
         Frequently Asked
       </span>
@@ -711,10 +840,11 @@
       <span class="faq-title-gradient">
         Questions
       </span>
+
     </h2>
 
     <p class="home-faq-sub">
-      Clear answers to help you move forward with confidence.
+      Everything you need to know about AI-powered marketing solutions.
     </p>
 
     <!-- FAQ CARD -->
@@ -725,14 +855,10 @@
 
       <div class="home-faq-item">
 
-        <div
-          class="home-faq-header"
-          role="button"
-          tabindex="0"
-        >
+        <div class="home-faq-header">
 
           <div class="home-faq-question">
-            How long does SEO take to show results?
+            What is AI Marketing?
           </div>
 
           <div class="home-faq-toggle">
@@ -743,9 +869,9 @@
 
         <div class="home-faq-answer">
           <p>
-            SEO improvements usually start appearing within 4–8 weeks,
-            while stronger ranking and traffic growth typically occur
-            within 3–6 months depending on competition and website quality.
+            AI Marketing uses artificial intelligence to analyze data,
+            predict customer behavior, automate campaigns, and optimize
+            marketing performance for better results.
           </p>
         </div>
 
@@ -755,14 +881,10 @@
 
       <div class="home-faq-item">
 
-        <div
-          class="home-faq-header"
-          role="button"
-          tabindex="0"
-        >
+        <div class="home-faq-header">
 
           <div class="home-faq-question">
-            Is SEO a one-time service?
+            How does AI improve marketing performance?
           </div>
 
           <div class="home-faq-toggle">
@@ -773,9 +895,9 @@
 
         <div class="home-faq-answer">
           <p>
-            No. SEO requires continuous optimisation including
-            technical improvements, content updates, and link
-            building to maintain and improve search rankings.
+            AI analyzes real-time data to optimize targeting, bidding,
+            and content strategy, helping businesses increase conversions
+            and reduce marketing waste.
           </p>
         </div>
 
@@ -785,14 +907,10 @@
 
       <div class="home-faq-item">
 
-        <div
-          class="home-faq-header"
-          role="button"
-          tabindex="0"
-        >
+        <div class="home-faq-header">
 
           <div class="home-faq-question">
-            Do you guarantee #1 rankings on Google?
+            Is AI Marketing suitable for small businesses?
           </div>
 
           <div class="home-faq-toggle">
@@ -803,9 +921,9 @@
 
         <div class="home-faq-answer">
           <p>
-            No ethical SEO agency can guarantee specific rankings.
-            Our focus is on sustainable strategies that improve
-            visibility, organic traffic, and conversions.
+            Yes. AI tools help small businesses compete with larger
+            brands by improving efficiency, targeting the right audience,
+            and maximizing ROI.
           </p>
         </div>
 
@@ -815,14 +933,10 @@
 
       <div class="home-faq-item">
 
-        <div
-          class="home-faq-header"
-          role="button"
-          tabindex="0"
-        >
+        <div class="home-faq-header">
 
           <div class="home-faq-question">
-            Will SEO work for small businesses?
+            Can AI Marketing reduce advertising costs?
           </div>
 
           <div class="home-faq-toggle">
@@ -833,9 +947,8 @@
 
         <div class="home-faq-answer">
           <p>
-            Yes. SEO is highly effective for local and small
-            businesses because it helps them appear in front
-            of customers actively searching for their services.
+            Absolutely. AI continuously optimizes campaigns to lower
+            cost-per-lead and improve return on investment.
           </p>
         </div>
 
@@ -845,14 +958,10 @@
 
       <div class="home-faq-item">
 
-        <div
-          class="home-faq-header"
-          role="button"
-          tabindex="0"
-        >
+        <div class="home-faq-header">
 
           <div class="home-faq-question">
-            How do we start SEO for our website?
+            How do we get started with AI Marketing?
           </div>
 
           <div class="home-faq-toggle">
@@ -863,9 +972,9 @@
 
         <div class="home-faq-answer">
           <p>
-            We begin with a complete SEO audit, keyword research,
-            and competitor analysis before building a customised
-            SEO roadmap aligned with your business goals.
+            Contact our team for a consultation. We'll analyze your
+            business goals and build a customized AI-driven
+            marketing strategy.
           </p>
         </div>
 
@@ -873,6 +982,7 @@
 
     </div>
 
+    <!-- CTA -->
 <div class="home-faq-cta">
 
   <h3>
@@ -883,13 +993,14 @@
     Get in touch with our team and discover the right solutions for your business needs.
   </p>
 
-  <a href="../pages/Contact.html">
+  <a href="/Contact/">
     <button>
       CONTACT US →
     </button>
   </a>
 
 </div>
+
   </div>
 
   <!-- JS INSIDE SECTION -->
@@ -897,187 +1008,111 @@
   <script>
 
   document.addEventListener(
-    "DOMContentLoaded",
-    function(){
+  "DOMContentLoaded",
+  function(){
 
-      const section =
-        document.getElementById(
-          "seoFaqSection"
-        );
-
-      if(!section) return;
-
-      const items =
-        section.querySelectorAll(
-          ".home-faq-item"
-        );
-
-      /* AUTO OPEN FIRST FAQ */
-
-      const observer =
-        new IntersectionObserver(
-
-          (entries)=>{
-
-            entries.forEach(entry=>{
-
-              if(entry.isIntersecting){
-
-                const first =
-                  items[0];
-
-                first.classList.add(
-                  "open"
-                );
-
-                first.querySelector(
-                  ".home-faq-toggle"
-                ).innerHTML="−";
-
-                observer.disconnect();
-
-              }
-
-            });
-
-          },
-
-          {
-            threshold:.35
-          }
-
-        );
-
-      observer.observe(
-        section
+    const section =
+      document.getElementById(
+        "faqAiSection"
       );
 
-      /* FAQ TOGGLE */
+    if(!section) return;
 
-      items.forEach((item)=>{
+    const items =
+      section.querySelectorAll(
+        ".home-faq-item"
+      );
 
-        const header =
-          item.querySelector(
-            ".home-faq-header"
-          );
+    /* AUTO OPEN FIRST FAQ */
 
-        const toggle =
-          item.querySelector(
-            ".home-faq-toggle"
-          );
+    const observer =
+      new IntersectionObserver(
 
-        header.addEventListener(
-          "click",
-          function(){
+      (entries)=>{
 
-            const isOpen =
-              item.classList.contains(
-                "open"
-              );
+        entries.forEach(entry=>{
 
-            items.forEach(i=>{
+          if(entry.isIntersecting){
 
-              i.classList.remove(
-                "open"
-              );
+            const first =
+              items[0];
 
-              i.querySelector(
-                ".home-faq-toggle"
-              ).innerHTML="+";
+            first.classList.add(
+              "open"
+            );
 
-            });
+            first.querySelector(
+              ".home-faq-toggle"
+            ).innerHTML="−";
 
-            if(!isOpen){
-
-              item.classList.add(
-                "open"
-              );
-
-              toggle.innerHTML="−";
-
-            }
+            observer.disconnect();
 
           }
+
+        });
+
+      },
+
+      {
+        threshold:.35
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+    /* FAQ TOGGLE */
+
+    items.forEach(item=>{
+
+      const header =
+        item.querySelector(
+          ".home-faq-header"
         );
+
+      const toggle =
+        item.querySelector(
+          ".home-faq-toggle"
+        );
+
+      header.addEventListener(
+      "click",
+      function(){
+
+        const isOpen =
+          item.classList.contains(
+            "open"
+          );
+
+        items.forEach(i=>{
+
+          i.classList.remove(
+            "open"
+          );
+
+          i.querySelector(
+            ".home-faq-toggle"
+          ).innerHTML="+";
+
+        });
+
+        if(!isOpen){
+
+          item.classList.add(
+            "open"
+          );
+
+          toggle.innerHTML="−";
+
+        }
 
       });
 
-      /* SEO FAQ SCHEMA */
-
-      const schema = {
-
-        "@context":"https://schema.org",
-        "@type":"FAQPage",
-
-        "mainEntity":[
-
-          {
-            "@type":"Question",
-            "name":"How long does SEO take to show results?",
-            "acceptedAnswer":{
-              "@type":"Answer",
-              "text":"SEO improvements usually start appearing within 4–8 weeks, while stronger ranking and traffic growth typically occur within 3–6 months depending on competition and website quality."
-            }
-          },
-
-          {
-            "@type":"Question",
-            "name":"Is SEO a one-time service?",
-            "acceptedAnswer":{
-              "@type":"Answer",
-              "text":"No. SEO requires continuous optimisation including technical improvements, content updates, and link building to maintain and improve search rankings."
-            }
-          },
-
-          {
-            "@type":"Question",
-            "name":"Do you guarantee #1 rankings on Google?",
-            "acceptedAnswer":{
-              "@type":"Answer",
-              "text":"No ethical SEO agency can guarantee specific rankings. Our focus is on sustainable strategies that improve visibility, organic traffic, and conversions."
-            }
-          },
-
-          {
-            "@type":"Question",
-            "name":"Will SEO work for small businesses?",
-            "acceptedAnswer":{
-              "@type":"Answer",
-              "text":"Yes. SEO is highly effective for local and small businesses because it helps them appear in front of customers actively searching for their services."
-            }
-          },
-
-          {
-            "@type":"Question",
-            "name":"How do we start SEO for our website?",
-            "acceptedAnswer":{
-              "@type":"Answer",
-              "text":"We begin with a complete SEO audit, keyword research, and competitor analysis before building a customised SEO roadmap aligned with your business goals."
-            }
-          }
-
-        ]
-
-      };
-
-      const script =
-        document.createElement(
-          "script"
-        );
-
-      script.type =
-        "application/ld+json";
-
-      script.innerHTML =
-        JSON.stringify(
-          schema
-        );
-
-      document.head.appendChild(
-        script
-      );
-
     });
+
+  });
 
   </script>
 
@@ -1122,8 +1157,6 @@ console.log("Call button clicked");
 });
 
 </script>
-    
-
 
 
 
@@ -1280,7 +1313,7 @@ sendWhatsApp();
 
     <!-- BRAND -->
     <div class="sps-footer-brand">
-      <img src="/images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+      <img src="../images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
 
       <h3>SHA INFOTECHNOLOGY</h3>
 
@@ -1296,12 +1329,13 @@ sendWhatsApp();
       <h4>Quick Links</h4>
 
       <ul>
-        <li><a href="../Home.html">Home</a></li>
-        <li><a href="../pages/About.html">About Us</a></li>
-        <li><a href="../pages/Services.html">Services</a></li>
-        <li><a href="../pages/Courses.html">Courses</a></li>
-        <li><a href="../pages/Contact.html">Contact</a></li>
-        <li><a href="../pages/Blog.html">Blog</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/About/">About Us</a></li>
+       
+        <li><a href="/Services/">Services</a></li>
+        <li><a href="/Courses/">Courses</a></li>
+        <li><a href="/Contact/">Contact</a></li>
+        <li><a href="/Blog/">Blog</a></li>
       </ul>
     </div>
 
@@ -1309,17 +1343,17 @@ sendWhatsApp();
     <div>
       <h4>Our Services</h4>
 
-     <ul>
-         <li><a href="../services/digital-strategy.html">Digital Strategy</a></li>
-        <li><a href="../services/web-development.html">Web Development</a></li>
-        <li><a href="../services/ecommerce-website.html">Ecommerce Website</a></li>
-        <li><a href="../services/seo.html">SEO</a></li>
-        <li><a href="../services/social-media-marketing.html">Social Media Marketing</a></li>
-        <li><a href="../services/aimarketing.html">AI Marketing</a></li>
-        <li><a href="../services/business-analysis.html">Business Analysis</a></li>
-        <li><a href="../services/content-design.html">Content Design</a></li>
-        <li><a href="../services/creative-design.html">Creative Design</a></li>
-        <li><a href="../services/brand-consultancy.html">Brand Consultancy</a></li>
+      <ul>
+         <li><a href="../Services/Digital_Strategy/">Digital Strategy</a></li>
+        <li><a href="../Services/Web_development/">Web Development</a></li>
+        <li><a href="../services/Ecommerce/">Ecommerce Website</a></li>
+        <li><a href="../services/Seo/">SEO</a></li>
+        <li><a href="../services/SocialMediaMarketing/">Social Media Marketing</a></li>
+        <li><a href="../services/Aimarketing/">AI Marketing</a></li>
+        <li><a href="../services/Business_analysis/">Business Analysis</a></li>
+        <li><a href="../services/Content_design/">Content Design</a></li>
+        <li><a href="../services/Creative_design/">Creative Design</a></li>
+        <li><a href="../services/Brand_consultancy/">Brand Consultancy</a></li>
       </ul>
     </div>
 
