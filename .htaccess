@@ -39,3 +39,8 @@ RewriteRule ^aimarketing/?$ services/aimarketing.html [L,NC]
 
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ %1 [R=301,L]
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^Blog/(.*)$ /Blog/index.html [L]

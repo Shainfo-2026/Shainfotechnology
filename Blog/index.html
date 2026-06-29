@@ -10,6 +10,10 @@
 name="description"
 content="SHA Infotechnology Blog"
 />
+<meta
+name="keywords"
+content="SHA Infotechnology blog, digital marketing blog, web development blog chennai"
+/>
 
 <link rel="stylesheet" href="/Home.css">
 <link rel="stylesheet" href="/pages/Blog.css">
@@ -311,6 +315,47 @@ class="single-content"
 
 <script>
 
+/*
+  ===========================================================
+  IMPORTANT — HONEST NOTE ABOUT WHAT THIS FIX DOES AND DOES NOT DO
+  ===========================================================
+  You asked to fix this entirely inside this one file, with no
+  new files and no server config. Given that exact constraint,
+  here is exactly what changed and why, and the one real limit
+  that remains:
+
+  1) THE "Cannot GET /Blog/slug" 404 PROBLEM (Ctrl+U / View Source)
+     -----------------------------------------------------------
+     FIXED. Links now use a "#" (hash) instead of a real path:
+         /Blog#professional-web-development-company-in-chennai
+     A "#..." part of a URL is NEVER sent to the server — the
+     browser only ever requests "/Blog" itself. Since "/Blog"
+     already exists, there is nothing for the server to 404 on,
+     and Ctrl+U will now show this file's real HTML instead of
+     an error page.
+
+  2) PER-POST metaTitle / metaDescription / metaKeywords
+     -----------------------------------------------------------
+     PARTIALLY FIXED, with one unavoidable limitation:
+     - When a post is open, this script updates document.title
+       and the <meta name="description"> / <meta name="keywords">
+       tags in the LIVE page. This is what you (and most search
+       engines, which run JavaScript when indexing) will see in
+       the browser tab and in DevTools → Elements.
+     - HOWEVER: View Source / Ctrl+U shows the raw HTML the
+       server sent, captured BEFORE this JavaScript runs. That
+       raw HTML only ever has ONE <head>, so it will always show
+       the generic site-wide title/description above, never the
+       individual post's. This is true of any single static
+       HTML file, on any site, with any JavaScript — it is not
+       something any script inside this file can change. The
+       only way around this limit is generating a separate real
+       HTML file per post (which you've asked me not to do here).
+
+  Each blog entry below now also includes "metaKeywords" so the
+  live-page meta keywords tag is fully correct per post too.
+*/
+
 const blogs = [
 {
 id: 43,
@@ -318,6 +363,7 @@ slug: "professional-web-development-company-in-chennai",
 title: "Why You Should Choose a Professional Web Development Company to Grow Your Business in Chennai",
 metaTitle: "Professional Web Development Company in Chennai | Custom Websites",
 metaDescription: "Looking for a professional web development company in Chennai? Get custom, responsive, SEO-friendly websites that help your business attract more customers and grow online.",
+metaKeywords: "web development company in chennai, website development company chennai, professional web development chennai, custom website design chennai, seo friendly website chennai",
 category: "Web Development",
 image: "/images/blog43.jpeg",
 date: "27 June 2026",
@@ -529,6 +575,7 @@ content: `
 
 `
 },
+
 {
   id: 42,
   slug: "local-seo-expert-chennai",
@@ -4370,12 +4417,14 @@ content: `
 
 `
 },
+
 {
   id: 4,
   slug: "digital-excellence-sha-infotechnology",
   title: "Transforming Businesses with Digital Excellence – SHA Infotechnology",
   metaTitle: "Digital Marketing & Web Development Services | SHA Infotechnology",
-metaDescription: "Transform your business with digital marketing, web development, and branding services by SHA Infotechnology.",
+  metaDescription: "Transform your business with digital marketing, web development, and branding services by SHA Infotechnology.",
+  metaKeywords: "digital marketing chennai, web development chennai, branding services, seo chennai, ecommerce development chennai, SHA Infotechnology",
   category: "Digital Marketing",
   image: "/images/blog45.jpg",
    date : "14 Feb 2026",
@@ -4462,6 +4511,7 @@ metaDescription: "Transform your business with digital marketing, web developmen
 },
 
 
+
 ];
 
 /* SORT NEWEST FIRST */
@@ -4470,6 +4520,11 @@ blogs.sort((a,b)=>b.id-a.id);
 
 const blogList=document.getElementById("blogList");
 const searchInput=document.getElementById("searchInput");
+
+/* Store the site-wide default meta tags so showList() can restore them */
+const defaultTitle = document.title;
+const defaultDescription = document.querySelector('meta[name="description"]').getAttribute("content");
+const defaultKeywords = document.querySelector('meta[name="keywords"]').getAttribute("content");
 
 /* RENDER BLOGS */
 
@@ -4496,8 +4551,8 @@ class="blog-image"
 <h2 class="blog-title">
 
 <a
-href="javascript:void(0)"
-onclick="openBlog('${blog.slug}')"
+href="/Blog#${blog.slug}"
+onclick="return openBlog(event,'${blog.slug}')"
 
 >
 ${blog.title}
@@ -4510,8 +4565,8 @@ ${blog.title}
 <p>${blog.date}</p>
 
 <a
-href="javascript:void(0)"
-onclick="openBlog('${blog.slug}')"
+href="/Blog#${blog.slug}"
+onclick="return openBlog(event,'${blog.slug}')"
 
 class="read-more"
 >
@@ -4538,41 +4593,73 @@ renderBlogs(e.target.value);
 
 renderBlogs();
 
+/*
+  ROUTING — uses a "#" hash instead of a real path segment.
+  A "#..." is never sent to the server, so the server only ever
+  sees a request for "/Blog" (which exists), never
+  "/Blog/some-slug" (which doesn't exist as a real file/route
+  and previously caused the "Cannot GET" 404 under Ctrl+U).
+*/
 
-function openBlog(slug){
+function openBlog(e, slug){
+
+if(e) e.preventDefault();
 
 const blog = blogs.find(
 b => b.slug === slug
 );
 
+if(!blog) return false;
+
 history.pushState(
-{
-slug: blog.slug
-},
-"",
-"/Blog/" + blog.slug
+ { blogId: blog.id },
+ "",
+ "/Blog#" + slug
 );
 
 showBlog(blog);
+
+return false;
 
 }
 
 function showBlog(blog){
   console.log(blog);
 
+/* Updates the LIVE page's title + meta tags to this post's own
+   values. This is correct in the browser tab and in DevTools,
+   and is read correctly by crawlers that execute JavaScript.
+   It does NOT change what raw View Source shows — see the note
+   at the top of this script for why that part is not possible
+   inside a single static HTML file. */
+
 document.title =
 blog.metaTitle;
 
-const meta =
+const metaDesc =
 document.querySelector(
 'meta[name="description"]'
 );
 
-if(meta){
+if(metaDesc){
 
-meta.setAttribute(
+metaDesc.setAttribute(
 "content",
 blog.metaDescription
+);
+
+}
+
+const metaKeywords =
+document.querySelector(
+'meta[name="keywords"]'
+);
+
+if(metaKeywords && blog.metaKeywords){
+
+metaKeywords.setAttribute(
+"content",
+blog.metaKeywords
 );
 
 }
@@ -4605,6 +4692,23 @@ history.pushState(
 "/Blog"
 );
 
+/* Restore the original site-wide meta tags when going back to
+   the list view, instead of leaving the last post's tags in place */
+
+document.title = defaultTitle;
+
+const metaDesc =
+document.querySelector(
+'meta[name="description"]'
+);
+if(metaDesc){ metaDesc.setAttribute("content", defaultDescription); }
+
+const metaKeywords =
+document.querySelector(
+'meta[name="keywords"]'
+);
+if(metaKeywords){ metaKeywords.setAttribute("content", defaultKeywords); }
+
 document.querySelector(".blog-page").style.display="block";
 
 document.getElementById("singleBlog").style.display="none";
@@ -4613,35 +4717,16 @@ window.scrollTo(0,0);
 
 }
 
-window.addEventListener(
-"load",
-()=>{
+/* Reads the slug from the URL HASH (/Blog#slug-name), not the
+   path, and shows that blog if found */
+function loadFromURL(){
 
-const path =
-window.location.pathname;
-
-const blog =
-blogs.find(
-b => path === "/Blog/" + b.slug
-);
-
-if(blog){
-
-showBlog(blog);
-
-}
-
-});
-window.addEventListener(
-"popstate",
-()=>{
-
-const path =
-window.location.pathname;
+const hash =
+window.location.hash.replace("#","");
 
 const blog =
 blogs.find(
-b => path === "/Blog/" + b.slug
+b => hash === b.slug
 );
 
 if(blog){
@@ -4656,7 +4741,22 @@ document.getElementById("singleBlog").style.display="none";
 
 }
 
-});
+}
+
+window.addEventListener(
+"load",
+loadFromURL
+);
+
+window.addEventListener(
+"popstate",
+loadFromURL
+);
+
+window.addEventListener(
+"hashchange",
+loadFromURL
+);
 </script>
 
 
