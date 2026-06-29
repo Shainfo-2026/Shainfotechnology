@@ -6,11 +6,15 @@
 
 <title>Our Blog | SHA Infotech</title>
 
+<meta
+name="description"
+content="SHA Infotechnology Blog"
+/>
 
-   
-   <link rel="stylesheet" href="/Home.css">
-    <link rel="stylesheet" href="/pages/Blog.css">
-     <link rel="stylesheet" href="/Callbutton.css">
+<link rel="stylesheet" href="/Home.css">
+<link rel="stylesheet" href="/pages/Blog.css">
+<link rel="stylesheet" href="/pages/bblog.css">
+<link rel="stylesheet" href="/Callbutton.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
@@ -274,6 +278,34 @@
 </div>
 
 </section>
+<section
+id="singleBlog"
+class="single-blog"
+style="display:none;"
+>
+
+<a
+href="javascript:void(0)"
+class="back-btn"
+onclick="showList()"
+>
+← Back
+</a>
+
+<h1 id="singleTitle"></h1>
+
+<img
+id="singleImage"
+class="single-image"
+alt=""
+>
+
+<div
+id="singleContent"
+class="single-content"
+></div>
+
+</section>
 
 <!-- ================= JS INSIDE SECTION ================= -->
 
@@ -291,7 +323,7 @@ image: "/images/blog43.jpeg",
 date: "27 June 2026",
 content: `
 
-<h2>Why You Should Choose a Professional Web Development Company to Grow Your Business in Chennai</h2>
+<h2>Introduction</h2>
 
 <p>These days, having a strong online presence is very important for businesses. Whether you run a small business or a large company, your website acts as the digital face of your brand. It is often the first thing potential customers see when searching online. Creating a positive first impression is essential.</p>
 
@@ -497,7 +529,6 @@ content: `
 
 `
 },
-
 {
   id: 42,
   slug: "local-seo-expert-chennai",
@@ -4430,6 +4461,7 @@ metaDescription: "Transform your business with digital marketing, web developmen
   `
 },
 
+
 ];
 
 /* SORT NEWEST FIRST */
@@ -4464,8 +4496,9 @@ class="blog-image"
 <h2 class="blog-title">
 
 <a
-href="/pages/blog-single.html?slug=${blog.slug}"
-target="_blank"
+href="javascript:void(0)"
+onclick="openBlog('${blog.slug}')"
+
 >
 ${blog.title}
 </a>
@@ -4477,8 +4510,9 @@ ${blog.title}
 <p>${blog.date}</p>
 
 <a
-href="/pages/blog-single.html?slug=${blog.slug}"
-target="_blank"
+href="javascript:void(0)"
+onclick="openBlog('${blog.slug}')"
+
 class="read-more"
 >
 Continue Reading →
@@ -4504,6 +4538,125 @@ renderBlogs(e.target.value);
 
 renderBlogs();
 
+
+function openBlog(slug){
+
+const blog = blogs.find(
+b => b.slug === slug
+);
+
+history.pushState(
+{
+slug: blog.slug
+},
+"",
+"/Blog/" + blog.slug
+);
+
+showBlog(blog);
+
+}
+
+function showBlog(blog){
+  console.log(blog);
+
+document.title =
+blog.metaTitle;
+
+const meta =
+document.querySelector(
+'meta[name="description"]'
+);
+
+if(meta){
+
+meta.setAttribute(
+"content",
+blog.metaDescription
+);
+
+}
+
+document.querySelector(".blog-page").style.display="none";
+
+document.getElementById("singleBlog").style.display="block";
+
+document.getElementById("singleTitle").innerHTML =
+blog.title;
+
+document.getElementById("singleImage").src =
+blog.image;
+
+document.getElementById("singleImage").alt =
+blog.title;
+
+document.getElementById("singleContent").innerHTML =
+blog.content;
+
+window.scrollTo(0,0);
+
+}
+
+function showList(){
+
+history.pushState(
+{},
+"",
+"/Blog"
+);
+
+document.querySelector(".blog-page").style.display="block";
+
+document.getElementById("singleBlog").style.display="none";
+
+window.scrollTo(0,0);
+
+}
+
+window.addEventListener(
+"load",
+()=>{
+
+const path =
+window.location.pathname;
+
+const blog =
+blogs.find(
+b => path === "/Blog/" + b.slug
+);
+
+if(blog){
+
+showBlog(blog);
+
+}
+
+});
+window.addEventListener(
+"popstate",
+()=>{
+
+const path =
+window.location.pathname;
+
+const blog =
+blogs.find(
+b => path === "/Blog/" + b.slug
+);
+
+if(blog){
+
+showBlog(blog);
+
+}else{
+
+document.querySelector(".blog-page").style.display="block";
+
+document.getElementById("singleBlog").style.display="none";
+
+}
+
+});
 </script>
 
 

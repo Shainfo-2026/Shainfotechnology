@@ -151,7 +151,9 @@ body{
   border-radius:12px;
   margin-bottom:24px;
 }
-
+.single-image{
+    margin-bottom:25px;
+}
 .single-blog h1{
   font-size:34px;
   font-weight:800;
