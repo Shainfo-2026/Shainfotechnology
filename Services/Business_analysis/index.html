@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Analysis</title>
+  <title>Business Analysis Services in Chennai | Strategic Consulting</title>
+
+<meta name="description" content="Enhance business performance with expert business analysis services in Chennai. Gain insights for growth, efficiency, and data-driven decision-making.">
+
+<meta name="keywords" content="Business Analysis Chennai, Business Consulting Chennai, Strategic Planning Chennai, Market Analysis Chennai, Business Growth Consulting Chennai">
   <link rel="stylesheet" href="/Home.css">
          <link rel="stylesheet" href="/footer.css">
          <link rel="stylesheet" href="/footer.js">
@@ -48,25 +52,27 @@
 
     <!-- NAVIGATION -->
 
-    <nav
-      class="sf-nav"
-      id="mobileNav"
-    >
+   <nav
+  class="sf-nav"
+  id="mobileNav"
+>
 
-      <a
-        href="/"
-        class="nav-btn"
-      >
-        Home
-      </a>
+  <!-- HOME -->
+  <a href="/" class="nav-btn">
+    Home
+  </a>
 
-      <a
-        href="/About/"
-        class="nav-btn"
-      >
-        About
-      </a>
+  <!-- ABOUT -->
+  <a href="/About/" class="nav-btn">
+    About
+  </a>
 
+  <!-- SERVICES -->
+  <div class="nav-dropdown">
+
+    <div class="services-nav">
+
+      <!-- Clicking this opens Services page -->
       <a
         href="/Services/"
         class="nav-btn"
@@ -74,29 +80,106 @@
         Services
       </a>
 
-      
-      <a
-        href="/Courses/"
-        class="nav-btn"
+      <!-- Clicking only this opens dropdown -->
+      <button
+        type="button"
+        class="dropdown-arrow"
+        onclick="toggleServices(event)"
+        aria-label="Open Services Menu"
       >
-        Courses
-      </a>
+        ▾
+      </button>
 
-      <a
-        href="/Contact/"
-        class="nav-btn contact-link"
-      >
-        Contact
-      </a>
+    </div>
 
-      <a
-        href="/Blog/"
-        class="nav-btn"
-      >
-        Blog
-      </a>
+    <ul
+      class="dropdown-menu"
+      id="servicesMenu"
+    >
 
-    </nav>
+      <li>
+        <a href="/Services/Digital_Strategy/">
+          Digital Strategy
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Web_development/">
+          Web Development
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Ecommerce/">
+          Ecommerce Website
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Seo/">
+          SEO
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/SocialMediaMarketing/">
+          Social Media Marketing
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Aimarketing/">
+          AI Marketing
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Business_analysis/">
+          Business Analysis
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Content_design/">
+          Content Design
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Creative_design/">
+          Creative Design
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Brand_consultancy/">
+          Brand Consultancy
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <!-- COURSES -->
+  <a href="/Courses/" class="nav-btn">
+    Courses
+  </a>
+
+  <!-- CONTACT -->
+  <a
+    href="/Contact/"
+    class="nav-btn contact-link"
+  >
+    Contact
+  </a>
+
+  <!-- BLOG -->
+  <a href="/Blog/" class="nav-btn">
+    Blog
+  </a>
+
+</nav>
 
   </div>
 
@@ -212,6 +295,66 @@
     }
 
   });
+
+ function toggleServices(e){
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const menu =
+    document.getElementById(
+        "servicesMenu"
+    );
+
+    /* CLOSE OTHER MENUS */
+
+    document
+    .querySelectorAll(".dropdown-menu")
+    .forEach(item=>{
+
+        if(item!==menu){
+
+            item.classList.remove("show");
+
+        }
+
+    });
+
+    menu.classList.toggle("show");
+
+}
+
+/* DON'T CLOSE WHEN CLICKING INSIDE */
+
+document
+.getElementById("servicesMenu")
+.addEventListener("click",function(e){
+
+    e.stopPropagation();
+
+});
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+document.addEventListener("click",function(){
+
+    document
+    .querySelectorAll(".dropdown-menu")
+    .forEach(menu=>{
+
+        menu.classList.remove("show");
+
+    });
+
+});
+
+document.addEventListener("click",function(){
+
+    document
+    .getElementById("servicesMenu")
+    .classList.remove("show");
+
+});
 
   </script>
 
