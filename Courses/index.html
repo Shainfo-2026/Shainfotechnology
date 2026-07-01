@@ -29,10 +29,10 @@
 
         <a href="/">
           <img
-            src="/images/LOGO.jpeg"
-            alt="Logo"
-            class="logo-img"
-          />
+  src="/images/LOGO.jpeg"
+  alt="SHA Infotechnology Digital Marketing and Web Development Company Chennai"
+  class="logo-img"
+/>
         </a>
 
       </div>
@@ -863,10 +863,10 @@ ${formData.message}`;
 
     <div class="vision-image">
 
-      <img
-        src="/images/dmcourse1.png"
-        alt="Digital Marketing Course"
-      />
+     <img
+  src="/images/dmcourse1.png"
+  alt="Professional Digital Marketing Course with SEO Google Ads Social Media Marketing Training"
+ />
 
     </div>
 
@@ -1811,7 +1811,367 @@ Please share details.`;
 
 
 
+<section class="home-faq-wrap" id="faqSection">
 
+  <div class="home-faq-container">
+
+    <!-- TITLE -->
+
+    <h2 class="home-faq-title">
+
+      <span class="faq-title-white">
+        Frequently Asked
+      </span>
+
+      <span class="faq-title-gradient">
+        Questions
+      </span>
+
+    </h2>
+
+    <p class="home-faq-sub">
+      Clear answers to help you move forward with confidence.
+    </p>
+
+    <!-- FAQ CARD -->
+<div class="home-faq-card">
+
+  <!-- FAQ 1 -->
+
+  <div class="home-faq-item">
+
+    <div class="home-faq-header">
+
+      <div class="home-faq-question">
+        What is a Digital Marketing Course in Chennai?
+      </div>
+
+      <div class="home-faq-toggle">
+        +
+      </div>
+
+    </div>
+
+    <div class="home-faq-answer">
+      <p>
+        A Digital Marketing Course in Chennai is a professional training program that teaches online marketing skills such as Search Engine Optimization (SEO), Social Media Marketing, Google Ads (PPC), Content Marketing, Email Marketing, and Web Analytics to prepare students for successful digital marketing careers.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FAQ 2 -->
+
+  <div class="home-faq-item">
+
+    <div class="home-faq-header">
+
+      <div class="home-faq-question">
+        Who can join Digital Marketing training in Chennai?
+      </div>
+
+      <div class="home-faq-toggle">
+        +
+      </div>
+
+    </div>
+
+    <div class="home-faq-answer">
+      <p>
+        Our Digital Marketing Training in Chennai is suitable for students, fresh graduates, job seekers, working professionals, freelancers, entrepreneurs, and business owners who want to build practical digital marketing skills and advance their careers.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FAQ 3 -->
+
+  <div class="home-faq-item">
+
+    <div class="home-faq-header">
+
+      <div class="home-faq-question">
+        What skills will I learn in this course?
+      </div>
+
+      <div class="home-faq-toggle">
+        +
+      </div>
+
+    </div>
+
+    <div class="home-faq-answer">
+      <p>
+        You will learn Search Engine Optimization (SEO), Social Media Marketing, Google Ads (PPC), Content Marketing, Email Marketing, Web Analytics, Keyword Research, Lead Generation, Campaign Management, and other essential digital marketing skills through practical training.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FAQ 4 -->
+
+  <div class="home-faq-item">
+
+    <div class="home-faq-header">
+
+      <div class="home-faq-question">
+        Is Digital Marketing training in Chennai good for a career?
+      </div>
+
+      <div class="home-faq-toggle">
+        +
+      </div>
+
+    </div>
+
+    <div class="home-faq-answer">
+      <p>
+        Yes. Digital Marketing is one of the fastest-growing career fields, offering excellent job opportunities in SEO, Social Media Marketing, Google Ads, Content Marketing, Performance Marketing, and Digital Marketing across multiple industries.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FAQ 5 -->
+
+  <div class="home-faq-item">
+
+    <div class="home-faq-header">
+
+      <div class="home-faq-question">
+        Do you provide practical training?
+      </div>
+
+      <div class="home-faq-toggle">
+        +
+      </div>
+
+    </div>
+
+    <div class="home-faq-answer">
+      <p>
+        Yes. Our Digital Marketing Course includes real-time projects, hands-on practical sessions, live campaign experience, industry tools, case studies, assignments, and expert guidance to help students become job-ready professionals.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- CTA -->
+
+    <div class="home-faq-cta">
+
+      <h3>
+        Still have questions?
+      </h3>
+
+      <p>
+        Talk directly with our experts and get a custom growth plan.
+      </p>
+
+      <a href="/Contact/">
+        <button>
+          BOOK FREE CONSULTATION →
+        </button>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "faqSection"
+      );
+
+    if(!section) return;
+
+    const items =
+      section.querySelectorAll(
+        ".home-faq-item"
+      );
+
+    /* AUTO OPEN FIRST FAQ */
+
+    const observer =
+      new IntersectionObserver(
+
+      (entries)=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            const first =
+              items[0];
+
+            first.classList.add(
+              "open"
+            );
+
+            first.querySelector(
+              ".home-faq-toggle"
+            ).innerHTML="−";
+
+            observer.disconnect();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.35
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+    /* FAQ TOGGLE */
+
+    items.forEach(item=>{
+
+      const header =
+        item.querySelector(
+          ".home-faq-header"
+        );
+
+      const toggle =
+        item.querySelector(
+          ".home-faq-toggle"
+        );
+
+      header.addEventListener(
+      "click",
+      function(){
+
+        const isOpen =
+          item.classList.contains(
+            "open"
+          );
+
+        items.forEach(i=>{
+
+          i.classList.remove(
+            "open"
+          );
+
+          i.querySelector(
+            ".home-faq-toggle"
+          ).innerHTML="+";
+
+        });
+
+        if(!isOpen){
+
+          item.classList.add(
+            "open"
+          );
+
+          toggle.innerHTML="−";
+
+        }
+
+      });
+
+    });
+
+    /* FAQ SCHEMA */
+
+    const schema = {
+
+      "@context":
+      "https://schema.org",
+
+      "@type":
+      "FAQPage",
+
+      "mainEntity":[
+
+      {
+        "@type":"Question",
+        "name":"Which service should I start with?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"If you’re new, start with a professional website and basic SEO. Once traffic grows, ads and social media help scale faster."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"Do you work with small businesses?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. We work with startups, small businesses, and growing companies, offering flexible and affordable solutions."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"How long does it take to see results?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"SEO typically takes 2–3 months for visible results, while Google Ads and social media campaigns can generate leads much faster."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"Do you provide ongoing support?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Absolutely. We offer continuous optimization, support, and performance tracking for all our services."
+        }
+      },
+
+      {
+        "@type":"Question",
+        "name":"How do I get started?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Simply contact us for a free consultation. We’ll analyze your business and recommend the best growth strategy."
+        }
+      }
+
+      ]
+
+    };
+
+    const script =
+      document.createElement(
+        "script"
+      );
+
+    script.type =
+      "application/ld+json";
+
+    script.innerHTML =
+      JSON.stringify(
+        schema
+      );
+
+    document.head.appendChild(
+      script
+    );
+
+  });
+
+  </script>
+
+</section>
 
 
 <a
@@ -1855,8 +2215,8 @@ console.log("Call button clicked");
 <img
 class="wa-avatar"
 src="/images/LOGO.jpeg"
-alt="SHA Infotechnology"
-/>
+alt="SHA Infotechnology Customer Support Digital Marketing Services"
+ />
 
 <div>
 <div class="wa-name">SHA Infotechnology</div>
@@ -1909,7 +2269,7 @@ onclick="toggleWA()"
 
 <img
 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-alt="WhatsApp"
+alt="WhatsApp Chat Support SHA Infotechnology"
 >
 
 </div>
@@ -2003,7 +2363,10 @@ sendWhatsApp();
 
     <!-- BRAND -->
     <div class="sps-footer-brand">
-      <img src="/images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+     <img
+src="/images/LOGO.jpeg"
+alt="SHA Infotechnology Digital Marketing SEO Web Development Company"
+class="sps-footer-logo">
 
       <h3>SHA INFOTECHNOLOGY</h3>
 
