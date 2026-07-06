@@ -1,34 +1,34 @@
-/* ================= POPUP ================= */
+// /* ================= POPUP ================= */
 
-const popup = document.getElementById("popup");
+// const popup = document.getElementById("popup");
 
-const openPopup = document.getElementById("openPopup");
+// const openPopup = document.getElementById("openPopup");
 
-const closePopup = document.getElementById("closePopup");
+// const closePopup = document.getElementById("closePopup");
 
-openPopup.addEventListener("click", () => {
-  popup.classList.add("active");
-});
+// openPopup.addEventListener("click", () => {
+//   popup.classList.add("active");
+// });
 
-closePopup.addEventListener("click", () => {
-  popup.classList.remove("active");
-});
+// closePopup.addEventListener("click", () => {
+//   popup.classList.remove("active");
+// });
 
-/* CLOSE WHEN CLICK OUTSIDE */
+// /* CLOSE WHEN CLICK OUTSIDE */
 
-popup.addEventListener("click", (e) => {
-  if (e.target === popup) {
-    popup.classList.remove("active");
-  }
-});
+// popup.addEventListener("click", (e) => {
+//   if (e.target === popup) {
+//     popup.classList.remove("active");
+//   }
+// });
 
-/* ESC CLOSE */
+// /* ESC CLOSE */
 
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    popup.classList.remove("active");
-  }
-});
+// window.addEventListener("keydown", (e) => {
+//   if (e.key === "Escape") {
+//     popup.classList.remove("active");
+//   }
+// });
 
 
 
