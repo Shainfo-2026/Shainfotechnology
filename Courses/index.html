@@ -366,6 +366,1469 @@ document.addEventListener("click",function(){
 
 
 
+  <section class="hero-section" id="coursesHero">
+
+  <div class="hero-container">
+
+    <!-- LEFT CONTENT -->
+
+    <div class="hero-left">
+
+      <h1>
+        Master the Future of <br>
+        <span>Digital Marketing</span>
+      </h1>
+
+      <p>
+        Join our industry-recognized Digital Marketing Course
+        designed to help you master SEO, Social Media Marketing,
+        Google Ads and real-world campaign strategies.
+      </p>
+
+      <button
+        class="cta-btn"
+        id="openPopupBtn"
+      >
+        Connect With Us
+      </button>
+
+    </div>
+
+    <!-- RIGHT FORM -->
+
+    <div class="hero-right">
+
+      <div class="side-form">
+
+        <h2>
+          Connect With Us
+        </h2>
+
+        <form
+          id="courseForm"
+        >
+
+          <div class="form-row">
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              required
+            >
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            >
+
+          </div>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          >
+
+          <select
+            name="selection"
+            required
+          >
+
+            <option value="">
+              Select Service / Course
+            </option>
+
+            <option value="Digital Strategy">
+              Digital Strategy
+            </option>
+
+            <option value="Digital Marketing Course">
+              Digital Marketing Course
+            </option>
+
+            <option value="Web Development">
+              Web Development
+            </option>
+
+            <option value="E-commerce Website">
+              E-commerce Website
+            </option>
+
+            <option value="Search Engine Optimization">
+              Search Engine Optimization
+            </option>
+
+            <option value="Social Media Marketing">
+              Social Media Marketing
+            </option>
+
+            <option value="Content Design">
+              Content Design
+            </option>
+
+            <option value="Business Analysis">
+              Business Analysis
+            </option>
+
+            <option value="Creative Design">
+              Creative Design
+            </option>
+
+            <option value="Brand Consultancy">
+              Brand Consultancy
+            </option>
+
+            <option value="AI Marketing">
+              AI Marketing
+            </option>
+
+          </select>
+
+          <textarea
+            name="message"
+            rows="3"
+            placeholder="Your Message"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="submit-btn"
+          >
+            Submit
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- POPUP -->
+
+  <div
+    class="popup-overlay"
+    id="popupOverlay"
+    style="display:none;"
+  >
+
+    <div
+      class="popup-form"
+      id="popupForm"
+    >
+
+      <button
+        class="close-btn"
+        id="closePopupBtn"
+      >
+        ✕
+      </button>
+
+      <h2>
+        Connect With Us
+      </h2>
+
+      <form
+        id="popupCourseForm"
+      >
+
+        <div class="form-row">
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            required
+          >
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            required
+          >
+
+        </div>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        >
+
+        <select
+          name="selection"
+          required
+        >
+
+          <option value="">
+            Select Service / Course
+          </option>
+
+          <option value="Digital Strategy">
+            Digital Strategy
+          </option>
+
+          <option value="Digital Marketing Course">
+            Digital Marketing Course
+          </option>
+
+          <option value="Web Development">
+            Web Development
+          </option>
+
+          <option value="E-commerce Website">
+            E-commerce Website
+          </option>
+
+          <option value="Search Engine Optimization">
+            Search Engine Optimization
+          </option>
+
+          <option value="Social Media Marketing">
+            Social Media Marketing
+          </option>
+
+          <option value="Content Design">
+            Content Design
+          </option>
+
+          <option value="Business Analysis">
+            Business Analysis
+          </option>
+
+          <option value="Creative Design">
+            Creative Design
+          </option>
+
+          <option value="Brand Consultancy">
+            Brand Consultancy
+          </option>
+
+          <option value="AI Marketing">
+            AI Marketing
+          </option>
+
+        </select>
+
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Your Message"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="submit-btn"
+        >
+          Submit
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    emailjs.init(
+      "yxT-hRvX41RhpOdfZ"
+    );
+
+    const popup =
+      document.getElementById(
+        "popupOverlay"
+      );
+
+    const openBtn =
+      document.getElementById(
+        "openPopupBtn"
+      );
+
+    const closeBtn =
+      document.getElementById(
+        "closePopupBtn"
+      );
+
+    const forms =
+      [
+        document.getElementById(
+          "courseForm"
+        ),
+        document.getElementById(
+          "popupCourseForm"
+        )
+      ];
+
+    /* OPEN POPUP */
+
+    openBtn.onclick =
+      function(){
+
+        popup.style.display=
+          "flex";
+
+      };
+
+    /* CLOSE */
+
+    closeBtn.onclick =
+      function(){
+
+        popup.style.display=
+          "none";
+
+      };
+
+    popup.onclick =
+      function(e){
+
+        if(
+          e.target===popup
+        ){
+
+          popup.style.display=
+            "none";
+
+        }
+
+      };
+
+    /* ESC CLOSE */
+
+    document.addEventListener(
+    "keydown",
+    function(e){
+
+      if(
+        e.key==="Escape"
+      ){
+
+        popup.style.display=
+          "none";
+
+      }
+
+    });
+
+    /* FORM SUBMIT */
+
+    forms.forEach(form=>{
+
+      form.addEventListener(
+      "submit",
+      function(e){
+
+        e.preventDefault();
+
+        const submitBtn =
+          form.querySelector(
+            ".submit-btn"
+          );
+
+        submitBtn.innerHTML =
+          "Sending...";
+
+        submitBtn.disabled =
+          true;
+
+        const formData = {
+
+          name:
+            form.name.value,
+
+          phone:
+            form.phone.value,
+
+          email:
+            form.email.value,
+
+          selection:
+            form.selection.value,
+
+          message:
+            form.message.value
+
+        };
+
+        emailjs.send(
+
+          "service_pznbx9s",
+          "template_8wwwast",
+          formData
+
+        )
+
+        .then(()=>{
+
+          alert(
+            "Enquiry Sent Successfully!"
+          );
+
+          const message =
+
+`🚀 New Course Enquiry
+
+👤 Name: ${formData.name}
+📞 Phone: ${formData.phone}
+📧 Email: ${formData.email}
+📌 Course/Service: ${formData.selection}
+
+💬 Message:
+${formData.message}`;
+
+          const phone =
+            "919361046387";
+
+          const url =
+
+`https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+          form.reset();
+
+          popup.style.display =
+            "none";
+
+          window.location.href =
+            url;
+
+        })
+
+        .catch(error=>{
+
+          alert(
+            "Failed to send enquiry."
+          );
+
+          console.error(
+            error
+          );
+
+        })
+
+        .finally(()=>{
+
+          submitBtn.innerHTML=
+            "Submit";
+
+          submitBtn.disabled=
+            false;
+
+        });
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 2 -->
+<section class="vision-section" id="whyDigitalMarketingCourse">
+
+  <!-- TITLE -->
+
+  <div class="vision-title">
+
+    <h3>
+      Why Choose Our
+    </h3>
+
+    <h2>
+      Digital Marketing Course
+    </h2>
+
+    <div class="vision-underline"></div>
+
+  </div>
+
+  <!-- CONTENT -->
+
+  <div class="vision-container">
+
+    <!-- IMAGE -->
+
+    <div class="vision-image">
+
+     <img
+  src="/images/dmcourse1.png"
+  alt="Professional Digital Marketing Course with SEO Google Ads Social Media Marketing Training"
+ />
+
+    </div>
+
+    <!-- TEXT -->
+
+    <div class="vision-content">
+
+      <p>
+        Our Digital Marketing Course is designed to help students,
+        entrepreneurs, and professionals master the skills required
+        to succeed in today's digital world. From SEO and social media
+        marketing to paid advertising and AI-powered marketing tools,
+        the course provides a complete understanding of modern digital strategies.
+      </p>
+
+      <p>
+        Unlike traditional theoretical training, we focus on practical
+        learning through real-time projects, live campaign simulations,
+        and hands-on tools used by industry experts. This approach helps
+        learners gain real-world experience and build confidence in executing
+        digital marketing strategies.
+      </p>
+
+      <p>
+        By the end of the program, students will have the knowledge to
+        build brands online, generate leads, optimize campaigns, and
+        create measurable business growth using powerful digital marketing techniques.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "whyDigitalMarketingCourse"
+      );
+
+    if(!section) return;
+
+    /* SECTION READY */
+
+    section.classList.add(
+      "loaded"
+    );
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 3 -->
+
+<section class="curriculum-section" id="curriculumSection">
+
+  <!-- TITLE -->
+
+  <h2 class="curriculum-title">
+    <span class="white-text">
+      What Will You
+    </span>
+    <span class="gradient-text">
+      Learn?
+    </span>
+  </h2>
+
+  <!-- GRID -->
+
+  <div class="curriculum-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="accordion-card">
+
+      <div class="accordion-header">
+
+        <h3>
+          Introduction to Digital Marketing
+        </h3>
+
+        <div class="accordion-icon">
+          +
+        </div>
+
+      </div>
+
+      <div class="accordion-content">
+
+        <ul>
+          <li>Digital Marketing Fundamentals</li>
+          <li>Marketing Funnels</li>
+          <li>Customer Journey</li>
+          <li>SEO, SMM & PPC Overview</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="accordion-card">
+
+      <div class="accordion-header">
+
+        <h3>
+          Search Engine Optimization
+        </h3>
+
+        <div class="accordion-icon">
+          +
+        </div>
+
+      </div>
+
+      <div class="accordion-content">
+
+        <ul>
+          <li>Keyword Research</li>
+          <li>On-page Optimization</li>
+          <li>Technical SEO</li>
+          <li>Link Building</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="accordion-card">
+
+      <div class="accordion-header">
+
+        <h3>
+          Social Media Marketing
+        </h3>
+
+        <div class="accordion-icon">
+          +
+        </div>
+
+      </div>
+
+      <div class="accordion-content">
+
+        <ul>
+          <li>Facebook Marketing</li>
+          <li>Instagram Growth</li>
+          <li>Content Strategy</li>
+          <li>Ad Campaign Setup</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="accordion-card">
+
+      <div class="accordion-header">
+
+        <h3>
+          Google Ads
+        </h3>
+
+        <div class="accordion-icon">
+          +
+        </div>
+
+      </div>
+
+      <div class="accordion-content">
+
+        <ul>
+          <li>Search Ads</li>
+          <li>Display Ads</li>
+          <li>YouTube Ads</li>
+          <li>Conversion Tracking</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="accordion-card">
+
+      <div class="accordion-header">
+
+        <h3>
+          Analytics
+        </h3>
+
+        <div class="accordion-icon">
+          +
+        </div>
+
+      </div>
+
+      <div class="accordion-content">
+
+        <ul>
+          <li>Google Analytics</li>
+          <li>Traffic Analysis</li>
+          <li>Conversion Optimization</li>
+          <li>ROI Measurement</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="accordion-card">
+
+      <div class="accordion-header">
+
+        <h3>
+          Advanced Digital Marketing
+        </h3>
+
+        <div class="accordion-icon">
+          +
+        </div>
+
+      </div>
+
+      <div class="accordion-content">
+
+        <ul>
+          <li>Automation Tools</li>
+          <li>AI Marketing</li>
+          <li>Growth Strategies</li>
+          <li>Marketing Funnels</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "curriculumSection"
+      );
+
+    if(!section) return;
+
+    const cards =
+      section.querySelectorAll(
+        ".accordion-card"
+      );
+
+    cards.forEach(card=>{
+
+      const header =
+        card.querySelector(
+          ".accordion-header"
+        );
+
+      const icon =
+        card.querySelector(
+          ".accordion-icon"
+        );
+
+      header.addEventListener(
+      "click",
+      function(){
+
+        const active =
+          card.classList.contains(
+            "active"
+          );
+
+        cards.forEach(c=>{
+
+          c.classList.remove(
+            "active"
+          );
+
+          c.querySelector(
+            ".accordion-icon"
+          ).innerHTML="+";
+
+        });
+
+        if(!active){
+
+          card.classList.add(
+            "active"
+          );
+
+          icon.innerHTML="-";
+
+        }
+
+      });
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+<!-- 4 -->
+
+<section class="impact-section" id="impactSection">
+
+  <h2 class="impact-title">
+    Our Impact
+  </h2>
+
+  <p class="impact-subtitle">
+    Real results from students and businesses who trust our
+    Digital Marketing training and services.
+  </p>
+
+  <!-- IMPACT GRID -->
+
+  <div class="impact-grid">
+
+    <div class="impact-item">
+      <div class="impact-icon">📈</div>
+      <p>
+        90% of students improved their digital marketing
+        skills through real-world projects.
+      </p>
+    </div>
+
+    <div class="impact-item">
+      <div class="impact-icon">🚀</div>
+      <p>
+        Businesses increased online visibility using our
+        SEO and social media strategies.
+      </p>
+    </div>
+
+    <div class="impact-item">
+      <div class="impact-icon">💻</div>
+      <p>
+        Hundreds of campaigns optimized with data-driven
+        digital marketing techniques.
+      </p>
+    </div>
+
+    <div class="impact-item">
+      <div class="impact-icon">🎓</div>
+      <p>
+        Students trained in SEO, Social Media Marketing,
+        Google Ads and AI Marketing.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- CURRENT REACH -->
+
+  <h2 class="reach-title">
+    Current Reach
+  </h2>
+
+  <div class="reach-grid">
+
+    <div class="reach-card">
+
+      <div class="reach-icon">👨‍🎓</div>
+
+      <h4>Students Trained</h4>
+
+      <div class="reach-number students-count">
+        0+
+      </div>
+
+    </div>
+
+    <div class="reach-card">
+
+      <div class="reach-icon">📊</div>
+
+      <h4>Campaigns Managed</h4>
+
+      <div class="reach-number campaigns-count">
+        0+
+      </div>
+
+    </div>
+
+    <div class="reach-card">
+
+      <div class="reach-icon">🏢</div>
+
+      <h4>Businesses Supported</h4>
+
+      <div class="reach-number business-count">
+        0+
+      </div>
+
+    </div>
+
+    <div class="reach-card">
+
+      <div class="reach-icon">🚀</div>
+
+      <h4>Projects Completed</h4>
+
+      <div class="reach-number projects-count">
+        0+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const section =
+      document.getElementById(
+        "impactSection"
+      );
+
+    if(!section) return;
+
+    const studentsEl =
+      section.querySelector(
+        ".students-count"
+      );
+
+    const campaignsEl =
+      section.querySelector(
+        ".campaigns-count"
+      );
+
+    const businessEl =
+      section.querySelector(
+        ".business-count"
+      );
+
+    const projectsEl =
+      section.querySelector(
+        ".projects-count"
+      );
+
+    let started=false;
+
+    /* SCROLL REVEAL */
+
+    const observer =
+      new IntersectionObserver(
+
+      entries=>{
+
+        entries.forEach(
+        entry=>{
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target.classList.add(
+              "show"
+            );
+
+            if(!started){
+              started=true;
+              startCounter();
+            }
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold:.3
+      }
+
+    );
+
+    observer.observe(
+      section
+    );
+
+    /* COUNTER */
+
+    function startCounter(){
+
+      let students=0;
+      let campaigns=0;
+      let business=0;
+      let projects=0;
+
+      const interval =
+      setInterval(()=>{
+
+        students+=70;
+        campaigns+=10;
+        business+=30;
+        projects+=4;
+
+        if(
+          students>=3500
+        ) students=3500;
+
+        if(
+          campaigns>=500
+        ) campaigns=500;
+
+        if(
+          business>=1200
+        ) business=1200;
+
+        if(
+          projects>=150
+        ) projects=150;
+
+        studentsEl.innerHTML =
+          students+"+";
+
+        campaignsEl.innerHTML =
+          campaigns+"+";
+
+        businessEl.innerHTML =
+          business+"+";
+
+        projectsEl.innerHTML =
+          projects+"+";
+
+        if(
+          students===3500
+        ){
+          clearInterval(
+            interval
+          );
+        }
+
+      },40);
+
+    }
+
+  });
+
+  </script>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="sf-why-section" id="whyRegisterSection">
+
+  <h2 class="sf-why-title">
+    Why Register?
+  </h2>
+
+  <div class="sf-why-grid" id="sfWhyGrid"></div>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    /* DATA */
+
+    const data = [
+
+      {
+        title:
+        "Expert Digital Marketing Trainers",
+
+        desc:
+        "Learn from certified industry professionals with real agency and corporate experience."
+      },
+
+      {
+        title:
+        "Hands-On Live Projects",
+
+        desc:
+        "Work on real SEO, Google Ads, and Social Media campaigns with practical implementation."
+      },
+
+      {
+        title:
+        "Complete SEO & Performance Marketing",
+
+        desc:
+        "Master SEO, Google Ads, Meta Ads, and conversion optimization strategies."
+      },
+
+      {
+        title:
+        "Social Media & Branding Mastery",
+
+        desc:
+        "Learn content creation, Instagram growth, LinkedIn marketing, and brand positioning."
+      },
+
+      {
+        title:
+        "Google Analytics & Tracking Setup",
+
+        desc:
+        "Understand data, traffic reports, conversion tracking, and ROI measurement."
+      },
+
+      {
+        title:
+        "Flexible Online Learning",
+
+        desc:
+        "Attend live online sessions from anywhere with lifetime access to recordings."
+      },
+
+      {
+        title:
+        "Placement & Career Support",
+
+        desc:
+        "Resume building, interview preparation, and job placement assistance included."
+      },
+
+      {
+        title:
+        "Affordable & Career-Focused Pricing",
+
+        desc:
+        "Flexible course fees designed to deliver maximum career growth and ROI."
+      }
+
+    ];
+
+    /* RENDER CARDS */
+
+    const grid =
+      document.getElementById(
+        "sfWhyGrid"
+      );
+
+    if(!grid) return;
+
+    data.forEach(item=>{
+
+      const card =
+        document.createElement(
+          "div"
+        );
+
+      card.className =
+        "sf-why-card";
+
+      card.innerHTML = `
+
+        <h3>
+          ${item.title}
+        </h3>
+
+        <p>
+          ${item.desc}
+        </p>
+
+      `;
+
+      grid.appendChild(
+        card
+      );
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+
+<!-- 6 -->
+
+
+<section class="sf-urgency-section" id="urgencySection">
+
+  <h2 class="sf-urgency-title">
+    Limited Seats for the
+    <span class="sf-highlight">
+      Next Digital Marketing Batch
+    </span>
+  </h2>
+
+  <p class="sf-sub">
+    Secure your seat before early bird discount ends.
+  </p>
+
+  <!-- COUNTDOWN -->
+
+  <div class="sf-countdown">
+
+    <div class="sf-time-box">
+      <div class="sf-time-number" id="days">0</div>
+      <div class="sf-time-label">Days</div>
+    </div>
+
+    <div class="sf-time-box">
+      <div class="sf-time-number" id="hours">0</div>
+      <div class="sf-time-label">Hours</div>
+    </div>
+
+    <div class="sf-time-box">
+      <div class="sf-time-number" id="minutes">0</div>
+      <div class="sf-time-label">Minutes</div>
+    </div>
+
+    <div class="sf-time-box">
+      <div class="sf-time-number" id="seconds">0</div>
+      <div class="sf-time-label">Seconds</div>
+    </div>
+
+  </div>
+
+  <!-- SEAT -->
+
+  <div class="sf-seat-box">
+    🔥 Only
+    <span class="sf-seat-number" id="seatCount">
+      15
+    </span>
+    Seats Remaining
+  </div>
+
+  <!-- BADGE -->
+
+  <div class="sf-badge">
+    🎉 Early Bird Offer: 20% OFF
+  </div>
+
+  <!-- BUTTON -->
+
+  <button
+    class="sf-enroll-btn"
+    id="enrollBtn"
+  >
+    Enroll Now on WhatsApp
+  </button>
+
+  <!-- JS INSIDE SECTION -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    /* TARGET DATE */
+
+    const targetDate =
+      new Date(
+        "August 30, 2026 00:00:00"
+      ).getTime();
+
+    /* SEATS */
+
+    let seatsLeft = 15;
+
+    const seatElement =
+      document.getElementById(
+        "seatCount"
+      );
+
+    /* COUNTDOWN */
+
+    const timer =
+      setInterval(function(){
+
+        const now =
+          new Date().getTime();
+
+        const difference =
+          targetDate - now;
+
+        if(
+          difference <= 0
+        ){
+          clearInterval(timer);
+          return;
+        }
+
+        const days =
+          Math.floor(
+            difference /
+            (
+              1000*60*60*24
+            )
+          );
+
+        const hours =
+          Math.floor(
+            (
+              difference /
+              (
+                1000*60*60
+              )
+            ) % 24
+          );
+
+        const minutes =
+          Math.floor(
+            (
+              difference /
+              1000 /
+              60
+            ) % 60
+          );
+
+        const seconds =
+          Math.floor(
+            (
+              difference /
+              1000
+            ) % 60
+          );
+
+        document.getElementById(
+          "days"
+        ).innerHTML =
+          days;
+
+        document.getElementById(
+          "hours"
+        ).innerHTML =
+          hours;
+
+        document.getElementById(
+          "minutes"
+        ).innerHTML =
+          minutes;
+
+        document.getElementById(
+          "seconds"
+        ).innerHTML =
+          seconds;
+
+      },1000);
+
+    /* SEAT DECREASE */
+
+    const seatTimer =
+      setInterval(function(){
+
+        if(
+          seatsLeft > 3
+        ){
+
+          seatsLeft--;
+
+          seatElement.innerHTML =
+            seatsLeft;
+
+        }
+
+      },30000);
+
+    /* WHATSAPP */
+
+    document
+    .getElementById(
+      "enrollBtn"
+    )
+    .addEventListener(
+    "click",
+    function(){
+
+      const adminNumber =
+        "919361046387";
+
+      const message =
+`Hi, I want to enroll in the Digital Marketing Course.
+
+Seats Left: ${seatsLeft}
+Batch Date: June 20, 2026
+
+Please share details.`;
+
+      const url =
+        "https://wa.me/"
+        +
+        adminNumber
+        +
+        "?text="
+        +
+        encodeURIComponent(
+          message
+        );
+
+      window.open(
+        url,
+        "_blank"
+      );
+
+    });
+
+  });
+
+  </script>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -910,6 +2373,132 @@ sendWhatsApp();
 );
 
 </script>
+
+
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+     <img
+src="/images/LOGO.jpeg"
+alt="SHA Infotechnology Digital Marketing SEO Web Development Company"
+class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/About/">About Us</a></li>
+       
+        <li><a href="/Services/">Services</a></li>
+        <li><a href="/Courses/">Courses</a></li>
+        <li><a href="/Contact/">Contact</a></li>
+        <li><a href="/Blog/">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+         <li><a href="/Services/Digital_Strategy/">Digital Strategy</a></li>
+        <li><a href="/Services/Web_development/">Web Development</a></li>
+        <li><a href="/Services/Ecommerce/">Ecommerce Website</a></li>
+        <li><a href="/Services/Seo/">SEO</a></li>
+        <li><a href="/Services/SocialMediaMarketing/">Social Media Marketing</a></li>
+        <li><a href="/Services/Aimarketing/">AI Marketing</a></li>
+        <li><a href="/Services/Business_analysis/">Business Analysis</a></li>
+        <li><a href="/Services/Content_design/">Content Design</a></li>
+        <li><a href="/Services/Creative_design/">Creative Design</a></li>
+        <li><a href="/Services/Brand_consultancy/">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
 </body>
 
 
