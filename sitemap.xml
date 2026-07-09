@@ -1,37 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://shainfotechnology.in/</loc>
-    <lastmod>2026-01-21</lastmod>
-    <priority>1.0</priority>
-  </url>
+    <!-- Home -->
+    <url>
+        <loc>https://www.shainfotechnology.in/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-  <url>
-    <loc>https://shainfotechnology.in/about</loc>
-    <priority>0.8</priority>
-  </url>
+    <!-- Main Pages -->
+    <url>
+        <loc>https://www.shainfotechnology.in/About/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-  <url>
-    <loc>https://shainfotechnology.in/services</loc>
-    <priority>0.8</priority>
-  </url>
-<url>
-    <loc>https://shainfotechnology.in/services/ai-marketing</loc>
-    <priority>0.8</priority>
-  </url>
-   <url>
-    <loc>https://shainfotechnology.in/courses</loc>
-    <priority>0.7</priority>
-  </url>
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-  <url>
-    <loc>https://shainfotechnology.in/contact</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-  <loc>https://shainfotechnology.in/blog</loc>
-  <priority>0.7</priority>
-</url>
+    <url>
+        <loc>https://www.shainfotechnology.in/Courses/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Blog/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Contact/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Services -->
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/Digital_Strategy/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/Web_development/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/Ecommerce/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/Seo/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/SocialMediaMarketing/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/Aimarketing/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/Business_analysis/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/Content_design/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/Creative_design/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shainfotechnology.in/Services/Brand_consultancy/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
