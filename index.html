@@ -2464,6 +2464,643 @@ sendWhatsApp();
 );
 
 </script>
+
+
+
+
+
+<section id="reviews">
+
+<style>
+
+#reviews{
+    padding:100px 20px;
+    background:transparent;
+    font-family:Arial,sans-serif;
+}
+
+.review-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.review-title{
+    text-align:center;
+    font-size:52px;
+    font-weight:800;
+    margin-bottom:15px;
+    color:#fff;
+    line-height:1.2;
+}
+
+.review-title span{
+    background:linear-gradient(90deg,#7B61FF,#E94FD7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.review-subtitle{
+    text-align:center;
+    color:#C9D2E4;
+    font-size:18px;
+    max-width:700px;
+    margin:0 auto 60px;
+    line-height:1.7;
+}
+
+/*==========================
+REVIEW CARDS
+(layout: centered badge/name/stars/text,
+ matching the reference screenshot)
+===========================*/
+
+#reviewList{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+gap:28px;
+
+margin-bottom:70px;
+
+}
+
+.review-card{
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:24px;
+
+padding:40px 30px 30px;
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+
+text-align:center;
+
+}
+
+.review-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:4px;
+
+background:linear-gradient(90deg,#7B61FF,#E94FD7);
+
+}
+
+/* Decorative circular badge above each review, sitting where
+   the reference design shows a company/avatar icon. Purely
+   CSS (no JS needed) so it works with however reviews are
+   currently injected into #reviewList. */
+
+.review-card::after{
+
+content:"❝";
+
+display:block;
+
+width:56px;
+
+height:56px;
+
+line-height:56px;
+
+margin:0 auto 18px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#7B61FF,#E94FD7);
+
+color:#fff;
+
+font-size:26px;
+
+font-weight:800;
+
+box-shadow:0 8px 20px rgba(123,97,255,.35);
+
+}
+
+.review-card:hover{
+
+transform:translateY(-10px);
+
+border-color:#8A5CFF;
+
+box-shadow:0 18px 40px rgba(123,97,255,.25);
+
+}
+
+.review-header{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:8px;
+
+margin-bottom:6px;
+
+}
+
+.review-name{
+
+font-size:20px;
+
+font-weight:700;
+
+color:#fff;
+
+}
+
+.review-stars{
+
+font-size:18px;
+
+color:#FFD84D;
+
+letter-spacing:3px;
+
+}
+
+.review-text{
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#D8DCEA;
+
+margin-top:12px;
+
+}
+
+/*==========================
+SUMMARY + FORM
+(two-column layout: average rating panel
+ on the left, review form on the right —
+ bar-chart breakdown intentionally omitted)
+===========================*/
+
+.review-bottom{
+
+display:grid;
+
+grid-template-columns:.85fr 1.15fr;
+
+gap:28px;
+
+align-items:start;
+
+}
+
+@media(max-width:900px){
+
+.review-bottom{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* AVERAGE RATING PANEL */
+
+.review-summary{
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:28px;
+
+padding:40px;
+
+text-align:center;
+
+box-shadow:0 18px 45px rgba(0,0,0,.25);
+
+}
+
+.review-summary h3{
+
+margin:0 0 18px;
+
+font-size:22px;
+
+font-weight:700;
+
+color:#fff;
+
+}
+
+.review-summary .avg-value{
+
+font-size:56px;
+
+font-weight:800;
+
+background:linear-gradient(90deg,#7B61FF,#E94FD7);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+line-height:1;
+
+margin-bottom:10px;
+
+}
+
+.review-summary .avg-stars{
+
+font-size:26px;
+
+color:#FFD84D;
+
+letter-spacing:4px;
+
+margin-bottom:10px;
+
+}
+
+.review-summary .avg-count{
+
+color:#C9D2E4;
+
+font-size:15px;
+
+}
+
+/*==========================
+FORM
+===========================*/
+
+.review-form{
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:28px;
+
+padding:45px;
+
+box-shadow:0 18px 45px rgba(0,0,0,.25);
+
+}
+
+.review-form h3{
+
+margin:0 0 30px;
+
+font-size:32px;
+
+font-weight:800;
+
+color:#fff;
+
+}
+
+.review-form-row{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:18px;
+
+}
+
+@media(max-width:600px){
+
+.review-form-row{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+.review-form input,
+
+.review-form textarea,
+
+.review-form select{
+
+width:100%;
+
+padding:18px;
+
+margin-bottom:22px;
+
+border-radius:14px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.08);
+
+color:#fff;
+
+font-size:16px;
+
+outline:none;
+
+transition:.3s;
+
+box-sizing:border-box;
+
+}
+
+.review-form input::placeholder,
+
+.review-form textarea::placeholder{
+
+color:#C9D2E4;
+
+}
+
+.review-form input:focus,
+
+.review-form textarea:focus,
+
+.review-form select:focus{
+
+border-color:#8A5CFF;
+
+box-shadow:0 0 0 4px rgba(123,97,255,.15);
+
+}
+
+.review-form textarea{
+
+resize:vertical;
+
+min-height:170px;
+
+}
+
+.review-form select{
+
+cursor:pointer;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+}
+
+.review-form option{
+
+background:#0F172A;
+
+color:#fff;
+
+}
+
+/*==========================
+BUTTON
+===========================*/
+
+.review-form button{
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:14px;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+background:linear-gradient(90deg,#7B61FF,#E94FD7);
+
+color:#fff;
+
+transition:.35s;
+
+}
+
+.review-form button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 12px 30px rgba(123,97,255,.35);
+
+}
+
+/*==========================
+SCROLLBAR
+===========================*/
+
+#reviewList::-webkit-scrollbar{
+
+height:6px;
+
+}
+
+#reviewList::-webkit-scrollbar-thumb{
+
+background:#8A5CFF;
+
+border-radius:10px;
+
+}
+
+/*==========================
+MOBILE
+===========================*/
+
+@media(max-width:768px){
+
+#reviews{
+
+padding:70px 18px;
+
+}
+
+.review-title{
+
+font-size:38px;
+
+}
+
+.review-subtitle{
+
+font-size:16px;
+
+margin-bottom:40px;
+
+}
+
+.review-summary{
+
+padding:28px;
+
+}
+
+.review-summary .avg-value{
+
+font-size:44px;
+
+}
+
+.review-form{
+
+padding:28px;
+
+}
+
+.review-form h3{
+
+font-size:26px;
+
+}
+
+.review-card{
+
+padding:32px 22px 24px;
+
+}
+
+.review-name{
+
+font-size:18px;
+
+}
+
+.review-stars{
+
+font-size:16px;
+
+}
+
+}
+
+</style>
+
+<div class="review-container">
+
+<h2 class="review-title">
+Customer <span>Reviews</span>
+</h2>
+
+<p class="review-subtitle">
+Real feedback from businesses and clients who trust SHA Infotechnology for web development, digital marketing, branding, SEO, and software solutions.
+</p>
+
+<!-- APPROVED REVIEWS WILL LOAD HERE -->
+
+<div id="reviewList">
+
+<!-- Firebase reviews -->
+
+</div>
+
+<!-- SUMMARY + FORM (two-column, bar breakdown omitted) -->
+
+<div class="review-bottom">
+
+  <!-- AVERAGE RATING PANEL -->
+  <div class="review-summary">
+
+    <h3>Average Rating</h3>
+
+    <div class="avg-value" id="avgRatingValue">4.9</div>
+
+    <div class="avg-stars" id="avgRatingStars">★★★★★</div>
+
+    <div class="avg-count" id="avgRatingCount">Based on verified customer reviews</div>
+
+  </div>
+
+  <!-- REVIEW FORM -->
+  <div class="review-form">
+
+  <h3>Write a Review</h3>
+
+  <form id="reviewForm">
+
+  <div class="review-form-row">
+
+  <input
+  type="text"
+  id="name"
+  placeholder="Your Name"
+  required>
+
+  <input
+  type="email"
+  id="email"
+  placeholder="Email (Optional)">
+
+  </div>
+
+  <select id="rating">
+
+  <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+  <option value="4">⭐⭐⭐⭐☆ Very Good</option>
+  <option value="3">⭐⭐⭐☆☆ Good</option>
+  <option value="2">⭐⭐☆☆☆ Fair</option>
+  <option value="1">⭐☆☆☆☆ Poor</option>
+
+  </select>
+
+  <textarea
+  id="review"
+  placeholder="Write your review..."
+  required></textarea>
+
+  <button type="submit">
+
+  Submit Review
+
+  </button>
+
+  </form>
+
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= END REVIEW SECTION ================= -->
+
+
+<script type="module" src="/firebase.js"></script>
+<script type="module" src="/review.js"></script>
 </body>
 
 
