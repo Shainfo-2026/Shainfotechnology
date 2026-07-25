@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Marketing Packages | Shainfo Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="/Home.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-void:#0a0316;
+    --bg-panel:#150a2b;
+    --bg-panel-2:#1c0f38;
+    --purple:#9b5cf6;
+    --purple-deep:#7c3aed;
+    --pink:#ec4899;
+    --pink-soft:#f472b6;
+    --gradient-brand: linear-gradient(120deg, #f472b6 0%, #c084fc 50%, #8b5cf6 100%);
+    --text-main:#f5f1fb;
+    --text-muted:#b9a9d6;
+    --text-faint:#8a78ad;
+    --border-soft: rgba(155,92,246,0.28);
+    --shadow-glow: 0 0 40px rgba(155,92,246,0.35);
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{
+    -webkit-text-size-adjust:100%;
+  }
+
+  body{
+    background:var(--bg-void);
+    color:var(--text-main);
+    font-family:'Inter', sans-serif;
+    overflow-x:hidden;
+    width:100%;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Poppins', sans-serif;
+  }
+
+  img{ max-width:100%; display:block; }
+
+  a{ -webkit-tap-highlight-color:transparent; }
+
+  /* ============ SCROLL REVEAL ============ */
+  .reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+  .reveal-left{ transform:translateX(-50px); }
+  .reveal-left.in-view{ transform:translateX(0); }
+  .reveal-right{ transform:translateX(50px); }
+  .reveal-right.in-view{ transform:translateX(0); }
+  .reveal-scale{ transform:scale(0.9); }
+  .reveal-scale.in-view{ transform:scale(1); }
+  .stagger-1{ transition-delay:0.08s; }
+  .stagger-2{ transition-delay:0.16s; }
+  .stagger-3{ transition-delay:0.24s; }
+  .stagger-4{ transition-delay:0.32s; }
+  .stagger-5{ transition-delay:0.4s; }
+
+  /* ============ HERO SECTION ============ */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    isolation:isolate;
+    padding:0 20px;
+  }
+
+  .hero-bg-layer{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transition:opacity 2s ease-in-out;
+    z-index:-2;
+  }
+  .hero-bg-layer.active{ opacity:1; }
+
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(180deg, rgba(10,3,22,0.55) 0%, rgba(10,3,22,0.75) 55%, rgba(10,3,22,0.97) 100%),
+      linear-gradient(120deg, rgba(236,72,153,0.25), rgba(139,92,246,0.25));
+    z-index:-1;
+  }
+
+  .hero-content{
+    max-width:880px;
+    width:100%;
+    padding:0 4px;
+    animation: fadeUp 1s ease both;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 18px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid var(--border-soft);
+    color:var(--pink-soft);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    margin-bottom:24px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:7px; height:7px; border-radius:50%;
+    background:var(--pink);
+    box-shadow:0 0 10px var(--pink);
+  }
+
+  .hero-content h1{
+    font-size:clamp(2rem, 5.2vw, 3.6rem);
+    font-weight:800;
+    line-height:1.15;
+    margin-bottom:20px;
+    word-wrap:break-word;
+  }
+  .hero-content h1 span{
+    background:var(--gradient-brand);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  .hero-content p{
+    font-size:clamp(0.92rem, 2.2vw, 1.05rem);
+    color:var(--text-muted);
+    max-width:640px;
+    margin:0 auto 34px;
+    line-height:1.7;
+  }
+
+  .hero-cta{
+    display:inline-flex;
+    gap:16px;
+    flex-wrap:wrap;
+    justify-content:center;
+    width:100%;
+  }
+
+  .btn-primary, .btn-ghost{
+    padding:15px 32px;
+    border-radius:10px;
+    font-weight:600;
+    font-size:0.95rem;
+    cursor:pointer;
+    border:none;
+    text-decoration:none;
+    display:inline-block;
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .btn-primary{
+    background:var(--gradient-brand);
+    color:#1a0630;
+  }
+  .btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(236,72,153,0.35);
+  }
+  .btn-ghost{
+    background:transparent;
+    color:var(--text-main);
+    border:1px solid var(--border-soft);
+  }
+  .btn-ghost:hover{
+    background:rgba(255,255,255,0.06);
+    transform:translateY(-3px);
+  }
+
+  .hero-dots{
+    position:absolute;
+    bottom:32px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:9px;
+    z-index:2;
+  }
+  .hero-dots span{
+    width:8px; height:8px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.25);
+    transition:all 0.4s ease;
+  }
+  .hero-dots span.active{
+    width:26px;
+    border-radius:5px;
+    background:var(--gradient-brand);
+  }
+
+  @keyframes fadeUp{
+    from{ opacity:0; transform:translateY(24px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+
+  /* ============ SHARED SECTION HEAD ============ */
+  .section-head{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 60px;
+    padding:0 12px;
+  }
+  .section-head.left-align{ text-align:left; margin:0 0 46px; max-width:600px; padding:0; }
+  .section-head .divider{
+    width:70px; height:4px;
+    /* background:var(--gradient-brand); */
+    border-radius:4px;
+    margin:18px auto 24px;
+  }
+  .section-head.left-align .divider{ margin:18px 0 24px; }
+  .section-head h2{
+    font-size:clamp(1.6rem, 4vw, 2.5rem);
+    font-weight:800;
+    margin-bottom:14px;
+    word-wrap:break-word;
+  }
+  .section-head h2 em{
+    font-style:normal;
+    background:var(--gradient-brand);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .section-head p{
+    color:var(--text-muted);
+    font-size:1rem;
+    line-height:1.7;
+  }
+
+  /* ============ BENEFITS SECTION (image 1 style) ============ */
+  .benefits-section{
+    padding:5px 20px;
+    /* background:var(--bg-void); */
+    position:relative;
+    overflow:hidden;
+  }
+  .benefits-section::before{
+    content:"";
+    position:absolute;
+    top:-100px; right:-100px;
+    width:420px; height:420px;
+    background:radial-gradient(circle, rgba(236,72,153,0.18), transparent 70%);
+    z-index:0;
+  }
+  .benefits-grid{
+    max-width:1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+    align-items:center;
+    position:relative;
+    z-index:1;
+  }
+  .benefits-list{ list-style:none; }
+  .benefits-list li{
+    display:flex;
+    gap:16px;
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    color:var(--text-muted);
+    font-size:1rem;
+    line-height:1.6;
+  }
+  .benefits-list li:last-child{ border-bottom:none; }
+  .benefits-list li .num{
+    flex:0 0 auto;
+    width:30px; height:30px;
+    border-radius:8px;
+    background:rgba(155,92,246,0.14);
+    border:1px solid var(--border-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-size:0.8rem;
+    font-weight:700;
+    color:var(--pink-soft);
+  }
+  .benefits-visual{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .benefits-visual svg{ width:100%; max-width:420px; height:auto; }
+
+  /* ============ PRICING SECTION ============ */
+  .pricing-section{
+    padding:100px 20px 120px;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(139,92,246,0.14), transparent 45%),
+      radial-gradient(circle at 85% 30%, rgba(236,72,153,0.12), transparent 40%),
+      var(--bg-void);
+  }
+
+  .price-table-wrap{
+    max-width:1180px;
+    margin:0 auto;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    border-radius:20px;
+    border:1px solid var(--border-soft);
+    background:linear-gradient(180deg, var(--bg-panel), var(--bg-panel-2));
+    box-shadow:0 30px 70px rgba(0,0,0,0.45);
+    scrollbar-width:thin;
+    scrollbar-color:var(--purple) transparent;
+  }
+  .price-table-wrap::-webkit-scrollbar{ height:6px; }
+  .price-table-wrap::-webkit-scrollbar-thumb{ background:var(--purple); border-radius:4px; }
+
+  table.price-table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:820px;
+  }
+
+  .price-table thead th{
+    padding:34px 20px 22px;
+    text-align:center;
+    vertical-align:top;
+    border-bottom:1px solid var(--border-soft);
+    position:relative;
+  }
+
+  .price-table thead th:first-child{
+    text-align:left;
+    padding-left:30px;
+    color:var(--text-faint);
+    font-weight:500;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+  }
+
+  .plan-col{
+    cursor:pointer;
+    transition:background 0.35s ease, transform 0.35s ease;
+    border-left:1px solid rgba(255,255,255,0.05);
+  }
+
+  .plan-col:hover{
+    background:rgba(155,92,246,0.09);
+  }
+
+  .plan-col.popular{
+    background:linear-gradient(180deg, rgba(236,72,153,0.10), rgba(139,92,246,0.06));
+  }
+
+  .badge-popular{
+    position:absolute;
+    top:6px; left:50%;
+    transform:translateX(-50%);
+    background:var(--gradient-brand);
+    color:#1a0630;
+    font-size:0.65rem;
+    font-weight:700;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    padding:5px 14px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+
+  .plan-name{
+    font-family:'Poppins',sans-serif;
+    font-size:1.15rem;
+    font-weight:700;
+    margin-top:14px;
+    color:var(--text-main);
+  }
+  .plan-tagline{
+    font-size:0.78rem;
+    color:var(--text-faint);
+    margin-top:4px;
+  }
+  .plan-price{
+    font-family:'Poppins',sans-serif;
+    font-size:2.1rem;
+    font-weight:800;
+    margin-top:14px;
+    background:var(--gradient-brand);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .plan-price small{
+    font-size:0.85rem;
+    font-weight:500;
+    color:var(--text-faint);
+    background:none;
+    -webkit-text-fill-color:var(--text-faint);
+  }
+  .plan-old-price{
+    font-size:0.85rem;
+    color:var(--text-faint);
+    text-decoration:line-through;
+    margin-top:2px;
+  }
+
+  .plan-cta{
+    display:inline-block;
+    margin-top:16px;
+    padding:10px 22px;
+    border-radius:8px;
+    font-size:0.82rem;
+    font-weight:600;
+    color:var(--text-main);
+    border:1px solid var(--border-soft);
+    transition:all 0.3s ease;
+  }
+  .plan-col.popular .plan-cta{
+    background:var(--gradient-brand);
+    color:#1a0630;
+    border:none;
+  }
+  .plan-col:hover .plan-cta{
+    background:var(--gradient-brand);
+    color:#1a0630;
+    border:none;
+    transform:scale(1.05);
+  }
+
+  .price-table tbody td{
+    padding:16px 20px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    font-size:0.9rem;
+    color:var(--text-muted);
+    white-space:nowrap;
+  }
+
+  .price-table tbody td:first-child{
+    text-align:left;
+    padding-left:30px;
+    color:var(--text-main);
+    font-weight:500;
+    white-space:normal;
+  }
+
+  .price-table tbody tr:hover td{
+    background:rgba(155,92,246,0.06);
+    color:var(--text-main);
+  }
+
+  .price-table tbody tr:last-child td{
+    border-bottom:none;
+  }
+
+  .check{
+    color:var(--pink-soft);
+    font-weight:700;
+    font-size:1rem;
+  }
+  .dash{
+    color:var(--text-faint);
+  }
+
+  .table-note{
+    text-align:center;
+    color:var(--text-faint);
+    font-size:0.85rem;
+    margin-top:28px;
+    padding:0 12px;
+  }
+  .table-scroll-hint{
+    display:none;
+    text-align:center;
+    color:var(--text-faint);
+    font-size:0.78rem;
+    margin-top:14px;
+    letter-spacing:0.3px;
+  }
+
+  /* ============ WHY CHOOSE US (image 2 style) ============ */
+  .why-section{
+    padding:10px 20px;
+    background:var(--bg-panel);
+    position:relative;
+  }
+  .why-grid{
+    max-width:1100px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+  }
+  .why-card{
+    background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border:1px solid var(--border-soft);
+    border-radius:18px;
+    padding:34px;
+    transition:transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+  .why-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--purple);
+    box-shadow:0 20px 40px rgba(139,92,246,0.18);
+  }
+  .why-icon{
+    width:52px; height:52px;
+    border-radius:12px;
+    background:var(--gradient-brand);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:20px;
+  }
+  .why-icon svg{ width:26px; height:26px; stroke:#1a0630; }
+  .why-card h3{
+    font-size:1.15rem;
+    font-weight:700;
+    margin-bottom:12px;
+    color:var(--text-main);
+  }
+  .why-card p{
+    color:var(--text-muted);
+    font-size:0.92rem;
+    line-height:1.7;
+  }
+
+  /* ============ STATS SECTION (image 3 style) ============ */
+  .stats-section{
+    padding:10px 20px;
+    background:var(--bg-void);
+  }
+  .stats-grid{
+    max-width:1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+  }
+  .stats-grid .stat-card:nth-child(4){ grid-column: 1 / 2; }
+  .stats-grid .stat-card:nth-child(5){ grid-column: 2 / 3; }
+  .stat-card{
+    background:var(--bg-panel);
+    border:1px solid var(--border-soft);
+    border-radius:16px;
+    padding:30px 26px;
+    transition:transform 0.4s ease, background 0.4s ease;
+  }
+  .stat-card:hover{
+    transform:translateY(-6px);
+    background:var(--bg-panel-2);
+  }
+  .stat-card h3{
+    font-size:1.15rem;
+    font-weight:700;
+    margin-bottom:12px;
+    line-height:1.4;
+    background:var(--gradient-brand);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .stat-card p{
+    color:var(--text-muted);
+    font-size:0.9rem;
+    line-height:1.65;
+  }
+
+  /* ============ FINAL CTA (image 4 style) ============ */
+  .final-cta{
+    position:relative;
+    padding:90px 20px;
+    background:radial-gradient(circle at 20% 20%, rgba(236,72,153,0.16), transparent 45%),
+               radial-gradient(circle at 80% 60%, rgba(139,92,246,0.18), transparent 50%),
+               #050110;
+    text-align:center;
+    overflow:hidden;
+  }
+  .final-cta::before{
+    content:"";
+    position:absolute;
+    top:0; left:0; right:0;
+    height:2px;
+    background:var(--gradient-brand);
+  }
+  .final-cta h2{
+    font-size:clamp(1.6rem, 4.4vw, 2.7rem);
+    font-weight:700;
+    max-width:820px;
+    margin:0 auto 22px;
+    line-height:1.3;
+    color:var(--text-main);
+    word-wrap:break-word;
+  }
+  .final-cta h2 span{
+    background:var(--gradient-brand);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    font-weight:800;
+  }
+  .final-cta p{
+    color:var(--text-muted);
+    max-width:640px;
+    margin:0 auto 40px;
+    line-height:1.7;
+  }
+  .final-cta .btn-outline{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 34px;
+    border:1px solid var(--purple);
+    border-radius:10px;
+    color:var(--text-main);
+    text-decoration:none;
+    font-weight:600;
+    transition:all 0.35s ease;
+  }
+  .final-cta .btn-outline:hover{
+    background:var(--gradient-brand);
+    color:#1a0630;
+    border-color:transparent;
+    transform:translateY(-3px);
+    box-shadow:0 16px 34px rgba(236,72,153,0.3);
+  }
+
+  /* ============================================================
+     RESPONSIVE BREAKPOINTS
+     ============================================================ */
+
+  /* Tablets / small laptops */
+  @media (max-width:1024px){
+    .stats-grid{ grid-template-columns:repeat(2,1fr); }
+    .stats-grid .stat-card:nth-child(4),
+    .stats-grid .stat-card:nth-child(5){ grid-column:auto; }
+    .benefits-grid{ gap:32px; }
+  }
+
+  /* Tablets / large mobile */
+  @media (max-width:900px){
+    .benefits-grid{ grid-template-columns:1fr; gap:44px; }
+    .benefits-visual{ order:-1; }
+    .benefits-visual svg{ max-width:320px; }
+    .why-grid{ grid-template-columns:1fr; gap:20px; }
+    .pricing-section{ padding:80px 16px 100px; }
+  }
+
+  @media (max-width:768px){
+    .hero{ min-height:88vh; padding:100px 16px 60px; }
+    .section-head{ margin-bottom:44px; }
+    .price-table thead th{ padding:26px 16px 16px; }
+    .plan-price{ font-size:1.7rem; }
+    .plan-name{ font-size:1.02rem; }
+    .final-cta{ padding:70px 16px; }
+    .stats-section, .why-section, .benefits-section{ padding-left:16px; padding-right:16px; }
+    .table-scroll-hint{ display:block; }
+  }
+
+  /* Mobile */
+  @media (max-width:640px){
+    .hero{ min-height:auto; padding:120px 16px 70px; }
+    .hero-cta{ flex-direction:column; width:100%; gap:12px; }
+    .hero-cta a{ width:100%; text-align:center; }
+    .eyebrow{ font-size:12px; padding:7px 16px; }
+
+    .section-head.left-align{ text-align:center; margin:0 0 36px; }
+    .section-head.left-align .divider{ margin:18px auto 24px; }
+    .benefits-list li{ text-align:left; }
+
+    .why-card{ padding:26px; }
+    .stats-grid{ grid-template-columns:1fr; gap:18px; }
+    .stat-card{ padding:24px 22px; }
+
+    .price-table-wrap{ border-radius:14px; }
+    table.price-table{ min-width:680px; }
+
+    .final-cta h2{ font-size:1.5rem; }
+    .final-cta p{ font-size:0.92rem; }
+    .final-cta .btn-outline{ width:100%; justify-content:center; padding:15px 20px; }
+  }
+
+  /* Small phones */
+  @media (max-width:480px){
+    .hero-content h1{ font-size:1.7rem; }
+    .hero-content p{ font-size:0.9rem; }
+    .btn-primary, .btn-ghost{ padding:14px 22px; font-size:0.9rem; }
+
+    .section-head h2{ font-size:1.4rem; }
+    .section-head p{ font-size:0.9rem; }
+
+    .benefits-list li{ font-size:0.92rem; padding:14px 0; }
+    .benefits-list li .num{ width:26px; height:26px; font-size:0.72rem; }
+
+    .why-card h3{ font-size:1.05rem; }
+    .why-card p{ font-size:0.88rem; }
+
+    .stat-card h3{ font-size:1.02rem; }
+    .stat-card p{ font-size:0.85rem; }
+
+    .plan-price{ font-size:1.5rem; }
+    .plan-old-price{ font-size:0.78rem; }
+    .plan-cta{ padding:9px 16px; font-size:0.78rem; }
+    table.price-table{ min-width:600px; }
+    .price-table tbody td{ padding:14px 14px; font-size:0.85rem; }
+    .price-table tbody td:first-child{ padding-left:20px; }
+
+    .final-cta h2{ font-size:1.3rem; }
+  }
+
+  /* Very small phones */
+  @media (max-width:360px){
+    .hero-content h1{ font-size:1.5rem; }
+    table.price-table{ min-width:560px; }
+  }
+</style>
+</head>
+
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+            src="/images/LOGO.jpeg"
+            alt="Logo"
+            class="logo-img"
+          />
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+   <nav
+  class="sf-nav"
+  id="mobileNav"
+>
+
+  <!-- HOME -->
+  <a href="/" class="nav-btn">
+    Home
+  </a>
+
+  <!-- ABOUT -->
+  <a href="/About/" class="nav-btn">
+    About
+  </a>
+
+  <!-- SERVICES -->
+  <div class="nav-dropdown">
+
+    <div class="services-nav">
+
+      <!-- Clicking this opens Services page -->
+      <a
+        href="/Services/"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      <!-- Clicking only this opens dropdown -->
+      <button
+        type="button"
+        class="dropdown-arrow"
+        onclick="toggleServices(event)"
+        aria-label="Open Services Menu"
+      >
+        ▾
+      </button>
+
+    </div>
+
+    <ul
+      class="dropdown-menu"
+      id="servicesMenu"
+    >
+
+      <li>
+        <a href="/Services/Digital_Strategy/">
+          Digital Strategy
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Web_development/">
+          Web Development
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Ecommerce/">
+          Ecommerce Website
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Seo/">
+          SEO
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/SocialMediaMarketing/">
+          Social Media Marketing
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Aimarketing/">
+          AI Marketing
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Business_analysis/">
+          Business Analysis
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Content_design/">
+          Content Design
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Creative_design/">
+          Creative Design
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Brand_consultancy/">
+          Brand Consultancy
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <!-- COURSES -->
+  <a href="/Courses/" class="nav-btn">
+    Courses
+  </a>
+<a href="/DigitalMarketingServicePackage/" class="nav-btn">
+    Digital Marketing Service Package
+  </a>
+  <!-- CONTACT -->
+  <a
+    href="/Contact/"
+    class="nav-btn contact-link"
+  >
+    Contact
+  </a>
+
+  <!-- BLOG -->
+  <a href="/Blog/" class="nav-btn">
+    Blog
+  </a>
+
+</nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+ function toggleServices(e){
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const menu =
+    document.getElementById(
+        "servicesMenu"
+    );
+
+    /* CLOSE OTHER MENUS */
+
+    document
+    .querySelectorAll(".dropdown-menu")
+    .forEach(item=>{
+
+        if(item!==menu){
+
+            item.classList.remove("show");
+
+        }
+
+    });
+
+    menu.classList.toggle("show");
+
+}
+
+/* DON'T CLOSE WHEN CLICKING INSIDE */
+
+document
+.getElementById("servicesMenu")
+.addEventListener("click",function(e){
+
+    e.stopPropagation();
+
+});
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+document.addEventListener("click",function(){
+
+    document
+    .querySelectorAll(".dropdown-menu")
+    .forEach(menu=>{
+
+        menu.classList.remove("show");
+
+    });
+
+});
+
+document.addEventListener("click",function(){
+
+    document
+    .getElementById("servicesMenu")
+    .classList.remove("show");
+
+});
+
+  </script>
+
+</header>
+
+<body>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg-layer active" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80');"></div>
+  <div class="hero-bg-layer" style="background-image:url('https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=1600&q=80');"></div>
+  <div class="hero-bg-layer" style="background-image:url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600&q=80');"></div>
+  <div class="hero-bg-layer" style="background-image:url('https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1600&q=80');"></div>
+
+  <div class="hero-content">
+    <span class="eyebrow">Shainfo Technology &middot; Chennai</span>
+    <h1>Digital Marketing <span>Packages</span> built for every stage of growth</h1>
+    <p>Pick a plan that matches where your business is today. Every package is powered by real SEO, content, and performance-tracking work — no filler, no guesswork.</p>
+    <div class="hero-cta">
+      <a href="#pricing" class="btn-primary">View Packages</a>
+      <a href="/Contact/" class="btn-ghost">Talk to Our Team</a>
+    </div>
+  </div>
+
+  <div class="hero-dots">
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</section>
+
+<!-- ============ BENEFITS SECTION ============ -->
+<section class="benefits-section" id="benefits">
+  <div class="benefits-grid">
+    <div>
+      <div class="section-head left-align reveal reveal-left">
+        <span class="eyebrow" style="margin-bottom:0;">Outcomes</span>
+        <div class="divider"></div>
+        <h2>What our packages are <em>designed to help you achieve</em></h2>
+      </div>
+      <ul class="benefits-list">
+        <li class="reveal reveal-left stagger-1"><span class="num">01</span> Increase in organic traffic through SEO and AI search visibility</li>
+        <li class="reveal reveal-left stagger-2"><span class="num">02</span> Consistent lead generation through Google Ads and paid campaigns</li>
+        <li class="reveal reveal-left stagger-3"><span class="num">03</span> Trust and authority built through strategic content marketing</li>
+        <li class="reveal reveal-left stagger-4"><span class="num">04</span> Stronger social media presence and audience engagement</li>
+        <li class="reveal reveal-left stagger-5"><span class="num">05</span> Better website conversions through data-backed optimization</li>
+      </ul>
+    </div>
+    <div class="benefits-visual reveal reveal-right">
+      <svg viewBox="0 0 420 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gradBar" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#8b5cf6"/>
+            <stop offset="100%" stop-color="#ec4899"/>
+          </linearGradient>
+        </defs>
+        <rect x="20" y="40" width="380" height="300" rx="18" fill="#1c0f38" stroke="#9b5cf655"/>
+        <rect x="55" y="240" width="34" height="70" rx="6" fill="url(#gradBar)"/>
+        <rect x="105" y="200" width="34" height="110" rx="6" fill="url(#gradBar)" opacity="0.85"/>
+        <rect x="155" y="160" width="34" height="150" rx="6" fill="url(#gradBar)" opacity="0.7"/>
+        <rect x="205" y="120" width="34" height="190" rx="6" fill="url(#gradBar)" opacity="0.55"/>
+        <path d="M55 250 L120 190 L180 210 L260 110 L340 90" stroke="#f472b6" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="340" cy="90" r="8" fill="#f472b6"/>
+        <circle cx="90" cy="90" r="22" fill="#0a0316" stroke="#9b5cf6"/>
+        <circle cx="90" cy="90" r="8" fill="#ec4899"/>
+        <rect x="300" y="180" width="80" height="55" rx="8" fill="#0a0316" stroke="#9b5cf655"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING SECTION ============ -->
+<section class="pricing-section" id="pricing">
+  <div class="section-head reveal">
+    <span class="eyebrow" style="margin-bottom:0;">Monthly SEO &amp; Marketing Plans</span>
+    <div class="divider"></div>
+    <h2>Simple pricing, <em>real results</em></h2>
+    <p>Compare our packages side by side. Click any plan to get started — our team will help you choose the right fit.</p>
+  </div>
+
+  <div class="price-table-wrap reveal reveal-scale">
+    <table class="price-table" id="priceTable">
+      <thead>
+        <tr>
+          <th>Features</th>
+          <th class="plan-col" data-plan="WordPress">
+            <div class="plan-name">WordPress</div>
+            <div class="plan-tagline">For small business sites</div>
+            <div class="plan-price">₹6,999<small>/mo</small></div>
+            <div class="plan-old-price">₹10,000</div>
+            <a href="/Contact/" class="plan-cta">Choose Plan</a>
+          </th>
+          <th class="plan-col" data-plan="Standard">
+            <div class="plan-name">Standard</div>
+            <div class="plan-tagline">For growing brands</div>
+            <div class="plan-price">₹7,999<small>/mo</small></div>
+            <div class="plan-old-price">₹12,000</div>
+            <a href="/Contact/" class="plan-cta">Choose Plan</a>
+          </th>
+          <th class="plan-col popular" data-plan="Pro">
+            <span class="badge-popular">Most Popular</span>
+            <div class="plan-name">Pro</div>
+            <div class="plan-tagline">For scaling businesses</div>
+            <div class="plan-price">₹9,999<small>/mo</small></div>
+            <div class="plan-old-price">₹15,000</div>
+            <a href="/Contact/" class="plan-cta">Choose Plan</a>
+          </th>
+          <th class="plan-col" data-plan="Pro Advance">
+            <div class="plan-name">Pro Advance</div>
+            <div class="plan-tagline">For full-scale growth</div>
+            <div class="plan-price">₹14,999<small>/mo</small></div>
+            <div class="plan-old-price">₹20,000</div>
+            <a href="/Contact/" class="plan-cta">Choose Plan</a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Target Keywords</td><td>5–10 Keywords</td><td>10–15 Keywords</td><td>25+ Keywords</td><td>40+ Keywords</td></tr>
+        <tr><td>On-Page Optimization</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Technical SEO</td><td><span class="dash">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span> Advanced</td></tr>
+        <tr><td>Backlinks Building</td><td>250+</td><td>350+</td><td>500+</td><td>750+</td></tr>
+        <tr><td>Blog Content</td><td>4 Posts</td><td>5 Posts</td><td>10 Posts</td><td>15 Posts</td></tr>
+        <tr><td>Guest Posting</td><td>2 Posts</td><td>3 Posts</td><td>5 Posts</td><td>8 Posts</td></tr>
+        <tr><td>Google Ads / PPC</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Social Media Marketing</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Dedicated Account Manager</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Reporting</td><td>Monthly</td><td>Weekly / Monthly</td><td>Weekly / Monthly</td><td>Weekly / Monthly</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="table-scroll-hint">← Swipe to compare all plans →</p>
+  <p class="table-note reveal">Click on any plan column to reach out to our team and get started.</p>
+</section>
+
+<!-- ============ WHY CHOOSE US SECTION ============ -->
+<section class="why-section" id="why-us">
+  <div class="section-head reveal">
+    <span class="eyebrow" style="margin-bottom:0;">Why Shainfo Technology</span>
+    <div class="divider"></div>
+    <h2>Why choose Digital Marketing Packages from <em>shainfo Technology</em></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal stagger-1">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg>
+      </div>
+      <h3>Complete digital marketing services in one place</h3>
+      <p>From SEO and social media marketing to paid advertising and content creation, we bring every channel together into one cohesive strategy that delivers results.</p>
+    </div>
+    <div class="why-card reveal stagger-2">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3>A team backed by proven experience</h3>
+      <p>Years of hands-on expertise and a track record of successful campaigns mean we understand what it takes to help businesses grow in competitive digital markets.</p>
+    </div>
+    <div class="why-card reveal stagger-3">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v3l2 2"/></svg>
+      </div>
+      <h3>AI SEO &amp; future-ready marketing</h3>
+      <p>Search is evolving beyond traditional engines. Our packages are built to keep your business visible across AI-driven search and next-generation discovery.</p>
+    </div>
+    <div class="why-card reveal stagger-4">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 13l3-3 3 3 5-5"/></svg>
+      </div>
+      <h3>Data-driven growth strategies</h3>
+      <p>Every strategy we build is guided by real data, market insights, and competitor analysis — so effort goes where it moves the needle, not where it looks busy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS SECTION ============ -->
+<section class="stats-section" id="why-digital">
+  <div class="section-head reveal">
+    <span class="eyebrow" style="margin-bottom:0;">The Numbers</span>
+    <div class="divider"></div>
+    <h2>Why <em>Digital Marketing</em> matters right now</h2>
+    <p>A few reasons businesses that invest in digital marketing keep pulling ahead of those that don't.</p>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card reveal stagger-1">
+      <h3>80%+ of customers search online before buying</h3>
+      <p>The way people shop has changed for good. If your business isn't visible in that search, you're invisible to the sale.</p>
+    </div>
+    <div class="stat-card reveal stagger-2">
+      <h3>78% of local searches lead to offline visits</h3>
+      <p>Don't miss customers who are already nearby and looking. Local SEO turns nearby searches into real footfall.</p>
+    </div>
+    <div class="stat-card reveal stagger-3">
+      <h3>40%+ of e-commerce traffic comes from Google</h3>
+      <p>If your store depends on being found, ranking on Google isn't optional — it's the main door customers walk through.</p>
+    </div>
+    <div class="stat-card reveal stagger-4">
+      <h3>3–4 hours a day spent on mobile phones</h3>
+      <p>That's hours of attention available every single day — mobile-first marketing puts your brand right where eyes already are.</p>
+    </div>
+    <div class="stat-card reveal stagger-5">
+      <h3>70%+ of shoppers prefer reading about products online</h3>
+      <p>Good content still wins. Clear, useful information online outperforms traditional selling every time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA SECTION ============ -->
+<section class="final-cta" id="cta">
+  <h2 class="reveal">Invest in your <span>Growth with Our Digital Marketing Packages</span></h2>
+  <p class="reveal stagger-1">Choose a package designed to increase your visibility, attract qualified leads, and support long-term growth. Get in touch with our team to get closer to your business goals.</p>
+  <a href="/Contact/" class="btn-outline reveal stagger-2">Contact Us →</a>
+</section>
+
+<script>
+  // ---------- Hero auto background changer ----------
+  const bgLayers = document.querySelectorAll('.hero-bg-layer');
+  const dots = document.querySelectorAll('.hero-dots span');
+  let currentBg = 0;
+
+  function rotateHeroBackground(){
+    bgLayers[currentBg].classList.remove('active');
+    dots[currentBg].classList.remove('active');
+    currentBg = (currentBg + 1) % bgLayers.length;
+    bgLayers[currentBg].classList.add('active');
+    dots[currentBg].classList.add('active');
+  }
+
+  setInterval(rotateHeroBackground, 5000);
+
+  // ---------- Pricing table: clickable columns redirect to contact ----------
+  const planColumns = document.querySelectorAll('.plan-col');
+
+  planColumns.forEach((col) => {
+    col.addEventListener('click', (e) => {
+      if (e.target.tagName.toLowerCase() === 'a') return;
+      window.location.href = 'contact.html';
+    });
+  });
+
+  const table = document.getElementById('priceTable');
+  const headerCells = Array.from(table.querySelectorAll('thead th'));
+
+  headerCells.forEach((th, colIndex) => {
+    if (colIndex === 0) return;
+    th.addEventListener('mouseenter', () => highlightColumn(colIndex, true));
+    th.addEventListener('mouseleave', () => highlightColumn(colIndex, false));
+  });
+
+  function highlightColumn(colIndex, isOn){
+    const rows = table.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+      const cell = row.children[colIndex];
+      if (cell){
+        cell.style.background = isOn ? 'rgba(155,92,246,0.10)' : '';
+        cell.style.color = isOn ? 'var(--text-main)' : '';
+      }
+    });
+  }
+
+  // ---------- Scroll reveal animation ----------
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // ---------- Hide swipe hint once the table has been scrolled ----------
+  const tableWrap = document.querySelector('.price-table-wrap');
+  const scrollHint = document.querySelector('.table-scroll-hint');
+  if (tableWrap && scrollHint){
+    tableWrap.addEventListener('scroll', () => {
+      scrollHint.style.opacity = '0';
+    }, { once:true });
+  }
+</script>
+
+</body>
+<footer class="sps-footer">
+
+  <div class="sps-footer-grid">
+
+    <!-- BRAND -->
+    <div class="sps-footer-brand">
+      <img src="/images/LOGO.jpeg" alt="Shainfotechnology Logo" class="sps-footer-logo">
+
+      <h3>SHA INFOTECHNOLOGY</h3>
+
+      <p>
+        SHA Infotechnology is a Chennai-based digital solutions company
+        delivering result-driven strategies in digital marketing, web
+        development, and brand growth.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <h4>Quick Links</h4>
+
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/About/">About Us</a></li>
+       
+        <li><a href="/Services/">Services</a></li>
+        <li><a href="/Courses/">Courses</a></li>
+        <li><a href="/DigitalMarketingServicePackage/">Digital Marketing Service Package</a></li>
+        <li><a href="/Contact/">Contact</a></li>
+        <li><a href="/Blog">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div>
+      <h4>Our Services</h4>
+
+      <ul>
+         <li><a href="/Services/Digital_Strategy/">Digital Strategy</a></li>
+        <li><a href="/Services/Web_development/">Web Development</a></li>
+        <li><a href="/Services/Ecommerce/">Ecommerce Website</a></li>
+        <li><a href="/Services/Seo/">SEO</a></li>
+        <li><a href="/Services/SocialMediaMarketing/">Social Media Marketing</a></li>
+        <li><a href="/Services/Aimarketing/">AI Marketing</a></li>
+        <li><a href="/Services/Business_analysis/">Business Analysis</a></li>
+        <li><a href="/Services/Content_design/">Content Design</a></li>
+        <li><a href="/Services/Creative_design/">Creative Design</a></li>
+        <li><a href="/Services/Brand_consultancy/">Brand Consultancy</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="sps-footer-contact">
+
+      <h4>Contact Us</h4>
+
+      <p>📞 +91 93610 46387</p>
+      <p>📧 shainfotech05@gmail.com</p>
+      <p>📍 Chennai, India</p>
+
+      <div class="sps-footer-actions">
+        <a href="tel:919361046387">Call Now</a>
+
+        <a
+          href="https://wa.me/919361046387"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="sps-footer-social">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61584983202107"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/_shainfotechnology_/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@shainfotechnology"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="sps-footer-bottom">
+
+    <span id="footer-year"></span>
+
+    <span>
+      Digital Strategy • Web Development • SEO • Ecommerce • Branding
+    </span>
+
+  </div>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="../footer.css">
+<script src="../footer.js"></script>
+</footer>
+
+</html>
