@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,183 +5,128 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Digital Marketing Company in Chennai | SHA Info Tech</title>
+  <title>Digital Marketing Company in Chennai | SHA Info Tech</title>
 
-<meta name="description" content="SHA Info Tech is a leading digital marketing company in Chennai offering SEO, web development, social media marketing, AI marketing, branding, and business growth solutions.">
+  <meta name="description" content="SHA Info Tech is a leading digital marketing company in Chennai offering SEO, web development, social media marketing, AI marketing, branding, and business growth solutions.">
+  <meta name="keywords" content="Digital Marketing Company Chennai, Digital Marketing Services Chennai, SEO Company Chennai, Web Development Chennai, Social Media Marketing Chennai, AI Marketing Chennai, Branding Services Chennai">
 
-<meta name="keywords" content="Digital Marketing Company Chennai, Digital Marketing Services Chennai, SEO Company Chennai, Web Development Chennai, Social Media Marketing Chennai, AI Marketing Chennai, Branding Services Chennai">
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <!-- GOOGLE FONT -->
+  <!-- GOOGLE FONT (preconnect + single load, font-display:swap already set) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <!-- FONT AWESOME (loaded once, non-blocking via preload swap) -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- CSS -->
-   <link rel="stylesheet" href="hom.html">
+  <!-- CRITICAL CSS (kept render-blocking on purpose: needed for above-fold layout) -->
   <link rel="stylesheet" href="Home.css">
-  <link rel="stylesheet" href="Callbutton.html">
-  <link rel="stylesheet" href="Callbutton.css">
+  <!-- Broken references removed: hom.html and Callbutton.html were HTML files
+       being loaded as stylesheets — dead network requests, no CSS effect. -->
 
+  <!-- NON-CRITICAL CSS: deferred with preload/swap so it doesn't block first paint -->
+  <link rel="preload" as="style" href="Callbutton.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="Callbutton.css"></noscript>
 
-<link rel="stylesheet" href="footer.css">
-  
+  <link rel="preload" as="style" href="footer.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="footer.css"></noscript>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 
-<title>SHA INFOTECHNOLOGY</title>
+  <!-- Organization schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"SHA Infotechnology",
+    "url":"https://shainfotechnology.in",
+    "logo":"https://shainfotechnology.in/favicon.png"
+  }
+  </script>
 
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem", "position": 1, "name": "Home page", "item": "https://www.shainfotechnology.in/"
+    },{
+      "@type": "ListItem", "position": 2, "name": "About us", "item": "https://www.shainfotechnology.in/About/"
+    },{
+      "@type": "ListItem", "position": 3, "name": "Service", "item": "https://www.shainfotechnology.in/Services/"
+    },{
+      "@type": "ListItem", "position": 4, "name": "Digital strategy", "item": "https://www.shainfotechnology.in/Services/Digital_Strategy/"
+    },{
+      "@type": "ListItem", "position": 5, "name": "Web development", "item": "https://www.shainfotechnology.in/Services/Web_development/"
+    },{
+      "@type": "ListItem", "position": 6, "name": "Ecommerce", "item": "https://www.shainfotechnology.in/Services/Ecommerce/"
+    },{
+      "@type": "ListItem", "position": 7, "name": "SEO", "item": "https://www.shainfotechnology.in/Services/Seo/"
+    },{
+      "@type": "ListItem", "position": 8, "name": "Social Media marketing", "item": "https://www.shainfotechnology.in/Services/SocialMediaMarketing/"
+    },{
+      "@type": "ListItem", "position": 9, "name": "AI marketing", "item": "https://www.shainfotechnology.in/Services/Aimarketing/"
+    },{
+      "@type": "ListItem", "position": 10, "name": "Business analysis", "item": "https://www.shainfotechnology.in/Services/Business_analysis/"
+    },{
+      "@type": "ListItem", "position": 11, "name": "Content design", "item": "https://www.shainfotechnology.in/Services/Content_design/"
+    },{
+      "@type": "ListItem", "position": 12, "name": "Creative design", "item": "https://www.shainfotechnology.in/Services/Creative_design/"
+    },{
+      "@type": "ListItem", "position": 13, "name": "Brand consultancy", "item": "https://www.shainfotechnology.in/Services/Brand_consultancy/"
+    },{
+      "@type": "ListItem", "position": 14, "name": "Courses", "item": "https://www.shainfotechnology.in/Courses/"
+    },{
+      "@type": "ListItem", "position": 15, "name": "contact", "item": "https://www.shainfotechnology.in/Contact/"
+    },{
+      "@type": "ListItem", "position": 16, "name": "Blog main page", "item": "https://www.shainfotechnology.in/Blog/"
+    }]
+  }
+  </script>
 
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <!-- Google Analytics + Ads (async, non-blocking) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P225RC16Y3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config','G-P225RC16Y3');
+    gtag('config','AW-17853848982');
+  </script>
 
-<!-- Organization schema -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"SHA Infotechnology",
-  "url":"https://shainfotechnology.in",
-  "logo":"https://shainfotechnology.in/favicon.png"
-}
-</script>
+  <!-- Facebook Pixel: deferred until the page has fully loaded so it never
+       competes with critical rendering work on first load -->
+  <script>
+    window.addEventListener('load', function () {
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+      }
+      (window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/", 
-  "@type": "BreadcrumbList", 
-  "itemListElement": [{
-    "@type": "ListItem", 
-    "position": 1, 
-    "name": "Home page",
-    "item": "https://www.shainfotechnology.in/"  
-  },{
-    "@type": "ListItem", 
-    "position": 2, 
-    "name": "About us",
-    "item": "https://www.shainfotechnology.in/About/"  
-  },{
-    "@type": "ListItem", 
-    "position": 3, 
-    "name": "Service",
-    "item": "https://www.shainfotechnology.in/Services/"  
-  },{
-    "@type": "ListItem", 
-    "position": 4, 
-    "name": "Digital strategy",
-    "item": "https://www.shainfotechnology.in/Services/Digital_Strategy/"  
-  },{
-    "@type": "ListItem", 
-    "position": 5, 
-    "name": "Web development",
-    "item": "https://www.shainfotechnology.in/Services/Web_development/"  
-  },{
-    "@type": "ListItem", 
-    "position": 6, 
-    "name": "Ecommerce",
-    "item": "https://www.shainfotechnology.in/Services/Ecommerce/"  
-  },{
-    "@type": "ListItem", 
-    "position": 7, 
-    "name": "SEO",
-    "item": "https://www.shainfotechnology.in/Services/Seo/"  
-  },{
-    "@type": "ListItem", 
-    "position": 8, 
-    "name": "Social Media marketing",
-    "item": "https://www.shainfotechnology.in/Services/SocialMediaMarketing/"  
-  },{
-    "@type": "ListItem", 
-    "position": 9, 
-    "name": "AI marketing",
-    "item": "https://www.shainfotechnology.in/Services/Aimarketing/"  
-  },{
-    "@type": "ListItem", 
-    "position": 10, 
-    "name": "Business analysis",
-    "item": "https://www.shainfotechnology.in/Services/Business_analysis/"  
-  },{
-    "@type": "ListItem", 
-    "position": 11, 
-    "name": "Content design",
-    "item": "https://www.shainfotechnology.in/Services/Content_design/"  
-  },{
-    "@type": "ListItem", 
-    "position": 12, 
-    "name": "Creative design",
-    "item": "https://www.shainfotechnology.in/Services/Creative_design/"  
-  },{
-    "@type": "ListItem", 
-    "position": 13, 
-    "name": "Brand consultancy",
-    "item": "https://www.shainfotechnology.in/Services/Brand_consultancy/"  
-  },{
-    "@type": "ListItem", 
-    "position": 14, 
-    "name": "Courses",
-    "item": "https://www.shainfotechnology.in/Courses/"  
-  },{
-    "@type": "ListItem", 
-    "position": 15, 
-    "name": "contact",
-    "item": "https://www.shainfotechnology.in/Contact/"  
-  },{
-    "@type": "ListItem", 
-    "position": 16, 
-    "name": "Blog main page",
-    "item": "https://www.shainfotechnology.in/Blog/"  
-  }]
-}
-</script>
+      fbq('init','1382005503745863');
+      fbq('track','PageView');
+    });
+  </script>
 
-<!-- Google Analytics + Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P225RC16Y3"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-dataLayer.push(arguments);
-}
-
-gtag('js', new Date());
-
-gtag('config','G-P225RC16Y3');
-gtag('config','AW-17853848982');
-</script>
-
-<!-- Facebook Pixel -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;
-n.loaded=!0;
-n.version='2.0';
-n.queue=[];
-t=b.createElement(e);
-t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}
-(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','1382005503745863');
-fbq('track','PageView');
-</script>
-
+  <!-- EmailJS: deferred so it doesn't block HTML parsing -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
 
@@ -195,441 +137,197 @@ fbq('track','PageView');
   <div class="sf-header-inner">
 
     <!-- LOGO -->
-
     <div class="sf-logo">
-
       <div class="mark">
-
         <a href="/">
           <img
             src="images/LOGO.jpeg"
             alt="Logo"
             class="logo-img"
+            width="46"
+            height="46"
+            fetchpriority="high"
+            decoding="async"
           />
         </a>
-
       </div>
-
     </div>
 
     <!-- HAMBURGER -->
-
-    <button
-      class="hamburger"
-      id="hamburgerBtn"
-    >
+    <button class="hamburger" id="hamburgerBtn">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
     <!-- NAVIGATION -->
+    <nav class="sf-nav" id="mobileNav">
 
-   <nav
-  class="sf-nav"
-  id="mobileNav"
->
+      <a href="/" class="nav-btn">Home</a>
+      <a href="/About/" class="nav-btn">About</a>
 
-  <!-- HOME -->
-  <a href="/" class="nav-btn">
-    Home
-  </a>
+      <!-- SERVICES -->
+      <div class="nav-dropdown">
+        <div class="services-nav">
+          <a href="/Services/" class="nav-btn">Services</a>
+          <button type="button" class="dropdown-arrow" onclick="toggleServices(event)" aria-label="Open Services Menu">▾</button>
+        </div>
 
-  <!-- ABOUT -->
-  <a href="/About/" class="nav-btn">
-    About
-  </a>
+        <ul class="dropdown-menu" id="servicesMenu">
+          <li><a href="/Services/Digital_Strategy/">Digital Strategy</a></li>
+          <li><a href="/Services/Web_development/">Web Development</a></li>
+          <li><a href="/Services/Ecommerce/">Ecommerce Website</a></li>
+          <li><a href="/Services/Seo/">SEO</a></li>
+          <li><a href="/Services/SocialMediaMarketing/">Social Media Marketing</a></li>
+          <li><a href="/Services/Aimarketing/">AI Marketing</a></li>
+          <li><a href="/Services/Business_analysis/">Business Analysis</a></li>
+          <li><a href="/Services/Content_design/">Content Design</a></li>
+          <li><a href="/Services/Creative_design/">Creative Design</a></li>
+          <li><a href="/Services/Brand_consultancy/">Brand Consultancy</a></li>
+        </ul>
+      </div>
 
-  <!-- SERVICES -->
-  <div class="nav-dropdown">
+      <a href="/Courses/" class="nav-btn">Courses</a>
+      <a href="/DigitalMarketingServicePackage/" class="nav-btn">Digital Marketing Service Package</a>
+      <a href="/Contact/" class="nav-btn contact-link">Contact</a>
+      <a href="/Blog/" class="nav-btn">Blog</a>
 
-    <div class="services-nav">
-
-      <!-- Clicking this opens Services page -->
-      <a
-        href="/Services/"
-        class="nav-btn"
-      >
-        Services
-      </a>
-
-      <!-- Clicking only this opens dropdown -->
-      <button
-        type="button"
-        class="dropdown-arrow"
-        onclick="toggleServices(event)"
-        aria-label="Open Services Menu"
-      >
-        ▾
-      </button>
-
-    </div>
-
-    <ul
-      class="dropdown-menu"
-      id="servicesMenu"
-    >
-
-      <li>
-        <a href="/Services/Digital_Strategy/">
-          Digital Strategy
-        </a>
-      </li>
-
-      <li>
-        <a href="/Services/Web_development/">
-          Web Development
-        </a>
-      </li>
-
-      <li>
-        <a href="/Services/Ecommerce/">
-          Ecommerce Website
-        </a>
-      </li>
-
-      <li>
-        <a href="/Services/Seo/">
-          SEO
-        </a>
-      </li>
-
-      <li>
-        <a href="/Services/SocialMediaMarketing/">
-          Social Media Marketing
-        </a>
-      </li>
-
-      <li>
-        <a href="/Services/Aimarketing/">
-          AI Marketing
-        </a>
-      </li>
-
-      <li>
-        <a href="/Services/Business_analysis/">
-          Business Analysis
-        </a>
-      </li>
-
-      <li>
-        <a href="/Services/Content_design/">
-          Content Design
-        </a>
-      </li>
-
-      <li>
-        <a href="/Services/Creative_design/">
-          Creative Design
-        </a>
-      </li>
-
-      <li>
-        <a href="/Services/Brand_consultancy/">
-          Brand Consultancy
-        </a>
-      </li>
-
-    </ul>
-
-  </div>
-
-  <!-- COURSES -->
-    <a href="/Courses/" class="nav-btn">
-    Courses
-  </a>
- <a href="/DigitalMarketingServicePackage/" class="nav-btn">
-    Digital Marketing Service Package
-  </a>
-
-  <!-- CONTACT -->
-  <a
-    href="/Contact/"
-    class="nav-btn contact-link"
-  >
-    Contact
-  </a>
-
-  <!-- BLOG -->
-  <a href="/Blog/" class="nav-btn">
-    Blog
-  </a>
-
-</nav>
-
+    </nav>
   </div>
 
   <!-- JS INSIDE HEADER -->
-
   <script>
+  document.addEventListener("DOMContentLoaded", function(){
 
-  document.addEventListener(
-  "DOMContentLoaded",
-  function(){
+    const hamburger = document.getElementById("hamburgerBtn");
+    const nav = document.getElementById("mobileNav");
 
-    const hamburger =
-      document.getElementById(
-        "hamburgerBtn"
-      );
-
-    const nav =
-      document.getElementById(
-        "mobileNav"
-      );
-
-    /* HAMBURGER TOGGLE */
-
-    hamburger.addEventListener(
-      "click",
-      function(){
-
-        hamburger.classList.toggle(
-          "open"
-        );
-
-        nav.classList.toggle(
-          "open"
-        );
-
-      }
-    );
-
-    /* CLOSE MENU AFTER CLICK */
-
-    const links =
-      nav.querySelectorAll(
-        ".nav-btn"
-      );
-
-    links.forEach(link=>{
-
-      link.addEventListener(
-      "click",
-      function(){
-
-        nav.classList.remove(
-          "open"
-        );
-
-        hamburger.classList.remove(
-          "open"
-        );
-
-      });
-
+    hamburger.addEventListener("click", function(){
+      hamburger.classList.toggle("open");
+      nav.classList.toggle("open");
     });
 
-    /* GOOGLE ADS CONVERSION */
+    const links = nav.querySelectorAll(".nav-btn");
+    links.forEach(link=>{
+      link.addEventListener("click", function(){
+        nav.classList.remove("open");
+        hamburger.classList.remove("open");
+      });
+    });
 
     function gtag_report_conversion(url){
-
       if(window.gtag){
-
-        window.gtag(
-          "event",
-          "conversion",
-          {
-            send_to:
-            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
-
-            value:1.0,
-            currency:"INR",
-
-            event_callback:function(){
-
-              if(url){
-                window.location =
-                url;
-              }
-
-            }
-
-          }
-        );
-
+        window.gtag("event","conversion",{
+          send_to:"AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+          value:1.0,
+          currency:"INR",
+          event_callback:function(){ if(url){ window.location = url; } }
+        });
       }
-
     }
 
-    /* CONTACT CONVERSION */
-
-    const contactLink =
-      document.querySelector(
-        ".contact-link"
-      );
-
+    const contactLink = document.querySelector(".contact-link");
     if(contactLink){
-
-      contactLink.addEventListener(
-      "click",
-      function(){
-
-        gtag_report_conversion();
-
-      });
-
+      contactLink.addEventListener("click", function(){ gtag_report_conversion(); });
     }
-
   });
 
- function toggleServices(e){
-
+  function toggleServices(e){
     e.preventDefault();
     e.stopPropagation();
-
-    const menu =
-    document.getElementById(
-        "servicesMenu"
-    );
-
-    /* CLOSE OTHER MENUS */
-
-    document
-    .querySelectorAll(".dropdown-menu")
-    .forEach(item=>{
-
-        if(item!==menu){
-
-            item.classList.remove("show");
-
-        }
-
+    const menu = document.getElementById("servicesMenu");
+    document.querySelectorAll(".dropdown-menu").forEach(item=>{
+      if(item!==menu){ item.classList.remove("show"); }
     });
-
     menu.classList.toggle("show");
+  }
 
-}
+  document.getElementById("servicesMenu").addEventListener("click", function(e){ e.stopPropagation(); });
 
-/* DON'T CLOSE WHEN CLICKING INSIDE */
-
-document
-.getElementById("servicesMenu")
-.addEventListener("click",function(e){
-
-    e.stopPropagation();
-
-});
-
-/* CLOSE WHEN CLICKING OUTSIDE */
-
-document.addEventListener("click",function(){
-
-    document
-    .querySelectorAll(".dropdown-menu")
-    .forEach(menu=>{
-
-        menu.classList.remove("show");
-
-    });
-
-});
-
-document.addEventListener("click",function(){
-
-    document
-    .getElementById("servicesMenu")
-    .classList.remove("show");
-
-});
-
+  document.addEventListener("click", function(){
+    document.querySelectorAll(".dropdown-menu").forEach(menu=>{ menu.classList.remove("show"); });
+  });
   </script>
 
 </header>
 
-
-
-
-
-
-
-
-
-
-
 <body>
 
-
-
-
-
-
   <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section">
+    <div class="hero-container">
 
-<section class="hero-section">
+      <!-- LEFT CONTENT -->
+      <div class="hero-left">
+        <h1>
+          Digital Marketing Services That <br>
+          <span>Grow Your Business</span>
+        </h1>
 
-  <div class="hero-container">
+        <p>
+          Sha Infotechnology is a results-driven <a href="https://www.shainfotechnology.in/Services/Digital_Strategy/">Digital Marketing Agency in Chennai</a>
+          delivering powerful digital marketing services, website development,
+          and content marketing strategy solutions to help brands scale online,
+          generate qualified leads, and increase revenue.
+        </p>
 
-    <!-- LEFT CONTENT -->
+        <button class="cta-btn" id="openPopupBtn">Connect With Us</button>
+      </div>
 
-    <div class="hero-left">
+      <!-- RIGHT FORM -->
+      <div class="hero-right">
+        <div class="side-form">
+          <h2>Connect With Us</h2>
 
-      <h1>
-        Digital Marketing Services That <br>
-        <span>Grow Your Business</span>
-      </h1>
+          <form class="heroForm" id="sideForm">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Full Name" required>
+              <input type="tel" name="phone" placeholder="Phone Number" required>
+            </div>
 
-      <p>
-        Sha Infotechnology is a results-driven <a href="https://www.shainfotechnology.in/Services/Digital_Strategy/">Digital Marketing Agency in Chennai</a>
-        delivering powerful digital marketing services, website development,
-        and content marketing strategy solutions to help brands scale online,
-        generate qualified leads, and increase revenue.
-      </p>
+            <input type="email" name="email" placeholder="Email Address" required>
 
-      <button
-        class="cta-btn"
-        id="openPopupBtn"
-      >
-        Connect With Us
-      </button>
+            <select name="selection" required>
+              <option value="">Select Service / Course</option>
+              <option value="Digital Strategy">Digital Strategy</option>
+              <option value="Digital Marketing Course">Digital Marketing Course</option>
+              <option value="Web Development">Web Development</option>
+              <option value="E-commerce Website">E-commerce Website</option>
+              <option value="Search Engine Optimization">Search Engine Optimization</option>
+              <option value="Social Media Marketing">Social Media Marketing</option>
+              <option value="Content Design">Content Design</option>
+              <option value="Business Analysis">Business Analysis</option>
+              <option value="Creative Design">Creative Design</option>
+              <option value="Brand Consultancy">Brand Consultancy</option>
+              <option value="AI Marketing">AI Marketing</option>
+            </select>
+
+            <textarea name="message" placeholder="Your Message" rows="3"></textarea>
+
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
 
     </div>
 
-    <!-- RIGHT FORM -->
-
-    <div class="hero-right">
-
-      <div class="side-form">
+    <!-- POPUP -->
+    <div class="popup-overlay" id="popupOverlay">
+      <div class="popup-form" id="popupBox">
+        <button class="close-btn" id="closePopupBtn">✕</button>
 
         <h2>Connect With Us</h2>
 
-        <form
-          class="heroForm"
-          id="sideForm"
-        >
-
+        <form class="heroForm" id="popupForm">
           <div class="form-row">
-
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              required
-            >
-
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              required
-            >
-
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
           </div>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            required
-          >
+          <input type="email" name="email" placeholder="Email Address" required>
 
-          <select
-            name="selection"
-            required
-          >
-            <option value="">
-              Select Service / Course
-            </option>
-
+          <select name="selection" required>
+            <option value="">Select Service / Course</option>
             <option value="Digital Strategy">Digital Strategy</option>
             <option value="Digital Marketing Course">Digital Marketing Course</option>
             <option value="Web Development">Web Development</option>
@@ -641,257 +339,55 @@ document.addEventListener("click",function(){
             <option value="Creative Design">Creative Design</option>
             <option value="Brand Consultancy">Brand Consultancy</option>
             <option value="AI Marketing">AI Marketing</option>
-
           </select>
 
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows="3"
-          ></textarea>
+          <textarea name="message" placeholder="Your Message" rows="4"></textarea>
 
-          <button
-            type="submit"
-            class="submit-btn"
-          >
-            Submit
-          </button>
-
+          <button type="submit" class="submit-btn">Submit</button>
         </form>
-
       </div>
-
     </div>
 
-  </div>
+    <!-- JS INSIDE SECTION -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
 
-  <!-- POPUP -->
+      emailjs.init("yxT-hRvX41RhpOdfZ");
 
-  <div
-    class="popup-overlay"
-    id="popupOverlay"
-  >
+      const popup = document.getElementById("popupOverlay");
+      const openBtn = document.getElementById("openPopupBtn");
+      const closeBtn = document.getElementById("closePopupBtn");
 
-    <div
-      class="popup-form"
-      id="popupBox"
-    >
+      if(openBtn){ openBtn.onclick = function(){ popup.style.display = "flex"; }; }
+      if(closeBtn){ closeBtn.onclick = function(){ popup.style.display = "none"; }; }
 
-      <button
-        class="close-btn"
-        id="closePopupBtn"
-      >
-        ✕
-      </button>
+      popup.onclick = function(e){ if(e.target===popup){ popup.style.display = "none"; } };
 
-      <h2>Connect With Us</h2>
+      document.addEventListener("keydown", function(e){ if(e.key==="Escape"){ popup.style.display = "none"; } });
 
-      <form
-        class="heroForm"
-        id="popupForm"
-      >
+      const forms = document.querySelectorAll(".heroForm");
 
-        <div class="form-row">
+      forms.forEach(form=>{
+        form.addEventListener("submit", function(e){
+          e.preventDefault();
 
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            required
-          >
+          const btn = form.querySelector(".submit-btn");
+          btn.innerHTML = "Sending...";
+          btn.disabled = true;
 
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            required
-          >
+          const data = {
+            name: form.name.value,
+            phone: form.phone.value,
+            email: form.email.value,
+            selection: form.selection.value,
+            message: form.message.value
+          };
 
-        </div>
+          emailjs.send("service_pznbx9s","template_8wwwast",data,"yxT-hRvX41RhpOdfZ")
+          .then(()=>{
+            alert("Enquiry Sent Successfully!");
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          required
-        >
-
-        <select
-          name="selection"
-          required
-        >
-          <option value="">
-            Select Service / Course
-          </option>
-
-          <option value="Digital Strategy">Digital Strategy</option>
-          <option value="Digital Marketing Course">Digital Marketing Course</option>
-          <option value="Web Development">Web Development</option>
-          <option value="E-commerce Website">E-commerce Website</option>
-          <option value="Search Engine Optimization">Search Engine Optimization</option>
-          <option value="Social Media Marketing">Social Media Marketing</option>
-          <option value="Content Design">Content Design</option>
-          <option value="Business Analysis">Business Analysis</option>
-          <option value="Creative Design">Creative Design</option>
-          <option value="Brand Consultancy">Brand Consultancy</option>
-          <option value="AI Marketing">AI Marketing</option>
-
-        </select>
-
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          rows="4"
-        ></textarea>
-
-        <button
-          type="submit"
-          class="submit-btn"
-        >
-          Submit
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    /* EMAILJS INIT */
-
-    emailjs.init(
-      "yxT-hRvX41RhpOdfZ"
-    );
-
-    const popup =
-      document.getElementById(
-        "popupOverlay"
-      );
-
-    const openBtn =
-      document.getElementById(
-        "openPopupBtn"
-      );
-
-    const closeBtn =
-      document.getElementById(
-        "closePopupBtn"
-      );
-
-    /* OPEN POPUP */
-
-    if(openBtn){
-
-      openBtn.onclick=function(){
-
-        popup.style.display="flex";
-
-      };
-
-    }
-
-    /* CLOSE BUTTON */
-
-    if(closeBtn){
-
-      closeBtn.onclick=function(){
-
-        popup.style.display="none";
-
-      };
-
-    }
-
-    /* OVERLAY CLOSE */
-
-    popup.onclick=function(e){
-
-      if(e.target===popup){
-
-        popup.style.display="none";
-
-      }
-
-    };
-
-    /* ESC CLOSE */
-
-    document.addEventListener(
-    "keydown",
-    function(e){
-
-      if(e.key==="Escape"){
-
-        popup.style.display="none";
-
-      }
-
-    });
-
-    /* FORM SUBMIT */
-
-    const forms =
-      document.querySelectorAll(
-        ".heroForm"
-      );
-
-    forms.forEach(form=>{
-
-      form.addEventListener(
-      "submit",
-      function(e){
-
-        e.preventDefault();
-
-        const btn =
-          form.querySelector(
-            ".submit-btn"
-          );
-
-        btn.innerHTML="Sending...";
-        btn.disabled=true;
-
-        const data={
-
-          name:
-            form.name.value,
-
-          phone:
-            form.phone.value,
-
-          email:
-            form.email.value,
-
-          selection:
-            form.selection.value,
-
-          message:
-            form.message.value
-
-        };
-
-        emailjs.send(
-          "service_pznbx9s",
-          "template_8wwwast",
-          data,
-          "yxT-hRvX41RhpOdfZ"
-        )
-
-        .then(()=>{
-
-          alert(
-            "Enquiry Sent Successfully!"
-          );
-
-          const message=
+            const message =
 `🚀 New Enquiry
 
 👤 Name: ${data.name}
@@ -902,2307 +398,763 @@ document.addEventListener("click",function(){
 💬 Message:
 ${data.message}`;
 
-          const phoneNumber =
-            "919361046387";
+            const phoneNumber = "919361046387";
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-          const whatsappURL =
-`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.location.href = whatsappURL;
 
-          /* WHATSAPP REDIRECT */
-
-          window.location.href=
-            whatsappURL;
-
-          /* RESET */
-
-          forms.forEach(
-            f=>f.reset()
-          );
-
-          /* CLOSE POPUP */
-
-          popup.style.display=
-            "none";
-
-        })
-
-        .catch(()=>{
-
-          alert(
-            "Failed to send enquiry."
-          );
-
-        })
-
-        .finally(()=>{
-
-          btn.innerHTML=
-            "Submit";
-
-          btn.disabled=
-            false;
-
+            forms.forEach(f=>f.reset());
+            popup.style.display = "none";
+          })
+          .catch(()=>{ alert("Failed to send enquiry."); })
+          .finally(()=>{ btn.innerHTML = "Submit"; btn.disabled = false; });
         });
-
       });
 
     });
+    </script>
+  </section>
 
-  });
-
-  </script>
-
-</section>
-
-
-  <!-- ================= POPUP FORM ================= -->
-
-
-
-
-
-
+  <!-- ================= TRUSTED AGENCY SECTION ================= -->
   <section class="projectrun-section">
 
     <div class="projectrun-header">
-
       <h2 class="projectrun-title">
-
-        <span class="projectrun-title-white">
-          Your Trusted Digital
-        </span>
-
-        <span class="projectrun-title-gradient">
-          Marketing Agency in Chennai for Measurable Growth
-        </span>
-
+        <span class="projectrun-title-white">Your Trusted Digital</span>
+        <span class="projectrun-title-gradient">Marketing Agency in Chennai for Measurable Growth</span>
       </h2>
-
       <div class="projectrun-divider"></div>
-
     </div>
 
     <div class="projectrun-container">
 
-      <!-- IMAGE -->
-
       <div class="projectrun-image">
-
         <div class="projectrun-image-glow">
+          <img src="images/projectrun.png" alt="Digital Marketing Services in Chennai for Business Growth"
+               width="520" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
 
-         <img src="images/projectrun.png" alt="Digital Marketing Services in Chennai for Business Growth">
+      <div class="projectrun-text">
+        <p>
+          At SHA Infotechnology, we are a leading <a href="https://www.shainfotechnology.in/Blog#top-benefits-of-hiring-an-seo-service-company-in-chennai">Digital Marketing Services in Chennai</a>, combining creativity, data, and technology to deliver end-to-end digital marketing services tailored for startups, SMEs, and growing enterprises.
+        </p>
 
+        <p>
+          From high-performance website development and SEO to ROI-focused content marketing strategies, our solutions are designed to strengthen your online presence and drive meaningful business outcomes.
+        </p>
+
+        <p>
+          As an experienced <a href="https://www.shainfotechnology.in/Services/Brand_consultancy/">Digital Marketing Company in Chennai</a>, we help your brand stand out in a competitive digital landscape by aligning smart digital strategies with measurable growth objectives.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="seo-section" id="seoSection">
+
+    <div class="seo-header">
+      <h2 class="seo-title">
+        <span class="seo-title-white">Digital Marketing Services</span>
+        <span class="seo-title-gradient">by a Leading Digital Marketing Agency in Chennai</span>
+      </h2>
+      <div class="seo-divider"></div>
+    </div>
+
+    <div class="seo-container">
+
+      <div class="seo-text">
+        <p>
+          We provide customized digital marketing services that align with your business goals and deliver measurable results. As a trusted Digital Marketing Agency in Chennai, we help businesses improve their online visibility, generate quality leads, and achieve sustainable growth.
+        </p>
+
+        <ul class="seo-list">
+          <li>Search Engine Optimization (SEO)</li>
+          <li>Google Ads &amp; Paid Media (PPC)</li>
+          <li>Social Media Marketing (SMM)</li>
+          <li>Local SEO &amp; Lead Generation</li>
+          <li>Analytics &amp; Performance Tracking</li>
+        </ul>
+
+        <p>
+          Our expert team combines data-driven strategies with the latest digital marketing techniques to increase website traffic, improve search engine rankings, and convert visitors into loyal customers. Whether you're a startup, SME, or enterprise, our <a href="https://www.shainfotechnology.in/Blog#professional-web-development-company-in-chennai">Digital Marketing Services in Chennai</a> delivers customized solutions that drive long-term success.
+        </p>
+      </div>
+
+      <div class="seo-image">
+        <div class="image-glow">
+          <img src="/images/seo.png" alt="SEO Services and Digital Marketing Company Chennai"
+               width="440" height="360" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const seoSection = document.getElementById("seoSection");
+      if(!seoSection) return;
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){ seoSection.classList.add("seo-show"); observer.disconnect(); }
+        });
+      }, { threshold:.2 });
+      observer.observe(seoSection);
+    });
+    </script>
+  </section>
+
+  <!-- ================= WEBSITE DEVELOPMENT ================= -->
+  <section class="section-wrap" id="websiteSection">
+
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="title-white">Website Development Services</span>
+        <span class="title-gradient">by a Trusted Digital Marketing Services in Chennai</span>
+      </h2>
+
+      <p class="section-desc">
+        Your website is the foundation of your online presence. At SHA Infotechnology, our <a href="https://www.shainfotechnology.in/Services/Web_development/">Web development services in Chennai</a> are designed to create high-performing, user-friendly, and SEO-optimized websites that help your business attract visitors and generate more leads. As a leading Digital Marketing Agency in Chennai, we build websites that deliver exceptional user experiences and measurable business growth.
+      </p>
+    </div>
+
+    <div class="section-container">
+
+      <div class="section-image">
+        <img src="/images/websitehome.png" alt="Web Development Company in Chennai Creating Responsive Websites"
+             width="500" height="380" loading="lazy" decoding="async">
+      </div>
+
+      <div class="section-text">
+        <ul class="section-list">
+          <li>SEO-friendly website architecture</li>
+          <li>Fast-loading, mobile-responsive design</li>
+          <li>UX/UI optimized for conversions</li>
+          <li>Secure and scalable development</li>
+        </ul>
+
+        <p>
+          Our expert developers create modern websites that not only look professional but also improve search engine visibility, enhance customer engagement, and convert visitors into loyal customers. Whether you need a business website, corporate portal, or eCommerce platform, our Digital Marketing Agency Company in Chennai delivers customized web development solutions that support your long-term business success.
+        </p>
+      </div>
+
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const section = document.getElementById("websiteSection");
+      if(!section) return;
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){ section.classList.add("section-show"); observer.disconnect(); }
+        });
+      }, { threshold:.2 });
+      observer.observe(section);
+    });
+    </script>
+  </section>
+
+  <!-- ================= CONTENT MARKETING ================= -->
+  <section class="contentcore-section" id="contentCoreSection">
+
+    <div class="contentcore-header">
+      <h2 class="contentcore-title">
+        <span class="contentcore-title-white">Content Marketing Services</span>
+        <span class="contentcore-title-gradient">by a Leading Digital Marketing Agency in Chennai</span>
+      </h2>
+      <div class="contentcore-divider"></div>
+    </div>
+
+    <div class="contentcore-container">
+
+      <div class="contentcore-text">
+        <p>
+          Content is the foundation of every successful digital marketing strategy. At SHA Infotechnology, we create SEO-focused content that builds brand authority, improves search engine rankings, and drives qualified traffic. As a trusted <a href="https://www.shainfotechnology.in/Services/Content_design/">Content Marketing Services in Chennai</a>, we develop content strategies that connect with your audience and support long-term business growth.
+        </p>
+
+        <ul class="contentcore-list">
+          <li>SEO-optimized blog content</li>
+          <li>Website and landing page copywriting</li>
+          <li>Social media content planning</li>
+          <li>Brand storytelling and messaging</li>
+        </ul>
+
+        <p>
+          We help you attract, engage, and retain your audience with meaningful, high-impact content that supports your business goals.
+        </p>
+      </div>
+
+      <div class="contentcore-image">
+        <div class="contentcore-image-glow">
+          <img src="/images/conhome.png" alt="Content Marketing Strategy and Content Design Services Chennai"
+               width="420" height="340" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const section = document.getElementById("contentCoreSection");
+      if(!section) return;
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){ section.classList.add("contentcore-show"); observer.disconnect(); }
+        });
+      }, { threshold:.2 });
+      observer.observe(section);
+    });
+    </script>
+  </section>
+
+  <!-- ================= WHAT WE DO ================= -->
+  <section class="sh-wrap">
+
+    <h2 class="sh-title">What We Do Best</h2>
+
+    <div class="sh-grid">
+
+      <a href="/Services/Digital_Strategy/" class="sh-card">
+        <div class="sh-icon">🧠</div>
+        <h3>Digital Strategy</h3>
+        <div class="sh-hover-text">Data-driven strategies that align technology, marketing, and business goals.</div>
+      </a>
+
+      <a href="/Services/Web_development/" class="sh-card">
+        <div class="sh-icon">💻</div>
+        <h3>Web Development</h3>
+        <div class="sh-hover-text">High-performance, responsive websites built to convert visitors into customers.</div>
+      </a>
+
+      <a href="/Services/Ecommerce/" class="sh-card">
+        <div class="sh-icon">🛒</div>
+        <h3>E-commerce Website</h3>
+        <div class="sh-hover-text">Secure, scalable online stores designed for smooth shopping and higher sales.</div>
+      </a>
+
+      <a href="/Services/Seo/" class="sh-card">
+        <div class="sh-icon">🔍</div>
+        <h3>Search Engine Optimization</h3>
+        <div class="sh-hover-text">Improve rankings, organic traffic, and long-term online visibility.</div>
+      </a>
+
+      <a href="/Services/SocialMediaMarketing/" class="sh-card">
+        <div class="sh-icon">📣</div>
+        <h3>Social Media Marketing</h3>
+        <div class="sh-hover-text">Build brand awareness, engagement, and trust across social platforms.</div>
+      </a>
+
+      <a href="/Services/Content_design/" class="sh-card">
+        <div class="sh-icon">✍️</div>
+        <h3>Content Design</h3>
+        <div class="sh-hover-text">Compelling content that informs, engages, and converts your audience.</div>
+      </a>
+
+      <a href="/Services/Business_analysis/" class="sh-card">
+        <div class="sh-icon">📊</div>
+        <h3>Business Analysis</h3>
+        <div class="sh-hover-text">Insight-driven analysis to optimize processes, performance, and growth.</div>
+      </a>
+
+      <a href="/Services/Creative_design/" class="sh-card">
+        <div class="sh-icon">🎨</div>
+        <h3>Creative Design</h3>
+        <div class="sh-hover-text">Eye-catching visuals and branding that make your business stand out.</div>
+      </a>
+
+      <a href="/Services/Brand_consultancy/" class="sh-card">
+        <div class="sh-icon">🏷️</div>
+        <h3>Brand Consultancy</h3>
+        <div class="sh-hover-text">Build a strong, consistent brand identity that drives trust and growth.</div>
+      </a>
+
+      <a href="/Services/Aimarketing/" class="sh-card">
+        <div class="sh-icon">⚙️</div>
+        <h3>AI Marketing</h3>
+        <div class="sh-hover-text">AI-powered marketing strategies that analyze data, predict customer behavior and maximize conversions.</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section class="why-wrap" id="whyChooseSection">
+
+    <div class="why-container">
+
+      <div class="why-left">
+        <h2>
+          Why Choose <span>SHA Infotechnology</span><br>
+          as Your Digital Marketing Company in Chennai?
+        </h2>
+
+        <p>
+          We don't just market your brand. As a trusted <a href="https://www.shainfotechnology.in/About/">Digital Marketing Company in Chennai</a>, We help you grow it sustainably.
+          Our approach combines creativity, strategy, and performance-driven execution to deliver measurable business results.
+        </p>
+
+        <div class="why-tagline">Trusted by businesses looking for real digital growth.</div>
+      </div>
+
+      <div class="why-features">
+
+        <div class="why-card">
+          <div class="why-icon">👨‍💻</div>
+          <div>
+            <h4>Experienced Professionals</h4>
+            <p>Skilled digital marketing experts with hands-on industry experience.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">📊</div>
+          <div>
+            <h4>Data-Driven Strategies</h4>
+            <p>Every decision backed by analytics, insights, and proven metrics.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">📈</div>
+          <div>
+            <h4>Transparent Reporting &amp; ROI</h4>
+            <p>Clear reports, honest communication, and measurable return on investment.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">🏢</div>
+          <div>
+            <h4>Industry-Specific Solutions</h4>
+            <p>Customized strategies tailored to your business and target audience.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <div>
+            <h4>Affordable &amp; Scalable Plans</h4>
+            <p>Flexible pricing plans that grow along with your business.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const section = document.getElementById("whyChooseSection");
+      if(!section) return;
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){ section.classList.add("why-show"); observer.disconnect(); }
+        });
+      }, { threshold:.2 });
+      observer.observe(section);
+    });
+    </script>
+  </section>
+
+  <!-- ================= INDUSTRIES ================= -->
+  <section class="sha-industries" id="industriesSection">
+
+    <h2>Industries <span>We Serve</span></h2>
+
+    <p>
+      SHA Infotechnology delivers customized Digital Marketing Services in Chennai to businesses across a wide range of industries. Our tailored digital marketing solutions help improve online visibility, generate qualified leads, and drive measurable business growth. We work with IT companies, eCommerce brands, healthcare providers, educational institutions, real estate firms, manufacturing businesses, financial services, hospitality, and startups to achieve sustainable digital success.
+    </p>
+
+    <div class="industry-slider">
+      <div class="industry-track">
+
+        <div class="industry-item"><div class="industry-icon">💻</div><h4>IT &amp; Software Companies</h4></div>
+        <div class="industry-item"><div class="industry-icon">🛒</div><h4>E-commerce &amp; Retail</h4></div>
+        <div class="industry-item"><div class="industry-icon">🏥</div><h4>Healthcare &amp; Clinics</h4></div>
+        <div class="industry-item"><div class="industry-icon">🎓</div><h4>Education &amp; EdTech</h4></div>
+        <div class="industry-item"><div class="industry-icon">🏗️</div><h4>Real Estate &amp; Construction</h4></div>
+        <div class="industry-item"><div class="industry-icon">🚀</div><h4>Startups &amp; Local Businesses</h4></div>
+
+        <!-- duplicate set for infinite scroll -->
+        <div class="industry-item"><div class="industry-icon">💻</div><h4>IT &amp; Software Companies</h4></div>
+        <div class="industry-item"><div class="industry-icon">🛒</div><h4>E-commerce &amp; Retail</h4></div>
+        <div class="industry-item"><div class="industry-icon">🏥</div><h4>Healthcare &amp; Clinics</h4></div>
+        <div class="industry-item"><div class="industry-icon">🎓</div><h4>Education &amp; EdTech</h4></div>
+        <div class="industry-item"><div class="industry-icon">🏗️</div><h4>Real Estate &amp; Construction</h4></div>
+        <div class="industry-item"><div class="industry-icon">🚀</div><h4>Startups &amp; Local Businesses</h4></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="sha-stats" id="statsSection">
+
+    <div class="sha-stats-inner">
+
+      <div class="stat-box">
+        <div class="stat-value" data-target="100">0+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-value" data-target="2">0+</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-value" data-target="5">0+</div>
+        <div class="stat-label">Expert Professionals</div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-value" data-target="180">0+</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const section = document.getElementById("statsSection");
+      if(!section) return;
+      const counters = section.querySelectorAll(".stat-value");
+      let started = false;
+
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting && !started){
+            started = true;
+            counters.forEach(counter=>{
+              const target = parseInt(counter.dataset.target);
+              let current = 0;
+              const increment = Math.ceil(target / 40);
+              const timer = setInterval(()=>{
+                current += increment;
+                if(current >= target){ current = target; clearInterval(timer); }
+                counter.innerHTML = current + "+";
+              }, 30);
+            });
+            observer.disconnect();
+          }
+        });
+      }, { threshold:.4 });
+
+      observer.observe(section);
+    });
+    </script>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="home-faq-wrap" id="faqSection">
+
+    <div class="home-faq-container">
+
+      <h2 class="home-faq-title">
+        <span class="faq-title-white">Frequently Asked</span>
+        <span class="faq-title-gradient">Questions</span>
+      </h2>
+
+      <p class="home-faq-sub">Clear answers to help you move forward with confidence.</p>
+
+      <div class="home-faq-card">
+
+        <div class="home-faq-item">
+          <div class="home-faq-header">
+            <div class="home-faq-question">Why choose Sha InfoTech as the best IT training institute in Chennai?</div>
+            <div class="home-faq-toggle">+</div>
+          </div>
+          <div class="home-faq-answer">
+            <p>Sha InfoTech is a leading IT training institute in Chennai offering industry-oriented courses, hands-on projects, experienced trainers, and placement assistance. Our practical learning approach helps students and professionals build job-ready skills in today's most in-demand technologies.</p>
+          </div>
+        </div>
+
+        <div class="home-faq-item">
+          <div class="home-faq-header">
+            <div class="home-faq-question">What IT courses are available at Sha InfoTech?</div>
+            <div class="home-faq-toggle">+</div>
+          </div>
+          <div class="home-faq-answer">
+            <p>Sha InfoTech provides a wide range of IT training courses, including Full Stack Development, Data Science, Artificial Intelligence, Generative AI, Cloud Computing, Python, Java, DevOps, Testing, Digital Marketing, and many other career-focused programs designed to meet current industry requirements.</p>
+          </div>
+        </div>
+
+        <div class="home-faq-item">
+          <div class="home-faq-header">
+            <div class="home-faq-question">Does Sha InfoTech provide placement assistance after course completion?</div>
+            <div class="home-faq-toggle">+</div>
+          </div>
+          <div class="home-faq-answer">
+            <p>Yes. Sha InfoTech offers comprehensive placement assistance, including resume building, mock interviews, aptitude training, technical interview preparation, and job referrals through its hiring partner network to help students secure successful IT careers.</p>
+          </div>
+        </div>
+
+        <div class="home-faq-item">
+          <div class="home-faq-header">
+            <div class="home-faq-question">Who can enroll in Sha InfoTech IT training courses?</div>
+            <div class="home-faq-toggle">+</div>
+          </div>
+          <div class="home-faq-answer">
+            <p>Our IT courses are suitable for fresh graduates, college students, working professionals, career changers, and anyone looking to enhance their technical skills. We offer beginner to advanced-level training with flexible weekday and weekend batches.</p>
+          </div>
+        </div>
+
+        <div class="home-faq-item">
+          <div class="home-faq-header">
+            <div class="home-faq-question">Do Sha InfoTech courses include practical projects and certifications?</div>
+            <div class="home-faq-toggle">+</div>
+          </div>
+          <div class="home-faq-answer">
+            <p>Yes. Every course includes practical assignments, real-time projects, hands-on lab sessions, and certification support. Students gain practical experience that improves their confidence and increases their employability in the IT industry.</p>
+          </div>
         </div>
 
       </div>
 
-      <!-- TEXT -->
+      <div class="home-faq-cta">
+        <h3>Still have questions?</h3>
+        <p>Talk directly with our experts and get a custom growth plan.</p>
+        <a href="/Contact/"><button>BOOK FREE CONSULTATION →</button></a>
+      </div>
 
-      <div class="projectrun-text">
+    </div>
 
-        <p>
-        At SHA Infotechnology, we are a leading <a href="https://www.shainfotechnology.in/Blog#top-benefits-of-hiring-an-seo-service-company-in-chennai">Digital Marketing Services in Chennai</a>, combining creativity, data, and technology to deliver end-to-end digital marketing services tailored for startups, SMEs, and growing enterprises.
-        </p>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const section = document.getElementById("faqSection");
+      if(!section) return;
+      const items = section.querySelectorAll(".home-faq-item");
 
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            const first = items[0];
+            first.classList.add("open");
+            first.querySelector(".home-faq-toggle").innerHTML = "−";
+            observer.disconnect();
+          }
+        });
+      }, { threshold:.35 });
 
-   
+      observer.observe(section);
 
+      items.forEach(item=>{
+        const header = item.querySelector(".home-faq-header");
+        const toggle = item.querySelector(".home-faq-toggle");
 
-        <p>
-          
-From high-performance website development and SEO to ROI-focused content marketing strategies, our solutions are designed to strengthen your online presence and drive meaningful business outcomes.
-        </p>
+        header.addEventListener("click", function(){
+          const isOpen = item.classList.contains("open");
+          items.forEach(i=>{
+            i.classList.remove("open");
+            i.querySelector(".home-faq-toggle").innerHTML = "+";
+          });
+          if(!isOpen){ item.classList.add("open"); toggle.innerHTML = "−"; }
+        });
+      });
 
-        <p>
-      
-As an experienced <a href="https://www.shainfotechnology.in/Services/Brand_consultancy/">Digital Marketing Company in Chennai</a>, we help your brand stand out in a competitive digital landscape by aligning smart digital strategies with measurable growth objectives.
-        </p>
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type":"Question", "name":"Which service should I start with?", "acceptedAnswer":{ "@type":"Answer", "text":"If you're new, start with a professional website and basic SEO. Once traffic grows, ads and social media help scale faster." } },
+          { "@type":"Question", "name":"Do you work with small businesses?", "acceptedAnswer":{ "@type":"Answer", "text":"Yes. We work with startups, small businesses, and growing companies, offering flexible and affordable solutions." } },
+          { "@type":"Question", "name":"How long does it take to see results?", "acceptedAnswer":{ "@type":"Answer", "text":"SEO typically takes 2–3 months for visible results, while Google Ads and social media campaigns can generate leads much faster." } },
+          { "@type":"Question", "name":"Do you provide ongoing support?", "acceptedAnswer":{ "@type":"Answer", "text":"Absolutely. We offer continuous optimization, support, and performance tracking for all our services." } },
+          { "@type":"Question", "name":"How do I get started?", "acceptedAnswer":{ "@type":"Answer", "text":"Simply contact us for a free consultation. We'll analyze your business and recommend the best growth strategy." } }
+        ]
+      };
+
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.innerHTML = JSON.stringify(schema);
+      document.head.appendChild(script);
+    });
+    </script>
+  </section>
+
+  <!-- JS -->
+  <script defer src="script.js"></script>
+
+  <!-- CALL FLOAT BUTTON -->
+  <a href="tel:+919361046387" class="call-float" aria-label="Call SHA Infotechnology" title="Call Now">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+      <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.3 21 3 13.7 3 4a1 1 0 011-1h3.49a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.02l-2.19 2.19z"/>
+    </svg>
+  </a>
+
+  <script>
+  document.querySelector(".call-float").addEventListener("click", function(){
+    console.log("Call button clicked");
+  });
+  </script>
+
+  <!-- WHATSAPP -->
+  <div class="wa-chat" id="waChat" style="display:none;">
+
+    <div class="wa-header">
+      <img class="wa-avatar" src="images/LOGO.jpeg" alt="SHA Info Tech - Digital Marketing Company in Chennai"
+           width="40" height="40" loading="lazy" decoding="async" />
+      <div>
+        <div class="wa-name">SHA Infotechnology</div>
+        <div class="wa-status">Online</div>
+      </div>
+      <div class="wa-close" onclick="closeWA()">✕</div>
+    </div>
+
+    <div class="wa-body">
+      <div class="wa-bubble">Hi there 👋 <br>How can we help you today?</div>
+    </div>
+
+    <div class="wa-input">
+      <input id="waInput" type="text" value="Hi SHA Infotechnology 👋 I would like to enquire about your services.">
+      <div class="wa-send" onclick="sendWhatsApp()">➤</div>
+    </div>
+
+  </div>
+
+  <div class="wa-float" onclick="toggleWA()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+         width="28" height="28" loading="lazy" decoding="async">
+  </div>
+
+  <script>
+  const phone = "919361046387";
+
+  setTimeout(()=>{ document.getElementById("waChat").style.display = "block"; }, 5000);
+
+  function toggleWA(){
+    const chat = document.getElementById("waChat");
+    chat.style.display = (chat.style.display === "none") ? "block" : "none";
+  }
+
+  function closeWA(){ document.getElementById("waChat").style.display = "none"; }
+
+  function sendWhatsApp(){
+    const msg = document.getElementById("waInput").value;
+    const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+    window.open(url, "_blank");
+  }
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Enter" && document.activeElement.id === "waInput"){ sendWhatsApp(); }
+  });
+  </script>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+
+    <style>
+    #reviews{ padding:100px 20px; background:transparent; font-family:Arial,sans-serif; }
+    .review-container{ max-width:1200px; margin:auto; }
+    .review-title{ text-align:center; font-size:52px; font-weight:800; margin-bottom:15px; color:#fff; line-height:1.2; }
+    .review-title span{ background:linear-gradient(90deg,#7B61FF,#E94FD7); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .review-subtitle{ text-align:center; color:#C9D2E4; font-size:18px; max-width:700px; margin:0 auto 60px; line-height:1.7; }
+    #reviewList{ display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:28px; margin-bottom:70px; }
+    .review-card{ background:rgba(255,255,255,.05); backdrop-filter:blur(18px); border:1px solid rgba(255,255,255,.08); border-radius:24px; padding:40px 30px 30px; transition:.35s; position:relative; overflow:hidden; text-align:center; }
+    .review-card::before{ content:""; position:absolute; top:0; left:0; width:100%; height:4px; background:linear-gradient(90deg,#7B61FF,#E94FD7); }
+    .review-card::after{ content:"❝"; display:block; width:56px; height:56px; line-height:56px; margin:0 auto 18px; border-radius:50%; background:linear-gradient(135deg,#7B61FF,#E94FD7); color:#fff; font-size:26px; font-weight:800; box-shadow:0 8px 20px rgba(123,97,255,.35); }
+    .review-card:hover{ transform:translateY(-10px); border-color:#8A5CFF; box-shadow:0 18px 40px rgba(123,97,255,.25); }
+    .review-header{ display:flex; flex-direction:column; align-items:center; gap:8px; margin-bottom:6px; }
+    .review-name{ font-size:20px; font-weight:700; color:#fff; }
+    .review-stars{ font-size:18px; color:#FFD84D; letter-spacing:3px; }
+    .review-text{ font-size:15px; line-height:1.8; color:#D8DCEA; margin-top:12px; }
+    .review-bottom{ display:grid; grid-template-columns:.85fr 1.15fr; gap:28px; align-items:start; }
+    @media(max-width:900px){ .review-bottom{ grid-template-columns:1fr; } }
+    .review-summary{ background:rgba(255,255,255,.05); backdrop-filter:blur(18px); border:1px solid rgba(255,255,255,.08); border-radius:28px; padding:40px; text-align:center; box-shadow:0 18px 45px rgba(0,0,0,.25); }
+    .review-summary h3{ margin:0 0 18px; font-size:22px; font-weight:700; color:#fff; }
+    .review-summary .avg-value{ font-size:56px; font-weight:800; background:linear-gradient(90deg,#7B61FF,#E94FD7); -webkit-background-clip:text; -webkit-text-fill-color:transparent; line-height:1; margin-bottom:10px; }
+    .review-summary .avg-stars{ font-size:26px; color:#FFD84D; letter-spacing:4px; margin-bottom:10px; }
+    .review-summary .avg-count{ color:#C9D2E4; font-size:15px; }
+    .review-form{ background:rgba(255,255,255,.05); backdrop-filter:blur(18px); border:1px solid rgba(255,255,255,.08); border-radius:28px; padding:45px; box-shadow:0 18px 45px rgba(0,0,0,.25); }
+    .review-form h3{ margin:0 0 30px; font-size:32px; font-weight:800; color:#fff; }
+    .review-form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    @media(max-width:600px){ .review-form-row{ grid-template-columns:1fr; } }
+    .review-form input, .review-form textarea, .review-form select{ width:100%; padding:18px; margin-bottom:22px; border-radius:14px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.08); color:#fff; font-size:16px; outline:none; transition:.3s; box-sizing:border-box; }
+    .review-form input::placeholder, .review-form textarea::placeholder{ color:#C9D2E4; }
+    .review-form input:focus, .review-form textarea:focus, .review-form select:focus{ border-color:#8A5CFF; box-shadow:0 0 0 4px rgba(123,97,255,.15); }
+    .review-form textarea{ resize:vertical; min-height:170px; }
+    .review-form select{ cursor:pointer; font-weight:700; letter-spacing:1px; }
+    .review-form option{ background:#0F172A; color:#fff; }
+    .review-form button{ width:100%; padding:18px; border:none; border-radius:14px; font-size:18px; font-weight:700; cursor:pointer; background:linear-gradient(90deg,#7B61FF,#E94FD7); color:#fff; transition:.35s; }
+    .review-form button:hover{ transform:translateY(-3px); box-shadow:0 12px 30px rgba(123,97,255,.35); }
+    #reviewList::-webkit-scrollbar{ height:6px; }
+    #reviewList::-webkit-scrollbar-thumb{ background:#8A5CFF; border-radius:10px; }
+    @media(max-width:768px){
+      #reviews{ padding:70px 18px; }
+      .review-title{ font-size:38px; }
+      .review-subtitle{ font-size:16px; margin-bottom:40px; }
+      .review-summary{ padding:28px; }
+      .review-summary .avg-value{ font-size:44px; }
+      .review-form{ padding:28px; }
+      .review-form h3{ font-size:26px; }
+      .review-card{ padding:32px 22px 24px; }
+      .review-name{ font-size:18px; }
+      .review-stars{ font-size:16px; }
+    }
+    </style>
+
+    <div class="review-container">
+
+      <h2 class="review-title">Customer <span>Reviews</span></h2>
+
+      <p class="review-subtitle">
+        Real feedback from businesses and clients who trust SHA Infotechnology for web development, digital marketing, branding, SEO, and software solutions.
+      </p>
+
+      <div id="reviewList"><!-- Firebase reviews --></div>
+
+      <div class="review-bottom">
+
+        <div class="review-summary">
+          <h3>Average Rating</h3>
+          <div class="avg-value" id="avgRatingValue">4.9</div>
+          <div class="avg-stars" id="avgRatingStars">★★★★★</div>
+          <div class="avg-count" id="avgRatingCount">Based on verified customer reviews</div>
+        </div>
+
+        <div class="review-form">
+          <h3>Write a Review</h3>
+
+          <form id="reviewForm">
+            <div class="review-form-row">
+              <input type="text" id="name" placeholder="Your Name" required>
+              <input type="email" id="email" placeholder="Email (Optional)">
+            </div>
+
+            <select id="rating">
+              <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+              <option value="4">⭐⭐⭐⭐☆ Very Good</option>
+              <option value="3">⭐⭐⭐☆☆ Good</option>
+              <option value="2">⭐⭐☆☆☆ Fair</option>
+              <option value="1">⭐☆☆☆☆ Poor</option>
+            </select>
+
+            <textarea id="review" placeholder="Write your review..." required></textarea>
+
+            <button type="submit">Submit Review</button>
+          </form>
+        </div>
 
       </div>
 
     </div>
 
   </section>
+  <!-- ================= END REVIEW SECTION ================= -->
 
-
-
-  <!-- ================= SERVICES ================= -->
-
-<section class="seo-section" id="seoSection">
-
-  <!-- HEADER -->
-
-  <div class="seo-header">
-
-    <h2 class="seo-title">
-
-      <span class="seo-title-white">
-        Digital Marketing Services
-      </span>
-
-      <span class="seo-title-gradient">
-       by a Leading Digital Marketing Agency in Chennai
-      </span>
-
-    </h2>
-
-    <div class="seo-divider"></div>
-
-  </div>
-
-  <!-- CONTENT -->
-
-  <div class="seo-container">
-
-    <!-- LEFT TEXT -->
-
-    <div class="seo-text">
-
-      <p>
-      We provide customized digital marketing services that align with your business goals and deliver measurable results. As a trusted Digital Marketing Agency in Chennai, we help businesses improve their online visibility, generate quality leads, and achieve sustainable growth.
-      </p>
-
-      <ul class="seo-list">
-
-        <li>
-          Search Engine Optimization (SEO)
-        </li>
-
-        <li>
-          Google Ads & Paid Media (PPC)
-        </li>
-
-        <li>
-          Social Media Marketing (SMM)
-        </li>
-
-        <li>
-          Local SEO & Lead Generation
-        </li>
-
-        <li>
-          Analytics & Performance Tracking
-        </li>
-
-      </ul>
-
-      <p>
-       Our expert team combines data-driven strategies with the latest digital marketing techniques to increase website traffic, improve search engine rankings, and convert visitors into loyal customers. Whether you're a startup, SME, or enterprise, our <a href="https://www.shainfotechnology.in/Blog#professional-web-development-company-in-chennai">Digital Marketing Services in Chennai</a> delivers customized solutions that drive long-term success.
-      </p>
-
-    </div>
-
-    <!-- RIGHT IMAGE -->
-
-    <div class="seo-image">
-
-      <div class="image-glow">
-
-       <img src="/images/seo.png" alt="SEO Services and Digital Marketing Company Chennai">
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    const seoSection =
-      document.getElementById(
-        "seoSection"
-      );
-
-    if(!seoSection) return;
-
-    const observer =
-      new IntersectionObserver(
-
-      (entries)=>{
-
-        entries.forEach(entry=>{
-
-          if(entry.isIntersecting){
-
-            seoSection.classList.add(
-              "seo-show"
-            );
-
-            observer.disconnect();
-
-          }
-
-        });
-
-      },
-
-      {
-        threshold:.2
-      }
-
-    );
-
-    observer.observe(
-      seoSection
-    );
-
-  });
-
-  </script>
-
-</section>
-
-
-
-  <!-- ================= WEBSITE DEVELOPMENT ================= -->
-
-<section class="section-wrap" id="websiteSection">
-
-  <!-- HEADER -->
-
-  <div class="section-header">
-
-    <h2 class="section-title">
-
-      <span class="title-white">
-     Website Development Services 
-      </span>
-
-      <span class="title-gradient">
-       by a Trusted Digital Marketing Services in Chennai
-      </span>
-
-    </h2>
-
-    <p class="section-desc">
-Your website is the foundation of your online presence. At SHA Infotechnology, our <a href="https://www.shainfotechnology.in/Services/Web_development/"> Web development services in Chennai</a> are designed to create high-performing, user-friendly, and SEO-optimized websites that help your business attract visitors and generate more leads. As a leading Digital Marketing Agency in Chennai, we build websites that deliver exceptional user experiences and measurable business growth.
-    </p>
-
-  </div>
-
-  <!-- CONTENT -->
-
-  <div class="section-container">
-
-    <!-- IMAGE -->
-
-    <div class="section-image">
-
-     <img src="/images/websitehome.png" alt="Web Development Company in Chennai Creating Responsive Websites">
-
-    </div>
-
-    <!-- TEXT -->
-
-    <div class="section-text">
-
-      <ul class="section-list">
-
-        <li>
-          SEO-friendly website architecture
-        </li>
-
-        <li>
-          Fast-loading, mobile-responsive design
-        </li>
-
-        <li>
-          UX/UI optimized for conversions
-        </li>
-
-        <li>
-          Secure and scalable development
-        </li>
-
-      </ul>
-
-      <p>
-       Our expert developers create modern websites that not only look professional but also improve search engine visibility, enhance customer engagement, and convert visitors into loyal customers. Whether you need a business website, corporate portal, or eCommerce platform, our Digital Marketing Agency  Company in Chennai delivers customized web development solutions that support your long-term business success.
-      </p>
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    const section =
-      document.getElementById(
-        "websiteSection"
-      );
-
-    if(!section) return;
-
-    const observer =
-      new IntersectionObserver(
-
-      (entries)=>{
-
-        entries.forEach(entry=>{
-
-          if(entry.isIntersecting){
-
-            section.classList.add(
-              "section-show"
-            );
-
-            observer.disconnect();
-
-          }
-
-        });
-
-      },
-
-      {
-        threshold:.2
-      }
-
-    );
-
-    observer.observe(
-      section
-    );
-
-  });
-
-  </script>
-
-</section>
-
-
-  <!-- ================= CONTENT MARKETING ================= -->
-<section class="contentcore-section" id="contentCoreSection">
-
-  <!-- HEADER -->
-
-  <div class="contentcore-header">
-
-    <h2 class="contentcore-title">
-
-      <span class="contentcore-title-white">
-     Content Marketing Services
-      </span>
-
-      <span class="contentcore-title-gradient">
-      by a Leading Digital Marketing Agency in Chennai
-      </span>
-
-    </h2>
-
-    <div class="contentcore-divider"></div>
-
-  </div>
-
-  <!-- CONTENT -->
-
-  <div class="contentcore-container">
-
-    <!-- LEFT TEXT -->
-
-    <div class="contentcore-text">
-
-      <p>
-    Content is the foundation of every successful digital marketing strategy. At SHA Infotechnology, we create SEO-focused content that builds brand authority, improves search engine rankings, and drives qualified traffic. As a trusted Digital Marketing Company in Chennai, we develop content strategies that connect with your audience and support long-term business growth.Content is the foundation of every successful digital marketing strategy. At SHA Infotechnology, we create SEO-focused content that builds brand authority, improves search engine rankings, and drives qualified traffic. As a trusted <a href="https://www.shainfotechnology.in/Services/Content_design/">Content Marketing Services in Chennai</a>, we develop content strategies that connect with your audience and support long-term business growth.
-      </p>
-
-      <ul class="contentcore-list">
-
-        <li>
-          SEO-optimized blog content
-        </li>
-
-        <li>
-          Website and landing page copywriting
-        </li>
-
-        <li>
-          Social media content planning
-        </li>
-
-        <li>
-          Brand storytelling and messaging
-        </li>
-
-      </ul>
-
-      <p>
-        We help you attract, engage, and retain your audience with meaningful,
-        high-impact content that supports your business goals.
-      </p>
-
-    </div>
-
-    <!-- RIGHT IMAGE -->
-
-    <div class="contentcore-image">
-
-      <div class="contentcore-image-glow">
-
-       <img src="/images/conhome.png" alt="Content Marketing Strategy and Content Design Services Chennai">
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    const section =
-      document.getElementById(
-        "contentCoreSection"
-      );
-
-    if(!section) return;
-
-    const observer =
-      new IntersectionObserver(
-
-      (entries)=>{
-
-        entries.forEach(entry=>{
-
-          if(entry.isIntersecting){
-
-            section.classList.add(
-              "contentcore-show"
-            );
-
-            observer.disconnect();
-
-          }
-
-        });
-
-      },
-
-      {
-        threshold:.2
-      }
-
-    );
-
-    observer.observe(
-      section
-    );
-
-  });
-
-  </script>
-
-</section>
-
-
-  <!-- ================= WHAT WE DO ================= -->
-
-<section class="sh-wrap">
-
-  <h2 class="sh-title">What We Do Best</h2>
-
-  <div class="sh-grid">
-
-    <a href="/Services/Digital_Strategy/" class="sh-card">
-      <div class="sh-icon">🧠</div>
-      <h3>Digital Strategy</h3>
-      <div class="sh-hover-text">
-        Data-driven strategies that align technology, marketing, and business goals.
-      </div>
-    </a>
-
-    <a href="/Services/Web_development/" class="sh-card">
-      <div class="sh-icon">💻</div>
-      <h3>Web Development</h3>
-      <div class="sh-hover-text">
-        High-performance, responsive websites built to convert visitors into customers.
-      </div>
-    </a>
-
-    <a href="/Services/Ecommerce/" class="sh-card">
-      <div class="sh-icon">🛒</div>
-      <h3>E-commerce Website</h3>
-      <div class="sh-hover-text">
-        Secure, scalable online stores designed for smooth shopping and higher sales.
-      </div>
-    </a>
-
-    <a href="/Services/Seo/" class="sh-card">
-      <div class="sh-icon">🔍</div>
-      <h3>Search Engine Optimization</h3>
-      <div class="sh-hover-text">
-        Improve rankings, organic traffic, and long-term online visibility.
-      </div>
-    </a>
-
-    <a href="/Services/SocialMediaMarketing/" class="sh-card">
-      <div class="sh-icon">📣</div>
-      <h3>Social Media Marketing</h3>
-      <div class="sh-hover-text">
-        Build brand awareness, engagement, and trust across social platforms.
-      </div>
-    </a>
-
-    <a href="/Services/Content_design/" class="sh-card">
-      <div class="sh-icon">✍️</div>
-      <h3>Content Design</h3>
-      <div class="sh-hover-text">
-        Compelling content that informs, engages, and converts your audience.
-      </div>
-    </a>
-
-    <a href="/Services/Business_analysis/" class="sh-card">
-      <div class="sh-icon">📊</div>
-      <h3>Business Analysis</h3>
-      <div class="sh-hover-text">
-        Insight-driven analysis to optimize processes, performance, and growth.
-      </div>
-    </a>
-
-    <a href="/Services/Creative_design/" class="sh-card">
-      <div class="sh-icon">🎨</div>
-      <h3>Creative Design</h3>
-      <div class="sh-hover-text">
-        Eye-catching visuals and branding that make your business stand out.
-      </div>
-    </a>
-
-    <a href="/Services/Brand_consultancy/" class="sh-card">
-      <div class="sh-icon">🏷️</div>
-      <h3>Brand Consultancy</h3>
-      <div class="sh-hover-text">
-        Build a strong, consistent brand identity that drives trust and growth.
-      </div>
-    </a>
-
-    <a href="/Services/Aimarketing/" class="sh-card">
-      <div class="sh-icon">⚙️</div>
-      <h3>AI Marketing</h3>
-      <div class="sh-hover-text">
-        AI-powered marketing strategies that analyze data, predict customer behavior and maximize conversions.
-      </div>
-    </a>
-
-  </div>
-
-</section>
-
-
-
-  <!-- ================= WHY CHOOSE US ================= -->
-
-<section class="why-wrap" id="whyChooseSection">
-
-  <div class="why-container">
-
-    <!-- LEFT -->
-
-    <div class="why-left">
-
-      <h2>
-        Why Choose
-        <span>SHA Infotechnology</span>
-        <br>
-        as Your Digital Marketing Company in Chennai?
-      </h2>
-
-      <p>
-        We don’t just market your brand. As a trusted <a href="https://www.shainfotechnology.in/About/"> Digital Marketing Company in Chennai</a>, We help you grow it sustainably.
-        Our approach combines creativity, strategy, and performance-driven
-        execution to deliver measurable business results.
-      </p>
-
-      <div class="why-tagline">
-        Trusted by businesses looking for real digital growth.
-      </div>
-
-    </div>
-
-    <!-- RIGHT -->
-
-    <div class="why-features">
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          👨‍💻
-        </div>
-
-        <div>
-
-          <h4>
-            Experienced Professionals
-          </h4>
-
-          <p>
-            Skilled digital marketing experts with hands-on industry experience.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          📊
-        </div>
-
-        <div>
-
-          <h4>
-            Data-Driven Strategies
-          </h4>
-
-          <p>
-            Every decision backed by analytics, insights, and proven metrics.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          📈
-        </div>
-
-        <div>
-
-          <h4>
-            Transparent Reporting & ROI
-          </h4>
-
-          <p>
-            Clear reports, honest communication, and measurable return on investment.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          🏢
-        </div>
-
-        <div>
-
-          <h4>
-            Industry-Specific Solutions
-          </h4>
-
-          <p>
-            Customized strategies tailored to your business and target audience.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          💰
-        </div>
-
-        <div>
-
-          <h4>
-            Affordable & Scalable Plans
-          </h4>
-
-          <p>
-            Flexible pricing plans that grow along with your business.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    const section =
-      document.getElementById(
-        "whyChooseSection"
-      );
-
-    if(!section) return;
-
-    const observer =
-      new IntersectionObserver(
-
-      (entries)=>{
-
-        entries.forEach(entry=>{
-
-          if(entry.isIntersecting){
-
-            section.classList.add(
-              "why-show"
-            );
-
-            observer.disconnect();
-
-          }
-
-        });
-
-      },
-
-      {
-        threshold:.2
-      }
-
-    );
-
-    observer.observe(
-      section
-    );
-
-  });
-
-  </script>
-
-</section>
-
-
-
-  <!-- ================= INDUSTRIES ================= -->
-
-
-  <section class="sha-industries" id="industriesSection">
-
-  <!-- HEADING -->
-
-  <h2>
-    Industries
-    <span>We Serve</span>
-  </h2>
-
-  <p>
-   SHA Infotechnology delivers customized Digital Marketing Services in Chennai to businesses across a wide range of industries. Our tailored digital marketing solutions help improve online visibility, generate qualified leads, and drive measurable business growth. We work with IT companies, eCommerce brands, healthcare providers, educational institutions, real estate firms, manufacturing businesses, financial services, hospitality, and startups to achieve sustainable digital success.
-  </p>
-
-  <!-- SLIDER -->
-
-  <div class="industry-slider">
-
-    <div class="industry-track">
-
-      <!-- SET 1 -->
-
-      <div class="industry-item">
-        <div class="industry-icon">💻</div>
-        <h4>IT & Software Companies</h4>
-      </div>
-
-      <div class="industry-item">
-        <div class="industry-icon">🛒</div>
-        <h4>E-commerce & Retail</h4>
-      </div>
-
-      <div class="industry-item">
-        <div class="industry-icon">🏥</div>
-        <h4>Healthcare & Clinics</h4>
-      </div>
-
-      <div class="industry-item">
-        <div class="industry-icon">🎓</div>
-        <h4>Education & EdTech</h4>
-      </div>
-
-      <div class="industry-item">
-        <div class="industry-icon">🏗️</div>
-        <h4>Real Estate & Construction</h4>
-      </div>
-
-      <div class="industry-item">
-        <div class="industry-icon">🚀</div>
-        <h4>Startups & Local Businesses</h4>
-      </div>
-
-      <!-- DUPLICATE SET (for infinite scroll same as React) -->
-
-      <div class="industry-item">
-        <div class="industry-icon">💻</div>
-        <h4>IT & Software Companies</h4>
-      </div>
-
-      <div class="industry-item">
-        <div class="industry-icon">🛒</div>
-        <h4>E-commerce & Retail</h4>
-      </div>
-
-      <div class="industry-item">
-        <div class="industry-icon">🏥</div>
-        <h4>Healthcare & Clinics</h4>
-      </div>
-
-      <div class="industry-item">
-        <div class="industry-icon">🎓</div>
-        <h4>Education & EdTech</h4>
-      </div>
-
-      <div class="industry-item">
-        <div class="industry-icon">🏗️</div>
-        <h4>Real Estate & Construction</h4>
-      </div>
-
-      <div class="industry-item">
-        <div class="industry-icon">🚀</div>
-        <h4>Startups & Local Businesses</h4>
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    const section =
-      document.getElementById(
-        "industriesSection"
-      );
-
-    if(!section) return;
-
-    const slider =
-      section.querySelector(
-        ".industry-slider"
-      );
-
-    const track =
-      section.querySelector(
-        ".industry-track"
-      );
-
-    /* SAME REACT STRUCTURE
-       CSS handles animation + hover pause */
-
-  });
-
-  </script>
-
-</section>
-
-
-
-  <!-- ================= STATS ================= -->
-
- <section class="sha-stats" id="statsSection">
-
-  <div class="sha-stats-inner">
-
-    <!-- ITEM 1 -->
-
-    <div class="stat-box">
-
-      <div
-        class="stat-value"
-        data-target="100"
-      >
-        0+
-      </div>
-
-      <div class="stat-label">
-        Happy Clients
-      </div>
-
-    </div>
-
-    <!-- ITEM 2 -->
-
-    <div class="stat-box">
-
-      <div
-        class="stat-value"
-        data-target="2"
-      >
-        0+
-      </div>
-
-      <div class="stat-label">
-        Years of Experience
-      </div>
-
-    </div>
-
-    <!-- ITEM 3 -->
-
-    <div class="stat-box">
-
-      <div
-        class="stat-value"
-        data-target="5"
-      >
-        0+
-      </div>
-
-      <div class="stat-label">
-        Expert Professionals
-      </div>
-
-    </div>
-
-    <!-- ITEM 4 -->
-
-    <div class="stat-box">
-
-      <div
-        class="stat-value"
-        data-target="180"
-      >
-        0+
-      </div>
-
-      <div class="stat-label">
-        Projects Delivered
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    const section =
-      document.getElementById(
-        "statsSection"
-      );
-
-    if(!section) return;
-
-    const counters =
-      section.querySelectorAll(
-        ".stat-value"
-      );
-
-    let started = false;
-
-    /* SAME INTERSECTION OBSERVER */
-
-    const observer =
-      new IntersectionObserver(
-
-      (entries)=>{
-
-        entries.forEach(entry=>{
-
-          if(
-            entry.isIntersecting &&
-            !started
-          ){
-
-            started = true;
-
-            counters.forEach(
-              counter=>{
-
-              const target =
-                parseInt(
-                  counter.dataset.target
-                );
-
-              let current = 0;
-
-              const increment =
-                Math.ceil(
-                  target / 40
-                );
-
-              const timer =
-                setInterval(()=>{
-
-                current += increment;
-
-                if(
-                  current >= target
-                ){
-                  current = target;
-                  clearInterval(
-                    timer
-                  );
-                }
-
-                counter.innerHTML =
-                  current + "+";
-
-              },30);
-
-            });
-
-            observer.disconnect();
-
-          }
-
-        });
-
-      },
-
-      {
-        threshold:.4
-      }
-
-    );
-
-    observer.observe(
-      section
-    );
-
-  });
-
-  </script>
-
-</section>
-
-
-  <!-- ================= FAQ ================= -->
-
-
-<section class="home-faq-wrap" id="faqSection">
-
-  <div class="home-faq-container">
-
-    <!-- TITLE -->
-
-    <h2 class="home-faq-title">
-
-      <span class="faq-title-white">
-        Frequently Asked
-      </span>
-
-      <span class="faq-title-gradient">
-        Questions
-      </span>
-
-    </h2>
-
-    <p class="home-faq-sub">
-      Clear answers to help you move forward with confidence.
-    </p>
-
-    <!-- FAQ CARD -->
-
-  <div class="home-faq-card">
-
-  <!-- FAQ 1 -->
-
-  <div class="home-faq-item">
-
-    <div class="home-faq-header">
-
-      <div class="home-faq-question">
-        Why choose Sha InfoTech as the best IT training institute in Chennai?
-      </div>
-
-      <div class="home-faq-toggle">
-        +
-      </div>
-
-    </div>
-
-    <div class="home-faq-answer">
-      <p>
-        Sha InfoTech is a leading IT training institute in Chennai offering industry-oriented courses, hands-on projects, experienced trainers, and placement assistance. Our practical learning approach helps students and professionals build job-ready skills in today's most in-demand technologies.
-      </p>
-    </div>
-
-  </div>
-
-  <!-- FAQ 2 -->
-
-  <div class="home-faq-item">
-
-    <div class="home-faq-header">
-
-      <div class="home-faq-question">
-        What IT courses are available at Sha InfoTech?
-      </div>
-
-      <div class="home-faq-toggle">
-        +
-      </div>
-
-    </div>
-
-    <div class="home-faq-answer">
-      <p>
-        Sha InfoTech provides a wide range of IT training courses, including Full Stack Development, Data Science, Artificial Intelligence, Generative AI, Cloud Computing, Python, Java, DevOps, Testing, Digital Marketing, and many other career-focused programs designed to meet current industry requirements.
-      </p>
-    </div>
-
-  </div>
-
-  <!-- FAQ 3 -->
-
-  <div class="home-faq-item">
-
-    <div class="home-faq-header">
-
-      <div class="home-faq-question">
-        Does Sha InfoTech provide placement assistance after course completion?
-      </div>
-
-      <div class="home-faq-toggle">
-        +
-      </div>
-
-    </div>
-
-    <div class="home-faq-answer">
-      <p>
-        Yes. Sha InfoTech offers comprehensive placement assistance, including resume building, mock interviews, aptitude training, technical interview preparation, and job referrals through its hiring partner network to help students secure successful IT careers.
-      </p>
-    </div>
-
-  </div>
-
-  <!-- FAQ 4 -->
-
-  <div class="home-faq-item">
-
-    <div class="home-faq-header">
-
-      <div class="home-faq-question">
-        Who can enroll in Sha InfoTech IT training courses?
-      </div>
-
-      <div class="home-faq-toggle">
-        +
-      </div>
-
-    </div>
-
-    <div class="home-faq-answer">
-      <p>
-        Our IT courses are suitable for fresh graduates, college students, working professionals, career changers, and anyone looking to enhance their technical skills. We offer beginner to advanced-level training with flexible weekday and weekend batches.
-      </p>
-    </div>
-
-  </div>
-
-  <!-- FAQ 5 -->
-
-  <div class="home-faq-item">
-
-    <div class="home-faq-header">
-
-      <div class="home-faq-question">
-        Do Sha InfoTech courses include practical projects and certifications?
-      </div>
-
-      <div class="home-faq-toggle">
-        +
-      </div>
-
-    </div>
-
-    <div class="home-faq-answer">
-      <p>
-        Yes. Every course includes practical assignments, real-time projects, hands-on lab sessions, and certification support. Students gain practical experience that improves their confidence and increases their employability in the IT industry.
-      </p>
-    </div>
-
-  </div>
-
-</div>
-
-    <!-- CTA -->
-
-    <div class="home-faq-cta">
-
-      <h3>
-        Still have questions?
-      </h3>
-
-      <p>
-        Talk directly with our experts and get a custom growth plan.
-      </p>
-
-      <a href="/Contact/">
-        <button>
-          BOOK FREE CONSULTATION →
-        </button>
-      </a>
-
-    </div>
-
-  </div>
-
-  <!-- JS INSIDE SECTION -->
-
-  <script>
-
-  document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    const section =
-      document.getElementById(
-        "faqSection"
-      );
-
-    if(!section) return;
-
-    const items =
-      section.querySelectorAll(
-        ".home-faq-item"
-      );
-
-    /* AUTO OPEN FIRST FAQ */
-
-    const observer =
-      new IntersectionObserver(
-
-      (entries)=>{
-
-        entries.forEach(entry=>{
-
-          if(entry.isIntersecting){
-
-            const first =
-              items[0];
-
-            first.classList.add(
-              "open"
-            );
-
-            first.querySelector(
-              ".home-faq-toggle"
-            ).innerHTML="−";
-
-            observer.disconnect();
-
-          }
-
-        });
-
-      },
-
-      {
-        threshold:.35
-      }
-
-    );
-
-    observer.observe(
-      section
-    );
-
-    /* FAQ TOGGLE */
-
-    items.forEach(item=>{
-
-      const header =
-        item.querySelector(
-          ".home-faq-header"
-        );
-
-      const toggle =
-        item.querySelector(
-          ".home-faq-toggle"
-        );
-
-      header.addEventListener(
-      "click",
-      function(){
-
-        const isOpen =
-          item.classList.contains(
-            "open"
-          );
-
-        items.forEach(i=>{
-
-          i.classList.remove(
-            "open"
-          );
-
-          i.querySelector(
-            ".home-faq-toggle"
-          ).innerHTML="+";
-
-        });
-
-        if(!isOpen){
-
-          item.classList.add(
-            "open"
-          );
-
-          toggle.innerHTML="−";
-
-        }
-
-      });
-
-    });
-
-    /* FAQ SCHEMA */
-
-    const schema = {
-
-      "@context":
-      "https://schema.org",
-
-      "@type":
-      "FAQPage",
-
-      "mainEntity":[
-
-      {
-        "@type":"Question",
-        "name":"Which service should I start with?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"If you’re new, start with a professional website and basic SEO. Once traffic grows, ads and social media help scale faster."
-        }
-      },
-
-      {
-        "@type":"Question",
-        "name":"Do you work with small businesses?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Yes. We work with startups, small businesses, and growing companies, offering flexible and affordable solutions."
-        }
-      },
-
-      {
-        "@type":"Question",
-        "name":"How long does it take to see results?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"SEO typically takes 2–3 months for visible results, while Google Ads and social media campaigns can generate leads much faster."
-        }
-      },
-
-      {
-        "@type":"Question",
-        "name":"Do you provide ongoing support?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Absolutely. We offer continuous optimization, support, and performance tracking for all our services."
-        }
-      },
-
-      {
-        "@type":"Question",
-        "name":"How do I get started?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Simply contact us for a free consultation. We’ll analyze your business and recommend the best growth strategy."
-        }
-      }
-
-      ]
-
-    };
-
-    const script =
-      document.createElement(
-        "script"
-      );
-
-    script.type =
-      "application/ld+json";
-
-    script.innerHTML =
-      JSON.stringify(
-        schema
-      );
-
-    document.head.appendChild(
-      script
-    );
-
-  });
-
-  </script>
-
-</section>
-
-
-  <!-- JS -->
-
-  <script src="script.js"></script>
-
-
-
-
-
-
-  <!-- CALL FLOAT BUTTON -->
-
-<a
-    href="tel:+919361046387"
-    class="call-float"
-    aria-label="Call SHA Infotechnology"
-    title="Call Now"
->
-
-    <svg xmlns="http://www.w3.org/2000/svg"
-         viewBox="0 0 24 24"
-         fill="currentColor">
-        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.3 21 3 13.7 3 4a1 1 0 011-1h3.49a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.02l-2.19 2.19z"/>
-    </svg>
-
-</a>
-
-<!-- JS INSIDE SECTION -->
-
-<script>
-
-/* OPTIONAL CLICK TRACK */
-
-document.querySelector(".call-float")
-.addEventListener("click",function(){
-
-console.log("Call button clicked");
-
-});
-
-</script>
-
-
-<!-- whatsapp -->
-
-
-<div class="wa-chat" id="waChat" style="display:none;">
-
-<div class="wa-header">
-
-<img
-class="wa-avatar"
-src="images/LOGO.jpeg"
-alt="SHA Info Tech - Digital Marketing Company in Chennai"
-/>
-
-<div>
-<div class="wa-name">SHA Infotechnology</div>
-<div class="wa-status">Online</div>
-</div>
-
-<div
-class="wa-close"
-onclick="closeWA()"
->
-✕
-</div>
-
-</div>
-
-<div class="wa-body">
-
-<div class="wa-bubble">
-Hi there 👋 <br>
-How can we help you today?
-</div>
-
-</div>
-
-<div class="wa-input">
-
-<input
-id="waInput"
-type="text"
-value="Hi SHA Infotechnology 👋 I would like to enquire about your services."
->
-
-<div
-class="wa-send"
-onclick="sendWhatsApp()"
->
-➤
-</div>
-
-</div>
-
-</div>
-
-<!-- FLOAT BUTTON -->
-
-<div
-class="wa-float"
-onclick="toggleWA()"
->
-
-<img
-src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-alt="WhatsApp"
->
-
-</div>
-
-<script>
-
-/* PHONE */
-
-const phone="919361046387";
-
-/* AUTO OPEN 5 SEC */
-
-setTimeout(()=>{
-document.getElementById(
-"waChat"
-).style.display="block";
-},5000);
-
-/* TOGGLE */
-
-function toggleWA(){
-
-const chat=document.getElementById(
-"waChat"
-);
-
-if(chat.style.display==="none"){
-chat.style.display="block";
-}
-else{
-chat.style.display="none";
-}
-
-}
-
-/* CLOSE */
-
-function closeWA(){
-document.getElementById(
-"waChat"
-).style.display="none";
-}
-
-/* SEND */
-
-function sendWhatsApp(){
-
-const msg=document.getElementById(
-"waInput"
-).value;
-
-const url=
-"https://wa.me/"
-+phone+
-"?text="+
-encodeURIComponent(msg);
-
-window.open(
-url,
-"_blank"
-);
-
-}
-
-/* ENTER KEY */
-
-document.addEventListener(
-"keydown",
-function(e){
-
-if(
-e.key==="Enter" &&
-document.activeElement.id==="waInput"
-){
-sendWhatsApp();
-}
-
-}
-);
-
-</script>
-
-
-
-
-
-<section id="reviews">
-
-<style>
-
-#reviews{
-    padding:100px 20px;
-    background:transparent;
-    font-family:Arial,sans-serif;
-}
-
-.review-container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.review-title{
-    text-align:center;
-    font-size:52px;
-    font-weight:800;
-    margin-bottom:15px;
-    color:#fff;
-    line-height:1.2;
-}
-
-.review-title span{
-    background:linear-gradient(90deg,#7B61FF,#E94FD7);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.review-subtitle{
-    text-align:center;
-    color:#C9D2E4;
-    font-size:18px;
-    max-width:700px;
-    margin:0 auto 60px;
-    line-height:1.7;
-}
-
-/*==========================
-REVIEW CARDS
-(layout: centered badge/name/stars/text,
- matching the reference screenshot)
-===========================*/
-
-#reviewList{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
-
-gap:28px;
-
-margin-bottom:70px;
-
-}
-
-.review-card{
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:24px;
-
-padding:40px 30px 30px;
-
-transition:.35s;
-
-position:relative;
-
-overflow:hidden;
-
-text-align:center;
-
-}
-
-.review-card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:4px;
-
-background:linear-gradient(90deg,#7B61FF,#E94FD7);
-
-}
-
-/* Decorative circular badge above each review, sitting where
-   the reference design shows a company/avatar icon. Purely
-   CSS (no JS needed) so it works with however reviews are
-   currently injected into #reviewList. */
-
-.review-card::after{
-
-content:"❝";
-
-display:block;
-
-width:56px;
-
-height:56px;
-
-line-height:56px;
-
-margin:0 auto 18px;
-
-border-radius:50%;
-
-background:linear-gradient(135deg,#7B61FF,#E94FD7);
-
-color:#fff;
-
-font-size:26px;
-
-font-weight:800;
-
-box-shadow:0 8px 20px rgba(123,97,255,.35);
-
-}
-
-.review-card:hover{
-
-transform:translateY(-10px);
-
-border-color:#8A5CFF;
-
-box-shadow:0 18px 40px rgba(123,97,255,.25);
-
-}
-
-.review-header{
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-gap:8px;
-
-margin-bottom:6px;
-
-}
-
-.review-name{
-
-font-size:20px;
-
-font-weight:700;
-
-color:#fff;
-
-}
-
-.review-stars{
-
-font-size:18px;
-
-color:#FFD84D;
-
-letter-spacing:3px;
-
-}
-
-.review-text{
-
-font-size:15px;
-
-line-height:1.8;
-
-color:#D8DCEA;
-
-margin-top:12px;
-
-}
-
-/*==========================
-SUMMARY + FORM
-(two-column layout: average rating panel
- on the left, review form on the right —
- bar-chart breakdown intentionally omitted)
-===========================*/
-
-.review-bottom{
-
-display:grid;
-
-grid-template-columns:.85fr 1.15fr;
-
-gap:28px;
-
-align-items:start;
-
-}
-
-@media(max-width:900px){
-
-.review-bottom{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-/* AVERAGE RATING PANEL */
-
-.review-summary{
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:28px;
-
-padding:40px;
-
-text-align:center;
-
-box-shadow:0 18px 45px rgba(0,0,0,.25);
-
-}
-
-.review-summary h3{
-
-margin:0 0 18px;
-
-font-size:22px;
-
-font-weight:700;
-
-color:#fff;
-
-}
-
-.review-summary .avg-value{
-
-font-size:56px;
-
-font-weight:800;
-
-background:linear-gradient(90deg,#7B61FF,#E94FD7);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-line-height:1;
-
-margin-bottom:10px;
-
-}
-
-.review-summary .avg-stars{
-
-font-size:26px;
-
-color:#FFD84D;
-
-letter-spacing:4px;
-
-margin-bottom:10px;
-
-}
-
-.review-summary .avg-count{
-
-color:#C9D2E4;
-
-font-size:15px;
-
-}
-
-/*==========================
-FORM
-===========================*/
-
-.review-form{
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:28px;
-
-padding:45px;
-
-box-shadow:0 18px 45px rgba(0,0,0,.25);
-
-}
-
-.review-form h3{
-
-margin:0 0 30px;
-
-font-size:32px;
-
-font-weight:800;
-
-color:#fff;
-
-}
-
-.review-form-row{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:18px;
-
-}
-
-@media(max-width:600px){
-
-.review-form-row{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-.review-form input,
-
-.review-form textarea,
-
-.review-form select{
-
-width:100%;
-
-padding:18px;
-
-margin-bottom:22px;
-
-border-radius:14px;
-
-background:rgba(255,255,255,.08);
-
-border:1px solid rgba(255,255,255,.08);
-
-color:#fff;
-
-font-size:16px;
-
-outline:none;
-
-transition:.3s;
-
-box-sizing:border-box;
-
-}
-
-.review-form input::placeholder,
-
-.review-form textarea::placeholder{
-
-color:#C9D2E4;
-
-}
-
-.review-form input:focus,
-
-.review-form textarea:focus,
-
-.review-form select:focus{
-
-border-color:#8A5CFF;
-
-box-shadow:0 0 0 4px rgba(123,97,255,.15);
-
-}
-
-.review-form textarea{
-
-resize:vertical;
-
-min-height:170px;
-
-}
-
-.review-form select{
-
-cursor:pointer;
-
-font-weight:700;
-
-letter-spacing:1px;
-
-}
-
-.review-form option{
-
-background:#0F172A;
-
-color:#fff;
-
-}
-
-/*==========================
-BUTTON
-===========================*/
-
-.review-form button{
-
-width:100%;
-
-padding:18px;
-
-border:none;
-
-border-radius:14px;
-
-font-size:18px;
-
-font-weight:700;
-
-cursor:pointer;
-
-background:linear-gradient(90deg,#7B61FF,#E94FD7);
-
-color:#fff;
-
-transition:.35s;
-
-}
-
-.review-form button:hover{
-
-transform:translateY(-3px);
-
-box-shadow:0 12px 30px rgba(123,97,255,.35);
-
-}
-
-/*==========================
-SCROLLBAR
-===========================*/
-
-#reviewList::-webkit-scrollbar{
-
-height:6px;
-
-}
-
-#reviewList::-webkit-scrollbar-thumb{
-
-background:#8A5CFF;
-
-border-radius:10px;
-
-}
-
-/*==========================
-MOBILE
-===========================*/
-
-@media(max-width:768px){
-
-#reviews{
-
-padding:70px 18px;
-
-}
-
-.review-title{
-
-font-size:38px;
-
-}
-
-.review-subtitle{
-
-font-size:16px;
-
-margin-bottom:40px;
-
-}
-
-.review-summary{
-
-padding:28px;
-
-}
-
-.review-summary .avg-value{
-
-font-size:44px;
-
-}
-
-.review-form{
-
-padding:28px;
-
-}
-
-.review-form h3{
-
-font-size:26px;
-
-}
-
-.review-card{
-
-padding:32px 22px 24px;
-
-}
-
-.review-name{
-
-font-size:18px;
-
-}
-
-.review-stars{
-
-font-size:16px;
-
-}
-
-}
-
-</style>
-
-<div class="review-container">
-
-<h2 class="review-title">
-Customer <span>Reviews</span>
-</h2>
-
-<p class="review-subtitle">
-Real feedback from businesses and clients who trust SHA Infotechnology for web development, digital marketing, branding, SEO, and software solutions.
-</p>
-
-<!-- APPROVED REVIEWS WILL LOAD HERE -->
-
-<div id="reviewList">
-
-<!-- Firebase reviews -->
-
-</div>
-
-<!-- SUMMARY + FORM (two-column, bar breakdown omitted) -->
-
-<div class="review-bottom">
-
-  <!-- AVERAGE RATING PANEL -->
-  <div class="review-summary">
-
-    <h3>Average Rating</h3>
-
-    <div class="avg-value" id="avgRatingValue">4.9</div>
-
-    <div class="avg-stars" id="avgRatingStars">★★★★★</div>
-
-    <div class="avg-count" id="avgRatingCount">Based on verified customer reviews</div>
-
-  </div>
-
-  <!-- REVIEW FORM -->
-  <div class="review-form">
-
-  <h3>Write a Review</h3>
-
-  <form id="reviewForm">
-
-  <div class="review-form-row">
-
-  <input
-  type="text"
-  id="name"
-  placeholder="Your Name"
-  required>
-
-  <input
-  type="email"
-  id="email"
-  placeholder="Email (Optional)">
-
-  </div>
-
-  <select id="rating">
-
-  <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
-  <option value="4">⭐⭐⭐⭐☆ Very Good</option>
-  <option value="3">⭐⭐⭐☆☆ Good</option>
-  <option value="2">⭐⭐☆☆☆ Fair</option>
-  <option value="1">⭐☆☆☆☆ Poor</option>
-
-  </select>
-
-  <textarea
-  id="review"
-  placeholder="Write your review..."
-  required></textarea>
-
-  <button type="submit">
-
-  Submit Review
-
-  </button>
-
-  </form>
-
-  </div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= END REVIEW SECTION ================= -->
-
-
-<script type="module" src="/firebase.js"></script>
-<script type="module" src="/review.js"></script>
+  <script type="module" src="/firebase.js"></script>
+  <script type="module" src="/review.js"></script>
 </body>
-
 
 <footer class="sps-footer">
 
   <div class="sps-footer-grid">
 
-    <!-- BRAND -->
     <div class="sps-footer-brand">
-      <img src="../images/LOGO.jpeg" alt="SHA Info Tech SEO Web Development and Digital Marketing Company Chennai" class="sps-footer-logo">
-
+      <img src="../images/LOGO.jpeg" alt="SHA Info Tech SEO Web Development and Digital Marketing Company Chennai"
+           class="sps-footer-logo" width="80" height="80" loading="lazy" decoding="async">
       <h3>SHA INFOTECHNOLOGY</h3>
-
       <p>
         SHA Infotechnology is a Chennai-based digital solutions company
         delivering result-driven strategies in digital marketing, web
@@ -3210,14 +1162,11 @@ Real feedback from businesses and clients who trust SHA Infotechnology for web d
       </p>
     </div>
 
-    <!-- QUICK LINKS -->
     <div>
       <h4>Quick Links</h4>
-
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/About/">About Us</a></li>
-       
         <li><a href="/Services/">Services</a></li>
         <li><a href="/Courses/">Courses</a></li>
         <li><a href="/DigitalMarketingServicePackage/">Digital Marketing Service Package</a></li>
@@ -3226,12 +1175,10 @@ Real feedback from businesses and clients who trust SHA Infotechnology for web d
       </ul>
     </div>
 
-    <!-- SERVICES -->
     <div>
       <h4>Our Services</h4>
-
       <ul>
-         <li><a href="../Services/Digital_Strategy/">Digital Strategy</a></li>
+        <li><a href="../Services/Digital_Strategy/">Digital Strategy</a></li>
         <li><a href="../Services/Web_development/">Web Development</a></li>
         <li><a href="../services/Ecommerce/">Ecommerce Website</a></li>
         <li><a href="../services/Seo/">SEO</a></li>
@@ -3244,80 +1191,32 @@ Real feedback from businesses and clients who trust SHA Infotechnology for web d
       </ul>
     </div>
 
-    <!-- CONTACT -->
     <div class="sps-footer-contact">
-
       <h4>Contact Us</h4>
-
       <p>📞 +91 93610 46387</p>
       <p>📧 shainfotech05@gmail.com</p>
       <p>📍 Chennai, India</p>
 
       <div class="sps-footer-actions">
         <a href="tel:+919361046387">Call Now</a>
-
-        <a
-          href="https://wa.me/919361046387"
-          target="_blank"
-        >
-          WhatsApp
-        </a>
+        <a href="https://wa.me/919361046387" target="_blank">WhatsApp</a>
       </div>
 
-      <!-- SOCIAL -->
       <div class="sps-footer-social">
-
-        <a
-          href="https://www.facebook.com/profile.php?id=61584983202107"
-          target="_blank"
-          class="facebook"
-        >
-          <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a
-          href="https://www.instagram.com/_shainfotechnology_/"
-          target="_blank"
-          class="instagram"
-        >
-          <i class="fab fa-instagram"></i>
-        </a>
-
-        <a
-          href="https://www.youtube.com/@shainfotechnology"
-          target="_blank"
-          class="youtube"
-        >
-          <i class="fab fa-youtube"></i>
-        </a>
-
+        <a href="https://www.facebook.com/profile.php?id=61584983202107" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/_shainfotechnology_/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@shainfotechnology" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
       </div>
-
     </div>
 
   </div>
 
-  <!-- FOOTER BOTTOM -->
   <div class="sps-footer-bottom">
-
     <span id="footer-year"></span>
-
-    <span>
-      Digital Strategy • Web Development • SEO • Ecommerce • Branding
-    </span>
-
+    <span>Digital Strategy • Web Development • SEO • Ecommerce • Branding</span>
   </div>
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-/>
 
-
-<script src="footer.js"></script>
+  <script defer src="footer.js"></script>
 </footer>
-
-<!-- FONT AWESOME -->
-
-
 
 </html>
