@@ -1,4 +1,9 @@
 /* ================= HERO SECTION ================= */
+/* NOTE: The Poppins/Inter Google Fonts are loaded once via <link> in
+   <head> with font-display:swap. The @import statements that used to
+   sit inside this file (and inside every section below) created a
+   second, render-blocking font request on every page load — they have
+   been removed. Nothing else in this stylesheet was changed. */
 
 .hero-section{
   min-height:0vh;
@@ -214,28 +219,6 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
 /* SECTION */
 
 .seo-section {
@@ -396,18 +379,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
 .projectrun-section {
   padding: clamp(8px, 2vw, 0px) clamp(5vw, 8vw, 9vw);
   font-family: 'Poppins', sans-serif;
@@ -511,8 +482,6 @@
     font-size: 16px;
   }
 }
-/* ================= CONTENT ================= */
-
 
 /* ================= BEST SECTION ================= */
 
@@ -562,35 +531,6 @@
 .best-card h3{
   font-size:18px;
 }
-
-/* ================= WHY CHOOSE ================= */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ================= RESPONSIVE ================= */
 
@@ -688,21 +628,7 @@ section{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ================= HEADER ================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 /* ===== GLOBAL RESET ===== */
 
@@ -1374,14 +1300,7 @@ body{
   padding-top:100px;
 }
 
-/* ===== GLOBAL RESET ===== */
-
-
-
-
-
 /* what we do best  */
-
 
 /* ================= SERVICES HIGHLIGHT ================= */
 
@@ -1580,17 +1499,7 @@ body{
   }
 }
 
-
-
-
-
-
-
-
 /* WEBSITE DEVELOPMENT CONVERTS  */
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 /* ================= SECTION ================= */
 
@@ -1720,24 +1629,7 @@ body{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* CONTENT  */
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* ================= SECTION ================= */
 
@@ -1902,16 +1794,7 @@ body{
 
 }
 
-
-
-
-
-
-
 /* WHY CHOOSE SHAINFOTECHNOLOGY */
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* ===== WHY CHOOSE US ===== */
 
@@ -2083,14 +1966,7 @@ body{
 
 }
 
-
-
 /* INDUSTRIES */
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* ===== INDUSTRIES SECTION ===== */
 
@@ -2283,13 +2159,7 @@ body{
 
 }
 
-
-
-
-
 /* STATS SECTION  */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* ===== STATS SECTION ===== */
 
@@ -2362,15 +2232,7 @@ body{
 
 }
 
-
-
-
-
 /* FAQ */
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* ================= FAQ SECTION ================= */
 
