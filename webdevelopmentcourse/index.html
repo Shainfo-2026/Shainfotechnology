@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Course | Sha Infotechnology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/Home.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0e1a;
+    --bg-soft:#0d1220;
+    --card:#121a2c;
+    --card-hover:#161f35;
+    --border:#232c42;
+    --purple:#8b5cf6;
+    --pink:#ec4899;
+    --gradient:linear-gradient(90deg,#8b5cf6 0%,#ec4899 100%);
+    --gradient-soft:linear-gradient(135deg,rgba(139,92,246,.15),rgba(236,72,153,.15));
+    --text:#ffffff;
+    --muted:#9aa3b8;
+    --muted-dim:#6b7280;
+    --radius:16px;
+    --font-display:'Poppins',sans-serif;
+    --font-body:'Inter',sans-serif;
+    --font-mono:'JetBrains Mono',monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body.wd-course{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  .wd-course h1,.wd-course h2,.wd-course h3,.wd-course h4{
+    font-family:var(--font-display);
+    font-weight:700;
+    line-height:1.2;
+  }
+
+  .wd-course .container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  .wd-course section{
+    padding:100px 0;
+    position:relative;
+  }
+
+  .wd-course .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--gradient-soft);
+    border:1px solid rgba(139,92,246,.35);
+    color:#c9b3ff;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    padding:7px 16px;
+    border-radius:999px;
+    margin-bottom:20px;
+  }
+
+  .wd-course .gradient-text{
+    background:var(--gradient);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+
+  .wd-course .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 32px;
+    border-radius:10px;
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:15px;
+    text-decoration:none;
+    cursor:pointer;
+    border:none;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+
+  .wd-course .btn-primary{
+    background:var(--gradient);
+    color:#fff;
+    box-shadow:0 8px 24px -8px rgba(236,72,153,.55);
+  }
+  .wd-course .btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px -8px rgba(236,72,153,.7);
+  }
+
+  .wd-course .btn-outline{
+    background:transparent;
+    color:#fff;
+    border:1.5px solid var(--border);
+  }
+  .wd-course .btn-outline:hover{
+    border-color:var(--purple);
+    background:rgba(139,92,246,.08);
+    transform:translateY(-3px);
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  .wd-course .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+  }
+  .wd-course .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+  .wd-course .reveal-delay-1{transition-delay:.08s;}
+  .wd-course .reveal-delay-2{transition-delay:.16s;}
+  .wd-course .reveal-delay-3{transition-delay:.24s;}
+  .wd-course .reveal-delay-4{transition-delay:.32s;}
+
+  /* ================= HERO ================= */
+  .wd-hero{
+    padding:110px 0 90px;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(139,92,246,.16), transparent 45%),
+      radial-gradient(circle at 90% 10%, rgba(236,72,153,.14), transparent 40%),
+      var(--bg);
+    position:relative;
+  }
+  .wd-hero .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:60px;
+    align-items:center;
+  }
+  .wd-hero h1{
+    font-size:clamp(34px,4.6vw,54px);
+    letter-spacing:-.02em;
+    margin-bottom:20px;
+  }
+  .wd-hero p.lead{
+    color:var(--muted);
+    font-size:18px;
+    max-width:520px;
+    margin-bottom:32px;
+  }
+  .wd-hero .cta-row{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+  }
+  .wd-hero .trust-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:var(--muted-dim);
+    font-size:14px;
+  }
+  .wd-hero .avatars{
+    display:flex;
+  }
+  .wd-hero .avatars span{
+    width:34px;height:34px;border-radius:50%;
+    background:var(--gradient);
+    border:2.5px solid var(--bg);
+    margin-left:-10px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:700;color:#fff;
+    font-family:var(--font-display);
+  }
+  .wd-hero .avatars span:first-child{margin-left:0;}
+
+  /* code editor mockup - signature element */
+  .code-window{
+    background:#0c1220;
+    border:1px solid var(--border);
+    border-radius:14px;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.02);
+    overflow:hidden;
+    transform:rotate(1.3deg);
+    animation:float-window 6s ease-in-out infinite;
+  }
+  @keyframes float-window{
+    0%,100%{transform:rotate(1.3deg) translateY(0);}
+    50%{transform:rotate(1.3deg) translateY(-12px);}
+  }
+  .code-window .cw-bar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 16px;
+    background:#0f1626;
+    border-bottom:1px solid var(--border);
+  }
+  .code-window .cw-bar .dot{width:11px;height:11px;border-radius:50%;}
+  .code-window .cw-bar .dot:nth-child(1){background:#ff5f56;}
+  .code-window .cw-bar .dot:nth-child(2){background:#ffbd2e;}
+  .code-window .cw-bar .dot:nth-child(3){background:#27c93f;}
+  .code-window .cw-bar .cw-title{
+    margin-left:10px;color:var(--muted-dim);font-size:12.5px;font-family:var(--font-mono);
+  }
+  .code-window pre{
+    margin:0;
+    padding:22px 22px 26px;
+    font-family:var(--font-mono);
+    font-size:13.5px;
+    color:#c7d2fe;
+    min-height:290px;
+    white-space:pre-wrap;
+  }
+  .code-window .tok-tag{color:#f472b6;}
+  .code-window .tok-attr{color:#a78bfa;}
+  .code-window .tok-str{color:#86efac;}
+  .code-window .tok-cmt{color:#6b7280;}
+  .code-window .cursor{
+    display:inline-block;width:8px;height:16px;background:var(--pink);
+    animation:blink 1s step-start infinite;vertical-align:middle;
+  }
+  @keyframes blink{50%{opacity:0;}}
+
+  .float-badge{
+    position:absolute;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px 16px;
+    display:flex;align-items:center;gap:10px;
+    font-size:13px;font-weight:600;
+    box-shadow:0 12px 30px -10px rgba(0,0,0,.5);
+    animation:bob 4.5s ease-in-out infinite;
+  }
+  .float-badge.b1{top:-24px;right:-10px;animation-delay:.4s;}
+  .float-badge.b2{bottom:-20px;left:-28px;animation-delay:1.1s;}
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+  .float-badge .ic{
+    width:30px;height:30px;border-radius:8px;background:var(--gradient);
+    display:flex;align-items:center;justify-content:center;font-size:15px;
+  }
+
+  /* ============= STATS ============= */
+  .wd-stats{
+    padding:50px 0;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    background:var(--bg-soft);
+  }
+  .wd-stats .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+  }
+  .wd-stats .stat-num{
+    font-family:var(--font-display);
+    font-size:clamp(28px,3.4vw,40px);
+    font-weight:800;
+    background:var(--gradient);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .wd-stats .stat-label{color:var(--muted);font-size:14px;margin-top:6px;}
+
+  /* ============= SECTION HEADS ============= */
+  .sec-head{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto 56px;
+  }
+  .sec-head h2{
+    font-size:clamp(28px,3.6vw,40px);
+    margin-bottom:14px;
+    letter-spacing:-.02em;
+  }
+  .sec-head p{color:var(--muted);font-size:16.5px;}
+
+  /* ============= SKILLS GRID ============= */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+  }
+  .skill-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:26px 20px;
+    text-align:center;
+    transition:transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .skill-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--purple);
+    background:var(--card-hover);
+  }
+  .skill-card .skill-ic{
+    width:52px;height:52px;
+    border-radius:12px;
+    background:var(--gradient-soft);
+    border:1px solid rgba(139,92,246,.3);
+    display:flex;align-items:center;justify-content:center;
+    font-size:24px;
+    margin:0 auto 14px;
+  }
+  .skill-card h4{font-size:15.5px;margin-bottom:4px;}
+  .skill-card span{color:var(--muted-dim);font-size:12.5px;}
+
+  /* ============= CURRICULUM ============= */
+  .curriculum{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    max-width:820px;
+    margin:0 auto;
+  }
+  .module{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow:hidden;
+    transition:border-color .3s ease;
+  }
+  .module.open, .module:hover{border-color:rgba(139,92,246,.5);}
+  .module-head{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:22px 24px;
+    cursor:pointer;
+    user-select:none;
+  }
+  .module-num{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:14px;
+    color:transparent;
+    -webkit-text-stroke:1.3px var(--purple);
+    min-width:34px;
+  }
+  .module-head h3{font-size:17px;font-weight:600;flex:1;}
+  .module-head .module-meta{color:var(--muted-dim);font-size:13px;margin-right:10px;}
+  .module-chevron{
+    width:26px;height:26px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--muted);
+    transition:transform .35s ease;
+    flex-shrink:0;
+  }
+  .module.open .module-chevron{transform:rotate(180deg);color:var(--pink);}
+  .module-body{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+  }
+  .module-body-inner{
+    padding:0 24px 22px 76px;
+    color:var(--muted);
+    font-size:14.5px;
+  }
+  .module-body-inner ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+  .module-body-inner li{position:relative;padding-left:20px;}
+  .module-body-inner li::before{
+    content:'';
+    position:absolute;left:0;top:8px;
+    width:8px;height:8px;border-radius:2px;
+    background:var(--gradient);
+  }
+
+  /* ============= WHY US ============= */
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+  .why-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:32px 26px;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .why-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px -20px rgba(139,92,246,.35);
+  }
+  .why-card .ic{
+    width:50px;height:50px;border-radius:12px;
+    background:var(--gradient);
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;margin-bottom:18px;
+  }
+  .why-card h3{font-size:18px;margin-bottom:10px;}
+  .why-card p{color:var(--muted);font-size:14.5px;}
+
+  /* ============= PRICING ============= */
+  .pricing-wrap{
+    display:flex;
+    justify-content:center;
+  }
+  .price-card{
+    background:linear-gradient(180deg, var(--card), var(--bg-soft));
+    border:1px solid var(--border);
+    border-radius:20px;
+    max-width:480px;
+    width:100%;
+    padding:40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .price-card::before{
+    content:'';
+    position:absolute;top:-2px;left:-2px;right:-2px;height:4px;
+    background:var(--gradient);
+  }
+  .price-card .badge-limited{
+    display:inline-block;
+    background:rgba(236,72,153,.15);
+    color:#f9a8d4;
+    border:1px solid rgba(236,72,153,.4);
+    font-size:12px;font-weight:600;
+    padding:5px 12px;border-radius:999px;
+    margin-bottom:16px;
+  }
+  .price-card h3{font-size:24px;margin-bottom:6px;}
+  .price-card .price-row{
+    display:flex;align-items:baseline;gap:10px;margin:18px 0 4px;
+  }
+  .price-card .price-now{
+    font-family:var(--font-display);
+    font-size:42px;font-weight:800;
+  }
+  .price-card .price-old{
+    color:var(--muted-dim);
+    text-decoration:line-through;
+    font-size:18px;
+  }
+  .price-card .price-note{color:var(--muted);font-size:13.5px;margin-bottom:26px;}
+  .price-card ul{list-style:none;display:flex;flex-direction:column;gap:13px;margin-bottom:30px;}
+  .price-card li{display:flex;align-items:center;gap:10px;font-size:14.5px;color:#e5e7eb;}
+  .price-card li .check{
+    width:20px;height:20px;border-radius:6px;
+    background:var(--gradient-soft);
+    border:1px solid rgba(139,92,246,.4);
+    display:flex;align-items:center;justify-content:center;
+    font-size:11px;color:#c9b3ff;flex-shrink:0;
+  }
+  .price-card .btn{width:100%;}
+
+  /* ============= TESTIMONIALS ============= */
+  .testi-track-wrap{overflow:hidden;position:relative;}
+  .testi-track-wrap::before,.testi-track-wrap::after{
+    content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;
+  }
+  .testi-track-wrap::before{left:0;background:linear-gradient(90deg,var(--bg),transparent);}
+  .testi-track-wrap::after{right:0;background:linear-gradient(270deg,var(--bg),transparent);}
+  .testi-track{
+    display:flex;gap:20px;
+    width:max-content;
+    animation:scroll-left 32s linear infinite;
+  }
+  .testi-track-wrap:hover .testi-track{animation-play-state:paused;}
+  @keyframes scroll-left{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+  .testi-card{
+    width:320px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:26px;
+    flex-shrink:0;
+  }
+  .testi-card .stars{color:#fbbf24;font-size:14px;margin-bottom:12px;letter-spacing:2px;}
+  .testi-card p{color:#d1d5db;font-size:14.5px;margin-bottom:18px;}
+  .testi-card .who{display:flex;align-items:center;gap:12px;}
+  .testi-card .who .av{
+    width:38px;height:38px;border-radius:50%;background:var(--gradient);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;
+    font-family:var(--font-display);
+  }
+  .testi-card .who h5{font-size:14px;}
+  .testi-card .who span{color:var(--muted-dim);font-size:12.5px;}
+
+  /* ============= FAQ ============= */
+  .faq-wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+  .faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+  .faq-q{
+    padding:19px 22px;display:flex;justify-content:space-between;align-items:center;
+    cursor:pointer;font-weight:600;font-size:15px;
+  }
+  .faq-plus{
+    width:22px;height:22px;flex-shrink:0;position:relative;
+  }
+  .faq-plus::before,.faq-plus::after{
+    content:'';position:absolute;background:var(--pink);border-radius:2px;
+  }
+  .faq-plus::before{width:14px;height:2px;top:10px;left:4px;}
+  .faq-plus::after{width:2px;height:14px;top:4px;left:10px;transition:transform .3s ease;}
+  .faq-item.open .faq-plus::after{transform:rotate(90deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .faq-a-inner{padding:0 22px 20px;color:var(--muted);font-size:14.5px;}
+
+  /* ============= FINAL CTA / ENQUIRY FORM ============= */
+  .cta-final{
+    background:
+      radial-gradient(circle at 20% 30%, rgba(139,92,246,.18), transparent 45%),
+      radial-gradient(circle at 85% 70%, rgba(236,72,153,.16), transparent 45%),
+      var(--bg-soft);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+  }
+  .cta-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+  }
+  .cta-grid h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:16px;}
+  .cta-grid p{color:var(--muted);margin-bottom:26px;font-size:16px;}
+  .contact-chip{
+    display:flex;align-items:center;gap:14px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:16px 18px;
+    margin-bottom:14px;
+  }
+  .contact-chip .ic{
+    width:42px;height:42px;border-radius:10px;background:var(--gradient);
+    display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;
+  }
+  .contact-chip a, .contact-chip span.txt{color:#fff;text-decoration:none;font-weight:600;font-size:15px;}
+  .contact-chip small{display:block;color:var(--muted-dim);font-size:12px;font-weight:400;}
+
+  .enquiry-form{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:32px;
+  }
+  .enquiry-form h3{font-size:19px;margin-bottom:20px;}
+  .enquiry-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .enquiry-form input, .enquiry-form textarea, .enquiry-form select{
+    width:100%;
+    background:var(--bg-soft);
+    border:1px solid var(--border);
+    color:#fff;
+    padding:14px 16px;
+    border-radius:10px;
+    font-family:var(--font-body);
+    font-size:14.5px;
+    margin-bottom:14px;
+    outline:none;
+    transition:border-color .25s ease, box-shadow .25s ease;
+  }
+  .enquiry-form select{color:#9aa3b8;}
+  .enquiry-form input::placeholder, .enquiry-form textarea::placeholder{color:var(--muted-dim);}
+  .enquiry-form input:focus, .enquiry-form textarea:focus, .enquiry-form select:focus{
+    border-color:var(--purple);
+    box-shadow:0 0 0 3px rgba(139,92,246,.18);
+  }
+  .enquiry-form textarea{resize:vertical;min-height:90px;}
+  .enquiry-form .btn{width:100%;}
+  .form-success{
+    display:none;
+    text-align:center;
+    padding:30px 10px;
+  }
+  .form-success .ic-ok{
+    width:56px;height:56px;border-radius:50%;background:var(--gradient);
+    display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;
+    animation:pop .4s cubic-bezier(.34,1.56,.64,1);
+  }
+  @keyframes pop{0%{transform:scale(0);}70%{transform:scale(1.15);}100%{transform:scale(1);}}
+  .form-success h4{margin-bottom:8px;}
+  .form-success p{color:var(--muted);font-size:14px;}
+
+  /* ============= FLOATING CONTACT BUTTONS ============= */
+  .floating-actions{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    z-index:999;
+  }
+  .floating-actions a{
+    width:54px;height:54px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:22px;
+    text-decoration:none;
+    box-shadow:0 10px 24px -6px rgba(0,0,0,.5);
+    animation:pulse-btn 2.4s ease-in-out infinite;
+  }
+  .floating-actions a.call{background:#f0596e;animation-delay:0s;}
+  .floating-actions a.whatsapp{background:#25d366;animation-delay:.4s;}
+  @keyframes pulse-btn{
+    0%,100%{box-shadow:0 10px 24px -6px rgba(0,0,0,.5),0 0 0 0 rgba(255,255,255,.15);}
+    50%{box-shadow:0 10px 24px -6px rgba(0,0,0,.5),0 0 0 10px rgba(255,255,255,0);}
+  }
+
+  /* ============= RESPONSIVE ============= */
+  @media (max-width:1024px){
+    .wd-hero .hero-grid{grid-template-columns:1fr;}
+    .code-window{max-width:520px;margin:60px auto 0;}
+    .skills-grid{grid-template-columns:repeat(3,1fr);}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .cta-grid{grid-template-columns:1fr;}
+    .wd-stats .stats-grid{grid-template-columns:repeat(2,1fr);row-gap:28px;}
+  }
+
+  @media (max-width:640px){
+    .wd-course section{padding:64px 0;}
+    .wd-hero{padding:70px 0 50px;}
+    .wd-hero .cta-row{flex-direction:column;align-items:stretch;}
+    .wd-hero .cta-row .btn{width:100%;}
+    .skills-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:1fr;}
+    .enquiry-form .row2{grid-template-columns:1fr;}
+    .module-body-inner{padding-left:24px;}
+    .module-num{display:none;}
+    .module-head{padding:18px;}
+    .price-card{padding:28px 22px;}
+    .float-badge{display:none;}
+    .testi-card{width:270px;}
+    .floating-actions{right:14px;bottom:14px;}
+    .floating-actions a{width:48px;height:48px;font-size:19px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .wd-course *{animation:none !important;transition:none !important;}
+  }
+</style>
+<header class="sf-header" id="siteHeader">
+
+  <div class="sf-header-inner">
+
+    <!-- LOGO -->
+
+    <div class="sf-logo">
+
+      <div class="mark">
+
+        <a href="/">
+          <img
+  src="/images/LOGO.jpeg"
+  alt="SHA Infotechnology Chennai Digital Marketing and Creative Design Company"
+  class="logo-img"
+/>
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HAMBURGER -->
+
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAVIGATION -->
+
+   <nav
+  class="sf-nav"
+  id="mobileNav"
+>
+
+  <!-- HOME -->
+  <a href="/" class="nav-btn">
+    Home
+  </a>
+
+  <!-- ABOUT -->
+  <a href="/About/" class="nav-btn">
+    About
+  </a>
+
+  <!-- SERVICES -->
+  <div class="nav-dropdown">
+
+    <div class="services-nav">
+
+      <!-- Clicking this opens Services page -->
+      <a
+        href="/Services/"
+        class="nav-btn"
+      >
+        Services
+      </a>
+
+      <!-- Clicking only this opens dropdown -->
+      <button
+        type="button"
+        class="dropdown-arrow"
+        onclick="toggleServices(event)"
+        aria-label="Open Services Menu"
+      >
+        ▾
+      </button>
+
+    </div>
+
+    <ul
+      class="dropdown-menu"
+      id="servicesMenu"
+    >
+
+      <li>
+        <a href="/Services/Digital_Strategy/">
+          Digital Strategy
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Web_development/">
+          Web Development
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Ecommerce/">
+          Ecommerce Website
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Seo/">
+          SEO
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/SocialMediaMarketing/">
+          Social Media Marketing
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Aimarketing/">
+          AI Marketing
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Business_analysis/">
+          Business Analysis
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Content_design/">
+          Content Design
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Creative_design/">
+          Creative Design
+        </a>
+      </li>
+
+      <li>
+        <a href="/Services/Brand_consultancy/">
+          Brand Consultancy
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <!-- COURSES -->
+  <a href="/Courses/" class="nav-btn">
+    Courses
+  </a>
+<a href="/DigitalMarketingServicePackage/" class="nav-btn">
+   Package
+  </a>
+  <!-- CONTACT -->
+  <a
+    href="/Contact/"
+    class="nav-btn contact-link"
+  >
+    Contact
+  </a>
+
+  <!-- BLOG -->
+  <a href="/Blog/" class="nav-btn">
+    Blog
+  </a>
+
+</nav>
+
+  </div>
+
+  <!-- JS INSIDE HEADER -->
+
+  <script>
+
+  document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const hamburger =
+      document.getElementById(
+        "hamburgerBtn"
+      );
+
+    const nav =
+      document.getElementById(
+        "mobileNav"
+      );
+
+    /* HAMBURGER TOGGLE */
+
+    hamburger.addEventListener(
+      "click",
+      function(){
+
+        hamburger.classList.toggle(
+          "open"
+        );
+
+        nav.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+    /* CLOSE MENU AFTER CLICK */
+
+    const links =
+      nav.querySelectorAll(
+        ".nav-btn"
+      );
+
+    links.forEach(link=>{
+
+      link.addEventListener(
+      "click",
+      function(){
+
+        nav.classList.remove(
+          "open"
+        );
+
+        hamburger.classList.remove(
+          "open"
+        );
+
+      });
+
+    });
+
+    /* GOOGLE ADS CONVERSION */
+
+    function gtag_report_conversion(url){
+
+      if(window.gtag){
+
+        window.gtag(
+          "event",
+          "conversion",
+          {
+            send_to:
+            "AW-17853848982/-CWeCM_gkN0bEJa7sMFC",
+
+            value:1.0,
+            currency:"INR",
+
+            event_callback:function(){
+
+              if(url){
+                window.location =
+                url;
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+    }
+
+    /* CONTACT CONVERSION */
+
+    const contactLink =
+      document.querySelector(
+        ".contact-link"
+      );
+
+    if(contactLink){
+
+      contactLink.addEventListener(
+      "click",
+      function(){
+
+        gtag_report_conversion();
+
+      });
+
+    }
+
+  });
+
+ function toggleServices(e){
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const menu =
+    document.getElementById(
+        "servicesMenu"
+    );
+
+    /* CLOSE OTHER MENUS */
+
+    document
+    .querySelectorAll(".dropdown-menu")
+    .forEach(item=>{
+
+        if(item!==menu){
+
+            item.classList.remove("show");
+
+        }
+
+    });
+
+    menu.classList.toggle("show");
+
+}
+
+/* DON'T CLOSE WHEN CLICKING INSIDE */
+
+document
+.getElementById("servicesMenu")
+.addEventListener("click",function(e){
+
+    e.stopPropagation();
+
+});
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+document.addEventListener("click",function(){
+
+    document
+    .querySelectorAll(".dropdown-menu")
+    .forEach(menu=>{
+
+        menu.classList.remove("show");
+
+    });
+
+});
+
+document.addEventListener("click",function(){
+
+    document
+    .getElementById("servicesMenu")
+    .classList.remove("show");
+
+});
+
+  </script>
+
+</header>
+</head>
+<body class="wd-course">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="wd-hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow reveal">💻 Web Development Course</div>
+        <h1 class="reveal reveal-delay-1">
+          Become a Job-Ready<br>
+          <span class="gradient-text">Web Developer</span> in Chennai
+        </h1>
+        <p class="lead reveal reveal-delay-2">
+          Learn HTML, CSS, JavaScript, React &amp; Node.js from scratch with live projects, real client work
+          and placement support — taught by Sha Infotechnology's in-house dev team.
+        </p>
+        <div class="cta-row reveal reveal-delay-3">
+          <a href="#enquiry" class="btn btn-primary">Enroll Now</a>
+          <a href="tel:+919361046387" class="btn btn-outline">📞 Call 93610 46387</a>
+        </div>
+        <div class="trust-row reveal reveal-delay-4">
+          <div class="avatars">
+            <span>A</span><span>R</span><span>S</span><span>P</span>
+          </div>
+          <span>500+ students trained · 4.9/5 average rating</span>
+        </div>
+      </div>
+
+      <div style="position:relative;">
+        <div class="code-window">
+          <div class="cw-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="cw-title">index.html — shainfotechnology.in</span>
+          </div>
+          <pre id="typedCode"></pre>
+        </div>
+        <div class="float-badge b1"><span class="ic">🚀</span> Live Projects</div>
+        <div class="float-badge b2"><span class="ic">🎓</span> Certification</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="wd-stats">
+    <div class="container stats-grid">
+      <div class="reveal">
+        <div class="stat-num" data-count="500">0</div>
+        <div class="stat-label">Students Trained</div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="stat-num" data-count="92">0</div>
+        <div class="stat-label">% Placement Rate</div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="stat-num" data-count="40">0</div>
+        <div class="stat-label">Live Projects Built</div>
+      </div>
+      <div class="reveal reveal-delay-3">
+        <div class="stat-num" data-count="6">0</div>
+        <div class="stat-label">Years Training Experience</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section>
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Everything you'll <span class="gradient-text">master</span></h2>
+        <p>A complete front-end to back-end stack, taught with real project work — not just theory.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal"><div class="skill-ic">🧱</div><h4>HTML5</h4><span>Structure &amp; SEO</span></div>
+        <div class="skill-card reveal reveal-delay-1"><div class="skill-ic">🎨</div><h4>CSS3 &amp; Flexbox/Grid</h4><span>Responsive layouts</span></div>
+        <div class="skill-card reveal reveal-delay-2"><div class="skill-ic">⚡</div><h4>JavaScript (ES6+)</h4><span>Interactivity &amp; logic</span></div>
+        <div class="skill-card reveal reveal-delay-3"><div class="skill-ic">⚛️</div><h4>React.js</h4><span>Modern UI building</span></div>
+        <div class="skill-card reveal"><div class="skill-ic">🟩</div><h4>Node.js &amp; Express</h4><span>Backend &amp; APIs</span></div>
+        <div class="skill-card reveal reveal-delay-1"><div class="skill-ic">🗄️</div><h4>MySQL / MongoDB</h4><span>Databases</span></div>
+        <div class="skill-card reveal reveal-delay-2"><div class="skill-ic">🔧</div><h4>Git &amp; GitHub</h4><span>Version control</span></div>
+        <div class="skill-card reveal reveal-delay-3"><div class="skill-ic">🌐</div><h4>Hosting &amp; Deployment</h4><span>Go live confidently</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CURRICULUM ===================== -->
+  <section>
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Course <span class="gradient-text">Curriculum</span></h2>
+        <p>A structured, module-by-module path — designed so each stage builds on the last.</p>
+      </div>
+      <div class="curriculum">
+
+        <div class="module reveal">
+          <div class="module-head" data-module>
+            <span class="module-num">01</span>
+            <h3>Foundations — HTML &amp; CSS</h3>
+            <span class="module-meta">2 weeks</span>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <div class="module-body-inner">
+              <ul>
+                <li>Semantic HTML5 structure &amp; forms</li>
+                <li>CSS box model, Flexbox &amp; Grid layouts</li>
+                <li>Responsive design with media queries</li>
+                <li>Build: personal portfolio page</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="module reveal">
+          <div class="module-head" data-module>
+            <span class="module-num">02</span>
+            <h3>JavaScript Programming</h3>
+            <span class="module-meta">3 weeks</span>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <div class="module-body-inner">
+              <ul>
+                <li>Variables, functions, DOM manipulation</li>
+                <li>Events, arrays, objects, ES6+ syntax</li>
+                <li>Fetch API &amp; working with JSON data</li>
+                <li>Build: interactive to-do &amp; weather app</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="module reveal">
+          <div class="module-head" data-module>
+            <span class="module-num">03</span>
+            <h3>Front-End with React</h3>
+            <span class="module-meta">3 weeks</span>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <div class="module-body-inner">
+              <ul>
+                <li>Components, props &amp; state</li>
+                <li>Hooks (useState, useEffect)</li>
+                <li>Routing &amp; API integration</li>
+                <li>Build: e-commerce style product listing app</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="module reveal">
+          <div class="module-head" data-module>
+            <span class="module-num">04</span>
+            <h3>Back-End &amp; Databases</h3>
+            <span class="module-meta">3 weeks</span>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <div class="module-body-inner">
+              <ul>
+                <li>Node.js &amp; Express fundamentals</li>
+                <li>REST APIs &amp; authentication</li>
+                <li>MySQL / MongoDB integration</li>
+                <li>Build: full-stack blog application</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="module reveal">
+          <div class="module-head" data-module>
+            <span class="module-num">05</span>
+            <h3>Capstone Project &amp; Placement</h3>
+            <span class="module-meta">2 weeks</span>
+            <span class="module-chevron">▾</span>
+          </div>
+          <div class="module-body">
+            <div class="module-body-inner">
+              <ul>
+                <li>Deploy a full-stack live client project</li>
+                <li>Resume, GitHub profile &amp; portfolio review</li>
+                <li>Mock interviews &amp; placement assistance</li>
+                <li>Course completion certificate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY US ===================== -->
+  <section>
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Why learn with <span class="gradient-text">Sha Infotechnology</span></h2>
+        <p>We're a working digital agency — you learn on real client-style projects, not just slides.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="ic">👨‍💻</div>
+          <h3>Agency-Led Mentors</h3>
+          <p>Trained directly by our in-house developers who build live websites for real clients.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-1">
+          <div class="ic">🛠️</div>
+          <h3>Project-Based Learning</h3>
+          <p>Every module ends with a real build — you leave with a portfolio, not just notes.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="ic">🎯</div>
+          <h3>Placement Support</h3>
+          <p>Resume reviews, mock interviews and referrals to help you land your first developer role.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="ic">🕒</div>
+          <h3>Flexible Batches</h3>
+          <p>Weekday and weekend batches, plus recorded sessions so you never miss a class.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="ic">📜</div>
+          <h3>Certification</h3>
+          <p>Get an industry-recognised completion certificate to boost your resume and LinkedIn.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-1">
+          <div class="ic">💬</div>
+          <h3>1-on-1 Doubt Support</h3>
+          <p>Direct WhatsApp and call access to mentors whenever you're stuck.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING ===================== -->
+  <section>
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Simple, <span class="gradient-text">honest pricing</span></h2>
+        <p>One complete program. No hidden fees.</p>
+      </div>
+      <div class="pricing-wrap reveal">
+        <div class="price-card">
+          <span class="badge-limited">🔥 Limited seats this batch</span>
+          <h3>Full-Stack Web Development</h3>
+          <div class="price-row">
+            <span class="price-now">₹14,999</span>
+            <span class="price-old">₹24,999</span>
+          </div>
+          <div class="price-note">One-time payment · EMI options available</div>
+          <ul>
+            <li><span class="check">✓</span> 13 weeks live instructor-led training</li>
+            <li><span class="check">✓</span> 5 real-world projects for your portfolio</li>
+            <li><span class="check">✓</span> Resume &amp; GitHub portfolio review</li>
+            <li><span class="check">✓</span> Placement assistance &amp; mock interviews</li>
+            <li><span class="check">✓</span> Verified completion certificate</li>
+            <li><span class="check">✓</span> Lifetime access to recorded sessions</li>
+          </ul>
+          <a href="#enquiry" class="btn btn-primary">Reserve My Seat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section style="padding-left:0;padding-right:0;">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>What our <span class="gradient-text">students say</span></h2>
+        <p>Real feedback from developers who trained with us.</p>
+      </div>
+    </div>
+    <div class="testi-track-wrap reveal">
+      <div class="testi-track" id="testiTrack">
+        <!-- set 1 -->
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"I joined with zero coding knowledge and built my own portfolio site by week 4. The mentors actually reply on WhatsApp!"</p>
+          <div class="who"><div class="av">A</div><div><h5>Arun Kumar</h5><span>Front-End Developer</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Best part was the live client-style projects. I got placed within 3 weeks of finishing the capstone project."</p>
+          <div class="who"><div class="av">R</div><div><h5>Ramya S.</h5><span>Full-Stack Developer</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Weekend batch fit perfectly around my job. The React module alone was worth the entire course fee."</p>
+          <div class="who"><div class="av">S</div><div><h5>Sanjay P.</h5><span>React Developer</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Clear explanations, real projects and genuine placement help — exactly what I needed as a beginner."</p>
+          <div class="who"><div class="av">P</div><div><h5>Priya M.</h5><span>Web Developer</span></div></div>
+        </div>
+        <!-- duplicate set for seamless loop -->
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"I joined with zero coding knowledge and built my own portfolio site by week 4. The mentors actually reply on WhatsApp!"</p>
+          <div class="who"><div class="av">A</div><div><h5>Arun Kumar</h5><span>Front-End Developer</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Best part was the live client-style projects. I got placed within 3 weeks of finishing the capstone project."</p>
+          <div class="who"><div class="av">R</div><div><h5>Ramya S.</h5><span>Full-Stack Developer</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Weekend batch fit perfectly around my job. The React module alone was worth the entire course fee."</p>
+          <div class="who"><div class="av">S</div><div><h5>Sanjay P.</h5><span>React Developer</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Clear explanations, real projects and genuine placement help — exactly what I needed as a beginner."</p>
+          <div class="who"><div class="av">P</div><div><h5>Priya M.</h5><span>Web Developer</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section>
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+      </div>
+      <div class="faq-wrap">
+        <div class="faq-item reveal">
+          <div class="faq-q" data-faq><span>Do I need any prior coding experience?</span><span class="faq-plus"></span></div>
+          <div class="faq-a"><div class="faq-a-inner">No. The course starts from HTML/CSS basics, so complete beginners are welcome.</div></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q" data-faq><span>Are classes online or offline?</span><span class="faq-plus"></span></div>
+          <div class="faq-a"><div class="faq-a-inner">Both — attend live at our Chennai center or join online. Recordings are provided either way.</div></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q" data-faq><span>Will I get a certificate?</span><span class="faq-plus"></span></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes, you'll receive a verified completion certificate from Sha Infotechnology after your capstone project.</div></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q" data-faq><span>Is EMI or installment payment available?</span><span class="faq-plus"></span></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes, EMI options are available. Talk to our team on call or WhatsApp for current plans.</div></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q" data-faq><span>Do you help with job placement?</span><span class="faq-plus"></span></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes — resume reviews, mock interviews and referrals are included for every student who completes the course.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA / ENQUIRY ===================== -->
+  <section class="cta-final" id="enquiry">
+    <div class="container cta-grid">
+      <div class="reveal">
+        <div class="eyebrow">Start Today</div>
+        <h2>Ready to start your <span class="gradient-text">developer journey?</span></h2>
+        <p>Talk to our course counselor for batch timings, fees and a free demo class.</p>
+
+        <div class="contact-chip">
+          <div class="ic">📞</div>
+          <div>
+            <a href="tel:+919361046387">+91 93610 46387</a>
+            <small>Mon–Sat, 10 AM – 7 PM</small>
+          </div>
+        </div>
+        <div class="contact-chip">
+          <div class="ic">💬</div>
+          <div>
+            <a href="https://wa.me/919361046387" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            <small>Quick replies for batch &amp; fee queries</small>
+          </div>
+        </div>
+        <div class="contact-chip">
+          <div class="ic">🌐</div>
+          <div>
+            <span class="txt">shainfotechnology.in</span>
+            <small>Explore all our courses &amp; services</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="enquiry-form reveal reveal-delay-1">
+        <form id="courseForm">
+          <h3>Get Free Demo Class Details</h3>
+          <div class="row2">
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}">
+          </div>
+          <input type="email" placeholder="Email Address" required>
+          <select required>
+            <option value="" selected disabled>Preferred Batch</option>
+            <option>Weekday Batch (Mon–Fri)</option>
+            <option>Weekend Batch (Sat–Sun)</option>
+            <option>Online Batch</option>
+          </select>
+          <textarea placeholder="Your Message (optional)"></textarea>
+          <button type="submit" class="btn btn-primary">Submit &amp; Get Callback</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="ic-ok">✓</div>
+          <h4>Thank you!</h4>
+          <p>Our course counselor will call you shortly. You can also reach us anytime at <strong>+91 93610 46387</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FLOATING BUTTONS ===================== -->
+  <div class="floating-actions">
+    <a href="tel:+919361046387" class="call" title="Call us" aria-label="Call us">📞</a>
+    <a href="https://wa.me/919361046387" target="_blank" rel="noopener" class="whatsapp" title="WhatsApp us" aria-label="WhatsApp us">💬</a>
+  </div>
+
+<script>
+(function(){
+  /* ---------- scroll reveal ---------- */
+  const revealEls = document.querySelectorAll('.wd-course .reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  /* ---------- counters ---------- */
+  const counters = document.querySelectorAll('.stat-num');
+  const counterIO = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const el = entry.target;
+        const target = parseInt(el.dataset.count,10);
+        let current = 0;
+        const step = Math.max(1, Math.ceil(target/60));
+        const timer = setInterval(()=>{
+          current += step;
+          if(current>=target){current=target;clearInterval(timer);}
+          el.textContent = current;
+        },25);
+        counterIO.unobserve(el);
+      }
+    });
+  },{threshold:0.4});
+  counters.forEach(el=>counterIO.observe(el));
+
+  /* ---------- curriculum accordion ---------- */
+  document.querySelectorAll('[data-module]').forEach(head=>{
+    head.addEventListener('click', ()=>{
+      const module = head.closest('.module');
+      const body = module.querySelector('.module-body');
+      const isOpen = module.classList.contains('open');
+
+      document.querySelectorAll('.module.open').forEach(m=>{
+        m.classList.remove('open');
+        m.querySelector('.module-body').style.maxHeight = null;
+      });
+
+      if(!isOpen){
+        module.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('[data-faq]').forEach(q=>{
+    q.addEventListener('click', ()=>{
+      const item = q.closest('.faq-item');
+      const ans = item.querySelector('.faq-a');
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item.open').forEach(f=>{
+        f.classList.remove('open');
+        f.querySelector('.faq-a').style.maxHeight = null;
+      });
+
+      if(!isOpen){
+        item.classList.add('open');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ---------- form submit ---------- */
+  const form = document.getElementById('courseForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    form.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  });
+
+  /* ---------- typing code animation ---------- */
+  const codeLines = [
+    {t:'&lt;', c:'tok-tag'}, {t:'section', c:'tok-tag'}, {t:' class=', c:'tok-attr'}, {t:'"course"', c:'tok-str'}, {t:'&gt;\n', c:'tok-tag'},
+    {t:'  &lt;', c:'tok-tag'}, {t:'h1', c:'tok-tag'}, {t:'&gt;', c:'tok-tag'}, {t:'Learn Web Dev', c:''}, {t:'&lt;/', c:'tok-tag'}, {t:'h1', c:'tok-tag'}, {t:'&gt;\n', c:'tok-tag'},
+    {t:'  &lt;', c:'tok-tag'}, {t:'button', c:'tok-tag'}, {t:' onClick', c:'tok-attr'}, {t:'={enroll}', c:'tok-str'}, {t:'&gt;\n', c:'tok-tag'},
+    {t:'    Enroll Now\n', c:''},
+    {t:'  &lt;/', c:'tok-tag'}, {t:'button', c:'tok-tag'}, {t:'&gt;\n', c:'tok-tag'},
+    {t:'&lt;/', c:'tok-tag'}, {t:'section', c:'tok-tag'}, {t:'&gt;\n\n', c:'tok-tag'},
+    {t:'// Built at Sha Infotechnology 🚀', c:'tok-cmt'}
+  ];
+  const target = document.getElementById('typedCode');
+  let flat = '';
+  codeLines.forEach(seg=>{
+    flat += `<span class="${seg.c}">${seg.t}</span>`;
+  });
+  // typing effect: reveal characters progressively while preserving tags
+  const rawHTML = flat;
+  let i = 0;
+  const chars = [];
+  // Build char-by-char array respecting tags (treat tag as atomic chunk)
+  const tokenizer = document.createElement('div');
+  tokenizer.innerHTML = rawHTML;
+  const finalHTML = rawHTML;
+  let visibleLen = 0;
+  const plainLength = tokenizer.textContent.length;
+
+  function typeStep(){
+    visibleLen++;
+    // progressively reveal by re-slicing textContent then reapplying spans is complex;
+    // simpler: reveal whole spans sequentially for a clean effect
+  }
+
+  // simpler approach: reveal span-by-span, char-by-char within each span
+  let segIndex = 0, charIndex = 0;
+  target.innerHTML = '';
+  const spans = [];
+  codeLines.forEach(seg=>{
+    const span = document.createElement('span');
+    span.className = seg.c;
+    target.appendChild(span);
+    spans.push({el:span, text:seg.t.replace(/&lt;/g,'<').replace(/&gt;/g,'>')});
+  });
+  const cursorEl = document.createElement('span');
+  cursorEl.className = 'cursor';
+  target.appendChild(cursorEl);
+
+  function typeNext(){
+    if(segIndex >= spans.length){
+      return;
+    }
+    const current = spans[segIndex];
+    if(charIndex < current.text.length){
+      current.el.textContent += current.text[charIndex];
+      charIndex++;
+      setTimeout(typeNext, 18);
+    } else {
+      segIndex++;
+      charIndex = 0;
+      setTimeout(typeNext, 18);
+    }
+  }
+  setTimeout(typeNext, 500);
+
+})();
+</script>
+
+</body>
+</html>
